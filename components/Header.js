@@ -8,10 +8,10 @@ export default function Header({ name }) {
 
       <div className="w-12 h-12 rounded-full block mx-auto mb-4 bg-gradient-conic from-gradient-3 to-gradient-4" />
       <p className="text-2xl dark:text-white text-center">
-      <Image
-  src="/logo.jpg"
-  width={1200}
-  height={600}
+      <Image className='avatar'
+  src="/avatar-nch.png"
+  width={150}
+  height={150}
   alt="Image description"
 />
         <Link href="/">
