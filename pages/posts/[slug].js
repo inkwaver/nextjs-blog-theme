@@ -101,8 +101,11 @@ export default function PostPage({
 export const getStaticProps = async ({ params }) => {
   const globalData = getGlobalData();
   const { mdxSource, data } = await getPostBySlug(params.slug);
-  const prevPost = getPreviousPostBySlug(params.slug);
-  const nextPost = getNextPostBySlug(params.slug);
+  
+  // Pass tag parameter if available
+  const tag = data.tags && data.tags[0];
+  const prevPost = getPreviousPostBySlug(params.slug, tag);
+  const nextPost = getNextPostBySlug(params.slug, tag);
 
   return {
     props: {
@@ -116,7 +119,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-  const paths = postFilePaths
+  const paths = postFilePaths()
     // Remove file extensions for page paths
     .map((path) => path.replace(/\.mdx?$/, ''))
     // Map the path into the static paths object required by Next.js

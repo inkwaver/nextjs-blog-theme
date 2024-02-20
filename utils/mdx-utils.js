@@ -1,3 +1,6 @@
+
+// mdx-utils.js
+
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -9,10 +12,11 @@ import remarkGfm from 'remark-gfm';
 export const POSTS_PATH = path.join(process.cwd(), 'posts');
 
 // postFilePaths is the list of all mdx files inside the POSTS_PATH directory
-export const postFilePaths = fs
-  .readdirSync(POSTS_PATH)
-  // Only include md(x) files
-  .filter((path) => /\.mdx?$/.test(path));
+export const postFilePaths = () => {
+  // Use dynamic import to ensure the usage of 'fs' during server-side execution
+  const files = fs.readdirSync(POSTS_PATH);
+  return files.filter((file) => /\.mdx?$/.test(file));
+};
 
 export const sortPostsByDate = (posts) => {
   return posts.sort((a, b) => {
@@ -22,8 +26,11 @@ export const sortPostsByDate = (posts) => {
   });
 };
 
-export const getPosts = () => {
-  let posts = postFilePaths.map((filePath) => {
+export const getPosts = (tag) => {
+  // Use dynamic import to ensure the usage of 'fs' during server-side execution
+  const filePaths = postFilePaths();
+  
+  let posts = filePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
     const { content, data } = matter(source);
 
@@ -36,8 +43,16 @@ export const getPosts = () => {
 
   posts = sortPostsByDate(posts);
 
+  // Filter posts by tag
+  if (tag) {
+    posts = posts.filter((post) => post.data.tags && post.data.tags.includes(tag));
+  }
+
   return posts;
 };
+
+// ... rest of the code
+
 
 export const getPostBySlug = async (slug) => {
   const postFilePath = path.join(POSTS_PATH, `${slug}.mdx`);
@@ -57,8 +72,8 @@ export const getPostBySlug = async (slug) => {
   return { mdxSource, data, postFilePath };
 };
 
-export const getNextPostBySlug = (slug) => {
-  const posts = getPosts();
+export const getNextPostBySlug = (slug, tag) => {
+  const posts = getPosts(tag);
   const currentFileName = `${slug}.mdx`;
   const currentPost = posts.find((post) => post.filePath === currentFileName);
   const currentPostIndex = posts.indexOf(currentPost);
@@ -75,8 +90,8 @@ export const getNextPostBySlug = (slug) => {
   };
 };
 
-export const getPreviousPostBySlug = (slug) => {
-  const posts = getPosts();
+export const getPreviousPostBySlug = (slug, tag) => {
+  const posts = getPosts(tag);
   const currentFileName = `${slug}.mdx`;
   const currentPost = posts.find((post) => post.filePath === currentFileName);
   const currentPostIndex = posts.indexOf(currentPost);
