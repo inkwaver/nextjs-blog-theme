@@ -15,3 +15,11 @@ h6 {
 body {
   font-family: var(--font-secondary);
 }
+
+.under-construct {
+  min-height: 34vh;
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}

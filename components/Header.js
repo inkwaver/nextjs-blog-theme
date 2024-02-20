@@ -8,7 +8,7 @@ export default function Header({ name }) {
         <Link href="/">
           <a>{name} </a>
         </Link>
-        <span>hello</span>
+        
       </p>
     </header>
   );
