@@ -27,7 +27,6 @@ export const sortPostsByDate = (posts) => {
 };
 
 export const getPosts = (tag) => {
-  // Use dynamic import to ensure the usage of 'fs' during server-side execution
   const filePaths = postFilePaths();
   
   let posts = filePaths.map((filePath) => {
@@ -36,7 +35,10 @@ export const getPosts = (tag) => {
 
     return {
       content,
-      data,
+      data: {
+        ...data,
+        thumbnail: data.thumbnail || null, // Set to null if not provided
+      },
       filePath,
     };
   });

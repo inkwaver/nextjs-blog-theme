@@ -29,17 +29,10 @@ export default function Index({ posts,allPosts,developmentPosts,designPosts, glo
                 href={`/posts/[slug]`}
               >
                 <a className="py-6 lg:py-10 px-6 lg:px-16 block focus:outline-none focus:ring-4">
-                  {post.data.date && (
-                    <p className="uppercase mb-3 font-bold opacity-60">
-                      {post.data.date}
-                    </p>
-                  )}
-                  <h2 className="text-2xl md:text-3xl">{post.data.title}</h2>
-                  {post.data.description && (
-                    <p className="mt-3 text-lg opacity-60">
-                      {post.data.description}
-                    </p>
-                  )}
+                {post.data.date && <p className="...">{post.data.date}</p>}
+        <h2 className="...">{post.data.title}</h2>
+        {post.data.description && <p className="...">{post.data.description}</p>}
+        {post.data.thumbnail && <img src={post.data.thumbnail} alt={`${post.data.title} Thumbnail`} />}
                   <ArrowIcon className="mt-4" />
                 </a>
               </Link>
