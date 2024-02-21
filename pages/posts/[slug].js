@@ -34,6 +34,7 @@ export default function PostPage({
   prevPost,
   nextPost,
   globalData,
+  thumbnail, // Receive thumbnail from props
 }) {
   return (
     <Layout>
@@ -43,7 +44,15 @@ export default function PostPage({
       />
       <Header name={globalData.name} />
       <article className="px-6 md:px-0">
-        <header>
+      <header>
+          {/* Conditionally render thumbnail */}
+          {thumbnail && (
+            <img
+              src={thumbnail}
+              alt={`${frontMatter.title} Thumbnail`}
+              className="w-full h-auto mb-6"
+            />
+          )}
           <h1 className="text-3xl md:text-5xl dark:text-white text-center mb-12">
             {frontMatter.title}
           </h1>
@@ -107,6 +116,9 @@ export const getStaticProps = async ({ params }) => {
   const prevPost = getPreviousPostBySlug(params.slug, tag);
   const nextPost = getNextPostBySlug(params.slug, tag);
 
+  // Include thumbnail information in props
+  const thumbnail = data.thumbnail || null;
+
   return {
     props: {
       globalData,
@@ -114,6 +126,7 @@ export const getStaticProps = async ({ params }) => {
       frontMatter: data,
       prevPost,
       nextPost,
+      thumbnail, // Include thumbnail information
     },
   };
 };
