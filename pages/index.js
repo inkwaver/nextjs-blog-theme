@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getPosts } from '../utils/mdx-utils';
-
+import Image from 'next/image';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Layout, { GradientBackground } from '../components/Layout';
@@ -8,7 +8,7 @@ import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
-export default function Index({ posts,allPosts,developmentPosts,designPosts, globalData }) {
+export default function Index({ posts, allPosts, developmentPosts, designPosts, globalData }) {
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
@@ -29,10 +29,17 @@ export default function Index({ posts,allPosts,developmentPosts,designPosts, glo
                 href={`/posts/[slug]`}
               >
                 <a className="py-6 lg:py-10 px-6 lg:px-16 block focus:outline-none focus:ring-4">
-                {post.data.date && <p className="...">{post.data.date}</p>}
-        <h2 className="...">{post.data.title}</h2>
-        {post.data.description && <p className="...">{post.data.description}</p>}
-        {post.data.thumbnail && <img src={post.data.thumbnail} alt={`${post.data.title} Thumbnail`} />}
+                  {post.data.date && <p className="...">{post.data.date}</p>}
+                  <h2 className="...">{post.data.title}</h2>
+                  {post.data.description && <p className="...">{post.data.description}</p>}
+                  {post.data.thumbnail && (
+                    <Image
+                      src={post.data.thumbnail}
+                      alt={`${post.data.title} Thumbnail`}
+                      width={150}
+                      height={150}
+                    />
+                  )}
                   <ArrowIcon className="mt-4" />
                 </a>
               </Link>

@@ -5,7 +5,7 @@ import {
   getPreviousPostBySlug,
   postFilePaths,
 } from '../../utils/mdx-utils';
-
+import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -47,11 +47,17 @@ export default function PostPage({
       <header>
           {/* Conditionally render thumbnail */}
           {thumbnail && (
-            <img
-              src={thumbnail}
-              alt={`${frontMatter.title} Thumbnail`}
-              className="w-full h-auto mb-6"
-            />
+          
+            <Image
+            src={thumbnail}
+            className="w-full h-auto mb-6"
+            alt={`${frontMatter.title} Thumbnail`}
+            width={672}
+            height={350}
+            loading="lazy"
+            // layout='fill'
+            // objectFit="cover"
+          />
           )}
           <h1 className="text-3xl md:text-5xl dark:text-white text-center mb-12">
             {frontMatter.title}
