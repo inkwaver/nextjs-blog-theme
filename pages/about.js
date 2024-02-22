@@ -18,6 +18,7 @@ export default function Index({ posts, globalData }) {
           {globalData.blogTitle}
         </h1>
        <div>hello about</div>
+       
       </main>
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground
