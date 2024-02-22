@@ -19,6 +19,11 @@
   --accent: hsl(211, 44%, 67%);
 } */
 
+.active {
+  /* Your active link styles go here */
+  color: #ff0000; /* Change the color as per your design */
+  font-weight: bold;
+}
 
 
 

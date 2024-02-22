@@ -1,24 +1,54 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import ThemeSwitcher from './ThemeSwitcher.js';
-export default function Header({ name }) {
-  return (
-    <header className="pt-20 pb-12">
-      <ThemeSwitcher />
 
-      <div className="w-12 h-12 rounded-full block mx-auto mb-4 bg-gradient-conic from-gradient-3 to-gradient-4" />
-      <p className="text-2xl dark:text-white text-center">
-      <Image className='avatar'
+
+export default function Header({ name,  }) {
+  const router = useRouter();
+
+  // Function to determine if a link is active
+  const isActiveLink = (href) => {
+    return router.pathname === href;
+  };
+
+  return (
+    <header className="">
+      <nav>
+      <ul>
+        <li>
+          <Link  href="/">
+             <a className={isActiveLink('/') ? 'active' : ''}>
+             <Image className='avatar'
   src="/avatar-nch.png"
   width={150}
   height={150}
   alt="Image description"
 />
-        <Link href="/">
-          <a>{name} </a>
-        </Link>
-        <span>hello</span>
-      </p>
+             </a>
+          </Link>
+        </li>
+        <li>
+          <Link
+            
+            href="/case-study"
+          >
+            <a className={isActiveLink('/case-study') ? 'active' : ''}>Case-Study</a>
+          </Link>
+        </li>
+
+          <li>
+          <Link
+            
+            href="/dev-projects"
+          >
+            <a className={isActiveLink('/dev-projects') ? 'active' : ''}>Dev Projects</a>
+          </Link>
+        </li>
+      </ul>
+    </nav>
+    <ThemeSwitcher />
+    
     </header>
   );
 }

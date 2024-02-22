@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { useEffect } from 'react';
 import styles from './Layout.module.css';
-
+import { useRouter } from 'next/router';
 export function GradientBackground({ variant, className }) {
   const classes = classNames(
     {
@@ -15,6 +15,13 @@ export function GradientBackground({ variant, className }) {
 }
 
 export default function Layout({ children }) {
+  const isActiveLink = (href) => {
+    return router.pathname === href;
+  };
+  const router = useRouter();
+
+  // Function to determine if a link is active
+ 
   const setAppTheme = () => {
     const darkMode = localStorage.getItem('theme') === 'dark';
     const lightMode = localStorage.getItem('theme') === 'light';
@@ -50,7 +57,7 @@ export default function Layout({ children }) {
   }, []);
 
   return (
-    <div className="relative pb-24 overflow-hidden">
+    <div className={isActiveLink('/') ? 'relative pb-24 overflow-hidden home-page' : 'relative pb-24 overflow-hidden '} >
       <div className="flex flex-col items-center max-w-2xl w-full mx-auto">
         {children}
       </div>

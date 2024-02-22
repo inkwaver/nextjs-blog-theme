@@ -10,9 +10,10 @@ import SEO from '../components/SEO';
 
 export default function Index({ posts, allPosts, developmentPosts, designPosts, globalData }) {
   return (
+
     <Layout>
+    <Header name={globalData.name} />
       <SEO title={globalData.name} description={globalData.blogTitle} />
-      <Header name={globalData.name} />
       <main className="w-full">
         <h1 className="text-3xl lg:text-5xl text-center mb-12">
           {globalData.blogTitle}
@@ -76,7 +77,6 @@ export default function Index({ posts, allPosts, developmentPosts, designPosts, 
           ))}
         </ul>
       </main>
-      <Footer copyrightText={globalData.footerText} />
       <GradientBackground
         variant="large"
         className="fixed top-20 opacity-40 dark:opacity-60"
@@ -85,7 +85,10 @@ export default function Index({ posts, allPosts, developmentPosts, designPosts, 
         variant="small"
         className="absolute bottom-0 opacity-20 dark:opacity-10"
       />
+    <Footer copyrightText={globalData.footerText} />
+
     </Layout>
+
   );
 }
 
