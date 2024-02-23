@@ -1,9 +1,10 @@
+@import url(./header.css);
+@import url(./hero.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
-@import url(./header.css);
-@import url(./hero.css);
+
 
 :root {
   --wrapper-main : 81rem;
