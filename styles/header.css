@@ -1,0 +1,31 @@
+header.main {
+    padding: 1rem;
+
+    &,
+    nav,
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: auto;
+        display: flex;
+       
+        a {
+            display: inline-flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1rem;
+        padding-right: 3rem;
+    }
+}

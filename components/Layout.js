@@ -58,7 +58,7 @@ export default function Layout({ children }) {
 
   return (
     <div className={isActiveLink('/') ? 'relative pb-24 overflow-hidden home-page' : 'relative pb-24 overflow-hidden '} >
-      <div className="flex flex-col items-center max-w-2xl w-full mx-auto">
+      <div className="flex flex-col items-center wrapper-main w-full mx-auto">
         {children}
       </div>
     </div>

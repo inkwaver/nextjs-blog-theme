@@ -2,154 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+@import url(./header.css);
 
-
-/* :root[data-theme="light"] {
-  --text: hsl(300, 92%, 5%);
-  --background: hsl(294, 100%, 98%);
-  --primary: hsl(198, 95%, 52%);
-  --secondary: hsl(56, 91%, 53%);
-  --accent: hsl(211, 44%, 33%);
+:root {
+  --wrapper-main : 81rem;
+  --wrapper-sec : 60rem;
 }
-:root[data-theme="dark"] {
-  --text: hsl(300, 92%, 95%);
-  --background: hsl(294, 100%, 2%);
-  --primary: hsl(198, 95%, 48%);
-  --secondary: hsl(56, 91%, 47%);
-  --accent: hsl(211, 44%, 67%);
-} */
 
 .active {
   /* Your active link styles go here */
   color: #ff0000; /* Change the color as per your design */
   font-weight: bold;
-}
-
-
-
-:root[data-theme="light"] {
-  --text-50: hsl(300, 92%, 95%);
-  --text-100: hsl(300, 92%, 90%);
-  --text-200: hsl(300, 92%, 80%);
-  --text-300: hsl(300, 92%, 70%);
-  --text-400: hsl(300, 92%, 60%);
-  --text-500: hsl(300, 92%, 50%);
-  --text-600: hsl(300, 92%, 40%);
-  --text-700: hsl(300, 92%, 30%);
-  --text-800: hsl(300, 92%, 20%);
-  --text-900: hsl(300, 92%, 10%);
-  --text-950: hsl(300, 92%, 5%);
-
-  --background-50: hsl(293, 100%, 95%);
-  --background-100: hsl(294, 100%, 90%);
-  --background-200: hsl(294, 100%, 80%);
-  --background-300: hsl(294, 100%, 70%);
-  --background-400: hsl(294, 100%, 60%);
-  --background-500: hsl(294, 100%, 50%);
-  --background-600: hsl(294, 100%, 40%);
-  --background-700: hsl(294, 100%, 30%);
-  --background-800: hsl(294, 100%, 20%);
-  --background-900: hsl(294, 100%, 10%);
-  --background-950: hsl(293, 100%, 5%);
-
-  --primary-50: hsl(198, 92%, 95%);
-  --primary-100: hsl(198, 96%, 90%);
-  --primary-200: hsl(198, 94%, 80%);
-  --primary-300: hsl(198, 95%, 70%);
-  --primary-400: hsl(198, 95%, 60%);
-  --primary-500: hsl(198, 95%, 50%);
-  --primary-600: hsl(198, 95%, 40%);
-  --primary-700: hsl(198, 95%, 30%);
-  --primary-800: hsl(198, 94%, 20%);
-  --primary-900: hsl(198, 96%, 10%);
-  --primary-950: hsl(197, 92%, 5%);
-
-  --secondary-50: hsl(55, 92%, 95%);
-  --secondary-100: hsl(56, 92%, 90%);
-  --secondary-200: hsl(56, 90%, 80%);
-  --secondary-300: hsl(56, 91%, 70%);
-  --secondary-400: hsl(56, 91%, 60%);
-  --secondary-500: hsl(56, 91%, 50%);
-  --secondary-600: hsl(56, 91%, 40%);
-  --secondary-700: hsl(56, 91%, 30%);
-  --secondary-800: hsl(56, 90%, 20%);
-  --secondary-900: hsl(56, 92%, 10%);
-  --secondary-950: hsl(57, 92%, 5%);
-
-  --accent-50: hsl(213, 44%, 95%);
-  --accent-100: hsl(211, 45%, 90%);
-  --accent-200: hsl(211, 43%, 80%);
-  --accent-300: hsl(211, 44%, 70%);
-  --accent-400: hsl(211, 44%, 60%);
-  --accent-500: hsl(211, 44%, 50%);
-  --accent-600: hsl(211, 44%, 40%);
-  --accent-700: hsl(211, 44%, 30%);
-  --accent-800: hsl(211, 43%, 20%);
-  --accent-900: hsl(211, 45%, 10%);
-  --accent-950: hsl(207, 44%, 5%);
-
-}
-:root[data-theme="dark"] {
-  --text-50: hsl(300, 92%, 5%);
-  --text-100: hsl(300, 92%, 10%);
-  --text-200: hsl(300, 92%, 20%);
-  --text-300: hsl(300, 92%, 30%);
-  --text-400: hsl(300, 92%, 40%);
-  --text-500: hsl(300, 92%, 50%);
-  --text-600: hsl(300, 92%, 60%);
-  --text-700: hsl(300, 92%, 70%);
-  --text-800: hsl(300, 92%, 80%);
-  --text-900: hsl(300, 92%, 90%);
-  --text-950: hsl(300, 92%, 95%);
-
-  --background-50: hsl(293, 100%, 5%);
-  --background-100: hsl(294, 100%, 10%);
-  --background-200: hsl(294, 100%, 20%);
-  --background-300: hsl(294, 100%, 30%);
-  --background-400: hsl(294, 100%, 40%);
-  --background-500: hsl(294, 100%, 50%);
-  --background-600: hsl(294, 100%, 60%);
-  --background-700: hsl(294, 100%, 70%);
-  --background-800: hsl(294, 100%, 80%);
-  --background-900: hsl(294, 100%, 90%);
-  --background-950: hsl(293, 100%, 95%);
-
-  --primary-50: hsl(197, 92%, 5%);
-  --primary-100: hsl(198, 96%, 10%);
-  --primary-200: hsl(198, 94%, 20%);
-  --primary-300: hsl(198, 95%, 30%);
-  --primary-400: hsl(198, 95%, 40%);
-  --primary-500: hsl(198, 95%, 50%);
-  --primary-600: hsl(198, 95%, 60%);
-  --primary-700: hsl(198, 95%, 70%);
-  --primary-800: hsl(198, 94%, 80%);
-  --primary-900: hsl(198, 96%, 90%);
-  --primary-950: hsl(198, 92%, 95%);
-
-  --secondary-50: hsl(57, 92%, 5%);
-  --secondary-100: hsl(56, 92%, 10%);
-  --secondary-200: hsl(56, 90%, 20%);
-  --secondary-300: hsl(56, 91%, 30%);
-  --secondary-400: hsl(56, 91%, 40%);
-  --secondary-500: hsl(56, 91%, 50%);
-  --secondary-600: hsl(56, 91%, 60%);
-  --secondary-700: hsl(56, 91%, 70%);
-  --secondary-800: hsl(56, 90%, 80%);
-  --secondary-900: hsl(56, 92%, 90%);
-  --secondary-950: hsl(55, 92%, 95%);
-
-  --accent-50: hsl(207, 44%, 5%);
-  --accent-100: hsl(211, 45%, 10%);
-  --accent-200: hsl(211, 43%, 20%);
-  --accent-300: hsl(211, 44%, 30%);
-  --accent-400: hsl(211, 44%, 40%);
-  --accent-500: hsl(211, 44%, 50%);
-  --accent-600: hsl(211, 44%, 60%);
-  --accent-700: hsl(211, 44%, 70%);
-  --accent-800: hsl(211, 43%, 80%);
-  --accent-900: hsl(211, 45%, 90%);
-  --accent-950: hsl(213, 44%, 95%);
-
 }
 
 
@@ -163,8 +26,17 @@ h6 {
   font-family: var(--font-primary);
 }
 
+.wrapper-main {
+  max-width: var(--wrapper-main);
+  width: 100%;
+}
+.wrapper-sec {
+  max-width: var(--wrapper-sec);
+  width: 100%;
+}
 body {
   font-family: var(--font-secondary);
+  font-size: 15px;
 }
 .avatar {
   border-radius: 50%;
