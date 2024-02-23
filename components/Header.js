@@ -14,6 +14,7 @@ export default function Header({ name, }) {
 
   return (
     <header className="main">
+      <div className='main-inner wrapper-main'>
       <nav>
         <ul>
           <li className='logo'>
@@ -49,6 +50,8 @@ export default function Header({ name, }) {
         </ul>
       </nav>
       <ThemeSwitcher />
+      </div>
+    
 
     </header>
   );

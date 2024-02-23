@@ -3,6 +3,7 @@
 @tailwind utilities;
 @tailwind variants;
 @import url(./header.css);
+@import url(./hero.css);
 
 :root {
   --wrapper-main : 81rem;
@@ -29,6 +30,7 @@ h6 {
 .wrapper-main {
   max-width: var(--wrapper-main);
   width: 100%;
+  margin: 0 auto 0;
 }
 .wrapper-sec {
   max-width: var(--wrapper-sec);
