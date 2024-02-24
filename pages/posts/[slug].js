@@ -4,6 +4,7 @@ import {
   getPostBySlug,
   getPreviousPostBySlug,
   postFilePaths,
+  getPosts, // Ensure this function is correctly implemented to fetch posts based on tags or other criteria
 } from '../../utils/mdx-utils';
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
@@ -17,15 +18,8 @@ import Sidebar from '../../components/Sidebar';
 import Layout, { GradientBackground } from '../../components/Layout';
 import SEO from '../../components/SEO';
 
-// Custom components/renderers to pass to MDX.
-// Since the MDX files aren't loaded by webpack, they have no knowledge of how
-// to handle import statements. Instead, you must include components in scope
-// here.
 const components = {
   a: CustomLink,
-  // It also works with dynamically-imported components, which is especially
-  // useful for conditionally loading components for certain routes.
-  // See the notes in README.md for more details.
   Head,
 };
 
@@ -35,7 +29,9 @@ export default function PostPage({
   prevPost,
   nextPost,
   globalData,
-  thumbnail, // Receive thumbnail from props
+  thumbnail,
+  designPosts, // Add designPosts here
+  developmentPosts, // Add developmentPosts here
 }) {
   return (
     <Layout>
@@ -44,22 +40,18 @@ export default function PostPage({
         description={frontMatter.description}
       />
       <Header name={globalData.name} />
-      <Sidebar></Sidebar>
+      <Sidebar designPosts={designPosts} developmentPosts={developmentPosts} /> {/* Pass both designPosts and developmentPosts to Sidebar */}
       <article className="px-6 md:px-0 main">
-      <header>
-          {/* Conditionally render thumbnail */}
+        <header>
           {thumbnail && (
-          
             <Image
-            src={thumbnail}
-            className="w-full h-auto mb-6"
-            alt={`${frontMatter.title} Thumbnail`}
-            width={672}
-            height={350}
-            loading="lazy"
-            // layout='fill'
-            // objectFit="cover"
-          />
+              src={thumbnail}
+              className="w-full h-auto mb-6"
+              alt={`${frontMatter.title} Thumbnail`}
+              width={672}
+              height={350}
+              loading="lazy"
+            />
           )}
           <h1 className="text-3xl md:text-5xl dark:text-white text-center mb-12">
             {frontMatter.title}
@@ -76,7 +68,7 @@ export default function PostPage({
         <div className="grid md:grid-cols-2  mt-12">
           {prevPost && (
             <Link href={`/posts/${prevPost.slug}`}>
-              <a className="py-8 px-10 text-center md:text-right first:rounded-t-lg md:first:rounded-tr-none md:first:rounded-l-lg last:rounded-r-lg first last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 last:border-t md:border-r-0 md:last:border-r md:last:rounded-r-none flex flex-col">
+              <a className="py-8 px-10 text-center md:text-right first:rounded-t-lg md:first:rounded-tr-none md:first:rounded-l-lg last:rounded-r-lg first last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 border-t-0 first:border-t first:rounded-t-lg md:border-t border-b-0 last:border-b flex flex-col">
                 <p className="uppercase text-gray-500 mb-4 dark:text-white dark:opacity-60">
                   Previous
                 </p>
@@ -118,7 +110,11 @@ export default function PostPage({
 export const getStaticProps = async ({ params }) => {
   const globalData = getGlobalData();
   const { mdxSource, data } = await getPostBySlug(params.slug);
-  
+   
+  // Fetch designPosts and developmentPosts
+  const designPosts = getPosts('design'); // Adjust this line as necessary
+  const developmentPosts = getPosts('development'); // Adjust this line as necessary
+
   // Pass tag parameter if available
   const tag = data.tags && data.tags[0];
   const prevPost = getPreviousPostBySlug(params.slug, tag);
@@ -134,16 +130,16 @@ export const getStaticProps = async ({ params }) => {
       frontMatter: data,
       prevPost,
       nextPost,
-      thumbnail, // Include thumbnail information
+      thumbnail,
+      designPosts, // Pass designPosts here
+      developmentPosts, // Pass developmentPosts here
     },
   };
 };
 
 export const getStaticPaths = async () => {
   const paths = postFilePaths()
-    // Remove file extensions for page paths
     .map((path) => path.replace(/\.mdx?$/, ''))
-    // Map the path into the static paths object required by Next.js
     .map((slug) => ({ params: { slug } }));
 
   return {
