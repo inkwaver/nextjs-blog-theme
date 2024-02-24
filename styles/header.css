@@ -3,6 +3,7 @@ header.main {
     width: 100%;
     /* position: fixed; */
     z-index: 12;
+
     /* background-color: rgba(255,255,255,.1); */
     &,
     .main-inner,
@@ -31,5 +32,67 @@ header.main {
         display: flex;
         gap: 1rem;
         padding-right: 3rem;
+    }
+
+}
+
+.home-page {
+    header.main {
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+        left: 0;
+        top: 0;
+        .main-inner {
+            justify-content: start;
+        }
+        .header-description {
+            display: flex;
+            flex-direction: column;
+            margin-left: 4.5rem;
+            a{
+                display: block;
+            }
+        }
+        .header-description p {
+            margin-top:3rem;
+            transition: all ease-in .1s;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            width: 40rem;
+            left: 24rem;
+        }
+
+        &.sticked {
+            transition: all ease-in .1s;
+            height: 45px;
+            .header-description {
+                width: 100%;
+                margin-left: 1rem;
+                flex-direction: row;
+                align-items: center;
+               justify-content: space-between;
+            }
+            .header-description p {
+                 transition: all ease-in .1s;
+                transform: translate(-100vh, -100vw);
+            }
+        }
+
+
+
+        .logo {
+            margin-right: unset;
+        }
+
+        .main-inner {
+            /* display: flex;
+            flex-direction: column; */
+        }
+    }
+
+    main.main {
+        margin-top: 100vh;
     }
 }

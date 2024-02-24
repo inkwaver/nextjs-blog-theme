@@ -20,26 +20,7 @@ export default function Index({ posts, allPosts, developmentPosts, designPosts, 
         {/* <h1 className="text-3xl lg:text-5xl text-center mb-12">
           {globalData.blogTitle}
         </h1> */}
-        <section className='hero'>
-          <div className='hero-avatar'>
-            <Image
-              src="/avatar-nch.png"
-              width={225}
-              height={225}
-              alt="Image description"
-            />
-          </div>
-
-          <div className='hero-intro'>
-            <h2>
-              Hi, I am John, <br />
-              Creative Technologist
-            </h2>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-          </div>
-
-
-        </section>
+     
         <h2>Developemt posts</h2>
         <ul className="w-full">
           {developmentPosts.map((post) => (
