@@ -57,7 +57,7 @@ export default function Layout({ children }) {
   }, []);
 
   return (
-    <div className={isActiveLink('/') ? 'relative pb-24 overflow-hidden home-page' : 'relative pb-24 overflow-hidden '} >
+    <div className={isActiveLink('/') ? 'relative pb-24 overflow-hidden home-page ruller-vert' : 'relative pb-24 overflow-hidden ruller-vert'} >
       <div className="wrapper-main site-structure">
         {children}
       </div>

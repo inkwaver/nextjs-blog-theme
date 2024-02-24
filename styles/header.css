@@ -57,7 +57,7 @@ header.main {
         }
         .header-description p {
             margin-top:3rem;
-            transition: all ease-in .1s;
+            /* transition: all ease-in .1s; */
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -75,7 +75,7 @@ header.main {
                justify-content: space-between;
             }
             .header-description p {
-                 transition: all ease-in .1s;
+                 /* transition: all ease-in .1s; */
                 transform: translate(-100vh, -100vw);
             }
         }

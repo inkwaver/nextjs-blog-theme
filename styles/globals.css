@@ -85,3 +85,16 @@ aside.main {
 footer.main {
   grid-area: footer;
 }
+
+.ruller-vert {
+  background-image: url("/ruler-horizon.png");
+  background-repeat: repeat-y;
+  background-size: 1rem 3rem;
+}
+header.main {
+  background-image: url("/ruler-vertical.png");
+  background-repeat: repeat-x;
+  background-size: 3rem 1rem;
+
+
+}
