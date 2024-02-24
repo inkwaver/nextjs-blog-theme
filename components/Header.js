@@ -13,22 +13,29 @@ export default function Header({ name }) {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-
-      // Decrease avatar size gradually as user scrolls
-      const newAvatarSize = Math.max(45, 240 - scrollPosition);
-      setAvatarSize(newAvatarSize);
-    };
-
-    // Attach scroll event listener
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []); // Empty dependency array ensures the effect runs only once on mount
+    // Apply the avatar size change and scroll effect only on the home page
+    if (router.pathname === '/') {
+      const handleScroll = () => {
+        const scrollPosition = window.scrollY;
+  
+        // Decrease avatar size gradually as user scrolls
+        const newAvatarSize = Math.max(45, 240 - scrollPosition);
+        setAvatarSize(newAvatarSize);
+      };
+  
+      // Attach scroll event listener
+      window.addEventListener('scroll', handleScroll);
+  
+      // Cleanup on component unmount
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    } else {
+      // On other pages, set a fixed avatar size and add the 'sticked' class
+      setAvatarSize(45);
+    }
+  }, [router.pathname]); // Listen for changes in the route
+  
 
   return (
     <header className={`main ${avatarSize <= 45 ? 'sticked' : ''}`}>

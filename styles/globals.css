@@ -57,13 +57,15 @@ body {
 }
 header.main{
   grid-area: header;
-
+  z-index: 11;
 }
 main.main, article.main{
   grid-area: content;
 }
 aside.main {
   grid-area: sidebar;
+  position: relative;
+  z-index: 12;
 }
 
 footer.main {

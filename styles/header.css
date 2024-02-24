@@ -3,7 +3,9 @@ header.main {
     width: 100%;
     /* position: fixed; */
     z-index: 12;
-
+    position: fixed;
+    left: 0;
+    top: 0;
     /* background-color: rgba(255,255,255,.1); */
     &,
     .main-inner,
@@ -40,9 +42,7 @@ header.main {
     header.main {
         height: 100vh;
         overflow: hidden;
-        position: fixed;
-        left: 0;
-        top: 0;
+      
         .main-inner {
             justify-content: start;
         }
