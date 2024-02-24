@@ -59,6 +59,9 @@ header.main{
   grid-area: header;
 
 }
+main.main, article.main{
+  grid-area: content;
+}
 aside.main {
   grid-area: sidebar;
 }

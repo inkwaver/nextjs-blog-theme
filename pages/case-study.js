@@ -15,7 +15,7 @@ export default function CaseStudy({ posts, globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} />
       <Sidebar></Sidebar>
-      <main className="w-full wrapper-sec">
+      <main className="w-full wrapper-sec main">
         <h1 className="text-3xl lg:text-5xl text-center mb-12">
           {globalData.blogTitle}
         </h1>

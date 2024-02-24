@@ -16,7 +16,7 @@ export default function Index({ posts, allPosts, developmentPosts, designPosts, 
       <Header name={globalData.name} />
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Sidebar></Sidebar>
-      <main className="w-full wrapper-sec">
+      <main className="w-full wrapper-sec main">
         {/* <h1 className="text-3xl lg:text-5xl text-center mb-12">
           {globalData.blogTitle}
         </h1> */}

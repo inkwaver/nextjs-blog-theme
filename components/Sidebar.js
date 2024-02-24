@@ -12,8 +12,7 @@ export default function Sidebar({ name }) {
   };
 
   return (
-    <aside className="main backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity bg-opacity-10">
-      <div className='main-inner wrapper-main'>
+    <aside className="main">
       <ThemeSwitcher />
 
       <nav>
@@ -38,7 +37,6 @@ export default function Sidebar({ name }) {
           </li>
         </ul>
       </nav>
-      </div>
     
 
     </aside>
