@@ -13,6 +13,7 @@ import ArrowIcon from '../../components/ArrowIcon';
 import CustomLink from '../../components/CustomLink';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import Sidebar from '../../components/Sidebar';
 import Layout, { GradientBackground } from '../../components/Layout';
 import SEO from '../../components/SEO';
 
@@ -43,6 +44,7 @@ export default function PostPage({
         description={frontMatter.description}
       />
       <Header name={globalData.name} />
+      <Sidebar></Sidebar>
       <article className="px-6 md:px-0">
       <header>
           {/* Conditionally render thumbnail */}

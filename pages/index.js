@@ -3,6 +3,7 @@ import { getPosts } from '../utils/mdx-utils';
 import Image from 'next/image';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
 import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
@@ -14,6 +15,7 @@ export default function Index({ posts, allPosts, developmentPosts, designPosts, 
     <Layout>
       <Header name={globalData.name} />
       <SEO title={globalData.name} description={globalData.blogTitle} />
+      <Sidebar></Sidebar>
       <main className="w-full wrapper-sec">
         {/* <h1 className="text-3xl lg:text-5xl text-center mb-12">
           {globalData.blogTitle}

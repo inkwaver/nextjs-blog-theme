@@ -37,6 +37,7 @@ h6 {
   max-width: var(--wrapper-sec);
   width: 100%;
 }
+
 body {
   font-family: var(--font-secondary);
   font-size: 15px;
@@ -45,4 +46,23 @@ body {
   border-radius: 50%;
   border: .1rem solid white !important;
   background: rgba(0,0,0,.3);
+}
+
+.site-structure {
+  display: grid;
+  grid-template:
+  "header header sidebar"
+  "content content sidebar"
+  "footer footer sidebar";
+}
+header.main{
+  grid-area: header;
+
+}
+aside.main {
+  grid-area: sidebar;
+}
+
+footer.main {
+  grid-area: footer;
 }

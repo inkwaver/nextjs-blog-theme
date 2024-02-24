@@ -3,6 +3,7 @@ import { getPosts } from '../utils/mdx-utils';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
 import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
@@ -13,6 +14,7 @@ export default function CaseStudy({ posts, globalData }) {
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} />
+      <Sidebar></Sidebar>
       <main className="w-full wrapper-sec">
         <h1 className="text-3xl lg:text-5xl text-center mb-12">
           {globalData.blogTitle}
