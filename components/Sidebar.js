@@ -1,12 +1,12 @@
+// Sidebar.js
+import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import ThemeSwitcher from './ThemeSwitcher.js';
 import Links from './Links';
-
-export default function Sidebar({ designPosts }) {
+import { useRouter } from 'next/router';  // Import the useRouter hook
+const Sidebar = ({ designPosts }) => {
     const router = useRouter();
 
-    // Function to determine if a link is active
     const isActiveLink = (href) => {
         return router.pathname === href || router.asPath === href;
     };
@@ -60,3 +60,5 @@ export default function Sidebar({ designPosts }) {
         </aside>
     );
 }
+
+export default Sidebar;
