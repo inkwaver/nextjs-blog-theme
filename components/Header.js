@@ -38,7 +38,7 @@ export default function Header() {
   
 
   return (
-    <header className={`main ${avatarSize <= 45 ? 'sticked' : ''}`}>
+    <header className={`main ${avatarSize <= 45 ? 'sticked' : 'hero-header'}`}>
       <div className='main-inner wrapper-main'>
         <h1 className='logo'>
           <Link href="/">

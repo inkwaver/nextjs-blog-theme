@@ -29,6 +29,7 @@ header.main {
             align-items: center;
             gap: 1rem;
         }
+      
     }
 
     nav ul {
@@ -40,7 +41,8 @@ header.main {
 
 }
 
-header.main.sticked, header.main{
+header.main.sticked,
+header.main {
     .main-inner {
         justify-content: unset;
     }
@@ -57,10 +59,19 @@ header.main.sticked, header.main{
         display: flex;
         margin-top: 0;
 
-        a.cv-btn{
+        a.cv-btn {
             margin-right: 26vw;
             font-size: 1rem;
+            border: .1rem solid;
+            display: inline-block;
+            width: auto;
+            /* margin-right: auto; */
+            padding: 0 1rem;
+            border-radius: 1rem;
+            
+            margin-top: .5rem;
         }
+
         a.logo-name {
             font-size: 1.2rem;
         }
@@ -88,11 +99,13 @@ header.main.sticked, header.main{
                 display: block;
                 color: unset;
                 font-size: 2.4rem;
+                font-weight: 200;
+                margin-bottom: .5rem;
             }
         }
 
         .header-description p {
-            margin-top: 5rem;
+            margin-top: 6.3rem;
             /* transition: all ease-in .1s; */
             display: flex;
             flex-direction: column;
@@ -112,6 +125,7 @@ header.main.sticked, header.main{
                 align-items: center;
                 justify-content: space-between;
                 margin-top: 0;
+
                 a.logo-name {
                     display: block;
                     color: unset;
@@ -141,6 +155,16 @@ header.main.sticked, header.main{
         margin-top: 100vh;
     }
 }
+
+.hero-header {
+    .header-description {
+        a.cv-btn {
+            margin-right: auto !important;
+            background-color: rgb(125, 122, 255);
+        }
+    }
+}
+
 
 .ruller-vert:not(.home-page) header.main .header-description p {
     display: none;
