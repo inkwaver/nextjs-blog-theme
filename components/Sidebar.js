@@ -19,10 +19,8 @@ const Sidebar = ({ designPosts }) => {
                 <nav>
                     <ul>
                         <li>
-                            <Link href="/dev-projects">
-                                <a className={isActiveLink('/dev-projects') ? 'active' : ''}>Developemnt</a>
-                            </Link>
-                            <ul>
+                            <h3>Development</h3>
+                            <ul className='sub-menu'>
                                 <li>
                                     <Link href="/dev-projects">
                                         <a className={isActiveLink('/dev-projects') ? 'active' : ''}>Dev Projects</a>
@@ -31,36 +29,32 @@ const Sidebar = ({ designPosts }) => {
                             </ul>
                         </li>
                         <li>
-                            <Link href="#design">
-                                <a className={isActiveLink('#design') ? 'active' : ''}>Design</a>
-                            </Link>
-                            <ul>
+                            <h3>Design</h3>
+                            <ul className='sub-menu'>
                                 <li>
                                     <Link href="/case-study">
                                         <a className={isActiveLink('/case-study') ? 'active' : ''}>Case-Study</a>
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link href="#articles">
-                                        <a className={isActiveLink('#articles') ? 'active' : ''}>Articles</a>
-                                    </Link>
-                                    <ul className='articles'>
-                                        {designPosts.map((post) => (
-                                            <li key={post.filePath}>
-                                                <Link href={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}>
-                                                    <a className={`block py-2 px-3 text-sm hover:underline ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
-                                                        <span className="block text-gray-600 dark:text-gray-400">{post.data.date}</span>
-                                                        <span className="block font-semibold">{post.data.title}</span>
-                                                    </a>
-                                                </Link>
-                                                <Links links={post.data.links} />
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </li>
+
                             </ul>
                         </li>
-
+                        <li>
+                            <h3>Articles</h3>
+                            <ul className='articles'>
+                                {designPosts.map((post) => (
+                                    <li key={post.filePath}>
+                                        <Link href={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}>
+                                            <a className={`block py-2 px-3 text-sm hover:underline ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
+                                                <span className="block text-gray-600 dark:text-gray-400">{post.data.date}</span>
+                                                <span className="block font-semibold">{post.data.title}</span>
+                                            </a>
+                                        </Link>
+                                        <Links links={post.data.links} />
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
 
                     </ul>
                 </nav>

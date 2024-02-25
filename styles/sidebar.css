@@ -8,17 +8,33 @@ aside.main {
       justify-content: center;
       position: fixed;
       height: 100vh;
-  
-      &>div {
+        right: 0;
+      & > div {
         margin-bottom: auto;
       }
   
       & > nav {
         margin-bottom: auto;
-        padding-left: 1rem;
         border-left: .1rem solid;
-  
-  
       }
+    }
+  }
+
+  .sideabar-inner > nav{
+    > ul{
+        > li > h3 {
+            margin-left: 1rem;
+        }
+    }
+    .sub-menu > li > a{
+        padding-left: 2rem;
+    } 
+    ul.articles > li > a{
+        padding-left: 3rem;
+        padding-right: 1rem;
+    }
+    ul.content-links > li > a {
+        padding-left: 3.5rem;
+        font-size: .9rem;
     }
   }

@@ -58,7 +58,7 @@ body {
     "header header sidebar"
     "content content sidebar"
     "footer footer sidebar";
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 1.2fr;
 }
 
 header.main {

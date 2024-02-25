@@ -17,11 +17,12 @@ export default function DevProjects({ posts, globalData, designPosts }) {
       <Sidebar name={globalData.name} designPosts={designPosts}></Sidebar>
 
       <main className="w-full wrapper-sec main">
+      <article className='single'>
         <h1 className="text-3xl lg:text-5xl text-center mb-12">
           {globalData.blogTitle}
         </h1>
        <div>hello projects</div>
-       
+       </article>
       </main>
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground
