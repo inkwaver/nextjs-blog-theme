@@ -56,7 +56,7 @@ export default function Header({ name }) {
         </h1>
         <div className='header-description'>
         <Link href="/">
-            <a className={isActiveLink('/') ? 'active' : ''}>
+            <a  className="logo-name">
             Narek Chilingaryan
             </a>
           </Link>
