@@ -1,6 +1,7 @@
 @import url(./header.css);
 @import url(./hero.css);
 @import url(./sidebar.css);
+@import url(./responsive.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -122,4 +123,27 @@ article.single {
     position: sticky;
     top: 3rem;
   } */
+}
+
+@media screen and (max-width: 942px) {
+   
+header.main.hero-header{
+  position: relative;
+ 
+}
+header.main.hero-header .main-inner {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      align-items: center !important;
+      justify-content: center;
+      .header-description a.cv-btn{
+        margin-right: 0 !important;
+
+      }
+  }
+  .home-page header.main .header-description {
+    margin-top: 1rem;
+    align-items: center;
+ 
+  }
 }
