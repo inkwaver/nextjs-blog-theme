@@ -1,5 +1,6 @@
 @import url(./header.css);
 @import url(./hero.css);
+@import url(./sidebar.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,13 +8,14 @@
 
 
 :root {
-  --wrapper-main : 81rem;
-  --wrapper-sec : 60rem;
+  --wrapper-main: 81rem;
+  --wrapper-sec: 60rem;
 }
 
 .active {
   /* Your active link styles go here */
-  color: #ff0000; /* Change the color as per your design */
+  color: #ff0000;
+  /* Change the color as per your design */
   font-weight: bold;
 }
 
@@ -33,6 +35,7 @@ h6 {
   width: 100%;
   margin: 0 auto 0;
 }
+
 .wrapper-sec {
   max-width: var(--wrapper-sec);
   width: 100%;
@@ -42,44 +45,35 @@ body {
   font-family: var(--font-secondary);
   font-size: 15px;
 }
+
 .avatar {
   border-radius: 50%;
   border: .1rem solid white !important;
-  background: rgba(0,0,0,.3);
+  background: rgba(0, 0, 0, .3);
 }
 
 .site-structure {
   display: grid;
   grid-template:
-  "header header sidebar"
-  "content content sidebar"
-  "footer footer sidebar";
+    "header header sidebar"
+    "content content sidebar"
+    "footer footer sidebar";
   grid-template-columns: 1fr 2fr 1fr;
 }
-header.main{
+
+header.main {
   grid-area: header;
   z-index: 11;
 }
-main.main, article.main{
+
+main.main,
+article.main {
   grid-area: content;
 }
+
 aside.main {
   grid-area: sidebar;
-  position: relative;
-  z-index: 12;
-  .sideabar-inner{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: fixed;
-    height: 100vh;
-    & > div {
-      margin-bottom: auto;
-    }
-    & > nav {
-      margin-bottom: auto;
-    } 
-  }
+
 }
 
 footer.main {
@@ -91,6 +85,7 @@ footer.main {
   background-repeat: repeat-y;
   background-size: 1rem 3rem;
 }
+
 header.main {
   background-image: url("/ruler-vertical.png");
   background-repeat: repeat-x;
@@ -103,7 +98,8 @@ ul.articles {
   .content-links {
     display: none;
   }
-  > li > a.active + .content-links {
+
+  >li>a.active+.content-links {
     display: block;
   }
 
@@ -111,6 +107,7 @@ ul.articles {
     color: blue;
   }
 }
-article.single{
+
+article.single {
   margin-top: 14rem;
 }

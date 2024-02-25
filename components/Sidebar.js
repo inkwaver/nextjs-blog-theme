@@ -19,6 +19,18 @@ const Sidebar = ({ designPosts }) => {
                 <nav>
                     <ul>
                         <li>
+                            <Link href="/dev-projects">
+                                <a className={isActiveLink('/dev-projects') ? 'active' : ''}>Developemnt</a>
+                            </Link>
+                            <ul>
+                                <li>
+                                    <Link href="/dev-projects">
+                                        <a className={isActiveLink('/dev-projects') ? 'active' : ''}>Dev Projects</a>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
                             <Link href="#design">
                                 <a className={isActiveLink('#design') ? 'active' : ''}>Design</a>
                             </Link>
@@ -49,11 +61,7 @@ const Sidebar = ({ designPosts }) => {
                             </ul>
                         </li>
 
-                        <li>
-                            <Link href="/dev-projects">
-                                <a className={isActiveLink('/dev-projects') ? 'active' : ''}>Dev Projects</a>
-                            </Link>
-                        </li>
+
                     </ul>
                 </nav>
             </div>

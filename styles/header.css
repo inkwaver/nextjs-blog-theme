@@ -6,6 +6,7 @@ header.main {
     position: fixed;
     left: 0;
     top: 0;
+
     /* background-color: rgba(255,255,255,.1); */
     &,
     .main-inner,
@@ -36,48 +37,90 @@ header.main {
         padding-right: 3rem;
     }
 
+
 }
 
+header.main.sticked, header.main{
+    .main-inner {
+        justify-content: unset;
+    }
+
+    .logo {
+        margin-right: unset;
+        margin-left: 2.2rem;
+    }
+
+    .header-description {
+        margin-left: 1rem;
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        margin-top: 0;
+
+        a.cv-btn{
+            margin-right: 26vw;
+            font-size: 1rem;
+        }
+        a.logo-name {
+            font-size: 1.2rem;
+        }
+    }
+}
 
 
 .home-page {
     header.main {
         height: 100vh;
         overflow: hidden;
-      
+
         .main-inner {
             justify-content: start;
         }
+
         .header-description {
             display: flex;
             flex-direction: column;
             margin-left: 4.5rem;
             position: relative;
-            a{
+            margin-top: -7rem;
+
+            a.logo-name {
                 display: block;
+                color: unset;
+                font-size: 2.4rem;
             }
         }
+
         .header-description p {
-            margin-top:3rem;
+            margin-top: 5rem;
             /* transition: all ease-in .1s; */
             display: flex;
             flex-direction: column;
             position: absolute;
-            width: 40rem;
+            max-width: 35rem;
+            width: 40vw;
         }
 
         &.sticked {
             transition: all ease-in .1s;
             height: 45px;
+
             .header-description {
                 width: 100%;
                 margin-left: 1rem;
                 flex-direction: row;
                 align-items: center;
-               justify-content: space-between;
+                justify-content: space-between;
+                margin-top: 0;
+                a.logo-name {
+                    display: block;
+                    color: unset;
+                    font-size: 1.2rem;
+                }
             }
+
             .header-description p {
-                 /* transition: all ease-in .1s; */
+                /* transition: all ease-in .1s; */
                 transform: translate(-100vh, -100vw);
             }
         }
