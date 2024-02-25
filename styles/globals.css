@@ -58,7 +58,8 @@ body {
     "header header sidebar"
     "content content sidebar"
     "footer footer sidebar";
-  grid-template-columns: 1fr 2fr 1.2fr;
+  grid-template-columns: 1fr 2fr minmax(19.6rem, 1.2fr);
+  /* grid-template-columns: 1fr 2fr 1.2fr; */
 }
 
 header.main {
@@ -109,5 +110,6 @@ ul.articles {
 }
 
 article.single {
-  margin-top: 14rem;
+  margin-top: 4rem;
+  padding: 0 3rem;
 }

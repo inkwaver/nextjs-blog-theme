@@ -18,7 +18,7 @@ export default function DevProjects({ posts, globalData, designPosts }) {
 
       <main className="w-full wrapper-sec main">
       <article className='single'>
-        <h1 className="text-3xl lg:text-5xl text-center mb-12">
+        <h1 className="text-3xl lg:text-5xl mb-12">
           {globalData.blogTitle}
         </h1>
        <div>hello projects</div>

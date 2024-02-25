@@ -53,7 +53,7 @@ export default function PostPage({
               loading="lazy"
             />
           )}
-          <h1 className="text-3xl md:text-5xl dark:text-white text-center mb-12">
+          <h1 className="text-3xl md:text-5xl dark:text-white  mb-12">
             {frontMatter.title}
           </h1>
           {frontMatter.description && (

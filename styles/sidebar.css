@@ -19,7 +19,7 @@ aside.main {
         justify-content: center;
         position: fixed;
         height: 100vh;
-        right: 0;
+        /* right: 0; */
 
         &>div {
             margin-bottom: auto;
