@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ThemeSwitcher from './ThemeSwitcher.js';
-import Links from './Links'; // Import the Links component
+import Links from './Links';
+
 export default function Sidebar({ designPosts }) {
     const router = useRouter();
 
     // Function to determine if a link is active
     const isActiveLink = (href) => {
-        return router.pathname === href;
+        return router.pathname === href || router.asPath === href;
     };
 
     return (
@@ -35,7 +36,7 @@ export default function Sidebar({ designPosts }) {
                                         {designPosts.map((post) => (
                                             <li key={post.filePath}>
                                                 <Link href={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}>
-                                                    <a className="block py-2 px-3 text-sm hover:underline">
+                                                    <a className={`block py-2 px-3 text-sm hover:underline ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
                                                         <span className="block text-gray-600 dark:text-gray-400">{post.data.date}</span>
                                                         <span className="block font-semibold">{post.data.title}</span>
                                                     </a>

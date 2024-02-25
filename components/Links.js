@@ -5,7 +5,7 @@ const Links = ({ links }) => {
     if (!links || links.length === 0) return null;
 
     return (
-        <ul className='content links'>
+        <ul className='content-links'>
             {links.map((link) => (
                 <li key={link.title}>
                     <a href={link.href}  rel="noopener noreferrer">
