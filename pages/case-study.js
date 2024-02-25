@@ -17,12 +17,14 @@ export default function CaseStudy({ posts, globalData, designPosts }) {
       <Sidebar name={globalData.name} designPosts={designPosts}></Sidebar>
       <main className="w-full wrapper-sec main">
         <article className='single'>
-        <h1 className="text-3xl lg:text-5xl  mb-12">
-          {globalData.blogTitle}
-        </h1>
-       <div>hello case study</div>
+          <header>
+            <h1 className="text-3xl lg:text-5xl  mb-12">
+              {globalData.blogTitle}
+            </h1>
+          </header>
+          <div>hello case study</div>
         </article>
-     
+
 
       </main>
       <Footer copyrightText={globalData.footerText} />

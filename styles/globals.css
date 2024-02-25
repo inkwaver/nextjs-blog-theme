@@ -112,4 +112,14 @@ ul.articles {
 article.single {
   margin-top: 4rem;
   padding: 0 3rem;
+  > header h1{
+    opacity: .4;
+    border-bottom: .1rem solid;
+    padding-bottom: 1rem;
+    font-size: 2.4rem;
+  }
+  /* > header {
+    position: sticky;
+    top: 3rem;
+  } */
 }

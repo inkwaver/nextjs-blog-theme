@@ -112,7 +112,7 @@ header.main {
             flex-direction: column;
             position: absolute;
             max-width: 35rem;
-            width: 40vw;
+            width: 36vw;
         }
 
         &.sticked {
