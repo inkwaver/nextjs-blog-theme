@@ -43,6 +43,7 @@ header.main {
 
 header.main.sticked,
 header.main {
+    height: 4.2rem;
     .main-inner {
         justify-content: unset;
     }
@@ -69,7 +70,7 @@ header.main {
             padding: 0 1rem;
             border-radius: 1rem;
             
-            margin-top: .5rem;
+            /* margin-top: .5rem; */
         }
 
         a.logo-name {
@@ -116,7 +117,7 @@ header.main {
 
         &.sticked {
             transition: all ease-in .1s;
-            height: 45px;
+            height: 4.2rem;
 
             .header-description {
                 width: 100%;
@@ -161,6 +162,7 @@ header.main {
         a.cv-btn {
             margin-right: auto !important;
             background-color: rgb(125, 122, 255);
+            margin-top: .5rem;
         }
     }
 }
