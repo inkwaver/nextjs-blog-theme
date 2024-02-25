@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ThemeSwitcher from './ThemeSwitcher.js';
-
+import Links from './Links'; // Import the Links component
 export default function Sidebar({ designPosts }) {
     const router = useRouter();
 
@@ -40,6 +40,7 @@ export default function Sidebar({ designPosts }) {
                                                         <span className="block font-semibold">{post.data.title}</span>
                                                     </a>
                                                 </Link>
+                                                <Links links={post.data.links} />
                                             </li>
                                         ))}
                                     </ul>
