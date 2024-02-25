@@ -38,6 +38,8 @@ header.main {
 
 }
 
+
+
 .home-page {
     header.main {
         height: 100vh;
@@ -95,4 +97,8 @@ header.main {
     main.main {
         margin-top: 100vh;
     }
+}
+
+.ruller-vert:not(.home-page) header.main .header-description p {
+    display: none;
 }

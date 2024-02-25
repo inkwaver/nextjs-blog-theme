@@ -9,18 +9,21 @@ import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
-export default function CaseStudy({ posts, globalData }) {
+export default function CaseStudy({ posts, globalData, designPosts }) {
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} />
-      <Sidebar></Sidebar>
+      <Sidebar name={globalData.name} designPosts={designPosts}></Sidebar>
       <main className="w-full wrapper-sec main">
+        <article className='single'>
         <h1 className="text-3xl lg:text-5xl text-center mb-12">
           {globalData.blogTitle}
         </h1>
        <div>hello case study</div>
-       
+        </article>
+     
+
       </main>
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground
@@ -36,8 +39,18 @@ export default function CaseStudy({ posts, globalData }) {
 }
 
 export function getStaticProps() {
-  const posts = getPosts();
+  const allPosts = getPosts(); // Get all posts
+  const developmentPosts = getPosts('development'); // Get posts with the 'development' tag
+  const designPosts = getPosts('design'); // Get posts with the 'design' tag
+
   const globalData = getGlobalData();
 
-  return { props: { posts, globalData } };
+  return {
+    props: {
+      allPosts,
+      developmentPosts,
+      designPosts,
+      globalData,
+    },
+  };
 }

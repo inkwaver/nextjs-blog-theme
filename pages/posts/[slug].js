@@ -41,7 +41,7 @@ export default function PostPage({
       />
       <Header name={globalData.name} />
       <Sidebar designPosts={designPosts} developmentPosts={developmentPosts} /> {/* Pass both designPosts and developmentPosts to Sidebar */}
-      <article className="px-6 md:px-0 main">
+      <article className="px-6 md:px-0 main single">
         <header>
           {thumbnail && (
             <Image

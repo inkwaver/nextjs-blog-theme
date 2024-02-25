@@ -111,3 +111,6 @@ ul.articles {
     color: blue;
   }
 }
+article.single{
+  margin-top: 14rem;
+}
