@@ -113,12 +113,14 @@ ul.articles {
 article.single {
   margin-top: 4rem;
   padding: 0 3rem;
-  > header h1{
+
+  >header h1 {
     opacity: .4;
     border-bottom: .1rem solid;
     padding-bottom: 1rem;
     font-size: 2.4rem;
   }
+
   /* > header {
     position: sticky;
     top: 3rem;
@@ -126,24 +128,96 @@ article.single {
 }
 
 @media screen and (max-width: 942px) {
-   
-header.main.hero-header{
-  position: relative;
- 
-}
-header.main.hero-header .main-inner {
-      flex-direction: column !important;
-      align-items: flex-start !important;
-      align-items: center !important;
-      justify-content: center;
-      .header-description a.cv-btn{
-        margin-right: 0 !important;
 
-      }
+  header.main.hero-header {
+    position: relative;
+
   }
+
+  header.main.hero-header .main-inner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    align-items: center !important;
+    justify-content: center;
+
+    .header-description a.cv-btn {
+      margin-right: 0 !important;
+
+    }
+  }
+
   .home-page header.main .header-description {
     margin-top: 1rem;
     align-items: center;
- 
+
   }
+}
+
+.project-part {
+  display: 'flex';
+  flex-direction: 'row';
+  justify-content: 'space-between';
+  margin: 3rem 0;
+
+  .project-descript {
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: .6rem;
+    }
+
+    p,
+    li {
+      font-size: .9rem;
+      letter-spacing: .02rem;
+      line-height: 1.4rem;
+  }
+  *:not(h2, img, a, .project-img, strong, em, li){
+    padding-left: 1.5rem;
+  }
+  li{
+    margin-bottom: .5rem;
+  }
+}
+
+.project-img {
+  white-space: nowrap;
+  overflow-y: auto;
+  margin: 1rem 0;
+  transition: ease-in-out .3s;
+
+  a {
+    display: inline-block;
+    width: 20rem;
+    height: 12rem;
+    margin-right: 1.5rem;
+    opacity: .6;
+    position: relative;
+    border-radius: .5rem;
+    overflow: hidden;
+
+    &:hover {
+      opacity: 1;
+      transition: ease-in-out .1s;
+    }
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+ul {
+  padding-left: 1rem;
+  list-style-type: circle;
+  padding-right: 3rem;
+}
 }

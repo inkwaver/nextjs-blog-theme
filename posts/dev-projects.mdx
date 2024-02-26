@@ -7,139 +7,86 @@ tags: ['dev-projects']
 
 
 links:
-  - title: "Link 1"
-    href: "#paragraph-1"
-  - title: "Link 2"
-    href: "#paragraph-2"
-  - title: "Link 3"
+  - title: "Webinos (Jun 2022 - Feb 2023)"
+    href: "#webinos"
+  - title: "SmartBet (Sep 2020 - Jul 2021)"
+    href: "#smartbet"
+  - title: "SmartBet"
     href: "#paragraph-3"
+
+
+images:
+  smartbet:
+    - path: /projects/Goodwin-Dark.png
+      alt: Goodwin Light Mode
+      link: https://example.com/link1
+    - path: /projects/Goodwin-Light.png
+      alt: Goodwin Light Mode
+      link: https://example.com/link2
+
+  webinos:
+    - path: /projects/StayActiveRehab.jpg
+      alt: Stay Active Rehab
+      link: https://example.com/link1
+    - path: /projects/MartingaleAssets.jpg
+      alt: MartingaleAssets
+      link: https://example.com/link2
 
 ---
 
 
-<div id="paragraph-1">
+<div className="project-part" id="webinos">
+ 
     
+    <div className="project-descript">
+    ## Wordpress Developer
+    **Webinos Inc. · Freelance**  
+    *Jun 2022 - Feb 2023 · 9 mos*  
+    *Location: Yerevan, Armenia · Remote*
 
-# My Document
+    <div className="project-img">
 
-
-
-## Section 1
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-## Appendix 1
-
-This is the content of Appendix 1.
-
-## Appendix 2
-
-This is the content of Appendix 2.
-
-## Appendix 3
-
-This is the content of Appendix 3.
-## Section with Paragraph IDs 1
-    met minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-
-        Design
-            Case-Study
-            Articles
-                Sep 14 2021Mental models for designers PART 2
-                Jun 2 2021Mental models for designers
-        Dev Projects
-
-    Mental models for designers PART 2
-
-    Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon.
-    Appenidx
-    met minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-
-        Design
-            Case-Study
-            Articles
-                Sep 14 2021Mental models for designers PART 2
-                Jun 2 2021Mental models for designers
-        Dev Projects
-
-    Mental models for designers PART 2
-
-    Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon.
-    Appenidx
-    met minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-
-        Design
-            Case-Study
-            Articles
-                Sep 14 2021Mental models for designers PART 2
-                Jun 2 2021Mental models for designers
-        Dev Projects
-
-    Mental models for designers PART 2
-
-    Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon.
-    Appenidx
+            {images.webinos.map((image, index) => (
+            <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
+                <img loading="lazy" src={image.path} alt={image.alt} />
+                <figcaption>{image.alt}</figcaption>
+            </a>
+            ))}
 
     </div>
 
-## Section with Paragraph IDs 2
+    - Successfully managed multiple **WordPress-based** websites, ensuring their functionality, performance, and visual appeal.
+    - Developed custom Gutenberg blocks and fields to empower clients with intuitive site management capabilities, enhancing their control over content and layout.
+    - Meticulously conducted tests and diligently debugged ongoing projects, guaranteeing a seamless user experience and resolving any issues promptly.
+    - Collaborated closely with clients to understand their specific requirements and extend website functionality accordingly, providing tailored solutions to meet their needs.
+    - Demonstrated adaptability by incorporating client-requested features and improvements into existing projects, contributing to customer satisfaction and project success.
 
-<div id="paragraph-2">
-
-met minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-
-    Design
-        Case-Study
-        Articles
-            Sep 14 2021Mental models for designers PART 2
-            Jun 2 2021Mental models for designers
-    Dev Projects
-
-Mental models for designers PART 2
-
-Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon.
-Appenidxmet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-
-    Design
-        Case-Study
-        Articles
-            Sep 14 2021Mental models for designers PART 2
-            Jun 2 2021Mental models for designers
-    Dev Projects
-
-Mental models for designers PART 2
-
-Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon.
-Appenidx
-
+  </div>
+ 
 </div>
 
-<div id="paragraph-3">
 
-met minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+  <div className="project-part" id="smartbet">
+  <div className="project-descript">
+    ## Smartbet · UI Developer
+    **Smartbet · Full-time**  
+    *Sep 2020 - Jul 2021 · 11 mos*  
+    *Location: Yerevan, Armenia · On-site*
 
-    Design
-        Case-Study
-        Articles
-            Sep 14 2021Mental models for designers PART 2
-            Jun 2 2021Mental models for designers
-    Dev Projects
+   <div className="project-img">
 
-Mental models for designers PART 2
+            {images.smartbet.map((image, index) => (
+            <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
+                <img loading="lazy" src={image.path} alt={image.alt} />
+                <figcaption>{image.alt}</figcaption>
+            </a>
+            ))}
 
-Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon.
-Appenidxmet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+    </div>
 
-    Design
-        Case-Study
-        Articles
-            Sep 14 2021Mental models for designers PART 2
-            Jun 2 2021Mental models for designers
-    Dev Projects
-
-Mental models for designers PART 2
-
-Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon.
-Appenidx
-
+    - Led the comprehensive redesign of the primary project's user interface, with a specific focus on enhancing user experience and visual appeal. Key considerations included:
+    - Easy theming: Implemented a theming system that allowed for seamless color scheme changes across the entire site using a single file.
+    - Dark/light modes: Ensured that each color scheme featured both dark and light mode options, catering to user preferences.
+    - Mobile optimization: Developed a mobile-responsive version of the website, ensuring that it met the criteria for easy theming and dark/light modes.
+  </div>
 </div>
