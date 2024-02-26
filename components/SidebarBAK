@@ -2,9 +2,9 @@
 import React from 'react';
 import Link from 'next/link';
 import ThemeSwitcher from './ThemeSwitcher.js';
-import Links from './Links';
+import Links from './Links.js';
 import { useRouter } from 'next/router';  // Import the useRouter hook
-const Sidebar = ({ devProjects }) => {
+const Sidebar = ({ designPosts }) => {
     const router = useRouter();
 
     const isActiveLink = (href) => {
@@ -20,10 +20,30 @@ const Sidebar = ({ devProjects }) => {
                     <ul>
                         <li>
                             <h3>Development</h3>
+                            <ul className='sub-menu'>
+                                <li>
+                                    <Link href="/dev-projects">
+                                        <a className={isActiveLink('/dev-projects') ? 'active' : ''}>Dev Projects</a>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Design</h3>
+                            <ul className='sub-menu'>
+                                <li>
+                                    <Link href="/case-study">
+                                        <a className={isActiveLink('/case-study') ? 'active' : ''}>Case-Study</a>
+                                    </Link>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Articles</h3>
                             <ul className='articles'>
-                                {devProjects.map((post) => (
+                                {designPosts.map((post) => (
                                     <li key={post.filePath}>
-                                        {/* eslint-disable */}
                                         <Link href={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}>
                                             <a className={`block py-2 px-3 text-sm hover:underline ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
                                                 <span className="block text-gray-600 dark:text-gray-400">{post.data.date}</span>
@@ -31,11 +51,11 @@ const Sidebar = ({ devProjects }) => {
                                             </a>
                                         </Link>
                                         <Links links={post.data.links} />
-                                       { /* eslint-enable  */}
                                     </li>
                                 ))}
                             </ul>
                         </li>
+
                     </ul>
                 </nav>
             </div>

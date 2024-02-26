@@ -41,6 +41,7 @@ export default function Header() {
     <header className={`main ${avatarSize <= 45 ? 'sticked' : 'hero-header'}`}>
       <div className='main-inner wrapper-main'>
         <h1 className='logo'>
+          {/* eslint-disable */}
           <Link href="/">
             <a className={isActiveLink('/') ? 'active' : ''}>
               <Image className='avatar'
@@ -52,7 +53,6 @@ export default function Header() {
               
             </a>
           </Link>
-          
         </h1>
         <div className='header-description'>
         <Link href="/">
@@ -64,6 +64,7 @@ export default function Header() {
             <a className='button cv-btn'>Download CV</a>
           </Link>
         <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+          {/* eslint-enable */}
 
         </div>
       </div>

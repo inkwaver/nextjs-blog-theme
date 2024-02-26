@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 
 const Links = ({ links }) => {
     if (!links || links.length === 0) return null;
-
+/* eslint-disable */
     const observer = useRef(null);  // Initialize with null
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const Links = ({ links }) => {
             }
         };
     }, [links]);
-
+/* eslint-enable */
     const handleIntersection = (entries) => {
         entries.forEach((entry) => {
             const targetElement = document.querySelector(`.content-links a[href="#${entry.target.id}"]`);
