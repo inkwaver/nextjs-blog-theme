@@ -37,6 +37,7 @@ images:
       link: https://web.archive.org/web/20180811101626/http://click2sure.co.za/
 ---
 
+import Image from 'next/image';
 
 <div className="project-part" id="webinos">
  
@@ -51,7 +52,7 @@ images:
 
             {images.webinos.map((image, index) => (
             <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
-                <img loading="lazy" src={image.path} alt={image.alt} />
+                <Image layout='fill' loading="lazy" src={image.path} alt={image.alt} />
                 <figcaption>{image.alt}</figcaption>
             </a>
             ))}
@@ -80,7 +81,7 @@ images:
 
                 {images.smartbet.map((image, index) => (
                 <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" src={image.path} alt={image.alt} />
+                <Image layout='fill' loading="lazy" src={image.path} alt={image.alt} />
                     <figcaption>{image.alt}</figcaption>
                 </a>
                 ))}
@@ -105,7 +106,7 @@ images:
     <div className="project-img">
       {images.click2Sure.map((image, index) => (
         <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
-          <img loading="lazy" src={image.path} alt={image.alt} />
+                <Image layout='fill' loading="lazy" src={image.path} alt={image.alt} />
           <figcaption>{image.alt}</figcaption>
         </a>
       ))}
@@ -124,7 +125,7 @@ images:
 
      <div className='btn-holder'>
 
-            <a href="/narek-ch_wp-dev.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/narek-ch_wp-dev-web.pdf" target="_blank" rel="noopener noreferrer">
               <button className='flex items-center h-full pr-2 dark:bg-primary rounded-3xl flex justify-center align-center p-2 w-24 h-10 transition'>
                 Download CV
                 </button>

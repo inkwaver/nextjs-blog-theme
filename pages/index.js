@@ -6,6 +6,7 @@ import Sidebar from '../components/Sidebar';
 import Layout, { GradientBackground } from '../components/Layout';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
+import Image from 'next/image';
 
 
 
@@ -45,7 +46,7 @@ export default function Index({ devProjects, globalData }) {
             <div className="project-img">
               {images.smartbet.map((image, index) => (
                 <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
-                  <img loading="lazy" src={image.path} alt={image.alt} />
+                  <Image layout='fill' src={image.path} alt={image.alt} />
                   <figcaption>{image.alt}</figcaption>
                 </a>
               ))}

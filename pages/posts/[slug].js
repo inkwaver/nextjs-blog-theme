@@ -21,6 +21,7 @@ import SEO from '../../components/SEO';
 const components = {
   a: CustomLink,
   Head,
+  Image, // Add the Image component here
 };
 
 export default function PostPage({

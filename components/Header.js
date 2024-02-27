@@ -61,7 +61,7 @@ export default function Header() {
             </a>
           </Link>
          
-            <a href="/narek-ch_wp-dev.pdf" target="_blank" rel="noopener noreferrer" className='button cv-btn'>Download CV</a>
+            <a href="/narek-ch_wp-dev-web.pdf" target="_blank" rel="noopener noreferrer" className='button cv-btn'>Download CV</a>
        
         <p>
         "UI/UX Designer and Engineer skilled in crafting top-notch web and mobile experiences. Proficient in HTML, CSS, JavaScript, React, Angular, WordPress, and Adobe tools. Committed to optimization for speed, accessibility, and SEO."
