@@ -15,7 +15,7 @@
 
 .active {
   /* Your active link styles go here */
-  color: #ff0000;
+  color: #f8f87d;
   /* Change the color as per your design */
   font-weight: bold;
 }
@@ -172,54 +172,77 @@ article.single {
       font-size: .9rem;
       letter-spacing: .02rem;
       line-height: 1.4rem;
-  }
-  *:not(h2, img, a, .project-img, strong, em, li){
-    padding-left: 1.5rem;
-  }
-  li{
-    margin-bottom: .5rem;
-  }
-}
+    }
 
-.project-img {
-  white-space: nowrap;
-  overflow-y: auto;
-  margin: 1rem 0;
-  transition: ease-in-out .3s;
+    *:not(h2, img, a, .project-img, strong, em, li) {
+      padding-left: 1.5rem;
+    }
 
-  a {
-    display: inline-block;
-    width: 20rem;
-    height: 12rem;
-    margin-right: 1.5rem;
-    opacity: .6;
-    position: relative;
-    border-radius: .5rem;
-    overflow: hidden;
-
-    &:hover {
-      opacity: 1;
-      transition: ease-in-out .1s;
+    li {
+      margin-bottom: .5rem;
     }
   }
 
-  figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, .6);
-    width: 100%;
+  .project-img {
+    white-space: nowrap;
+    overflow-y: auto;
+    margin: 1rem 0;
+    transition: ease-in-out .3s;
+
+    a {
+      display: inline-block;
+      width: 20rem;
+      height: 12rem;
+      margin-right: 1.5rem;
+      opacity: .6;
+      position: relative;
+      border-radius: .5rem;
+      overflow: hidden;
+
+      &:hover {
+        opacity: 1;
+        transition: ease-in-out .1s;
+      }
+    }
+
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, .6);
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
-  img {
-    width: 100%;
+  ul {
+    padding-left: 1rem;
+    list-style-type: circle;
+    padding-right: 3rem;
   }
 }
-
-ul {
-  padding-left: 1rem;
-  list-style-type: circle;
-  padding-right: 3rem;
+.home-snipet {
+  padding: 2rem;
+  margin-left: 3rem;
 }
+.btn-holder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  button{
+    display: inline-block;
+    width: auto;
+    padding: .5rem 2rem;
+    margin-top: 2rem;
+    opacity: .6;
+    transition: all ease-in-out .3s;
+    &:hover{
+    transition: all ease-in-out .3s;
+      opacity: 1;
+    }
+  }
 }

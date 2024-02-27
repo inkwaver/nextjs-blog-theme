@@ -60,10 +60,12 @@ export default function Header() {
             Narek Chilingaryan
             </a>
           </Link>
-          <Link href="#">
-            <a className='button cv-btn'>Download CV</a>
-          </Link>
-        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+         
+            <a href="/narek-ch_wp-dev.pdf" target="_blank" rel="noopener noreferrer" className='button cv-btn'>Download CV</a>
+       
+        <p>
+        "UI/UX Designer and Engineer skilled in crafting top-notch web and mobile experiences. Proficient in HTML, CSS, JavaScript, React, Angular, WordPress, and Adobe tools. Committed to optimization for speed, accessibility, and SEO."
+        </p>
           {/* eslint-enable */}
 
         </div>

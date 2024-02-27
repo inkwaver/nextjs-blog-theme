@@ -7,7 +7,7 @@ export const getGlobalData = () => {
     : 'Portfolio';
   const footerText = process.env.BLOG_FOOTER_TEXT
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
-    : 'All rights reserved.';
+    : 'This website is in alpha mode and under development.';
 
   return {
     name,

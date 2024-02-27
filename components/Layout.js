@@ -59,6 +59,8 @@ export default function Layout({ children }) {
   return (
     <div className={isActiveLink('/') ? 'relative pb-24 overflow-hidden home-page ruller-vert' : 'relative pb-24 overflow-hidden ruller-vert'} >
       <div className="wrapper-main site-structure">
+        <input className='burger-anchor' id="hamburger" type='checkbox'/>
+        <label className='menu-icon' htmlFor="hamburger">Menu</label>
         {children}
       </div>
     </div>

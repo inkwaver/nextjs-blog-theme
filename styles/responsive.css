@@ -4,4 +4,47 @@
     .hero-header .main-inner {
         flex-direction: column;
     }
-  }
+}
+
+.menu-icon, .burger-anchor {
+    display: none;
+}
+
+@media screen and (max-width: 746px) {
+    .menu-icon, .burger-anchor {
+        display: block;
+    }
+   
+    .burger-anchor{
+        display: none;
+    }
+
+    .site-structure {
+        display: flex !important;
+        flex-direction: column;
+
+        header.main .header-description p {
+            max-width: 300px;
+        }
+        aside.main{
+            position: fixed;
+            width: 320px;
+            right: -329px;
+            height: 100%;
+            z-index: 15;
+            background-color: rgba(0,0,0,.9);
+            z-index: 15;
+        }
+    }
+    .menu-icon{
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 16;
+    
+    }
+    .burger-anchor:checked ~aside.main{
+        right: 0;
+    }
+}
+
