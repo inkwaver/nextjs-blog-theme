@@ -7,12 +7,12 @@ tags: ['dev-projects']
 
 
 links:
-  - title: "Webinos (Jun 2022 - Feb 2023)"
+  - title: "Webinos (2022 - 2023)"
     href: "#webinos"
-  - title: "SmartBet (Sep 2020 - Jul 2021)"
+  - title: "SmartBet (2020 - 2021)"
     href: "#smartbet"
-  - title: "SmartBet"
-    href: "#paragraph-3"
+  - title: "Click2Sure (2018 - 2019)"
+    href: "#click2sure"
 
 
 images:
@@ -31,7 +31,10 @@ images:
     - path: /projects/MartingaleAssets.jpg
       alt: MartingaleAssets
       link: https://example.com/link2
-
+  click2Sure:
+    - path: /projects/Click2Sure.jpg
+      alt: Click2Sure (snapshot)
+      link: https://example.com/link1
 ---
 
 
@@ -67,26 +70,53 @@ images:
 
 
   <div className="project-part" id="smartbet">
-  <div className="project-descript">
-    ## Smartbet · UI Developer
-    **Smartbet · Full-time**  
-    *Sep 2020 - Jul 2021 · 11 mos*  
-    *Location: Yerevan, Armenia · On-site*
+    <div className="project-descript">
+        ## Smartbet · UI Developer
+        **Smartbet · Full-time**  
+        *Sep 2020 - Jul 2021 · 11 mos*  
+        *Location: Yerevan, Armenia · On-site*
 
-   <div className="project-img">
+    <div className="project-img">
 
-            {images.smartbet.map((image, index) => (
-            <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
-                <img loading="lazy" src={image.path} alt={image.alt} />
-                <figcaption>{image.alt}</figcaption>
-            </a>
-            ))}
+                {images.smartbet.map((image, index) => (
+                <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
+                    <img loading="lazy" src={image.path} alt={image.alt} />
+                    <figcaption>{image.alt}</figcaption>
+                </a>
+                ))}
 
-    </div>
+        </div>
 
     - Led the comprehensive redesign of the primary project's user interface, with a specific focus on enhancing user experience and visual appeal. Key considerations included:
     - Easy theming: Implemented a theming system that allowed for seamless color scheme changes across the entire site using a single file.
     - Dark/light modes: Ensured that each color scheme featured both dark and light mode options, catering to user preferences.
     - Mobile optimization: Developed a mobile-responsive version of the website, ensuring that it met the criteria for easy theming and dark/light modes.
+  </div>
+</div>
+
+
+<div className="project-part" id="click2sure">
+  <div className="project-descript">
+    ## User Interface Engineer
+    **Click2Sure · Full-time**  
+    *Jan 2018 - Nov 2019 · 1 yr 11 mos*  
+    *Location: Yerevan, Armenia · On-site*
+
+    <div className="project-img">
+      {images.click2Sure.map((image, index) => (
+        <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
+          <img loading="lazy" src={image.path} alt={image.alt} />
+          <figcaption>{image.alt}</figcaption>
+        </a>
+      ))}
+    </div>
+
+    - Collaborated with a cross-functional team to design and develop user interfaces for the insurance company's platform.
+    - Utilized Angular to create responsive and visually appealing user interfaces, ensuring a seamless user experience.
+    - Developed and maintained reusable Angular components to streamline the development process, enhancing code efficiency and consistency.
+    - Conducted thorough testing and debugging to identify and rectify any issues or inconsistencies in the user interface.
+    - Worked closely with the design team to translate wireframes and design mockups into functional HTML and CSS layouts.
+    - Implemented best practices in HTML and CSS to optimize web page performance and ensure compatibility across various browsers.
+    - Stayed up-to-date with emerging web development trends and technologies, incorporating relevant innovations into the user interface design.
   </div>
 </div>

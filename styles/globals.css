@@ -106,7 +106,8 @@ ul.articles {
   }
 
   .content-links a.highlight {
-    color: blue;
+    color: #7d7aff;
+    font-weight: bold;
   }
 }
 
