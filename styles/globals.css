@@ -107,12 +107,13 @@ ul.articles {
 
   .content-links a.highlight {
     color: #7d7aff;
-    font-weight: bold;
+    text-decoration: underline;
+    /* font-weight: bold; */
   }
 }
 
 article.single {
-  margin-top: 4rem;
+  margin-top: 10rem;
   padding: 0 3rem;
 
   >header h1 {

@@ -61,7 +61,8 @@ header.main {
         margin-top: 0;
 
         a.cv-btn {
-            margin-right: 26vw;
+            margin-right: auto;
+            margin-left: 2rem;
             font-size: 1rem;
             border: .1rem solid;
             display: inline-block;
@@ -163,6 +164,7 @@ header.main {
             margin-right: auto !important;
             background-color: rgb(125, 122, 255);
             margin-top: .5rem;
+            margin-left: 0 !important;
         }
     }
 }
