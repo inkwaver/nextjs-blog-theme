@@ -15,12 +15,12 @@ export default function Index({ devProjects, globalData }) {
       {
         path: '/projects/Goodwin-Dark.png',
         alt: 'Goodwin Light Mode',
-        link: 'https://example.com/link1',
+        link: 'https://goodwin.am/',
       },
       {
         path: '/projects/Goodwin-Light.png',
         alt: 'Goodwin Light Mode',
-        link: 'https://example.com/link2',
+        link: 'https://goodwin.am/',
       },
     ],
   };
