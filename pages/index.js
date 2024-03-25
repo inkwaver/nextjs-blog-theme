@@ -54,16 +54,16 @@ export default function Index({ devProjects, globalData }) {
 
             <ul>
               <li>
-                - Led the comprehensive redesign of the primary project's user interface, with a specific focus on enhancing user experience and visual appeal. Key considerations included:
+                 Led the comprehensive redesign of the primary project's user interface, with a specific focus on enhancing user experience and visual appeal. Key considerations included:
               </li>
               <li>
-                - Easy theming: Implemented a theming system that allowed for seamless color scheme changes across the entire site using a single file.
+                 Easy theming: Implemented a theming system that allowed for seamless color scheme changes across the entire site using a single file.
               </li>
               <li>
-                - Dark/light modes: Ensured that each color scheme featured both dark and light mode options, catering to user preferences.
+                 Dark/light modes: Ensured that each color scheme featured both dark and light mode options, catering to user preferences.
               </li>
               <li>
-                - Mobile optimization: Developed a mobile-responsive version of the website, ensuring that it met the criteria for easy theming and dark/light modes.
+                 Mobile optimization: Developed a mobile-responsive version of the website, ensuring that it met the criteria for easy theming and dark/light modes.
               </li>
             </ul>
           </div>
