@@ -25,10 +25,14 @@ const Sidebar = ({ devProjects }) => {
                                     <li key={post.filePath}>
                                         {/* eslint-disable */}
                                         <Link href={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}>
-                                            <a className={`block py-2 px-3 text-sm hover:underline ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
+                                            {/* <a className={`block py-2 px-3 text-sm hover:underline ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
                                                 <span className="block text-gray-600 dark:text-gray-400">{post.data.date}</span>
                                                 <span className="block font-semibold">{post.data.title}</span>
-                                            </a>
+                                            </a> */}   
+                                             <span className={`block py-2 px-3 text-sm hover:underline ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
+                                                <span className="block text-gray-600 dark:text-gray-400">{post.data.date}</span>
+                                                <span className="block font-semibold">{post.data.title}</span>
+                                            </span>
                                         </Link>
                                         <Links links={post.data.links} />
                                        { /* eslint-enable  */}

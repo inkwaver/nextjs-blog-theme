@@ -5,7 +5,7 @@ export default function CustomLink({ as, href, ...otherProps }) {
     /* eslint-disable */
     <>
       <Link as={as} href={href}>
-        <a {...otherProps} />
+        <span {...otherProps} />
       </Link>
     </>
     /* eslint-enable */

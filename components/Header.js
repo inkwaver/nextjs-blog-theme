@@ -43,7 +43,7 @@ export default function Header() {
         <h1 className='logo'>
           {/* eslint-disable */}
           <Link href="/">
-            <a className={isActiveLink('/') ? 'active' : ''}>
+            {/* <a className={isActiveLink('/') ? 'active' : ''}>
               <Image className='avatar'
                 src="/avatar-nch.png"
                 width={avatarSize}
@@ -51,14 +51,25 @@ export default function Header() {
                 alt="Image description"
               />
               
-            </a>
+            </a> */}
+            <span className={isActiveLink('/') ? 'active' : ''}>
+              <Image className='avatar'
+                src="/avatar-nch.png"
+                width={avatarSize}
+                height={avatarSize}
+                alt="Image description"
+              />
+              
+            </span>
           </Link>
         </h1>
         <div className='header-description'>
         <Link href="/">
-            <a  className="logo-name">
+            {/* <a  className="logo-name"> */}
+            <span  className="logo-name">
             Narek Chilingaryan
-            </a>
+            </span>
+            {/* </a> */}
           </Link>
          
             <a href="/narek-ch_wp-dev-web.pdf" target="_blank" rel="noopener noreferrer" className='button cv-btn'>Download CV</a>
