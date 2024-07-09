@@ -1,4 +1,3 @@
-
 // mdx-utils.js
 
 import fs from 'fs';
@@ -53,11 +52,9 @@ export const getPosts = (tag) => {
   return posts;
 };
 
-// ... rest of the code
-
-
-export const getPostBySlug = async (slug) => {
-  const postFilePath = path.join(POSTS_PATH, `${slug}.mdx`);
+// Updated getPostBySlug function to handle different base paths
+export const getPostBySlug = async (slug, basePath = 'posts') => {
+  const postFilePath = path.join(process.cwd(), basePath, `${slug}.mdx`);
   const source = fs.readFileSync(postFilePath);
 
   const { content, data } = matter(source);

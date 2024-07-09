@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 
 
-export default function Index({ devProjects, globalData }) {
+export default function Index({ devProjects,designProjects, globalData }) {
   const images = {
     smartbet: [
       {
@@ -30,7 +30,7 @@ export default function Index({ devProjects, globalData }) {
     <Layout>
       <Header name={globalData.name} />
       <SEO title={globalData.name} description={globalData.blogTitle} />
-      <Sidebar name={globalData.name} devProjects={devProjects}></Sidebar>
+      <Sidebar name={globalData.name} designProjects={designProjects} devProjects={devProjects}></Sidebar>
       <main className="w-full wrapper-sec main">
         {/* <h1 className="text-3xl lg:text-5xl text-center mb-12">
           {globalData.blogTitle}
@@ -98,6 +98,7 @@ export default function Index({ devProjects, globalData }) {
 export function getStaticProps() {
   const allPosts = getPosts(); // Get all posts
   const devProjects = getPosts('dev-projects'); // Get posts with the 'design' tag
+  const designProjects = getPosts('design'); // Get posts with the 'design' tag
 
   const globalData = getGlobalData();
 
@@ -105,6 +106,7 @@ export function getStaticProps() {
     props: {
       allPosts,
       devProjects,
+      designProjects,
       globalData,
     },
   };

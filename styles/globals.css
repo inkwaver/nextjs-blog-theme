@@ -2,10 +2,10 @@
 @import url(./hero.css);
 @import url(./sidebar.css);
 @import url(./responsive.css);
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind variants;
+@tailwind variants; */
 
 
 :root {
@@ -101,12 +101,12 @@ ul.articles {
     display: none;
   }
 
-  >li>a.active+.content-links {
+  & > li> a.active+ .content-links {
     display: block;
   }
 
   .content-links a.highlight {
-    color: #7d7aff;
+    color: #ff7a8c;
     text-decoration: underline;
     /* font-weight: bold; */
   }
@@ -124,7 +124,7 @@ article.single {
   }
 
   /* > header {
-    position: sticky;
+    position: sticky;active
     top: 3rem;
   } */
 }

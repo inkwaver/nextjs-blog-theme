@@ -37,8 +37,71 @@ images:
       link: https://web.archive.org/web/20180811101626/http://click2sure.co.za/
 ---
 
+import Link from 'next/link';
+import { getPosts } from '../../utils/mdx-utils';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import Sidebar from '../../components/Sidebar';
+import Layout, { GradientBackground } from '../../components/Layout';
+import { getGlobalData } from '../../utils/global-data';
+import SEO from '../../components/SEO';
 import Image from 'next/image';
 
+
+export default function Index({ devProjects,designProjects, globalData }) {
+  const images = {
+    smartbet: [
+      {
+        path: '/projects/Goodwin-Dark.png',
+        alt: 'Goodwin Light Mode',
+        link: 'https://goodwin.am/',
+      },
+      {
+        path: '/projects/Goodwin-Light.png',
+        alt: 'Goodwin Light Mode',
+        link: 'https://goodwin.am/',
+      },
+      
+    ],
+     webinos: [
+      {
+        path: '/projects/Goodwin-Dark.png',
+        alt: 'Goodwin Light Mode',
+        link: 'https://goodwin.am/',
+      },
+      {
+        path: '/projects/Goodwin-Light.png',
+        alt: 'Goodwin Light Mode',
+        link: 'https://goodwin.am/',
+      },
+      
+    ],
+     click2Sure : [
+      {
+        path: '/projects/Goodwin-Dark.png',
+        alt: 'Goodwin Light Mode',
+        link: 'https://goodwin.am/',
+      },
+      {
+        path: '/projects/Goodwin-Light.png',
+        alt: 'Goodwin Light Mode',
+        link: 'https://goodwin.am/',
+      },
+      
+    ]
+  };
+  return (
+
+    <Layout>
+      <Header name={globalData.name} />
+      <SEO title={globalData.name} description={globalData.blogTitle} />
+      <Sidebar name={globalData.name} designProjects={designProjects} devProjects={devProjects}></Sidebar>
+      <main className="w-full wrapper-sec main">
+        {/* <h1 className="text-3xl lg:text-5xl text-center mb-12">
+          {globalData.blogTitle}
+        </h1> */}
+        {/* eslint-disable jsx-a11y/anchor-is-valid */}
+        
 <div className="project-part" id="webinosss">
  
     
@@ -132,3 +195,41 @@ import Image from 'next/image';
               </a>
 
           </div>
+
+      </main>
+      <GradientBackground
+        variant="large"
+        className="fixed top-20 opacity-40 dark:opacity-60"
+      />
+      <GradientBackground
+        variant="small"
+        className="absolute bottom-0 opacity-20 dark:opacity-10"
+      />
+      <Footer copyrightText={globalData.footerText} />
+
+    </Layout>
+
+  );
+}
+
+   
+
+
+export function getStaticProps() {
+  const allPosts = getPosts(); // Get all posts
+  const devProjects = getPosts('dev-projects'); // Get posts with the 'design' tag
+  const designProjects = getPosts('design'); // Get posts with the 'design' tag
+
+  const globalData = getGlobalData();
+  const images = {}; // Add logic to fetch images if necessary
+
+  return {
+    props: {
+      allPosts,
+      devProjects,
+      designProjects,
+      globalData,
+      images,
+    },
+  };
+}

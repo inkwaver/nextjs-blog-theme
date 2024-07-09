@@ -32,6 +32,7 @@ export default function PostPage({
   globalData,
   thumbnail,
   devProjects,
+  designProjects,
 }) {
   return (
     <Layout>
@@ -40,7 +41,7 @@ export default function PostPage({
         description={frontMatter.description}
       />
       <Header name={globalData.name} />
-      <Sidebar devProjects={devProjects} /> {/* Pass both designPosts and developmentPosts to Sidebar */}
+      <Sidebar designProjects={designProjects} devProjects={devProjects} /> {/* Pass both designPosts and developmentPosts to Sidebar */}
       <article className="px-6 md:px-0 main single">
         <header>
           {thumbnail && (
@@ -127,6 +128,7 @@ export const getStaticProps = async ({ params }) => {
   // Fetch designPosts and developmentPosts
 
   const devProjects = getPosts('dev-projects'); // Adjust this line as necessary
+  const designProjects = getPosts('design'); // Adjust this line as necessary
 
   // Pass tag parameter if available
   const tag = data.tags && data.tags[0];
@@ -145,6 +147,7 @@ export const getStaticProps = async ({ params }) => {
       nextPost,
       thumbnail,
       devProjects,
+      designProjects,
     },
   };
 };
