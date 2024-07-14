@@ -7,6 +7,7 @@ import Layout, { GradientBackground } from '../components/Layout';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 import Image from 'next/image';
+import ArrowIcon from '../components/ArrowIcon';
 
 
 
@@ -78,7 +79,37 @@ export default function Index({ devProjects,designProjects, globalData }) {
           </div>
 
         </div>
-
+        <h2>Developemt posts</h2>
+        <ul className="w-full">
+          {devProjects.map((post) => (
+            <li
+              key={post.filePath}
+              className="md:first:rounded-t-lg md:last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 border-b-0 last:border-b hover:border-b hovered-sibling:border-t-0"
+            >
+              <div> {post.data.label}</div>
+             
+              <Link
+                as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
+                href={`/posts/[slug]`}
+              >
+                <span className="py-6 lg:py-10 px-6 lg:px-16 block focus:outline-none focus:ring-4">
+                  {post.data.date && <p className="...">{post.data.date}</p>}
+                  <h2 className="...">{post.data.title}</h2>
+                  {post.data.description && <p className="...">{post.data.description}</p>}
+                  {post.data.thumbnail && (
+                    <Image
+                      src={post.data.thumbnail}
+                      alt={`${post.data.title} Thumbnail`}
+                      width={150}
+                      height={150}
+                    />
+                  )}
+                  <ArrowIcon className="mt-4" />
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </main>
       <GradientBackground
         variant="large"

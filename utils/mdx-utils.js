@@ -37,6 +37,7 @@ export const getPosts = (tag) => {
       data: {
         ...data,
         thumbnail: data.thumbnail || null, // Set to null if not provided
+        label: data.label || null, // Set to null if not provided
       },
       filePath,
     };
