@@ -54,7 +54,7 @@ export default function Header() {
             </a> */}
             <span className={isActiveLink('/') ? 'active' : ''}>
               <Image className='avatar'
-                src="/avatar-nch.png"
+                src="/narek-ch.png"
                 width={avatarSize}
                 height={avatarSize}
                 alt="Image description"

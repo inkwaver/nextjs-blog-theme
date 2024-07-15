@@ -1,5 +1,5 @@
 header.main {
-    padding: 1rem;
+    padding: var(--size-15) var(--wrapper-margin);
     width: 100%;
     /* position: fixed; */
     z-index: 12;
@@ -50,7 +50,7 @@ header.main {
 
     .logo {
         margin-right: unset;
-        margin-left: 2.2rem;
+        /* margin-left: 2.2rem; */
     }
 
     .header-description {
@@ -83,6 +83,7 @@ header.main {
 
 
 .home-page {
+
     header.main {
         height: 100vh;
         /* overflow: hidden; */
@@ -150,14 +151,14 @@ header.main {
             margin-right: unset;
         }
 
-        .main-inner {
-            /* display: flex;
-            flex-direction: column; */
-        }
+  
     }
-
-    main.main {
-        /* margin-top: 100vh; */
+  
+    .site-structure{
+        display: block;
+        main.main {
+            margin-top: 100vh;
+        }
     }
 }
 
