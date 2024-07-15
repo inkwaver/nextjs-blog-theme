@@ -9,10 +9,52 @@
 
 
 :root {
-  --wrapper-main: 81rem;
+  --wrapper-main: 1920px;
   --wrapper-sec: 60rem;
-}
+  --font: Arial, Helvetica, sans-serif;
 
+  --font-size-huge: 4.3rem;
+  --font-size-big: 3.5rem;
+  --font-size-title: 1.66rem;
+  --font-size-Subtitle: 1.33rem;
+  --font-size-paragraph: 1rem;
+  --font-size-caption: .83rem;
+
+  --color-n1: #1A1A1A;
+  --color-n2: #404040;
+  --color-n3: #666666;
+  --color-n4: #8C8C8C;
+  --color-n5: #B3B3B3;
+  --color-n6: #D9D9D9;
+
+  --body-color: #FFF8EC;
+
+  /* size and proportion */
+  --size-9 :9px;
+  --size-15: 15px;
+  --size-24: 24px;
+  --size-39: 39px;
+  --size-63: 63px;
+  --size-102: 102px;
+
+  /* header */
+  --logo-name-small: var(--size-24);
+  --logo-name-big:  var(--font-size-huge);
+  --logo-name-big-font-weight: 900;
+  --logo-name-big-color: var(--color-n3);
+  --intro-color: var(var(--color-n2));
+
+}
+.paragraph, p {
+  font-size: var(--font-size-paragraph);
+  line-height: calc(2* var(--size-15));
+  word-spacing: 0.04rem;
+  letter-spacing: .03rem;
+  strong{
+    font-weight: bold;
+    display: inline-block;
+  }
+}
 .active {
   /* Your active link styles go here */
   color: #7d7aff;
@@ -28,7 +70,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-primary);
+  font-family: var(--font);
+}
+
+.huge-title {
+  font-family: var(--font);
+  font-size: 4.3rem;
+
 }
 
 .wrapper-main {
@@ -43,8 +91,10 @@ h6 {
 }
 
 body {
-  font-family: var(--font-secondary);
-  font-size: 15px;
+  font-family: var(--font);
+  font-size: calc(var(--size-9) * 2);
+  background-color: var(--body-color);
+  
 }
 
 .avatar {
@@ -82,19 +132,7 @@ footer.main {
   grid-area: footer;
 }
 
-.ruller-vert {
-  background-image: url("/ruler-horizon.png");
-  background-repeat: repeat-y;
-  background-size: 1rem 3rem;
-}
 
-header.main {
-  background-image: url("/ruler-vertical.png");
-  background-repeat: repeat-x;
-  background-size: 3rem 1rem;
-
-
-}
 
 ul.articles {
   .content-links {

@@ -64,7 +64,7 @@ export default function Header() {
           </Link>
         </h1>
         <div className='header-description'>
-        <Link href="/">
+        <Link className='huge-title' href="/">
             {/* <a  className="logo-name"> */}
             <span  className="logo-name">
             Narek Chilingaryan
@@ -74,8 +74,9 @@ export default function Header() {
          
             <a href="/narek-ch_wp-dev-web.pdf" target="_blank" rel="noopener noreferrer" className='button cv-btn'>Download CV</a>
        
-        <p>
-        "UI/UX Designer and Engineer skilled in crafting top-notch web and mobile experiences. Proficient in HTML, CSS, JavaScript, React, Angular, WordPress, and Adobe tools. Committed to optimization for speed, accessibility, and SEO."
+        <p className='paragraph'>
+        I <strong>design interfaces</strong> and translate them into markup that's high-resolution, features smooth scrolling, 
+is mobile-friendly, and prioritizes accessibility.
         </p>
           {/* eslint-enable */}
 

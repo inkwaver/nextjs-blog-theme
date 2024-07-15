@@ -74,8 +74,9 @@ header.main {
             /* margin-top: .5rem; */
         }
 
-        a.logo-name {
-            font-size: 1.2rem;
+        .logo-name {
+            font-size: var(--logo-name-small);
+            color: var(--color-n2);
         }
     }
 }
@@ -94,32 +95,35 @@ header.main {
             display: flex;
             flex-direction: column;
             margin-left: 4.5rem;
-            position: relative;
-            margin-top: -7rem;
-
-            a.logo-name {
+            /* position: relative;
+            margin-top: -7rem; */
+            a{
+                text-decoration: none;
+            }
+            .logo-name {
                 display: block;
-                color: unset;
-                font-size: 2.4rem;
-                font-weight: 200;
+                color: var(--logo-name-big-color);
+                font-size: var(--logo-name-big);
+                font-weight: var(--logo-name-big-font-weight);
                 margin-bottom: .5rem;
             }
         }
 
         .header-description p {
-            margin-top: 6.3rem;
+            /* margin-top: 6.3rem; */
             /* transition: all ease-in .1s; */
-            display: flex;
-            flex-direction: column;
-            position: absolute;
+            /* display: flex;
+            flex-direction: column; */
+            /* position: absolute; */
             max-width: 35rem;
             max-width: 36vw;
+            color: var(--intro-color);
         }
 
         &.sticked {
             transition: all ease-in .1s;
             height: 4.2rem;
-
+            background-color: white;
             .header-description {
                 width: 100%;
                 margin-left: 1rem;
@@ -128,10 +132,9 @@ header.main {
                 justify-content: space-between;
                 margin-top: 0;
 
-                a.logo-name {
-                    display: block;
-                    color: unset;
-                    font-size: 1.2rem;
+                .logo-name {
+                    font-size: var(--logo-name-small);
+                    color: var(--color-n2);
                 }
             }
 

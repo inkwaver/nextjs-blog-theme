@@ -8,7 +8,7 @@ import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 import Image from 'next/image';
 import ArrowIcon from '../components/ArrowIcon';
-
+import { ResearchIcon, SitemapIcon } from '../components/Icons/DesignFlowIcons';
 
 
 export default function Index({ devProjects,designProjects, globalData }) {
@@ -37,6 +37,23 @@ export default function Index({ devProjects,designProjects, globalData }) {
           {globalData.blogTitle}
         </h1> */}
         {/* eslint-disable jsx-a11y/anchor-is-valid */}
+
+        <div>
+          <h2>Design Flow</h2>
+          <ul>
+            <li>
+              <span className='icon'>
+              <ResearchIcon />
+              </span>
+              <p>
+              Extensive research on similar websites to gather UX insights and identify important components.
+              </p>
+            </li>
+          </ul>
+        <ResearchIcon />
+        <SitemapIcon />
+    </div>
+
         <div className="project-part home-snipet md:first:rounded-t-lg md:last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10  transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 border-b-0 last:border-b " id="smartbet">
           <div className="project-descript">
             <h2>Smartbet · UI Developer</h2>
