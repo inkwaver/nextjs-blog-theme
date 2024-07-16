@@ -8,7 +8,7 @@ import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 import Image from 'next/image';
 import ArrowIcon from '../components/ArrowIcon';
-import { ResearchIcon, SitemapIcon } from '../components/Icons/DesignFlowIcons';
+import { ResearchIcon, SitemapIcon, DevExp } from '../components/Icons/DesignFlowIcons';
 
 
 export default function Index({ devProjects, designProjects, globalData }) {
@@ -44,7 +44,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
         {/* eslint-disable jsx-a11y/anchor-is-valid */}
 
         <div className='design-flow mb-102'>
-          <h2 className='big-title color-n4 mb-39'>Design Flow</h2>
+          <h2 className='big-title color-n3 mb-39'>Design Flow</h2>
           <ul >
             <li className='design-flow-card'>
               <span className='icon'>
@@ -106,7 +106,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
         </div>
 
         <div className="project-part home-snipet mb-102" id="smartbet">
-          <h2 className='big-title color-n4 mb-39'>Design Experience</h2>
+          <h2 className='big-title color-n3 mb-39'>Design Experience</h2>
 
 
           <div className="project-img">
@@ -126,7 +126,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
 
         </div>
         <div className='mb-102'>
-          <h2 className='big-title color-n4 mb-39'>Development Skills</h2>
+          <h2 className='big-title color-n3 mb-39'>Development Skills</h2>
           <ul className='subtitle'>
             <li>
               Front-End Technologies: HTML, CSS, JavaScript
@@ -160,11 +160,30 @@ export default function Index({ devProjects, designProjects, globalData }) {
             </li>
           </ul>
         </div>
-        <div className='dev-exp mb-102'>
-          <h2 className='big-title color-n4 mb-39'>Development Experience</h2>
+        <div className='dev-exp '>
+          
           <div className='project-block'>
             <div className='col-left'>
-              <h2>Smartbet · UI Developer</h2>
+            <h2 className='big-title color-n3 '>Experience <span className='icon-mid'><DevExp/></span></h2>
+              <h4>WordPress Developer</h4>
+              <strong>Webinos Inc, Freelance</strong>
+              <em>Jun 2022 - Feb 2023</em>
+              <p>Location: Yerevan, Armenia · On-site</p>
+            </div>
+            <ul>
+              <li>
+                Managed multiple WordPress-based websites, ensuring functionality, performance, and visual appeal.
+              </li>
+              <li>
+                Managed multiple WordPress-based websites, ensuring functionality, performance, and visual appeal.
+              </li>
+              <li>
+                Managed multiple WordPress-based websites, ensuring functionality, performance, and visual appeal.
+              </li>
+            </ul>
+
+            <div className='col-left'>
+              <h4>Smartbet · UI Developer</h4>
               <strong>Smartbet · Full-time</strong>
               <em>Sep 2020 - Jul 2021 · 11 mos</em>
               <p>Location: Yerevan, Armenia · On-site</p>
