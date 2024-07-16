@@ -116,6 +116,9 @@ header.main {
             /* display: flex;
             flex-direction: column; */
             /* position: absolute; */
+            margin-top:var(--size-9);
+            font-size: var(--font-size-Subtitle);
+            line-height: calc(1.5*var(--font-size-Subtitle));
             max-width: 35rem;
             max-width: 36vw;
             color: var(--intro-color);
@@ -161,8 +164,13 @@ header.main {
         }
     }
 }
-
+.header-links {
+    align-self: flex-start;
+}
 .hero-header {
+    .wrapper-main{
+        height: 100%;
+    }
     .header-description {
         a.cv-btn {
             margin-right: auto !important;

@@ -40,6 +40,7 @@ export default function Header() {
   return (
     <header className={`main ${avatarSize <= 45 ? 'sticked' : 'hero-header'}`}>
       <div className='main-inner wrapper-main'>
+      
         <h1 className='logo'>
           {/* eslint-disable */}
           <Link href="/">
@@ -72,7 +73,7 @@ export default function Header() {
             {/* </a> */}
           </Link>
          
-            <a href="/narek-ch_wp-dev-web.pdf" target="_blank" rel="noopener noreferrer" className='button cv-btn'>Download CV</a>
+            
        
         <p className='paragraph'>
         I <strong>design interfaces</strong> and translate them into markup that's high-resolution, features smooth scrolling, 
@@ -82,6 +83,11 @@ is mobile-friendly, and prioritizes accessibility.
 
         </div>
       </div>
+      <div className='header-links'>
+      <a className="button" href="/narek-ch_wp-dev-web.pdf" target="_blank" rel="noopener noreferrer" className='button cv-btn'>Download CV</a>
+
+      </div>
+
     </header>
   );
 }
