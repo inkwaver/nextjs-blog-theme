@@ -209,18 +209,18 @@ export default function Index({ devProjects, designProjects, globalData }) {
 
                 <input checked id="desktopView" name='responsive' type='radio' />
                 <input id="mobileView" name='responsive' type='radio' />
-                <input checked id="darkMode" name='responsive' type='radio' />
-                <input id="lightMode" name='responsive' type='radio' />
+                <input checked id="darkMode" name='color' type='radio' />
+                <input id="lightMode" name='color' type='radio' />
                 <div className='view-mode'>
                   <section>
                     <h6>Responsivnes -</h6>
-                    <label className='button desk-btn' for="desktopView">Desktop</label>
-                    <label className='button mob-btn' for="mobileView">Mobile</label>
+                    <label className='button desk-btn' htmlFor="desktopView">Desktop</label>
+                    <label className='button mob-btn' htmlFor="mobileView">Mobile</label>
                   </section>
                   <section>
                     <h6>Color Mode -</h6>
-                    <label className='button light' for="lightMode">Light</label>
-                    <label className='button dark' for="darkMode">Dark</label>
+                    <label className='button light' htmlFor="lightMode">Light</label>
+                    <label className='button dark' htmlFor="darkMode">Dark</label>
                   </section>
                 </div>
                 <div className='desktop-view'>
