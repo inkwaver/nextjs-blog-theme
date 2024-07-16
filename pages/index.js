@@ -161,12 +161,12 @@ export default function Index({ devProjects, designProjects, globalData }) {
           </ul>
         </div>
         <div className='dev-exp '>
-          
+
           <div className='project-block'>
             <div className='col-left'>
-            <h2 className='big-title color-n3 '>Experience <span className='icon-mid'><DevExp/></span></h2>
+              <h2 className='big-title color-n3 '>Experience <span className='icon-mid'><DevExp /></span></h2>
               <h4>WordPress Developer</h4>
-              
+
               <strong>Webinos Inc, Freelance</strong>
               <em>Jun 2022 - Feb 2023</em>
             </div>
@@ -175,116 +175,168 @@ export default function Index({ devProjects, designProjects, globalData }) {
                 Managed multiple WordPress-based websites, ensuring functionality, performance, and visual appeal.
               </li>
               <li>
-              Developed custom Gutenberg blocks and fields to empower clients with intuitive site management capabilities, enhancing their control over content and layout.
+                Developed custom Gutenberg blocks and fields to empower clients with intuitive site management capabilities, enhancing their control over content and layout.
               </li>
               <li>
-              Collaborated with clients to understand their specific requirements and extend website functionality accordingly, providing tailored solutions to meet their needs.
+                Collaborated with clients to understand their specific requirements and extend website functionality accordingly, providing tailored solutions to meet their needs.
               </li>
               <li>
-              Incorporated client-requested features and improvements into existing projects, contributing to customer satisfaction and project success.
+                Incorporated client-requested features and improvements into existing projects, contributing to customer satisfaction and project success.
               </li>
             </ul>
 
             <div className='col-left'>
-            <h4>Markup Specialist</h4>
-              
+              <h4>Markup Specialist</h4>
+
               <strong>SmartBet</strong>
               <em>Sep 2020 - Jul 2021</em>
             </div>
             <ul>
               <li>
-              Led the comprehensive redesign of the primary project's user interface, focusing on enhancing user experience and visual appeal.
+                Led the comprehensive redesign of the primary project's user interface, focusing on enhancing user experience and visual appeal.
               </li>
               <li>
-              Implemented a theming system that allowed for seamless color scheme changes across the entire site using a single file.
+                Implemented a theming system that allowed for seamless color scheme changes across the entire site using a single file.
               </li>
               <li>
-              Ensured each color scheme featured both dark and light mode options, catering to user preferences.
+                Ensured each color scheme featured both dark and light mode options, catering to user preferences.
               </li>
               <li>
-              Developed a mobile-responsive version of the website, ensuring it met criteria for easy theming and dark/light modes.
+                Developed a mobile-responsive version of the website, ensuring it met criteria for easy theming and dark/light modes.
+              </li>
+              <li className='project-overview'>
+          
+
+                <input checked id="desktopView" name='responsive' type='radio' />
+                <input id="mobileView" name='responsive' type='radio' />
+                <input checked id="darkMode" name='responsive' type='radio' />
+                <input id="lightMode" name='responsive' type='radio' />
+                <div className='view-mode'>
+                  <section>
+                    <h6>Responsivnes -</h6>
+                    <label className='button desk-btn' for="desktopView">Desktop</label>
+                    <label className='button mob-btn' for="mobileView">Mobile</label>
+                  </section>
+                  <section>
+                    <h6>Color Mode -</h6>
+                    <label className='button light' for="lightMode">Light</label>
+                    <label className='button dark' for="darkMode">Dark</label>
+                  </section>
+                </div>
+                <div className='desktop-view'>
+                  <Image
+                    className='desktop-view light'
+                    src="/projects/goodwin-desk-light.jpg"
+                    alt='Goodwin desktop'
+                    width={635}
+                    height={352}
+                  />
+                  <Image
+                    className='desktop-view dark'
+                    src="/projects/goodwin-desk-dark.jpg"
+                    alt='Goodwin desktop'
+                    width={635}
+                    height={352}
+                  />
+                </div>
+                <div className='mobile-view'>
+                  <Image
+                    className='desktop-view light'
+                    src="/projects/goodwin-mobile-light.jpg"
+                    alt='Goodwin desktop'
+                    width={210}
+                    height={372}
+                  />
+                  <Image
+                    className='desktop-view dark'
+                    src="/projects/goodwin-mobile-dark.jpg"
+                    alt='Goodwin desktop'
+                    width={210}
+                    height={372}
+                  />
+                </div>
               </li>
             </ul>
 
             <div className='col-left'>
-            <h4>Markup Specialist</h4>
-              
+              <h4>Markup Specialist</h4>
+
               <strong>Click2Sure</strong>
               <em>Jan 2018 - Dec 2019</em>
             </div>
             <ul>
               <li>
-              Collaborated with a cross-functional team to design and develop user interfaces for the insurance company's platform.
+                Collaborated with a cross-functional team to design and develop user interfaces for the insurance company's platform.
               </li>
               <li>
-              Utilized Angular to create responsive and visually appealing user interfaces, ensuring a seamless user experience.
+                Utilized Angular to create responsive and visually appealing user interfaces, ensuring a seamless user experience.
               </li>
               <li>
-              Developed and maintained reusable Angular components to streamline the development process, enhancing code efficiency and consistency.
+                Developed and maintained reusable Angular components to streamline the development process, enhancing code efficiency and consistency.
               </li>
               <li>
-              Conducted thorough testing and debugging to identify and rectify any issues or inconsistencies in the user interface.
+                Conducted thorough testing and debugging to identify and rectify any issues or inconsistencies in the user interface.
               </li>
               <li>
-              Translated wireframes and design mockups into functional HTML and CSS.
+                Translated wireframes and design mockups into functional HTML and CSS.
               </li>
               <li>
-              Implemented best practices in HTML and CSS to optimize web page performance and ensure compatibility across various browsers.
+                Implemented best practices in HTML and CSS to optimize web page performance and ensure compatibility across various browsers.
               </li>
             </ul>
             <div className='col-left'>
-            <h4>Markup Specialist <br/> WordPress Developer</h4>
-              
+              <h4>Markup Specialist <br /> WordPress Developer</h4>
+
               <strong>SPILL, Barsamini Toort</strong>
               <em>Mar 2013 - Mar 2014</em>
             </div>
             <ul>
               <li>
-              Developed WordPress templates from scratch for blogs, news, and portfolio websites.
+                Developed WordPress templates from scratch for blogs, news, and portfolio websites.
               </li>
               <li>
-              Bugfixed and redesigned existing projects.
+                Bugfixed and redesigned existing projects.
               </li>
               <li>
-              Developed cross-browser compatible code to ensure the product looked identical on multiple modern and old browsers
+                Developed cross-browser compatible code to ensure the product looked identical on multiple modern and old browsers
               </li>
               <li>
-              Designed and implemented a custom markup structure for a Tumblr blog, aligning it seamlessly with the provided design. 
+                Designed and implemented a custom markup structure for a Tumblr blog, aligning it seamlessly with the provided design.
               </li>
             </ul>
             <div className='col-left'>
-            <h4>Markup Specialist </h4>
-              
+              <h4>Markup Specialist </h4>
+
               <strong>Aragast Ben</strong>
               <em>Oct 2011 - Nov 2012</em>
             </div>
             <ul>
               <li>
-              Redesigned the UI and refined the layouts of the Cafe4tune social network.
+                Redesigned the UI and refined the layouts of the Cafe4tune social network.
               </li>
               <li>
-              Developed cross-browser compatible code to ensure the product looked identical on multiple modern and old browsers (IE7, IE8).
+                Developed cross-browser compatible code to ensure the product looked identical on multiple modern and old browsers (IE7, IE8).
               </li>
-           
+
             </ul>
             <div className='col-left'>
-            <h4>WordPress Developer</h4>
-              
+              <h4>WordPress Developer</h4>
+
               <strong>NexusLab</strong>
               <em>Sep 2010 - Jul 2011</em>
             </div>
             <ul>
               <li>
-              Created pixel-perfect, cross-browser compatible WordPress themes based on provided designs.
+                Created pixel-perfect, cross-browser compatible WordPress themes based on provided designs.
               </li>
               <li>
-              Ensured support for IE6, IE7, and IE8 browsers.
+                Ensured support for IE6, IE7, and IE8 browsers.
               </li>
               <li>
-              Optimized styles and content image assets for improved performance.
+                Optimized styles and content image assets for improved performance.
               </li>
               <li>
-              Conducted bug fixes and implemented additional features in existing themes.
+                Conducted bug fixes and implemented additional features in existing themes.
               </li>
             </ul>
           </div>
