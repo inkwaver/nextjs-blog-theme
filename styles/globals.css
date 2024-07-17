@@ -674,6 +674,8 @@ article.single {
 
 .theme-switcher{
   border:.1rem solid var(--color-n2);
+  background-color: var(--color-n6);
+  border-radius: var(--size-102);
   height: var(--size-15);
   display: flex;
   button{
@@ -681,12 +683,16 @@ article.single {
     border:none;
     cursor: pointer;
     /* margin-top: -4.5px; */
-    margin-top:calc(-1*var(--size-24)/2);
-    width: var(--size-39);
-    height: var(--size-39);
+    margin-top:calc(-1*var(--size-9)/2);
+    margin-left: -.05rem;
+    margin-right: -.05rem;
+    width: var(--size-24);
+    height: var(--size-24);
     background-color: var(--color-n6);
     border-radius: 100px;
+    opacity: 0;
     &.active{
+      opacity: 1;
       background-color: var(--color-n2);
       svg path {
         stroke: var(--body-color);
