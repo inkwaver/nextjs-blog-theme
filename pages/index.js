@@ -220,9 +220,9 @@ export default function Index({ devProjects, designProjects, globalData }) {
                 <div ref={el => colLeftRefs.current[0] = el} className={`col-left ${highlightIndex >= 0 ? 'highlight' : ''}`}>
               <h2 className='big-title color-n3 '>Experience <span className='icon-mid'><DevExp /></span></h2>
               <h4>WordPress Developer</h4>
-
-              <strong>Webinos Inc, Freelance</strong>
               <em>Jun 2022 - Feb 2023</em>
+              <strong>Webinos Inc, Freelance</strong>
+
             </div>
             <ul>
               <li>
@@ -241,9 +241,15 @@ export default function Index({ devProjects, designProjects, globalData }) {
 
             <div ref={el => colLeftRefs.current[1] = el} className={`col-left ${highlightIndex >= 1 ? 'highlight' : ''}`}>
               <h4>Markup Specialist</h4>
-
-              <strong>SmartBet</strong>
               <em>Sep 2020 - Jul 2021</em>
+              <strong>SmartBet</strong>
+              <Image
+                    className='desktop-view dark'
+                    src="/company-logos/smartbet_io.jpg"
+                    alt='Goodwin desktop'
+                    width={39}
+                    height={39}
+                  />
             </div>
             <ul>
               <li>
@@ -314,9 +320,15 @@ export default function Index({ devProjects, designProjects, globalData }) {
 
             <div ref={el => colLeftRefs.current[2] = el} className={`col-left ${highlightIndex >= 2 ? 'highlight' : ''}`}>
               <h4>Markup Specialist</h4>
-
-              <strong>Click2Sure</strong>
               <em>Jan 2018 - Dec 2019</em>
+              <strong>Click2Sure</strong>
+              <Image
+                    className='desktop-view dark'
+                    src="/company-logos/click2sure.jpg"
+                    alt='Goodwin desktop'
+                    width={39}
+                    height={39}
+                  />
             </div>
             <ul>
               <li>
@@ -337,12 +349,28 @@ export default function Index({ devProjects, designProjects, globalData }) {
               <li>
                 Implemented best practices in HTML and CSS to optimize web page performance and ensure compatibility across various browsers.
               </li>
+              <li>
+              <Image
+                    className='desktop-view dark'
+                    src="/projects/click2sure.jpg"
+                    alt='Goodwin desktop'
+                    width={635}
+                    height={358}
+                  />
+              </li>
             </ul>
             <div ref={el => colLeftRefs.current[3] = el} className={`col-left ${highlightIndex >= 3 ? 'highlight' : ''}`}>
               <h4>Markup Specialist <br /> WordPress Developer</h4>
-
-              <strong>SPILL, Barsamini Toort</strong>
               <em>Mar 2013 - Mar 2014</em>
+              <strong>SPILL, Barsamini Toort</strong>
+              
+              <Image
+                    className='desktop-view dark'
+                    src="/company-logos/spill.jpg"
+                    alt='Goodwin desktop'
+                    width={39}
+                    height={39}
+                  />
             </div>
             <ul>
               <li>
@@ -357,12 +385,27 @@ export default function Index({ devProjects, designProjects, globalData }) {
               <li>
                 Designed and implemented a custom markup structure for a Tumblr blog, aligning it seamlessly with the provided design.
               </li>
+              <li>
+              <Image
+                    className='desktop-view dark'
+                    src="/projects/isamo.jpg"
+                    alt='Goodwin desktop'
+                    width={635}
+                    height={358}
+                  />
+                     <Image
+                    className='desktop-view dark'
+                    src="/projects/mungo-maud.jpg"
+                    alt='Goodwin desktop'
+                    width={635}
+                    height={358}
+                  />
+              </li>
             </ul>
             <div ref={el => colLeftRefs.current[4] = el} className={`col-left ${highlightIndex >= 4 ? 'highlight' : ''}`}>
               <h4>Markup Specialist </h4>
-
-              <strong>Aragast Ben</strong>
               <em>Oct 2011 - Nov 2012</em>
+              <strong>Aragast Ben</strong>
             </div>
             <ul>
               <li>
@@ -371,13 +414,27 @@ export default function Index({ devProjects, designProjects, globalData }) {
               <li>
                 Developed cross-browser compatible code to ensure the product looked identical on multiple modern and old browsers (IE7, IE8).
               </li>
-
+<li>
+<Image
+                    className='desktop-view dark'
+                    src="/projects/cafe4tune.jpg"
+                    alt='Goodwin desktop'
+                    width={635}
+                    height={358}
+                  />
+</li>
             </ul>
             <div ref={el => colLeftRefs.current[5] = el} className={`col-left ${highlightIndex >= 5 ? 'highlight' : ''}`}>
               <h4>WordPress Developer</h4>
-
-              <strong>NexusLab</strong>
               <em>Sep 2010 - Jul 2011</em>
+              <strong>NexusLab</strong>
+              <Image
+                    className='desktop-view dark'
+                    src="/company-logos/nexuslab.jpg"
+                    alt='Goodwin desktop'
+                    width={39}
+                    height={39}
+                  />
             </div>
             <ul>
               <li>
