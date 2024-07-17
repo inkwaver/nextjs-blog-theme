@@ -35,12 +35,12 @@ export default function PostPage({
   designProjects,
 }) {
   return (
-    <Layout>
+    <Layout className="single">
       <SEO
         title={`${frontMatter.title} - ${globalData.name}`}
         description={frontMatter.description}
       />
-      <Header name={globalData.name} />
+      <Header className="single-header" name={globalData.name} />
       <Sidebar designProjects={designProjects} devProjects={devProjects} /> {/* Pass both designPosts and developmentPosts to Sidebar */}
       <article className="px-6 md:px-0 main single">
         <header>

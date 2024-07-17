@@ -654,3 +654,12 @@ article.single {
     }
   }
 }
+
+
+.single .project-part {
+  position: relative;
+  width: 500px;
+  img{
+    width: 100%;
+  }
+}
