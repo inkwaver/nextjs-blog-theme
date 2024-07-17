@@ -256,9 +256,12 @@ body {
   .col-left {
     padding-right: var(--size-39);
     text-align: right;
-    border-right: .1rem solid var(--color-n4);
+    border-right: .1rem solid var(--color-n6);
     position: relative;
     min-width: calc(5*var(--size-102));
+    &.highlight{
+      border-color: var(--color-n3);
+    }
     &:after{
       content: "";
       display: block;

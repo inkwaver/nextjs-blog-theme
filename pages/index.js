@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 import { getPosts } from '../utils/mdx-utils';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -31,6 +32,59 @@ export default function Index({ devProjects, designProjects, globalData }) {
       },
     ],
   };
+
+  const colLeftRefs = useRef([]);
+  const [highlightIndex, setHighlightIndex] = useState(null);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  useEffect(() => {
+    const options = {
+      root: null, // viewport
+      rootMargin: '0px',
+      threshold: 0.3 // trigger when 10% of the element is visible
+    };
+  
+    const observer = new IntersectionObserver((entries) => {
+      let newHighlightIndex = highlightIndex;
+      entries.forEach(entry => {
+        const index = colLeftRefs.current.indexOf(entry.target);
+        if (entry.isIntersecting) {
+          newHighlightIndex = index;
+        } else if (!entry.isIntersecting && entry.boundingClientRect.top > 0 && window.scrollY < lastScrollTop) {
+          // Scrolling up and element is out of view
+          newHighlightIndex = index - 1;
+        }
+      });
+
+      if (newHighlightIndex !== highlightIndex) {
+        setHighlightIndex(newHighlightIndex);
+      }
+    }, options);
+
+    colLeftRefs.current.forEach(ref => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      colLeftRefs.current.forEach(ref => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, [lastScrollTop, highlightIndex]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setLastScrollTop(window.scrollY);
+      if (window.scrollY === 0) {
+        setHighlightIndex(null);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
 
     <Layout>
@@ -106,7 +160,6 @@ export default function Index({ devProjects, designProjects, globalData }) {
         </div>
 
         <div className="project-part home-snipet mb-102" id="smartbet">
-          <h2 className='big-title color-n3 mb-39'>Design Experience</h2>
 
 
           <div className="project-img">
@@ -163,7 +216,8 @@ export default function Index({ devProjects, designProjects, globalData }) {
         <div className='dev-exp '>
 
           <div className='project-block'>
-            <div className='col-left'>
+                
+                <div ref={el => colLeftRefs.current[0] = el} className={`col-left ${highlightIndex >= 0 ? 'highlight' : ''}`}>
               <h2 className='big-title color-n3 '>Experience <span className='icon-mid'><DevExp /></span></h2>
               <h4>WordPress Developer</h4>
 
@@ -185,7 +239,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
               </li>
             </ul>
 
-            <div className='col-left'>
+            <div ref={el => colLeftRefs.current[1] = el} className={`col-left ${highlightIndex >= 1 ? 'highlight' : ''}`}>
               <h4>Markup Specialist</h4>
 
               <strong>SmartBet</strong>
@@ -207,9 +261,9 @@ export default function Index({ devProjects, designProjects, globalData }) {
               <li className='project-overview'>
           
 
-                <input checked id="desktopView" name='responsive' type='radio' />
+                <input readOnly checked id="desktopView" name='responsive' type='radio' />
                 <input id="mobileView" name='responsive' type='radio' />
-                <input checked id="darkMode" name='color' type='radio' />
+                <input readOnly checked id="darkMode" name='color' type='radio' />
                 <input id="lightMode" name='color' type='radio' />
                 <div className='view-mode'>
                   <section>
@@ -258,7 +312,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
               </li>
             </ul>
 
-            <div className='col-left'>
+            <div ref={el => colLeftRefs.current[2] = el} className={`col-left ${highlightIndex >= 2 ? 'highlight' : ''}`}>
               <h4>Markup Specialist</h4>
 
               <strong>Click2Sure</strong>
@@ -284,7 +338,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
                 Implemented best practices in HTML and CSS to optimize web page performance and ensure compatibility across various browsers.
               </li>
             </ul>
-            <div className='col-left'>
+            <div ref={el => colLeftRefs.current[3] = el} className={`col-left ${highlightIndex >= 3 ? 'highlight' : ''}`}>
               <h4>Markup Specialist <br /> WordPress Developer</h4>
 
               <strong>SPILL, Barsamini Toort</strong>
@@ -304,7 +358,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
                 Designed and implemented a custom markup structure for a Tumblr blog, aligning it seamlessly with the provided design.
               </li>
             </ul>
-            <div className='col-left'>
+            <div ref={el => colLeftRefs.current[4] = el} className={`col-left ${highlightIndex >= 4 ? 'highlight' : ''}`}>
               <h4>Markup Specialist </h4>
 
               <strong>Aragast Ben</strong>
@@ -319,7 +373,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
               </li>
 
             </ul>
-            <div className='col-left'>
+            <div ref={el => colLeftRefs.current[5] = el} className={`col-left ${highlightIndex >= 5 ? 'highlight' : ''}`}>
               <h4>WordPress Developer</h4>
 
               <strong>NexusLab</strong>
