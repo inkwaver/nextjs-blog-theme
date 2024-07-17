@@ -14,7 +14,6 @@ const Sidebar = ({ devProjects,designProjects }) => {
     return (
         <aside className="main">
             <div className='sideabar-inner'>
-                <ThemeSwitcher />
 
                 <nav>
                     <ul>
