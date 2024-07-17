@@ -244,7 +244,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
               <em>Sep 2020 - Jul 2021</em>
               <strong>SmartBet</strong>
               <Image
-                    className='desktop-view dark'
+                    
                     src="/company-logos/smartbet_io.jpg"
                     alt='Goodwin desktop'
                     width={39}
@@ -323,7 +323,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
               <em>Jan 2018 - Dec 2019</em>
               <strong>Click2Sure</strong>
               <Image
-                    className='desktop-view dark'
+                    
                     src="/company-logos/click2sure.jpg"
                     alt='Goodwin desktop'
                     width={39}
@@ -365,7 +365,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
               <strong>SPILL, Barsamini Toort</strong>
               
               <Image
-                    className='desktop-view dark'
+                    
                     src="/company-logos/spill.jpg"
                     alt='Goodwin desktop'
                     width={39}
@@ -429,7 +429,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
               <em>Sep 2010 - Jul 2011</em>
               <strong>NexusLab</strong>
               <Image
-                    className='desktop-view dark'
+                 
                     src="/company-logos/nexuslab.jpg"
                     alt='Goodwin desktop'
                     width={39}

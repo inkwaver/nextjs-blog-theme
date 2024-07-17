@@ -166,6 +166,9 @@ header.main {
 }
 .header-links {
     align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: var(--size-24);
 }
 .hero-header {
     .wrapper-main{

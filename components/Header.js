@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { LinkedIn, Behance } from './Icons/DesignFlowIcons';
 
 export default function Header() {
   const router = useRouter();
@@ -84,8 +85,10 @@ is mobile-friendly, and prioritizes accessibility.
         </div>
       </div>
       <div className='header-links'>
-      <a className="button" href="/narek-ch_wp-dev-web.pdf" target="_blank" rel="noopener noreferrer" className='button cv-btn'>Download CV</a>
-
+      <Link className='icon-24' href="#"> <LinkedIn/> </Link>
+      <Link className='icon-24' href="#"> <Behance/> </Link>
+      <Link  href="/narek-ch_wp-dev-web.pdf" target="_blank" rel="noopener noreferrer" className='button cv-btn'>Download CV</Link>
+      
       </div>
 
     </header>
