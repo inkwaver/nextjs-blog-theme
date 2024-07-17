@@ -1,13 +1,4 @@
-.theme-switcher {
-    margin-top: .9rem;
-  margin-left: auto;
-    svg{
-        width: .9rem;
-    }
-    button{
-        height: 1.8rem;
-    }
-}
+
 
 aside.main {
     position: relative;

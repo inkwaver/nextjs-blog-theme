@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { LinkedIn, Behance } from './Icons/DesignFlowIcons';
-
+import ThemeSwitcher from './ThemeSwitcher.js';
 export default function Header() {
   const router = useRouter();
   const [avatarSize, setAvatarSize] = useState(240);
@@ -88,7 +88,7 @@ is mobile-friendly, and prioritizes accessibility.
       <Link className='icon-24' href="#"> <LinkedIn/> </Link>
       <Link className='icon-24' href="#"> <Behance/> </Link>
       <Link  href="/narek-ch_wp-dev-web.pdf" target="_blank" rel="noopener noreferrer" className='button cv-btn'>Download CV</Link>
-      
+      <ThemeSwitcher/>
       </div>
 
     </header>

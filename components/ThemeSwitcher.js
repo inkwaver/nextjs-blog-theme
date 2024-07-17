@@ -46,35 +46,54 @@ const sunIcon = (
       ></path>
     </svg>
   );
-  
-  const ThemeSwitcher = () => {
-    return (
-      <div className="theme-switcher flex  bg-white justify-center dark:bg-gray-900 rounded-3xl p-1">
-        <button
-          type="button"
-          aria-label="Use Dark Mode"
-          onClick={() => {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-          }}
-          className="flex items-center h-full pr-2 dark:bg-primary rounded-3xl flex justify-center align-center p-2 w-24 h-10 transition"
-        >
-          {moonIcon}
-        </button>
-  
-        <button
-          type="button"
-          aria-label="Use Light Mode"
-          onClick={() => {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-          }}
-          className="flex items-center h-full pr-2 bg-primary dark:bg-transparent rounded-3xl flex justify-center align-center p-2 w-24 h-10 transition"
-        >
-          {sunIcon}
-        </button>
-      </div>
-    );
-  };
+  import React, { useState, useEffect  } from 'react';
+const ThemeSwitcher = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false); // Initialize with light mode
 
-  export default ThemeSwitcher;
+ // Read theme preference from local storage on component mount
+ useEffect(() => {
+  const storedTheme = localStorage.getItem('theme');
+  if (storedTheme === 'dark') {
+    setIsDarkMode(true);
+    document.documentElement.classList.add('dark');
+  }
+}, []); // Empty dependency array ensures this runs only once on mount
+
+const toggleTheme = () => {
+  if (isDarkMode) {
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  }
+  setIsDarkMode(!isDarkMode);
+};
+  return (
+    <div className="theme-switcher flex bg-white justify-center dark:bg-gray-900 rounded-3xl p-1">
+      <button
+        type="button"
+        aria-label="Use Dark Mode"
+        onClick={toggleTheme}
+        className={`${
+          isDarkMode ? 'dark:bg-primary active' : 'dark:bg-transparent'
+        } `}
+      >
+        {moonIcon}
+      </button>
+
+      <button
+        type="button"
+        aria-label="Use Light Mode"
+        onClick={toggleTheme}
+        className={`${
+          !isDarkMode ? 'bg-primary active' : 'dark:bg-transparent'
+        } `}
+      >
+        {sunIcon}
+      </button>
+    </div>
+  );
+};
+
+export default ThemeSwitcher;

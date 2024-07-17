@@ -1,7 +1,7 @@
 // Sidebar.js
 import React from 'react';
 import Link from 'next/link';
-import ThemeSwitcher from './ThemeSwitcher.js';
+
 import Links from './Links';
 import { useRouter } from 'next/router';  // Import the useRouter hook
 const Sidebar = ({ devProjects,designProjects }) => {
