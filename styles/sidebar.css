@@ -50,3 +50,19 @@ aside.main {
     }
 }
 
+.sidebar-inner{
+    position: sticky;
+    top:5rem;
+    .chapter {
+        background-color: var(--color-n6);
+        & ~ li {
+            margin-left: var(--size-39);
+        }
+    }
+    ul.articles{
+        display: none;
+    }
+    .active-cat + ul.articles{
+        display: block;
+    }
+}
