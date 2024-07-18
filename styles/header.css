@@ -2,7 +2,7 @@ header.main {
     padding: var(--size-15) var(--wrapper-margin);
     width: 100%;
     /* position: fixed; */
-    z-index: 12;
+    z-index: 13;
     position: fixed;
     left: 0;
     top: 0;
@@ -151,6 +151,9 @@ header.main {
     display: flex;
     align-items: center;
     gap: var(--size-24);
+    .icon-24 {
+        margin-top: -.4rem;
+    }
 }
 
 .hero-header {
@@ -178,8 +181,8 @@ header.main {
     &.sticked {
         transition: all ease-in .1s;
         height: 4.2rem;
-        background-color: white;
-
+        background-color: var(--white);
+        border-bottom: .1rem solid var(--color-n5);
         .header-description {
             width: 100%;
             margin-left: 1rem;

@@ -13,6 +13,7 @@
   box-sizing: border-box;
   line-height: 1;
   text-decoration: none;
+  color: var(--color-n2);
 }
 
 :root {
@@ -34,6 +35,8 @@
   --color-n5: #B3B3B3;
   --color-n6: #D9D9D9;
 
+  --white:#ffffff;
+  --black:#000000;
   --body-color: #FFF8EC;
 
   /* size and proportion */
@@ -53,7 +56,7 @@
   --logo-name-big: var(--font-size-huge);
   --logo-name-big-font-weight: 900;
   --logo-name-big-color: var(--color-n3);
-  --intro-color: var(var(--color-n2));
+  --intro-color: var(--color-n2);
 
 }
 .dark:root{
@@ -63,7 +66,13 @@
   --color-n3: #8C8C8C;
   --color-n2: #B3B3B3;
   --color-n1: #D9D9D9;
-  --body-color: #1b0641;
+  --body-color: #0d0320;
+  --white:#000000;
+  --black:#ffffff;
+}
+
+svg,svg path{
+  fill: var(--black);
 }
 .paragraph,
 p {
@@ -517,7 +526,7 @@ body {
 
 header.main {
   grid-area: header;
-  z-index: 11;
+
 }
 
 main.main,

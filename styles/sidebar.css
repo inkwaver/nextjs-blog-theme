@@ -65,4 +65,7 @@ aside.main {
     .active-cat + ul.articles{
         display: block;
     }
+    .content-links {
+        margin-left: var(--size-39);
+    }
 }
