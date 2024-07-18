@@ -95,6 +95,11 @@ p {
     background-color: var(--color-n6);
   }
 }
+.button {
+  &.ghost{
+    border-color: transparent;
+  }
+}
 
 .active {
   /* Your active link styles go here */
@@ -503,9 +508,9 @@ body {
 .site-structure {
   display: grid;
   grid-template:
-    "header header sidebar"
+    "header header header"
     "content content sidebar"
-    "footer footer sidebar";
+    "footer footer footer";
   grid-template-columns: 1fr 2fr minmax(19.6rem, 1.2fr);
   /* grid-template-columns: 1fr 2fr 1.2fr; */
 }

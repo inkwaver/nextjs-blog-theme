@@ -85,6 +85,7 @@ is mobile-friendly, and prioritizes accessibility.
         </div>
       </div>
       <div className='header-links'>
+      <Link  href="/posts/case-study-real-estate-brief"  rel="noopener noreferrer" className='button cv-btn ghost'>Case Study</Link>
       <Link className='icon-24' href="#"> <LinkedIn/> </Link>
       <Link className='icon-24' href="#"> <Behance/> </Link>
       <Link  href="/narek-ch_wp-dev-web.pdf" target="_blank" rel="noopener noreferrer" className='button cv-btn'>Download CV</Link>

@@ -3,7 +3,7 @@
 aside.main {
     position: relative;
     z-index: 12;
-
+    padding-top: var(--size-102);
     .sideabar-inner {
         display: flex;
         flex-direction: column;

@@ -33,6 +33,7 @@ export default function PostPage({
   thumbnail,
   devProjects,
   designProjects,
+  caseStudy,
 }) {
   return (
     <Layout className="single">
@@ -41,7 +42,7 @@ export default function PostPage({
         description={frontMatter.description}
       />
       <Header className="single-header" name={globalData.name} />
-      <Sidebar designProjects={designProjects} devProjects={devProjects} /> {/* Pass both designPosts and developmentPosts to Sidebar */}
+      <Sidebar caseStudy={caseStudy}  designProjects={designProjects} devProjects={devProjects} /> {/* Pass both designPosts and developmentPosts to Sidebar */}
       <article className="px-6 md:px-0 main single">
         <header>
           {thumbnail && (
@@ -109,14 +110,16 @@ export default function PostPage({
         </div>
       </article>
       <Footer copyrightText={globalData.footerText} />
-      <GradientBackground
+
+      {/* <GradientBackground
         variant="large"
         className="absolute -top-32 opacity-30 dark:opacity-50"
       />
       <GradientBackground
         variant="small"
         className="absolute bottom-0 opacity-20 dark:opacity-10"
-      />
+      /> */}
+
     </Layout>
   );
 }
@@ -129,6 +132,7 @@ export const getStaticProps = async ({ params }) => {
 
   const devProjects = getPosts('dev-projects'); // Adjust this line as necessary
   const designProjects = getPosts('design'); // Adjust this line as necessary
+  const caseStudy = getPosts('case-study'); // Adjust this line as necessary
 
   // Pass tag parameter if available
   const tag = data.tags && data.tags[0];
@@ -148,6 +152,7 @@ export const getStaticProps = async ({ params }) => {
       thumbnail,
       devProjects,
       designProjects,
+      caseStudy,
     },
   };
 };
