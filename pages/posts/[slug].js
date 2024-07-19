@@ -37,27 +37,28 @@ export default function PostPage({
 }) {
   return (
     <Layout className="single">
-      <SEO
-        title={`${frontMatter.title} - ${globalData.name}`}
-        description={frontMatter.description}
+     <SEO
+        title={frontMatter.title ? `${frontMatter.title} - ${globalData.name}` : 'Default Title'}
+        description={frontMatter.description || 'Default description'}
+        ogImage={frontMatter.ogImage || '/avatar-nch.png'}
       />
       <Header className="single-header" name={globalData.name} />
 
       <article className=" site-structure main single">
         <header className='article-header'>
           <div className='wrapper-main'>
-
-            {thumbnail && (
-              <Image
-                src={thumbnail}
-                className="w-full h-auto mb-6"
-                alt={`${frontMatter.title} Thumbnail`}
-                width={672}
-                height={350}
-                loading="lazy"
-              />
-            )}
-
+            <div className='wrapper-1400'>
+              {thumbnail && (
+                <Image
+                  src={thumbnail}
+                  className="w-full h-auto mb-6"
+                  alt={`${frontMatter.title} Thumbnail`}
+                  width={672}
+                  height={350}
+                  loading="lazy"
+                />
+              )}
+            </div>
           </div>
         </header>
         <h1 className="wrapper-main">

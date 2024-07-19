@@ -209,7 +209,11 @@ ul {
   max-width: var(--wrapper-main);
   width: 100%;
   margin: 0 auto 0;
-
+}
+.wrapper-1400{
+  max-width: 1400px;
+  margin: o auto 0;
+  margin:0 auto 0;
 }
 
 main.main {
