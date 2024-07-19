@@ -50,7 +50,6 @@ aside.main {
 .section-title {
 }
 .sidebar{
-    background-color: var(--color-n5);
     .title{
         font-size: var(--size-39);
         padding-bottom: 24px;

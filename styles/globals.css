@@ -546,8 +546,9 @@ footer.main {
 
 .single-content {
   display: flex;
-  background-color: var(--white);
   .content{
+  background-color: var(--white);
+
     width: 100%;
     padding: var(--size-24);
   }
