@@ -39,14 +39,14 @@ const Sidebar = ({ devProjects, designProjects, caseStudy }) => {
   };
 
   return (
-    <aside className="main">
+    <aside className="main sidebar">
       <div className='sidebar-inner'>
         <nav>
           <ul>
             <li>
-              <h3>Case Study</h3>
+              <h3 className='title'>Case Study</h3>
               {Object.keys(caseStudyByProject).map((project) => (
-                <div key={project}>
+                <div className='parts' key={project}>
                   <span
                     className={activeProject === project || (urlActiveProject && urlActiveProject.includes(project)) ? 'active-cat' : ''}
                     onClick={() => handleProjectClick(project)}
