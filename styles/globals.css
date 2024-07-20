@@ -714,3 +714,11 @@ footer.main {
   }
  
 }
+
+.page-cover {
+  background-color: #093E82;
+  display: flex;
+  * {
+    color: white;
+  }
+}
