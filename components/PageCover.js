@@ -1,9 +1,9 @@
 // components/PageCover.js
 import React from 'react';
 
-const PageCover = ({ title, subtitle, description, img }) => {
+const PageCover = ({ id, title, subtitle, description, img }) => {
   return (
-    <section className='page-cover'>
+    <section id={id} className='page-cover'>
       <div className='info'>
         <h2>{title}</h2>
         <span>{subtitle}</span>

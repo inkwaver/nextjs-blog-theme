@@ -18,12 +18,14 @@ import Sidebar from '../../components/Sidebar';
 import Layout, { GradientBackground } from '../../components/Layout';
 import SEO from '../../components/SEO';
 import PageCover from '../../components/PageCover';
+import ImageViewerModal from '../../components/ImageViewerModal'; // Ensure correct path
 
 const components = {
   a: CustomLink,
   Head,
   Image,
   PageCover,  // Add the PageCover component here
+  ImageViewerModal,
 };
 
 export default function PostPage({
