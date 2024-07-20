@@ -592,7 +592,10 @@ footer.main {
   background-color: var(--white);
 
     width: 100%;
-    padding: var(--size-24);
+   
+    .content-holder {
+      padding: var(--size-24);
+    }
   }
 
   .sidebar {
@@ -759,8 +762,20 @@ footer.main {
   height: 90vh;
   align-items: center;
   padding: var(--size-24);
+position: relative;
+
   .info, .visuals {
     width: 50%;
+  }
+
+  &:before{
+    content: "";
+    width: 50%;
+    position: absolute;
+    left: -50%;
+    height: 100%;
+  background-color: var(--color-static-p1);
+
   }
   .visuals {
     display: flex;
