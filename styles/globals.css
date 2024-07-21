@@ -786,7 +786,7 @@ footer.main {
   width: 100%;
   min-height: 90vh;
   align-items: center;
-  padding: var(--size-24);
+  padding:var(--size-102) var(--size-24);
 position: relative;
 
   .info, .visuals {
@@ -811,10 +811,12 @@ position: relative;
       color: var(--color-s6);
       font-size: var(--font-size-huge);
       font-weight: 900;
+      line-height: 3.6rem;
+      margin-bottom: 9px;
     }
     .info > span{
       color: var(--color-s5);
-      font-size: var(--font-size-caption);
+      font-size: var(--font-size-paragraph);
       margin-bottom: var(--size-15);
       display: block;
     }
