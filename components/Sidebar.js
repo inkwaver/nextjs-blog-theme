@@ -44,7 +44,7 @@ const Sidebar = ({ devProjects, designProjects, caseStudy }) => {
         <nav>
           <ul>
             <li>
-              <h3 className='title'>Case Study</h3>
+              {/* <h3 className='title'>Case Study</h3> */}
               {Object.keys(caseStudyByProject).map((project) => (
                 <div className='parts' key={project}>
                   <span
