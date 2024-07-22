@@ -1,0 +1,38 @@
+
+.design-flow {
+    max-width: 1500px;
+  
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: var(--size-24);
+    }
+  }
+  
+  .design-flow-card {
+    display: grid;
+    grid-template: "icon title"
+      "icon description";
+    grid-template-columns: 60px auto;
+    column-gap: var(--size-24);
+    /* max-width: 532px; */
+    width: 100%;
+    padding: var(--size-39);
+    border: .1rem solid var(--color-n5);
+    border-radius: var(--size-24);
+  
+    .icon {
+      grid-area: icon;
+    }
+  
+    .title-normal {
+      grid-area: title;
+      margin-bottom: var(--size-9);
+      color: var(--color-n2);
+    }
+  
+    p {
+      grid-area: description;
+      color: var(--color-n3);
+    }
+  }

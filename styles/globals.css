@@ -1,8 +1,11 @@
+@import url(./var.css);
 @import url(./header.css);
 @import url(./hero.css);
 @import url(./sidebar.css);
-@import url(./responsive.css);
 @import url(./page-cover.css);
+@import url(./parts/design-flow-cards.css);
+@import url(./resposnivnes/responsive.css);
+@import url(./resposnivnes/laptop.css);
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,106 +20,6 @@
   color: var(--color-n2);
 }
 
-:root {
-  --wrapper-main: 1920px;
-  --wrapper-sec: 60rem;
-  --font: Arial, Helvetica, sans-serif;
-
-  --font-size-huge: 4.3rem;
-  --font-size-big: 3.5rem;
-  --font-size-title: 1.66rem;
-  --font-size-Subtitle: 1.33rem;
-  --font-size-paragraph: 1rem;
-  --font-size-caption: .83rem;
-
-  --color-n1: #1A1A1A;
-  --color-n2: #404040;
-  --color-n3: #666666;
-  --color-n4: #8C8C8C;
-  --color-n5: #B3B3B3;
-  --color-n6: #D9D9D9;
-
-  --color-p1: #093E82;
-  --color-p2: #2E5B95;
-  --color-p3: #5378A7;
-  --color-p4: #7895BA;
-  --color-p5: #9DB2CD;
-  --color-p6: #C1CFE0;
-
-  --color-static-p1:  #093E82;
-  --color-static-p2:  #2E5B95;
-  --color-static-p3:  #5378A7;
-  --color-static-p4:  #7895BA;
-  --color-static-p5:  #9DB2CD;
-  --color-static-p6: #C1CFE0;
-
-  --color-s1: #FF9E00;
-  --color-s2: #FFAD26;
-  --color-s3: #FFBB4D;
-  --color-s4: #FFCA73;
-  --color-s5: #FFD899;
-  --color-s6: #FFE7BF;
-  --color-s7: #FFF0D9;
-
-  --color-static-s1: #FF9E00;
-  --color-static-s2: #FFAD26;
-  --color-static-s3: #FFBB4D;
-  --color-static-s4: #FFCA73;
-  --color-static-s5: #FFD899;
-  --color-static-s6: #FFE7BF;
-  --color-static-s7: #FFF0D9;
-
-  --white:#ffffff;
-  --black:#000000;
-  --body-color: #FFF8EC;
-
-  /* size and proportion */
-  --size-9: 9px;
-  --size-15: 15px;
-  --size-24: 24px;
-  --size-39: 39px;
-  --size-63: 63px;
-  --size-102: 102px;
-
-  --size-9x2: 18px;
-
-  /* wrapper */
-  --wrapper-margin: var(--size-39);
-  /* header */
-  --logo-name-small: var(--size-24);
-  --logo-name-big: var(--font-size-huge);
-  --logo-name-big-font-weight: 900;
-  --logo-name-big-color: var(--color-n3);
-  --intro-color: var(--color-n2);
-
-}
-.dark:root{
-  --color-n6: #1A1A1A;
-  --color-n5: #404040;
-  --color-n4: #666666;
-  --color-n3: #8C8C8C;
-  --color-n2: #B3B3B3;
-  --color-n1: #D9D9D9;
-  --body-color: #110429;
-
-  --color-p6: #093E82;
-  --color-p5: #2E5B95;
-  --color-p4: #5378A7;
-  --color-p3: #7895BA;
-  --color-p2: #9DB2CD;
-  --color-p1: #C1CFE0;
-
-  --color-s7: #FF9E00;
-  --color-s6: #FFAD26;
-  --color-s5: #FFBB4D;
-  --color-s4: #FFCA73;
-  --color-s3: #FFD899;
-  --color-s2: #FFE7BF;
-  --color-s1: #FFF0D9;
-
-  --white:#000000;
-  --black:#ffffff;
-}
 
 svg,svg path{
   fill: var(--black);
@@ -285,43 +188,6 @@ body {
   background: rgba(0, 0, 0, .3);
 }
 
-.design-flow {
-  max-width: 1500px;
-
-  ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--size-24);
-  }
-}
-
-.design-flow-card {
-  display: grid;
-  grid-template: "icon title"
-    "icon description";
-  grid-template-columns: 60px auto;
-  column-gap: var(--size-24);
-  /* max-width: 532px; */
-  width: 100%;
-  padding: var(--size-39);
-  border: .1rem solid var(--color-n5);
-  border-radius: var(--size-24);
-
-  .icon {
-    grid-area: icon;
-  }
-
-  .title-normal {
-    grid-area: title;
-    margin-bottom: var(--size-9);
-    color: var(--color-n2);
-  }
-
-  p {
-    grid-area: description;
-    color: var(--color-n3);
-  }
-}
 
 .dev-exp {
   margin-top: calc(2* (var(--font-size-big) + var(--size-39)));

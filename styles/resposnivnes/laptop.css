@@ -1,0 +1,26 @@
+
+
+@media screen and (max-width: 1562px) {
+   
+    .design-flow-card {
+        width: 484px;
+    }
+    .design-flow ul {
+        display: grid;
+        grid-template-columns: 484px 484px ;
+        gap: var(--size-24);
+    }
+   
+}
+
+
+
+@media screen and (max-width: 1240px) {
+   
+    .page-cover svg, .page-cover path {
+        width: 37% !important;
+    }
+    .page-cover .info, .page-cover .visuals {
+        width: 63%;
+    }
+}
