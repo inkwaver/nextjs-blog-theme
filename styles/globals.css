@@ -2,6 +2,7 @@
 @import url(./hero.css);
 @import url(./sidebar.css);
 @import url(./responsive.css);
+@import url(./page-cover.css);
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,6 +57,14 @@
   --color-s5: #FFD899;
   --color-s6: #FFE7BF;
   --color-s7: #FFF0D9;
+
+  --color-static-s1: #FF9E00;
+  --color-static-s2: #FFAD26;
+  --color-static-s3: #FFBB4D;
+  --color-static-s4: #FFCA73;
+  --color-static-s5: #FFD899;
+  --color-static-s6: #FFE7BF;
+  --color-static-s7: #FFF0D9;
 
   --white:#ffffff;
   --black:#000000;
@@ -780,76 +789,5 @@ footer.main {
  
 }
 
-.page-cover {
-  background-color: var(--color-static-p1);
-  display: flex;
-  width: 100%;
-  min-height: 90vh;
-  align-items: center;
-  padding:var(--size-102) var(--size-24);
-position: relative;
-
-  .info, .visuals {
-    width: 50%;
-  }
-
-  &:before{
-    content: "";
-    width: 50%;
-    position: absolute;
-    left: -50%;
-    height: 100%;
-  background-color: var(--color-static-p1);
-
-  }
-  .visuals {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-    h2{
-      color: var(--color-s6);
-      font-size: var(--font-size-huge);
-      font-weight: 900;
-      line-height: 3.6rem;
-      margin-bottom: 9px;
-    }
-    .info > span{
-      color: var(--color-s5);
-      font-size: var(--font-size-paragraph);
-      margin-bottom: var(--size-15);
-      display: block;
-    }
-    p, li {
-      width: 552px;
-    }
-    li {
-      margin-bottom: var(--size-9);
-      list-style-type: disc;
-      
-    }
-    ul {
-      padding-left: var(--size-15);
-    }
-    p, ul {
-      margin-top: var(--size-24);
-
-    }
-    p, ul li {
-      color: var(--color-s7);
-      font-size: var(--font-size-Subtitle);
-      line-height: calc(1.6*(var(--font-size-Subtitle)));
-
-    }
-    svg, path{
-      width: 204px !important;
-    }
-    svg, path {
-      fill: var(--color-s3);
-    }
-  * {
-    color: var(--white);
-  }
-}
 
 /* components/ImageViewerModal.module.css */
