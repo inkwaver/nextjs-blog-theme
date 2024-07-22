@@ -1,6 +1,8 @@
 
 :root {
-  --sidebar-bg: var(--color-p2);
+  /* sidebar-color schem v1 start */
+
+  /* --sidebar-bg: var(--color-p2);
   --sidebar-border-left-color: var(--color-p2);
 
   --sideabr-cat-bg:red;
@@ -15,7 +17,11 @@
 
   --sidebar-active-cat-ul:var(--color-p4);
   --sidebar-active-cat-ul-li-2nt-higlight-color:var(--color-s5);
-  --sidebar-active-cat-ul-li-2nt-color:var(--white);
+  --sidebar-active-cat-ul-li-2nt-color:var(--white); */
+
+  /* sidebar-color schem v1 end */
+  --sidebar-active-cat-ul-li-2nt-higlight-color:var(--color-p1);
+
 }
 
 
