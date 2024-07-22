@@ -19,6 +19,8 @@
   --sidebar-active-cat-ul-li-2nt-color:var(--white); */
 
   /* sidebar-color schem v1 end */
+  --sidebar-chapter-color: var(--color-p3);
+
   --sidebar-active-cat-ul-li-2nt-higlight-color: var(--color-p1);
   --sidebar-active-cat-ul-li-2nt-color: var(--color-n3);
 }
@@ -30,7 +32,7 @@
     position: sticky;
     top: 4rem;
     /* padding-left: 45px; */
-    padding-top: var(--size-15);
+    /* padding-top: var(--size-15); */
   }
   ul {
     list-style-type: none;
@@ -87,6 +89,8 @@
         font-weight: bold;
         * {
           color: var(--sidebar-chapter-color);
+          font-size: 12px;
+          letter-spacing: .02rem;
         }
       }
       li:not(.chapter) > a {
