@@ -11,10 +11,10 @@
         gap: var(--size-24);
     }
     header.main{
-        .main-inner {
+        /* .main-inner {
             position: absolute;
-            top:-15px;
-        }
+            top:9px;
+        } */
         .header-links {
             position: absolute;
             right: var(--size-24);
@@ -65,6 +65,22 @@
         .design-flow-card {
             width: 100%;
         }
+    }
+}
+
+
+@media screen and (max-width: 983px) {
+    .home-page header.main .header-description .logo-name{
+        font-size: 39px;
+    }
+    header.main.sticked .header-description .logo-name {
+        font-size: var(--font-size-Subtitle);
+        margin-bottom: 0;
+    }
+    .home-page header.main .header-description p {
+        font-size: var(--font-size-paragraph);
+        line-height: 1.4rem;
+        max-width: 27rem;
     }
 }
 

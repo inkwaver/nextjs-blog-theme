@@ -1,7 +1,7 @@
-/* #toc, .toc-menu {
+#toc, .toc-menu {
 
 display: none;
-} */
+}
 @media screen and (max-width: 1024px) {
   .single-content {
     display: block;
