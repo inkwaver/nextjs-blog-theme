@@ -40,7 +40,9 @@ const Sidebar = ({ devProjects, designProjects, caseStudy }) => {
 
   return (
     <aside className="main sidebar">
+      <input type='checkbox' id="toc"/>
       <div className='sidebar-inner'>
+        <label className='toc-menu' htmlFor='toc'>menu</label>
         <nav>
           <ul>
             <li>
@@ -57,9 +59,9 @@ const Sidebar = ({ devProjects, designProjects, caseStudy }) => {
                     {caseStudyByProject[project].map((post) => (
                       <li key={post.filePath} className={post.data.classname || ''}>
                         <Link className={`${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`} href={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}>
-                          <span className={`block py-2 px-3 text-sm hover:underline ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
-                            <span className="block text-gray-600 dark:text-gray-400">{post.data.date}</span>
-                            <span className="block font-semibold">{post.data.title}</span>
+                          <span className={` ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
+                            <span className="menu-date">{post.data.date}</span>
+                            <span className="menu-title">{post.data.title}</span>
                           </span>
                         </Link>
                         <Links links={post.data.links} />

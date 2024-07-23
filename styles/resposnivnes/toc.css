@@ -1,0 +1,31 @@
+@media screen and (max-width: 1024px) {
+  .single-content {
+    display: block;
+  }
+  .single-content .sidebar-inner {
+    position: fixed;
+    background: white;
+    right: 0;
+    height: 88vh;
+    overflow-y: auto;
+  }
+  .toc-menu {
+  }
+  #toc:checked ~ .sidebar-inner {
+    .parts > span.active-cat{
+        display: none;
+    }
+    li.chapter{
+        display: none;
+    }
+    ul.articles > li > a {
+        display: none;
+    }
+    .parts > span:not(.active-cat){
+        display: none;
+    }
+    .content-links li a{
+        font-size: 0;
+    }
+  }
+}

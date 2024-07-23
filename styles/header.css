@@ -123,7 +123,7 @@ header.main {
             font-size: var(--font-size-Subtitle);
             line-height: calc(1.5*var(--font-size-Subtitle));
             max-width: 35rem;
-            max-width: 36vw;
+            /* max-width: 36vw; */
             color: var(--intro-color);
         }
 
