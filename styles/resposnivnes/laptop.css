@@ -76,6 +76,7 @@
     header.main.sticked .header-description .logo-name {
         font-size: var(--font-size-Subtitle);
         margin-bottom: 0;
+        margin-left: 1rem;
     }
     .home-page header.main .header-description p {
         font-size: var(--font-size-paragraph);
@@ -95,7 +96,24 @@
     }
 }
 
+@media screen and (max-width: 811px) {
+  
+    .home-page header.main.hero-header .main-inner {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .home-page header.main.hero-header .header-description {
+        align-items: center;
+        margin-left: 0;
+        text-align: center;
 
+    }
+    .design-flow {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 /* @media screen and (max-width: 942px) {
 
