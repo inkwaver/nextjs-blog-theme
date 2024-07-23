@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Links from './Links';
+import { CloseIcon, TocIcon } from '../components/Icons/DesignFlowIcons';
+
 
 const Sidebar = ({ devProjects, designProjects, caseStudy }) => {
   const router = useRouter();
@@ -42,7 +44,10 @@ const Sidebar = ({ devProjects, designProjects, caseStudy }) => {
     <aside className="main sidebar">
       <input type='checkbox' id="toc"/>
       <div className='sidebar-inner'>
-        <label className='toc-menu' htmlFor='toc'>menu</label>
+        <label className='toc-menu' htmlFor='toc'>
+          <CloseIcon className="close-toc"/>
+          <TocIcon className="open-toc"/>
+        </label>
         <nav>
           <ul>
             <li>

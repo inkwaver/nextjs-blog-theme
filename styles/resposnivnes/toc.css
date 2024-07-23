@@ -8,10 +8,34 @@
     right: 0;
     height: 88vh;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
   .toc-menu {
+    display: inline-block;
+    padding: var(--size-9);
+    border-bottom: .1rem solid var(--color-n4);
+    .open-toc {
+        display: none;
+    }
+    svg {
+        width: var(--size-24);
+        height: var(--size-24);
+    }
   }
   #toc:checked ~ .sidebar-inner {
+    height: auto;
+    margin-top: 2rem;
+    .toc-menu {
+        .close-toc {
+            display: none;
+        }
+        .open-toc {
+            display: block;
+        }
+    }
+
     .parts > span.active-cat{
         display: none;
     }
@@ -26,6 +50,9 @@
     }
     .content-links li a{
         font-size: 0;
+    }
+    .content-links {
+        margin-right: 0;
     }
   }
 }
