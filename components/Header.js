@@ -4,15 +4,20 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { LinkedIn, Behance } from './Icons/DesignFlowIcons';
 import ThemeSwitcher from './ThemeSwitcher.js';
+import { CloseIcon, MenuIcon } from '../components/Icons/DesignFlowIcons';
+
 export default function Header() {
   const router = useRouter();
   const [avatarSize, setAvatarSize] = useState(240);
+  const [isChecked, setIsChecked] = useState(false);
 
   // Function to determine if a link is active
   const isActiveLink = (href) => {
     return router.pathname === href;
   };
-
+  const handleChange = (event) => {
+    setIsChecked(event.target.checked);
+};
   useEffect(() => {
     // Apply the avatar size change and scroll effect only on the home page
     if (router.pathname === '/') {
@@ -39,6 +44,12 @@ export default function Header() {
 
   return (
     <header className={`main ${avatarSize <= 45 ? 'sticked' : 'hero-header'}`}>
+         <input checked={isChecked} onChange={handleChange}  className='burger-anchor' id="hamburger" type='checkbox'/>
+         <label className='menu-icon' htmlFor="hamburger">
+          <MenuIcon className="main-menu-open"/>
+          <CloseIcon className="main-menu-close"/>
+
+         </label>
       <div className='wrapper-main header-wrap'>
       <div className="main-inner ">
         <h1 className="logo">

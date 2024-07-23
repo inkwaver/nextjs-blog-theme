@@ -1,0 +1,43 @@
+#hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 811px) {
+  .main-menu-close, .header-links {
+    display: none;
+    background-color: white;
+  }
+
+  #hamburger:checked ~ .header-wrap {
+    .header-links {
+        display: flex;
+        background-color: var(--color-n5);
+        flex-direction: column-reverse;
+        top: 4rem;
+        padding: 24px;
+        right: 0;
+        width: 100%;
+    }
+  }
+  #hamburger:checked ~ .menu-icon {
+    .main-menu-close {
+        display: block;
+    }
+    .main-menu-open {
+        display: none;
+    }
+  }
+  .menu-icon {
+    position: absolute;
+    right: 24px;
+    top:21px;
+    z-index: 12;
+  }
+  .main-menu-open , .main-menu-close{
+    width: 24px;
+     path{
+        width: 24px;
+
+    }
+  }
+}
