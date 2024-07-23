@@ -18,15 +18,15 @@ export default function Header() {
     if (router.pathname === '/') {
       const handleScroll = () => {
         const scrollPosition = window.scrollY;
-  
+
         // Decrease avatar size gradually as user scrolls
         const newAvatarSize = Math.max(45, 240 - scrollPosition);
         setAvatarSize(newAvatarSize);
       };
-  
+
       // Attach scroll event listener
       window.addEventListener('scroll', handleScroll);
-  
+
       // Cleanup on component unmount
       return () => {
         window.removeEventListener('scroll', handleScroll);
@@ -36,13 +36,12 @@ export default function Header() {
       setAvatarSize(45);
     }
   }, [router.pathname]); // Listen for changes in the route
-  
 
   return (
     <header className={`main ${avatarSize <= 45 ? 'sticked' : 'hero-header'}`}>
-      <div className='main-inner wrapper-main'>
-      
-        <h1 className='logo'>
+      <div className='wrapper-main header-wrap'>
+      <div className="main-inner ">
+        <h1 className="logo">
           {/* eslint-disable */}
           <Link href="/">
             {/* <a className={isActiveLink('/') ? 'active' : ''}>
@@ -55,43 +54,58 @@ export default function Header() {
               
             </a> */}
             <span className={isActiveLink('/') ? 'active' : ''}>
-              <Image className='avatar'
+              <Image
+                className="avatar"
                 src="/narek-ch.png"
                 width={avatarSize}
                 height={avatarSize}
                 alt="Image description"
               />
-              
             </span>
           </Link>
         </h1>
-        <div className='header-description'>
-        <Link className='huge-title' href="/">
+        <div className="header-description">
+          <Link className="huge-title" href="/">
             {/* <a  className="logo-name"> */}
-            <span  className="logo-name">
-            Narek Chilingaryan
-            </span>
+            <span className="logo-name">Narek Chilingaryan</span>
             {/* </a> */}
           </Link>
-         
-            
-       
-        <p className='paragraph'>
-        I <strong>design interfaces</strong> and translate them into markup that's high-resolution, features smooth scrolling, 
-is mobile-friendly, and prioritizes accessibility.
-        </p>
-          {/* eslint-enable */}
 
+          <p className="paragraph">
+            I <strong>design interfaces</strong> and translate them into markup
+            that's high-resolution, features smooth scrolling, is
+            mobile-friendly, and prioritizes accessibility.
+          </p>
+          {/* eslint-enable */}
         </div>
       </div>
-      <div className='header-links'>
-      <Link  href="/posts/case-study-real-estate-brief"  rel="noopener noreferrer" className='button cv-btn ghost'>Case Study</Link>
-      <Link className='icon-24' href="#"> <LinkedIn/> </Link>
-      <Link className='icon-24' href="#"> <Behance/> </Link>
-      <Link  href="/narek-ch_wp-dev-web.pdf" target="_blank" rel="noopener noreferrer" className='button cv-btn'>Download CV</Link>
-      <ThemeSwitcher/>
+      <div className="header-links">
+        <Link
+          href="/posts/case-study-real-estate-brief"
+          rel="noopener noreferrer"
+          className="button cv-btn ghost"
+        >
+          Case Study
+        </Link>
+        <Link className="icon-24" href="#">
+          {' '}
+          <LinkedIn />{' '}
+        </Link>
+        <Link className="icon-24" href="#">
+          {' '}
+          <Behance />{' '}
+        </Link>
+        <Link
+          href="/narek-ch_wp-dev-web.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button cv-btn"
+        >
+          Download CV
+        </Link>
+        <ThemeSwitcher />
       </div>
-
+      </div>
     </header>
   );
 }

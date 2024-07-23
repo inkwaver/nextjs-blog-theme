@@ -6,13 +6,16 @@ import { CloseIcon, TocIcon } from '../components/Icons/DesignFlowIcons';
 
 
 const Sidebar = ({ devProjects, designProjects, caseStudy }) => {
+
   const router = useRouter();
   const [activeProject, setActiveProject] = useState(null);
-
+const [isChecked, setIsChecked] = useState(false);
   const isActiveLink = (href) => {
     return router.pathname === href || router.asPath === href;
   };
-
+  const handleChange = (event) => {
+    setIsChecked(event.target.checked);
+};
   // Sort caseStudy posts by the order property
   const sortedCaseStudy = caseStudy.sort((a, b) => a.data.order - b.data.order);
 
@@ -42,7 +45,7 @@ const Sidebar = ({ devProjects, designProjects, caseStudy }) => {
 
   return (
     <aside className="main sidebar">
-      <input type='checkbox' id="toc"/>
+      <input checked={isChecked} onChange={handleChange}   type='checkbox' id="toc"/>
       <div className='sidebar-inner'>
         <label className='toc-menu' htmlFor='toc'>
           <CloseIcon className="close-toc"/>

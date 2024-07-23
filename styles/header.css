@@ -40,6 +40,9 @@ header.main {
 
 
 }
+.header-wrap {
+    display: flex;
+}
 
 header.main.sticked,
 header.main {
@@ -198,7 +201,9 @@ header.main {
                 font-weight: var(--logo-name-big-font-weight);
             }
         }
-
+        .header-links {
+            align-self: center;
+        }
         .header-description p {
             /* transition: all ease-in .1s; */
             transform: translate(-100vh, -100vw);
