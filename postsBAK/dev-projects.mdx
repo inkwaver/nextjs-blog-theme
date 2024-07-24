@@ -1,0 +1,134 @@
+---
+title: "dev Projects"
+description: "Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon."
+date: "2018 - 2023"
+tags: ['dev-projects']
+thumbnail: "/logo.jpg"
+label: 'kaka'
+project: 'festberg vv'
+links:
+  - title: "Webinos "
+    href: "#webinosss"
+  - title: "SmartBet (2020 - 2021)"
+    href: "#smartbesst"
+  - title: "Click2Sure (2018 - 2019)"
+    href: "#click2suress"
+
+
+images:
+  smartbet:
+    - path: /projects/Goodwin-Dark.png
+      alt: Goodwin Light Mode
+      link: https://goodwin.am/
+    - path: /projects/Goodwin-Light.png
+      alt: Goodwin Light Mode
+      link: https://goodwin.am/
+
+  webinos:
+    - path: /projects/StayActiveRehab.jpg
+      alt: Stay Active Rehab
+      link: https://www.stayactiverehab.com/
+    - path: /projects/MartingaleAssets.jpg
+      alt: MartingaleAssets
+      link: https://www.martingale.com/
+  click2Sure:
+    - path: /projects/Click2Sure.jpg
+      alt: Click2Sure (snapshot)
+      link: https://web.archive.org/web/20180811101626/http://click2sure.co.za/
+---
+
+import Image from 'next/image';
+
+<div className="project-part" id="webinosss">
+ 
+    
+    <div className="project-descript">
+    ## Wordpress Developer
+    **Webinos Inc. · Freelance**  
+    *Jun 2022 - Feb 2023 · 9 mos*  
+    *Location: Yerevan, Armenia · Remote*
+
+    <div className="project-img">
+
+            {images.webinos.map((image, index) => (
+            <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
+                <Image layout='fill' loading="lazy" src={image.path} alt={image.alt} />
+                <figcaption>{image.alt}</figcaption>
+            </a>
+            ))}
+
+    </div>
+
+    - Successfully managed multiple **WordPress-based** websites, ensuring their functionality, performance, and visual appeal.
+    - Developed custom Gutenberg blocks and fields to empower clients with intuitive site management capabilities, enhancing their control over content and layout.
+    - Meticulously conducted tests and diligently debugged ongoing projects, guaranteeing a seamless user experience and resolving any issues promptly.
+    - Collaborated closely with clients to understand their specific requirements and extend website functionality accordingly, providing tailored solutions to meet their needs.
+    - Demonstrated adaptability by incorporating client-requested features and improvements into existing projects, contributing to customer satisfaction and project success.
+
+  </div>
+ 
+</div>
+
+
+  <div className="project-part" id="smartbesst">
+    <div className="project-descript">
+        ## Smartbet · UI Developer
+        **Smartbet · Full-time**  
+        *Sep 2020 - Jul 2021 · 11 mos*  
+        *Location: Yerevan, Armenia · On-site*
+
+    <div className="project-img">
+
+                {images.smartbet.map((image, index) => (
+                <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
+                <Image layout='fill' loading="lazy" src={image.path} alt={image.alt} />
+                    <figcaption>{image.alt}</figcaption>
+                </a>
+                ))}
+
+        </div>
+
+    - Led the comprehensive redesign of the primary project's user interface, with a specific focus on enhancing user experience and visual appeal. Key considerations included:
+    - Easy theming: Implemented a theming system that allowed for seamless color scheme changes across the entire site using a single file.
+    - Dark/light modes: Ensured that each color scheme featured both dark and light mode options, catering to user preferences.
+    - Mobile optimization: Developed a mobile-responsive version of the website, ensuring that it met the criteria for easy theming and dark/light modes.
+  </div>
+</div>
+
+
+<div className="project-part" id="click2sure">
+  <div className="project-descript">
+    ## User Interface Engineer
+    **Click2Sure · Full-time**  
+    *Jan 2018 - Nov 2019 · 1 yr 11 mos*  
+    *Location: Yerevan, Armenia · On-site*
+
+    <div className="project-img">
+      {images.click2Sure.map((image, index) => (
+        <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
+                <Image layout='fill' loading="lazy" src={image.path} alt={image.alt} />
+          <figcaption>{image.alt}</figcaption>
+        </a>
+      ))}
+    </div>
+
+    - Collaborated with a cross-functional team to design and develop user interfaces for the insurance company's platform.
+    - Utilized Angular to create responsive and visually appealing user interfaces, ensuring a seamless user experience.
+    - Developed and maintained reusable Angular components to streamline the development process, enhancing code efficiency and consistency.
+    - Conducted thorough testing and debugging to identify and rectify any issues or inconsistencies in the user interface.
+    - Worked closely with the design team to translate wireframes and design mockups into functional HTML and CSS layouts.
+    - Implemented best practices in HTML and CSS to optimize web page performance and ensure compatibility across various browsers.
+    - Stayed up-to-date with emerging web development trends and technologies, incorporating relevant innovations into the user interface design.
+  </div>
+</div>
+
+
+     <div className='btn-holder'>
+
+            <a href="/narek-ch_wp-dev-web.pdf" target="_blank" rel="noopener noreferrer">
+              <button className='flex items-center h-full pr-2 dark:bg-primary rounded-3xl flex justify-center align-center p-2 w-24 h-10 transition'>
+                Download CV
+                </button>
+              </a>
+
+          </div>

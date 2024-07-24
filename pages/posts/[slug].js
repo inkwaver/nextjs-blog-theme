@@ -18,13 +18,13 @@ import Sidebar from '../../components/Sidebar';
 import Layout, { GradientBackground } from '../../components/Layout';
 import SEO from '../../components/SEO';
 import PageCover from '../../components/PageCover';
-import ImageViewerModal from '../../components/ImageViewerModal'; // Ensure correct path
+import ImageViewerModal from '../../components/ImageViewerModal';
 
 const components = {
   a: CustomLink,
   Head,
   Image,
-  PageCover,  // Add the PageCover component here
+  PageCover,
   ImageViewerModal,
 };
 
