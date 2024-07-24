@@ -213,12 +213,12 @@ export default function Index({ devProjects, designProjects, globalData }) {
             </li>
           </ul>
         </div>
-        <div className='dev-exp '>
+        <div  className='dev-exp '>
 
           <div className='project-block'>
                 
                 <div ref={el => colLeftRefs.current[0] = el} className={`col-left ${highlightIndex >= 0 ? 'highlight' : ''}`}>
-              <h2 className='big-title color-n3 '>Experience <span className='icon-mid'><DevExp /></span></h2>
+              <h2 id="devExp" className='big-title color-n3 '>Experience <span className='icon-mid'><DevExp /></span></h2>
               <h4>WordPress Developer</h4>
               <em>Jun 2022 - Feb 2023</em>
               <strong>Webinos Inc, Freelance</strong>
