@@ -1,5 +1,5 @@
 header.main {
-    padding: var(--size-15) var(--wrapper-margin);
+    /* padding: var(--size-15) var(--wrapper-margin); */
     width: 100%;
     /* position: fixed; */
     z-index: 13;
@@ -42,6 +42,7 @@ header.main {
 }
 .header-wrap {
     display: flex;
+    padding: 0 var(--size-24);
 }
 
 header.main.sticked,
@@ -54,6 +55,7 @@ header.main {
 
     .logo {
         margin-right: unset;
+     
         /* margin-left: 2.2rem; */
     }
 
@@ -200,6 +202,10 @@ header.main {
                 display: block;
                 font-weight: var(--logo-name-big-font-weight);
             }
+        }
+        .logo{
+            height: var(--size-45);
+            display: block;
         }
         .header-links {
             align-self: center;

@@ -5,7 +5,7 @@
 @media screen and (max-width: 811px) {
   .main-menu-close, .header-links {
     display: none;
-    background-color: white;
+    /* background-color: white; */
   }
 
   #hamburger:checked ~ .header-wrap {

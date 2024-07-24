@@ -452,7 +452,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
             </ul>
           </div>
 
-
+{/* 
           <div className='btn-holder'>
 
             <Link href="/posts/dev-projects">
@@ -461,9 +461,10 @@ export default function Index({ devProjects, designProjects, globalData }) {
               </button>
 
             </Link>
-          </div>
+          </div> */}
         </div>
-        <h2>Developemt posts</h2>
+
+        {/* <h2>Developemt posts</h2>
         <ul className="w-full">
           {designProjects.map((post) => (
             <li
@@ -493,16 +494,16 @@ export default function Index({ devProjects, designProjects, globalData }) {
               </Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </main>
-      <GradientBackground
+      {/* <GradientBackground
         variant="large"
         className="fixed top-20 opacity-40 dark:opacity-60"
       />
       <GradientBackground
         variant="small"
         className="absolute bottom-0 opacity-20 dark:opacity-10"
-      />
+      /> */}
       <Footer copyrightText={globalData.footerText} />
 
     </Layout>
