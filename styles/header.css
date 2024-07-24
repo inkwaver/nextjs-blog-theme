@@ -164,8 +164,12 @@ header.main {
 .hero-header {
     .wrapper-main {
         height: 100%;
-    }
 
+    }
+    .header-wrap {
+        padding:var(--size-9x2) var(--size-24);
+       
+    }
     .header-description {
         a.cv-btn {
             margin-right: auto !important;
@@ -201,10 +205,11 @@ header.main {
                 color: var(--color-n2);
                 display: block;
                 font-weight: var(--logo-name-big-font-weight);
+                margin-bottom: 0;
             }
         }
         .logo{
-            height: var(--size-45);
+            height: var(--size-15x3);
             display: block;
         }
         .header-links {

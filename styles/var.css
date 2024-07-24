@@ -60,7 +60,19 @@
 --size-102: 102px;
 
 --size-9x2: 18px;
---size-45: 45px;
+--size-15x2: 30px;
+--size-24x2: 48px;
+--size-39x2: 78px;
+--size-63x2: 126px;
+--size-102x2: 204px;
+
+--size-9x3: 27px;
+--size-15x3: 45px;
+--size-24x3: 72px;
+--size-39x3: 117px;
+--size-63x3: 189px;
+--size-102x3: 306px;
+
 
 /* wrapper */
 --wrapper-margin: var(--size-39);

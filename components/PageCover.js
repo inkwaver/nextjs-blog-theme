@@ -1,5 +1,5 @@
-// components/PageCover.js
 import React from 'react';
+import Image from 'next/image';
 
 const PageCover = ({ id, title, subtitle, description, img }) => {
   return (
@@ -13,7 +13,7 @@ const PageCover = ({ id, title, subtitle, description, img }) => {
         {typeof img === 'string' && img.startsWith('<svg') ? (
           <div dangerouslySetInnerHTML={{ __html: img }} />
         ) : typeof img === 'string' ? (
-          <img src={img} alt="" />
+          <Image src={img} alt="" layout='fill' objectFit='contain' />
         ) : (
           img
         )}
@@ -23,6 +23,7 @@ const PageCover = ({ id, title, subtitle, description, img }) => {
 };
 
 export default PageCover;
+
 
 // usage in mdx
 {/* <PageCover
