@@ -17,7 +17,7 @@ const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => 
 
   const isActiveLink = (href) => {
     const isActive = router.pathname === href || router.asPath === href;
-    console.log(`Is ${href} active?`, isActive);
+    //console.log(`Is ${href} active?`, isActive);
     return isActive;
   };
 
@@ -47,14 +47,14 @@ const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => 
   const activePost = [...caseStudy, ...showCase].find(post => isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`));
   const urlActiveProject = activePost ? activePost.data.project : null;
 
-  console.log('Active post:', activePost);
-  console.log('Active project:', urlActiveProject);
+  // console.log('Active post:', activePost);
+  // console.log('Active project:', urlActiveProject);
 
   const handleProjectClick = (project) => {
-    console.log('Clicked project:', project);
+    // console.log('Clicked project:', project);
     setActiveProject(project);
     const firstPost = [...caseStudyByProject[project] || [], ...showCaseByProject[project] || []].find(post => post.data.order === 1);
-    console.log('First post:', firstPost);
+    // console.log('First post:', firstPost);
     if (firstPost) {
       router.push(`/posts/${firstPost.filePath.replace(/\.mdx?$/, '')}`);
     }
