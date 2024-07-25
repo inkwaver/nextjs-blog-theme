@@ -83,7 +83,6 @@ const ImageViewerModal = ({ src, alt, caption, width, isPriority = false }) => {
           className={styles.modal}
           role="dialog"
           aria-labelledby="modal-title"
-          onClick={closeModal}
         >
           <div className={styles.modalContentWrapper}>
             <button
@@ -111,6 +110,12 @@ const ImageViewerModal = ({ src, alt, caption, width, isPriority = false }) => {
               View Source
             </button>
             {caption && <figcaption className={styles.modalCaption}>{caption}</figcaption>}
+            <button
+              className={styles.modalOverlay}
+              onClick={closeModal}
+              aria-label="Close modal"
+              style={{ background: 'none', border: 'none', cursor: 'pointer', position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }}
+            />
           </div>
         </div>
       )}

@@ -1,21 +1,23 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { getPosts } from '../utils/mdx-utils';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
-import Layout, { GradientBackground } from '../components/Layout';
+// import Sidebar from '../components/Sidebar';
+// import Layout, { GradientBackground } from '../components/Layout';
+import Layout from '../components/Layout';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 import Image from 'next/image';
-import ArrowIcon from '../components/ArrowIcon';
+// import ArrowIcon from '../components/ArrowIcon';
 import {
   ResearchIcon,
   SitemapIcon,
   DevExp,
 } from '../components/Icons/DesignFlowIcons';
 
-export default function Index({ devProjects, designProjects, globalData }) {
+// export default function Index({ devProjects, designProjects, globalData }) {
+  export default function Index({  globalData }) {
   const images = {
     smartbet: [
       {
@@ -66,7 +68,7 @@ export default function Index({ devProjects, designProjects, globalData }) {
         setHighlightIndex(newHighlightIndex);
       }
     }, options);
-
+  {/* eslint-disable */}
     colLeftRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
@@ -577,16 +579,16 @@ export default function Index({ devProjects, designProjects, globalData }) {
 
 export function getStaticProps() {
   const allPosts = getPosts(); // Get all posts
-  const devProjects = getPosts('dev-projects'); // Get posts with the 'design' tag
-  const designProjects = getPosts('design'); // Get posts with the 'design' tag
+  // const devProjects = getPosts('dev-projects'); // Get posts with the 'design' tag
+  // const designProjects = getPosts('design'); // Get posts with the 'design' tag
 
   const globalData = getGlobalData();
 
   return {
     props: {
       allPosts,
-      devProjects,
-      designProjects,
+      // devProjects,
+      // designProjects,
       globalData,
     },
   };

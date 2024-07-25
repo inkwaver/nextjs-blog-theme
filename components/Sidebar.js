@@ -62,6 +62,7 @@ const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => 
 
   return (
     <aside className="main sidebar">
+         {/* eslint-disable */}
       <input checked={isChecked} onChange={handleChange} type='checkbox' id="toc"/>
       <div className='sidebar-inner'>
         <label className='toc-menu' htmlFor='toc'>

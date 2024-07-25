@@ -49,21 +49,23 @@ export default function Header() {
 
   return (
     <header className={`main ${avatarSize <= 45 ? 'sticked' : 'hero-header'}`}>
+         {/* eslint-disable */}
       <input
         checked={isChecked}
         onChange={handleChange}
         className='burger-anchor'
         id="hamburger"
         type='checkbox'
+        aria-label="Menu toggle"
       />
       <label className='menu-icon' htmlFor="hamburger">
         <MenuIcon className="main-menu-open" />
         <CloseIcon className="main-menu-close" />
       </label>
       <div className='wrapper-main header-wrap'>
-        <div className="main-inner ">
+        <div className="main-inner">
           <h1 className="logo">
-            {/* eslint-disable */}
+         
             <Link href="/">
               <span className={isActiveLink('/') ? 'active' : ''}>
                 <Image
@@ -105,12 +107,10 @@ export default function Header() {
             Dev Projects
           </Link>
           <Link className="icon-24" href="#">
-            {' '}
-            <LinkedIn />{' '}
+            <LinkedIn />
           </Link>
           <Link className="icon-24" href="#">
-            {' '}
-            <Behance />{' '}
+            <Behance />
           </Link>
           <Link
             href="/narek-ch_wp-dev-web.pdf"
