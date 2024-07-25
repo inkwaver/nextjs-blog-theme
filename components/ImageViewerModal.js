@@ -1,14 +1,14 @@
-// components/ImageViewerModal.js
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './ImageViewerModal.module.css';
 
-const ImageViewerModal = ({ src, alt, caption, width, height, isPriority = false }) => {
+const ImageViewerModal = ({ src, alt, caption, width, isPriority = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [aspectRatio, setAspectRatio] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Calculate aspect ratio of the image
     const img = document.createElement('img');
     img.src = src;
     img.onload = () => {
@@ -20,6 +20,25 @@ const ImageViewerModal = ({ src, alt, caption, width, height, isPriority = false
       setLoading(false);
     };
   }, [src]);
+
+  useEffect(() => {
+    // Handle Escape key to close modal
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    };
+
+    // Add event listener when modal is open
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+
+    // Clean up event listener when modal is closed
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen]);
 
   const openModal = () => {
     setIsOpen(true);
@@ -37,26 +56,44 @@ const ImageViewerModal = ({ src, alt, caption, width, height, isPriority = false
 
   return (
     <>
-      <figure 
-        className={styles.thumbnailContainer} 
+      <figure
+        className={styles.thumbnailContainer}
         style={{ width: width || '100%', paddingTop: aspectRatio ? `${(1 / aspectRatio) * 100}%` : '56.25%' }}
-        onClick={openModal}
       >
-        <Image
-          className={styles.thumbnail}
-          src={src}
-          alt={alt}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          priority={isPriority}
-          style={{ objectFit: 'contain' }}
-        />
-        {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
+        <button
+          className={styles.thumbnailButton}
+          onClick={openModal}
+          aria-label="Open image"
+          style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', width: '100%', height: '100%' }}
+        >
+          <Image
+            className={styles.thumbnail}
+            src={src}
+            alt={alt}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={isPriority}
+            style={{ objectFit: 'contain' }}
+          />
+          {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
+        </button>
       </figure>
       {isOpen && (
-        <div className={styles.modal} onClick={closeModal}>
-          <span className={styles.close} onClick={closeModal}>&times;</span>
-          <figure className={styles.modalContentWrapper}>
+        <div
+          className={styles.modal}
+          role="dialog"
+          aria-labelledby="modal-title"
+          onClick={closeModal}
+        >
+          <div className={styles.modalContentWrapper}>
+            <button
+              className={styles.close}
+              onClick={closeModal}
+              aria-label="Close modal"
+              style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+            >
+              &times;
+            </button>
             <Image
               className={styles.modalContent}
               src={src}
@@ -65,11 +102,16 @@ const ImageViewerModal = ({ src, alt, caption, width, height, isPriority = false
               sizes="100vw"
               style={{ objectFit: 'contain' }}
             />
-            <button className={styles.viewSourceButton} onClick={viewSource}>
+            <button
+              className={styles.viewSourceButton}
+              onClick={viewSource}
+              aria-label="View source image"
+              style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+            >
               View Source
             </button>
             {caption && <figcaption className={styles.modalCaption}>{caption}</figcaption>}
-          </figure>
+          </div>
         </div>
       )}
     </>

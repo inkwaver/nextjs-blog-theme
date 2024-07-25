@@ -1,11 +1,24 @@
 import React, { useEffect, useRef } from 'react';
 
 const Links = ({ links }) => {
-  if (!links || links.length === 0) return null;
-
   const observer = useRef(null);
 
   useEffect(() => {
+    if (!links || links.length === 0) return;
+
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        const targetElement = document.querySelector(`.content-links a[href="#${entry.target.id}"]`);
+        if (targetElement) {
+          if (entry.isIntersecting) {
+            targetElement.classList.add('highlight');
+          } else {
+            targetElement.classList.remove('highlight');
+          }
+        }
+      });
+    };
+
     observer.current = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
 
     links.forEach((link) => {
@@ -22,22 +35,9 @@ const Links = ({ links }) => {
     };
   }, [links]);
 
-  const handleIntersection = (entries) => {
-    entries.forEach((entry) => {
-      const targetElement = document.querySelector(`.content-links a[href="#${entry.target.id}"]`);
-      if (targetElement) {
-        if (entry.isIntersecting) {
-          targetElement.classList.add('highlight');
-        } else {
-          targetElement.classList.remove('highlight');
-        }
-      }
-    });
-  };
-
   return (
     <ul className='content-links'>
-      {links.map((link) => (
+      {links && links.length > 0 && links.map((link) => (
         <li key={link.title}>
           <a href={link.href} rel="noopener noreferrer">
             {link.title}
