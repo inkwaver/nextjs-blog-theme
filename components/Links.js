@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const Links = ({ links }) => {
+const Links = ({ links, onLinkClick }) => {
   const observer = useRef(null);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const Links = ({ links }) => {
     <ul className='content-links'>
       {links && links.length > 0 && links.map((link) => (
         <li key={link.title}>
-          <a href={link.href} rel="noopener noreferrer">
+          <a href={link.href} rel="noopener noreferrer" onClick={onLinkClick}>
             {link.title}
           </a>
         </li>
