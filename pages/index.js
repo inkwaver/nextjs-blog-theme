@@ -42,7 +42,16 @@ export default function Index({ globalData }) {
       },
     ],
   };
+  const [responsiveMode, setResponsiveMode] = useState('desktop');
+  const [colorMode, setColorMode] = useState('dark');
 
+  const handleResponsiveChange = (event) => {
+    setResponsiveMode(event.target.value);
+  };
+
+  const handleColorModeChange = (event) => {
+    setColorMode(event.target.value);
+  };
   const colLeftRefs = useRef([]);
   const [highlightIndex, setHighlightIndex] = useState(null);
   const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -308,75 +317,79 @@ export default function Index({ globalData }) {
                 it met criteria for easy theming and dark/light modes.
               </li>
               <li className="project-overview">
-                <input
-                  readOnly
-                  checked
-                  id="desktopView"
-                  name="responsive"
-                  type="radio"
-                />
-                <input id="mobileView" name="responsive" type="radio" />
-                <input
-                  readOnly
-                  checked
-                  id="darkMode"
-                  name="color"
-                  type="radio"
-                />
-                <input id="lightMode" name="color" type="radio" />
-                <div className="view-mode">
-                  <section>
-                    <h6>Responsivnes -</h6>
-                    <label className="button desk-btn" htmlFor="desktopView">
-                      Desktop
-                    </label>
-                    <label className="button mob-btn" htmlFor="mobileView">
-                      Mobile
-                    </label>
-                  </section>
-                  <section>
-                    <h6>Color Mode -</h6>
-                    <label className="button light" htmlFor="lightMode">
-                      Light
-                    </label>
-                    <label className="button dark" htmlFor="darkMode">
-                      Dark
-                    </label>
-                  </section>
-                </div>
-                <div className="desktop-view">
-                  <Image
-                    className="desktop-view light"
-                    src="/projects/goodwin-desk-light.jpg"
-                    alt="Goodwin desktop"
-                    width={635}
-                    height={352}
-                  />
-                  <Image
-                    className="desktop-view dark"
-                    src="/projects/goodwin-desk-dark.jpg"
-                    alt="Goodwin desktop"
-                    width={635}
-                    height={352}
-                  />
-                </div>
-                <div className="mobile-view">
-                  <Image
-                    className="desktop-view light"
-                    src="/projects/goodwin-mobile-light.jpg"
-                    alt="Goodwin desktop"
-                    width={210}
-                    height={372}
-                  />
-                  <Image
-                    className="desktop-view dark"
-                    src="/projects/goodwin-mobile-dark.jpg"
-                    alt="Goodwin desktop"
-                    width={210}
-                    height={372}
-                  />
-                </div>
-              </li>
+      <input
+        readOnly
+        checked={responsiveMode === 'desktop'}
+        id="desktopView"
+        name="responsive"
+        type="radio"
+        value="desktop"
+        onChange={handleResponsiveChange}
+      />
+      <input
+        checked={responsiveMode === 'mobile'}
+        id="mobileView"
+        name="responsive"
+        type="radio"
+        value="mobile"
+        onChange={handleResponsiveChange}
+      />
+      <input
+        readOnly
+        checked={colorMode === 'dark'}
+        id="darkMode"
+        name="color"
+        type="radio"
+        value="dark"
+        onChange={handleColorModeChange}
+      />
+      <input
+        checked={colorMode === 'light'}
+        id="lightMode"
+        name="color"
+        type="radio"
+        value="light"
+        onChange={handleColorModeChange}
+      />
+      <div className="view-mode">
+        <section>
+          <h6>Responsiveness -</h6>
+          <label className="button desk-btn" htmlFor="desktopView">
+            Desktop
+          </label>
+          <label className="button mob-btn" htmlFor="mobileView">
+            Mobile
+          </label>
+        </section>
+        <section>
+          <h6>Color Mode -</h6>
+          <label className="button light" htmlFor="lightMode">
+            Light
+          </label>
+          <label className="button dark" htmlFor="darkMode">
+            Dark
+          </label>
+        </section>
+      </div>
+      <div className={`desktop-view ${responsiveMode === 'desktop' ? '' : 'hidden'}`}>
+        <Image
+          className={`desktop-view ${colorMode === 'light' ? 'light' : 'dark'}`}
+          src={`/projects/goodwin-desk-${colorMode}.jpg`}
+          alt="Goodwin desktop"
+          width={635}
+          height={352}
+        />
+      </div>
+      <div className={`mobile-view ${responsiveMode === 'mobile' ? '' : 'hidden'}`}>
+        <Image
+          className={`mobile-view ${colorMode === 'light' ? 'light' : 'dark'}`}
+          src={`/projects/goodwin-mobile-${colorMode}.jpg`}
+          alt="Goodwin mobile"
+          width={210}
+          height={372}
+        />
+      </div>
+    </li>
             </ul>
 
             <div
