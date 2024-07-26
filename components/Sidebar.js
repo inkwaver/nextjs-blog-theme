@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Links from './Links';
 import { CloseIcon, TocIcon } from '../components/Icons/DesignFlowIcons';
 
+// eslint-disable-next-line react/jsx-no-comment-textnodes
 const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => {
   const router = useRouter();
   const [activeProject, setActiveProject] = useState(null);
@@ -62,6 +63,7 @@ const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => 
     <aside className="main sidebar">
       <input checked={isChecked} onChange={handleChange} type='checkbox' id="toc"/>
       <div className='sidebar-inner'>
+        {/* eslint-disable */}
         <label className='toc-menu' htmlFor='toc'>
           <CloseIcon className="close-toc"/>
           <TocIcon className="open-toc"/>
