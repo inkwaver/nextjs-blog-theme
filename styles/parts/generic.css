@@ -68,11 +68,22 @@ svg,svg path{
     width: var(--size-63);
     height: var(--size-63);
     /* margin-right: calc(-1*(var(--size-39))); */
-    margin-right: calc(-1.8*(var(--size-39)));
     /* margin-right: calc(-2*(var(--size-39))); */
     /* transform: translateY( calc(-1 * (var(--font-size-big) + var(--size-39)))); */
     border: .1rem solid;
     border-radius: 10rem;
+  }
+
+  .dev-exp .icon-mid{
+    margin-right: calc(-1.8*(var(--size-39)));
+
+  }
+  .design-exp .icon-mid {
+    margin-right: var(--size-15);
+  }
+  .design-exp h2.big-title{
+    display: flex;
+    align-items: center;
   }
   
   .big-title {

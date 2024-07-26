@@ -14,10 +14,15 @@ import {
   ResearchIcon,
   SitemapIcon,
   DevExp,
+  InfArch,
+  Wireframing,
+  DesignSys,
+  Prototyping,
+  DesExp
 } from '../components/Icons/DesignFlowIcons';
 
 // export default function Index({ devProjects, designProjects, globalData }) {
-  export default function Index({  globalData }) {
+export default function Index({ globalData }) {
   const images = {
     smartbet: [
       {
@@ -68,7 +73,9 @@ import {
         setHighlightIndex(newHighlightIndex);
       }
     }, options);
-  {/* eslint-disable */}
+    {
+      /* eslint-disable */
+    }
     colLeftRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
@@ -106,7 +113,11 @@ import {
         {/* eslint-disable jsx-a11y/anchor-is-valid */}
 
         <div className="design-flow mb-102">
-          <h2 className="big-title color-n3 mb-39">Design Flow</h2>
+          <h2 className="big-title color-n3 mb-39">
+            {' '}
+           
+            Design Flow
+          </h2>
           <ul>
             <li className="design-flow-card">
               <span className="icon">
@@ -130,7 +141,7 @@ import {
             </li>
             <li className="design-flow-card">
               <span className="icon">
-                <SitemapIcon />
+                <InfArch />
               </span>
               <h4 className="title-normal">Information Architecture</h4>
               <p>
@@ -140,7 +151,7 @@ import {
             </li>
             <li className="design-flow-card">
               <span className="icon">
-                <SitemapIcon />
+                <Wireframing />
               </span>
               <h4 className="title-normal">Wireframing</h4>
               <p>
@@ -150,7 +161,7 @@ import {
             </li>
             <li className="design-flow-card">
               <span className="icon">
-                <SitemapIcon />
+                <DesignSys />
               </span>
               <h4 className="title-normal">Design System</h4>
               <p>
@@ -160,7 +171,7 @@ import {
             </li>
             <li className="design-flow-card">
               <span className="icon">
-                <SitemapIcon />
+                <Prototyping />
               </span>
               <h4 className="title-normal">Figma Prototyping</h4>
               <p>
@@ -171,7 +182,10 @@ import {
           </ul>
         </div>
 
-        <div className="project-part home-snipet mb-102" id="smartbet">
+        <div className="project-part home-snipet mb-102 design-exp" >
+          <h2 className="big-title color-n3 mb-39"> <span className="icon-mid">
+              <DesExp />
+            </span>Feat Design</h2>
           <div className="project-img">
             {images.smartbet.map((image, index) => (
               <a
@@ -181,13 +195,14 @@ import {
                 rel="noopener noreferrer"
               >
                 <span className="img-holder">
-                  <Image layout="fill" 
-                          src={image.path} 
-                          alt={image.alt} 
-                          loading="lazy"
-                          placeholder="blur"
-                          blurDataURL={image.path}
-                          />
+                  <Image
+                    layout="fill"
+                    src={image.path}
+                    alt={image.alt}
+                    loading="lazy"
+                    placeholder="blur"
+                    blurDataURL={image.path}
+                  />
                 </span>
 
                 <figcaption>{image.alt}</figcaption>
