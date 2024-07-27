@@ -45,6 +45,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+      img {
+        position: static !important;
+      }
     }
       h2{
         color: var(--page-cover-title);

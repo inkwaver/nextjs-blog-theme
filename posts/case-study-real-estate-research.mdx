@@ -8,18 +8,25 @@ order: 3
 links:
   - title: "Research and Analysis"
     href: "#Research"
+
   - title: "Primary and Advanced Search Panels"
     href: "#primaryPanel"
+
   - title: "Primary Panel Fields Across Competitors"
     href: "#primaryPanelCompetitor"
+
   - title: "Advanced Filter Panel"
-    href: "#fff"
+    href: "#advancedFilterPanel"
+
   - title: "Listing Cards"
-    href: "#fff"
+    href: "#listingCard"
+
   - title: "Listing Card structure"
     href: "#fff"
+
   - title: "Property Listing Page"
     href: "#fff"
+
   - title: "Single Property"
     href: "#fff"
 images:
@@ -87,13 +94,13 @@ import ImageViewerModal from '../components/ImageViewerModal';
 ### Research and Analysis
 
 The aim is to understand the UX strategies these websites employ and how they can be adapted to our needs. By analyzing the current functionalities and key views of these websites, we hope to uncover insights that will guide the design and development process, leading to a more user-friendly and efficient website for our client.
-
+<br/>
 ### Key Views Focus
 
 - Primary Search Panels
 - Listing Page
 - Single Property (View)
-
+<br/>
 </div>
 
 <PageCover id ="primaryPanel"
@@ -125,25 +132,25 @@ Search Panels "
 }
 />
 
-<div className="content-holder col-container">
+<div id="primaryPanelCompetitor" className="content-holder col-container">
   <div className="col-50">
   ### Primary Panel Fields Across Competitors
 
   All competitors include Location, Property Type, and Price filters. However, only green-acres.ae offers a currency filter, and emirates.estate provides a multiselect option for property types.
-
+<br/>
   ### Common Fields:
 
   - Location
   - Property Type 
   - Price
   - Beds/Baths
-
+<br/>
   ### Unique Features:
 
   **Multiselect Options:** emirates.estate, green-acres.ae \
   **Currency Filter** emirates.estate, green-acres.ae \
   **Buy/Rent Options:** emirates.estate, green-acres.ae \
-
+<br/>
   </div>
   <div className="col-50">
   
@@ -153,4 +160,53 @@ Search Panels "
                     <figcaption>alt</figcaption> */}
    
   </div>
+
+  
+
+
 </div>
+
+<div id="advancedFilterPanel" className="content-holder col-container">
+  <div className="col-50">
+  ### Advanced Filter Panel
+
+  All competitors exept from one using non wordpress platfrom , so in our case we need to consider that wordpress has its limitation and find balance between functionlity of website and not  also overcomplicate user with to many filter options rather than neccesary one
+<br/>
+  ### Common Fields:
+
+  - Property Area (min/max values)
+  - Limited important Amenities list
+
+
+  </div>
+  </div>
+
+  
+<PageCover id ="listingCard"
+  title="Primary and 
+Advanced
+Search Panels "
+  subtitle="Chapter 02 - Competitor and Similar Research and Analisys"
+  description={<>
+    <p>The search panel is essential for real estate websites, allowing users to filter and find properties efficiently. This research examines primary search panel fields across top competitors to identify best practices and innovative features for our future website.</p>
+    <ul>
+      <li>
+     Essential Function: The search panel helps users filter properties by key criteria like location and price.
+      </li>
+      <li>
+       Improving User Experience: Effective search panels enhance user satisfaction and ease of navigation.
+      </li>
+      <li>
+       Competitive Analysis: Studying competitors helps identify successful design elements for our own site.
+      </li>
+         <li>
+      Informing Future Design: Insights from this research will guide the development of a user-friendly search panel for our website.
+      </li>
+    </ul>
+    </>
+  }
+  img={ <svg width="305" height="187" viewBox="0 0 305 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M279.562 0.515625H25.4269C18.6302 0.515625 12.248 3.16495 7.44699 7.97842C2.64598 12.7855 0 19.1822 0 25.9874V88.754C0 95.5529 2.6396 101.95 7.44699 106.757C12.248 111.564 18.6302 114.213 25.4205 114.213C25.4269 114.213 66.9209 114.213 66.9273 114.213L71.0589 165.648C71.2119 167.551 72.3787 169.236 74.1129 170.04C75.9619 170.902 78.1998 170.621 79.7491 169.293L98.7045 152.459C99.5844 153.187 116.404 188.049 118.062 186.351C119.031 186.645 120.083 186.543 120.975 186.064L136.705 177.644C138.566 176.648 139.268 174.324 138.273 172.46L121.179 140.432L145.688 134.01C149.737 132.988 150.846 127.223 147.493 124.759L134.193 114.219C134.193 114.219 279.562 114.219 279.568 114.219C293.232 114.5 305.276 102.441 304.995 88.7604V25.9938C304.995 11.9556 293.582 0.534779 279.562 0.528396V0.515625ZM71.9005 64.8335C68.4703 61.9352 62.8213 64.9612 63.3313 69.4299L64.7595 87.2346H30.4957C28.6467 87.2346 27.142 85.7281 27.1484 83.8831V30.8456C27.1165 29.0453 28.6913 27.4493 30.4957 27.494C30.4957 27.494 197.078 27.494 197.084 27.494C198.882 27.4557 200.469 29.0517 200.431 30.852V83.8959C200.431 84.7896 200.087 85.6259 199.449 86.2643C198.818 86.8963 197.977 87.2474 197.078 87.2474H100.171L71.9005 64.8463V64.8335ZM114.555 134.239C112.221 134.788 110.965 137.661 112.151 139.749L129.729 172.677L120.746 177.484L103.168 144.549C102.09 142.404 99.017 141.849 97.2572 143.49L78.3146 160.311C76.6313 139.34 73.0609 94.8507 71.3968 74.1923L96.4092 94.0144L139.051 127.811L114.561 134.233L114.555 134.239ZM297.344 88.7476C297.535 98.3107 289.119 106.744 279.568 106.546C279.568 106.546 124.533 106.546 124.527 106.546L109.83 94.9017C109.83 94.9017 197.071 94.8953 197.078 94.9017C200.017 94.9017 202.778 93.759 204.856 91.6779C206.935 89.5967 208.076 86.8325 208.076 83.8959V30.852C208.197 24.9341 202.988 19.712 197.071 19.8397C197.071 19.8397 30.4893 19.8397 30.4829 19.8397C27.55 19.8397 24.7893 20.9824 22.7108 23.0636C20.6323 25.1447 19.491 27.909 19.4846 30.852V83.8895C19.4846 89.9606 24.4131 94.9017 30.4829 94.9081H65.3652L66.3025 106.552H25.4141C15.8631 106.75 7.44062 98.3235 7.64464 88.754V25.9874C7.64464 21.2314 9.49364 16.7627 12.8473 13.3984C16.2074 10.034 20.6705 8.1827 25.4205 8.1827H279.549C289.355 8.1827 297.331 16.1754 297.331 25.9874V88.754L297.344 88.7476Z" fill="#FFE7BF"/>
+</svg>
+}
+/>
