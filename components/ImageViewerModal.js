@@ -1,8 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import styles from './ImageViewerModal.module.css';
 
-const ImageViewerModal = ({ src, alt, caption, width, isPriority = false }) => {
+const DEFAULT_BLUR_URL = 'data:image/svg+xml;base64,' + btoa(
+  `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">
+     <rect width="100%" height="100%" fill="#ccc"/>
+   </svg>`
+);
+
+const ImageViewerModal = ({
+  src,
+  alt,
+  caption,
+  width,
+  isPriority = false,
+  buttonText = 'View Source Image',
+  buttonUrl,
+  children,
+  blur = false,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [aspectRatio, setAspectRatio] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -49,7 +64,7 @@ const ImageViewerModal = ({ src, alt, caption, width, isPriority = false }) => {
   };
 
   const viewSource = () => {
-    window.open(src, '_blank');
+    window.open(buttonUrl || src, '_blank');
   };
 
   if (loading) return <div>Loading...</div>;
@@ -57,64 +72,67 @@ const ImageViewerModal = ({ src, alt, caption, width, isPriority = false }) => {
   return (
     <>
       <figure
-        className={styles.thumbnailContainer}
+        className="thumbnail-container"
         style={{ width: width || '100%', paddingTop: aspectRatio ? `${(1 / aspectRatio) * 100}%` : '56.25%' }}
       >
         <button
-          className={styles.thumbnailButton}
+          className="thumbnail-button"
           onClick={openModal}
           aria-label="Open image"
-          style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', width: '100%', height: '100%' }}
         >
-          <Image
-            className={styles.thumbnail}
-            src={src}
-            alt={alt}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            priority={isPriority}
-            style={{ objectFit: 'contain' }}
-          />
-          {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
+          <div className="thumbnail-wrapper">
+            <Image
+              className="thumbnail"
+              src={src}
+              alt={alt || caption}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority={isPriority}
+              placeholder={blur ? 'blur' : 'empty'}
+              blurDataURL={blur ? DEFAULT_BLUR_URL : undefined}
+            />
+          </div>
+          {caption && <figcaption className="caption">{caption}</figcaption>}
+          {children}
         </button>
       </figure>
       {isOpen && (
         <div
-          className={styles.modal}
+          className="modal"
           role="dialog"
           aria-labelledby="modal-title"
         >
-          <div className={styles.modalContentWrapper}>
+          <div className="modal-content-wrapper">
             <button
-              className={styles.close}
+              className="close"
               onClick={closeModal}
               aria-label="Close modal"
-              style={{ background: 'none', border: 'none', cursor: 'pointer' }}
             >
-              &times;
+              close
             </button>
             <Image
-              className={styles.modalContent}
+              className="modal-content"
               src={src}
-              alt={alt}
+              alt={alt || caption}
               fill
               sizes="100vw"
-              style={{ objectFit: 'contain' }}
+              priority={isPriority}
+              placeholder={blur ? 'blur' : 'empty'}
+              blurDataURL={blur ? DEFAULT_BLUR_URL : undefined}
             />
             <button
-              className={styles.viewSourceButton}
+              className="view-source-button"
               onClick={viewSource}
               aria-label="View source image"
-              style={{ background: 'none', border: 'none', cursor: 'pointer' }}
             >
-              View Source
+              {buttonText}
             </button>
-            {caption && <figcaption className={styles.modalCaption}>{caption}</figcaption>}
+            {caption && <figcaption className="modal-caption">{caption}</figcaption>}
+            {children}
             <button
-              className={styles.modalOverlay}
+              className="modal-overlay"
               onClick={closeModal}
               aria-label="Close modal"
-              style={{ background: 'none', border: 'none', cursor: 'pointer', position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }}
             />
           </div>
         </div>
@@ -124,3 +142,19 @@ const ImageViewerModal = ({ src, alt, caption, width, isPriority = false }) => {
 };
 
 export default ImageViewerModal;
+
+
+
+
+{/* <ImageViewerModal src="/path/to/image.jpg" alt="Description of the image" /> */}
+{/* <ImageViewerModal
+  src="/path/to/image.jpg"
+  alt="Description of the image"
+  buttonText="Custom Button Text"
+  buttonUrl="https://example.com/custom-url"
+/> */}
+
+{/* <ImageViewerModal src="/path/to/image.jpg" alt="Description of the image">
+  <div className="info">Some custom info</div>
+  <div className="additional-info">Additional custom info</div>
+</ImageViewerModal> */}
