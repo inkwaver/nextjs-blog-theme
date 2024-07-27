@@ -258,9 +258,11 @@ export default function Index({ globalData }) {
                   <DevExp />
                 </span>
               </h2>
-              <h4>WordPress Developer</h4>
+
+
+              <h4>Webinos Inc, Freelance <span className='company-logo'>WB</span></h4>
               <em>Jun 2022 - Feb 2023</em>
-              <strong>Webinos Inc, Freelance</strong>
+              <strong>WordPress Developer</strong>
             </div>
             <ul>
               <li>
@@ -288,15 +290,17 @@ export default function Index({ globalData }) {
               ref={(el) => (colLeftRefs.current[1] = el)}
               className={`col-left ${highlightIndex >= 1 ? 'highlight' : ''}`}
             >
-              <h4>Markup Specialist</h4>
-              <em>Sep 2020 - Jul 2021</em>
-              <strong>SmartBet</strong>
-              <Image
+              <h4>SmartBet    
+                <Image
                 src="/company-logos/smartbet_io.jpg"
                 alt="Goodwin desktop"
                 width={39}
                 height={39}
               />
+              </h4>
+              <em>Sep 2020 - Jul 2021</em>
+              <strong>Markup Specialist</strong>
+           
             </div>
             <ul>
               <li>
@@ -396,15 +400,17 @@ export default function Index({ globalData }) {
               ref={(el) => (colLeftRefs.current[2] = el)}
               className={`col-left ${highlightIndex >= 2 ? 'highlight' : ''}`}
             >
-              <h4>Markup Specialist</h4>
-              <em>Jan 2018 - Dec 2019</em>
-              <strong>Click2Sure</strong>
-              <Image
+              <h4>Click2Sure    
+                <Image
                 src="/company-logos/click2sure.jpg"
                 alt="Goodwin desktop"
                 width={39}
                 height={39}
               />
+              </h4>
+              <em>Jan 2018 - Dec 2019</em>
+              <strong>Markup Specialist</strong>
+           
             </div>
             <ul>
               <li>
@@ -447,17 +453,18 @@ export default function Index({ globalData }) {
               className={`col-left ${highlightIndex >= 3 ? 'highlight' : ''}`}
             >
               <h4>
-                Markup Specialist <br /> WordPress Developer
-              </h4>
-              <em>Mar 2013 - Mar 2014</em>
-              <strong>SPILL, Barsamini Toort</strong>
-
+              SPILL, Barsamini Toort
               <Image
                 src="/company-logos/spill.jpg"
                 alt="Goodwin desktop"
                 width={39}
                 height={39}
               />
+              </h4>
+              <em>Mar 2013 - Mar 2014</em>
+              <strong>Markup Specialist <br /> WordPress Developer</strong>
+
+          
             </div>
             <ul>
               <li>
@@ -494,9 +501,9 @@ export default function Index({ globalData }) {
               ref={(el) => (colLeftRefs.current[4] = el)}
               className={`col-left ${highlightIndex >= 4 ? 'highlight' : ''}`}
             >
-              <h4>Markup Specialist </h4>
+              <h4>Aragast Ben <span className='company-logo'>AB</span></h4>
               <em>Oct 2011 - Nov 2012</em>
-              <strong>Aragast Ben</strong>
+              <strong>Markup Specialist </strong>
             </div>
             <ul>
               <li>
@@ -521,15 +528,15 @@ export default function Index({ globalData }) {
               ref={(el) => (colLeftRefs.current[5] = el)}
               className={`col-left ${highlightIndex >= 5 ? 'highlight' : ''}`}
             >
-              <h4>WordPress Developer</h4>
-              <em>Sep 2010 - Jul 2011</em>
-              <strong>NexusLab</strong>
-              <Image
+              <h4>NexusLab <Image
                 src="/company-logos/nexuslab.jpg"
                 alt="Goodwin desktop"
                 width={39}
                 height={39}
-              />
+              /></h4>
+              <em>Sep 2010 - Jul 2011</em>
+              <strong>WordPress Developer</strong>
+              
             </div>
             <ul>
               <li>
