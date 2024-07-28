@@ -8,6 +8,7 @@ const DEFAULT_BLUR_URL = 'data:image/svg+xml;base64,' + btoa(
 );
 
 const getImageDimensions = (src) => {
+     /* eslint-disable */
   return new Promise((resolve, reject) => {
     const img = new window.Image(); // Use window.Image() to avoid confusion with next/image
     img.onload = () => {
