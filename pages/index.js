@@ -523,6 +523,35 @@ export default function Index({ globalData }) {
               className={`col-left ${highlightIndex >= 4 ? 'highlight' : ''}`}
             >
               <h4>
+                Mikayel inc <span className="company-logo">MI</span>
+              </h4>
+              <em>Oct 2011 - Nov 2012</em>
+              <strong>Wordpress Dev (freelance)</strong>
+            </div>
+            <ul>
+              <li>
+                Redesigned the UI and refined the layouts of the Cafe4tune
+                social network.
+              </li>
+              <li>
+                Developed cross-browser compatible code to ensure the product
+                looked identical on multiple modern and old browsers (IE7, IE8).
+              </li>
+              <li>
+                <Image
+                  className="desktop-view dark"
+                  src="/projects/cafe4tune.jpg"
+                  alt="Goodwin desktop"
+                  width={635}
+                  height={358}
+                />
+              </li>
+            </ul>
+            <div
+              ref={(el) => (colLeftRefs.current[5] = el)}
+              className={`col-left ${highlightIndex >= 5 ? 'highlight' : ''}`}
+            >
+              <h4>
                 Aragast Ben <span className="company-logo">AB</span>
               </h4>
               <em>Oct 2011 - Nov 2012</em>
@@ -548,8 +577,8 @@ export default function Index({ globalData }) {
               </li>
             </ul>
             <div
-              ref={(el) => (colLeftRefs.current[5] = el)}
-              className={`col-left ${highlightIndex >= 5 ? 'highlight' : ''}`}
+              ref={(el) => (colLeftRefs.current[6] = el)}
+              className={`col-left ${highlightIndex >= 6 ? 'highlight' : ''}`}
             >
               <h4>
                 NexusLab{' '}
@@ -576,6 +605,26 @@ export default function Index({ globalData }) {
               <li>
                 Conducted bug fixes and implemented additional features in
                 existing themes.
+              </li>
+              <li>
+              <ImageViewerModal
+                  src="/projects/ada.jpg"
+                  alt="Ada Minasyan"
+                  buttonText="View Website Snapshot"
+                  buttonUrl="https://web.archive.org/web/20130523110823/http://adaminasyan.com/"
+                />
+                     <ImageViewerModal
+                  src="/projects/leonela.jpg"
+                  alt="Ada Minasyan"
+                  buttonText="View Website Snapshot"
+                  buttonUrl="https://web.archive.org/web/20130523110823/http://adaminasyan.com/"
+                />
+                       <ImageViewerModal
+                  src="/projects/axon.jpg"
+                  alt="Ada Minasyan"
+                  buttonText="View Website Snapshot"
+                  buttonUrl="https://web.archive.org/web/20130523110823/http://adaminasyan.com/"
+                />
               </li>
             </ul>
           </div>

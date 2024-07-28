@@ -91,7 +91,7 @@ const ImageViewerModal = ({
               className="thumbnail"
               src={src}
               alt={alt || caption}
-              fill
+              layout='fill'
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority={isPriority}
               placeholder={blur ? 'blur' : 'empty'}
