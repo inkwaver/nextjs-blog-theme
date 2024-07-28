@@ -70,12 +70,12 @@ export default function PostPage({
             </div>
           </div>
         </header>
-        <h1 className="wrapper-main">
+        {/* <h1 className="wrapper-main">
           {frontMatter.title}
         </h1>
         {frontMatter.description && (
           <p className="wrapper-main">{frontMatter.description}</p>
-        )}
+        )} */}
         <main className='single-content wrapper-main'>
           <article className="content">
             <MDXRemote {...source} components={components} />

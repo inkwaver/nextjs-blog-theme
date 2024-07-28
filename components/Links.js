@@ -8,7 +8,7 @@ const Links = ({ links, onLinkClick }) => {
 
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
-        const targetElement = document.querySelector(`.content-links a[href="#${entry.target.id}"]`);
+        const targetElement = document.querySelector(`.active-cat + .articles > li > a.active + .content-links a[href="#${entry.target.id}"]`);
         if (targetElement) {
           if (entry.isIntersecting) {
             targetElement.classList.add('highlight');
