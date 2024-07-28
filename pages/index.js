@@ -10,6 +10,8 @@ import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 import Image from 'next/image';
 // import ArrowIcon from '../components/ArrowIcon';
+import ImageViewerModal from '../components/ImageViewerModal';
+
 import {
   ResearchIcon,
   SitemapIcon,
@@ -18,7 +20,7 @@ import {
   Wireframing,
   DesignSys,
   Prototyping,
-  DesExp
+  DesExp,
 } from '../components/Icons/DesignFlowIcons';
 
 // export default function Index({ devProjects, designProjects, globalData }) {
@@ -122,11 +124,7 @@ export default function Index({ globalData }) {
         {/* eslint-disable jsx-a11y/anchor-is-valid */}
 
         <div className="design-flow mb-102">
-          <h2 className="big-title color-n3 mb-39">
-            {' '}
-           
-            Design Flow
-          </h2>
+          <h2 className="big-title color-n3 mb-39"> Design Flow</h2>
           <ul>
             <li className="design-flow-card">
               <span className="icon">
@@ -191,10 +189,14 @@ export default function Index({ globalData }) {
           </ul>
         </div>
 
-        <div className="project-part home-snipet mb-102 design-exp" >
-          <h2 className="big-title color-n3 mb-39"> <span className="icon-mid">
+        <div className="project-part home-snipet mb-102 design-exp">
+          <h2 className="big-title color-n3 mb-39">
+            {' '}
+            <span className="icon-mid">
               <DesExp />
-            </span>Feat Design</h2>
+            </span>
+            Feat Design
+          </h2>
           <div className="project-img">
             {images.smartbet.map((image, index) => (
               <a
@@ -259,8 +261,9 @@ export default function Index({ globalData }) {
                 </span>
               </h2>
 
-
-              <h4>Webinos Inc, Freelance <span className='company-logo'>WB</span></h4>
+              <h4>
+                Webinos Inc, Freelance <span className="company-logo">WB</span>
+              </h4>
               <em>Jun 2022 - Feb 2023</em>
               <strong>WordPress Developer</strong>
             </div>
@@ -290,17 +293,17 @@ export default function Index({ globalData }) {
               ref={(el) => (colLeftRefs.current[1] = el)}
               className={`col-left ${highlightIndex >= 1 ? 'highlight' : ''}`}
             >
-              <h4>SmartBet    
+              <h4>
+                SmartBet
                 <Image
-                src="/company-logos/smartbet_io.jpg"
-                alt="Goodwin desktop"
-                width={39}
-                height={39}
-              />
+                  src="/company-logos/smartbet_io.jpg"
+                  alt="Goodwin desktop"
+                  width={39}
+                  height={39}
+                />
               </h4>
               <em>Sep 2020 - Jul 2021</em>
               <strong>Markup Specialist</strong>
-           
             </div>
             <ul>
               <li>
@@ -321,96 +324,108 @@ export default function Index({ globalData }) {
                 it met criteria for easy theming and dark/light modes.
               </li>
               <li className="project-overview">
-      <input
-        readOnly
-        checked={responsiveMode === 'desktop'}
-        id="desktopView"
-        name="responsive"
-        type="radio"
-        value="desktop"
-        onChange={handleResponsiveChange}
-      />
-      <input
-        checked={responsiveMode === 'mobile'}
-        id="mobileView"
-        name="responsive"
-        type="radio"
-        value="mobile"
-        onChange={handleResponsiveChange}
-      />
-      <input
-        readOnly
-        checked={colorMode === 'dark'}
-        id="darkMode"
-        name="color"
-        type="radio"
-        value="dark"
-        onChange={handleColorModeChange}
-      />
-      <input
-        checked={colorMode === 'light'}
-        id="lightMode"
-        name="color"
-        type="radio"
-        value="light"
-        onChange={handleColorModeChange}
-      />
-      <div className="view-mode">
-        <section>
-          <h6>Responsiveness -</h6>
-          <label className="button desk-btn" htmlFor="desktopView">
-            Desktop
-          </label>
-          <label className="button mob-btn" htmlFor="mobileView">
-            Mobile
-          </label>
-        </section>
-        <section>
-          <h6>Color Mode -</h6>
-          <label className="button light" htmlFor="lightMode">
-            Light
-          </label>
-          <label className="button dark" htmlFor="darkMode">
-            Dark
-          </label>
-        </section>
-      </div>
-      <div className={`desktop-view ${responsiveMode === 'desktop' ? '' : 'hidden'}`}>
-        <Image
-          className={`desktop-view ${colorMode === 'light' ? 'light' : 'dark'}`}
-          src={`/projects/goodwin-desk-${colorMode}.jpg`}
-          alt="Goodwin desktop"
-          width={635}
-          height={352}
-        />
-      </div>
-      <div className={`mobile-view ${responsiveMode === 'mobile' ? '' : 'hidden'}`}>
-        <Image
-          className={`mobile-view ${colorMode === 'light' ? 'light' : 'dark'}`}
-          src={`/projects/goodwin-mobile-${colorMode}.jpg`}
-          alt="Goodwin mobile"
-          width={210}
-          height={372}
-        />
-      </div>
-    </li>
+                <input
+                  readOnly
+                  checked={responsiveMode === 'desktop'}
+                  id="desktopView"
+                  name="responsive"
+                  type="radio"
+                  value="desktop"
+                  onChange={handleResponsiveChange}
+                />
+                <input
+                  checked={responsiveMode === 'mobile'}
+                  id="mobileView"
+                  name="responsive"
+                  type="radio"
+                  value="mobile"
+                  onChange={handleResponsiveChange}
+                />
+                <input
+                  readOnly
+                  checked={colorMode === 'dark'}
+                  id="darkMode"
+                  name="color"
+                  type="radio"
+                  value="dark"
+                  onChange={handleColorModeChange}
+                />
+                <input
+                  checked={colorMode === 'light'}
+                  id="lightMode"
+                  name="color"
+                  type="radio"
+                  value="light"
+                  onChange={handleColorModeChange}
+                />
+                <div className="view-mode">
+                  <section>
+                    <h6>Responsiveness -</h6>
+                    <label className="button desk-btn" htmlFor="desktopView">
+                      Desktop
+                    </label>
+                    <label className="button mob-btn" htmlFor="mobileView">
+                      Mobile
+                    </label>
+                  </section>
+                  <section>
+                    <h6>Color Mode -</h6>
+                    <label className="button light" htmlFor="lightMode">
+                      Light
+                    </label>
+                    <label className="button dark" htmlFor="darkMode">
+                      Dark
+                    </label>
+                  </section>
+                </div>
+                <div
+                  className={`desktop-view ${
+                    responsiveMode === 'desktop' ? '' : 'hidden'
+                  }`}
+                >
+                  <Image
+                    className={`desktop-view ${
+                      colorMode === 'light' ? 'light' : 'dark'
+                    }`}
+                    src={`/projects/goodwin-desk-${colorMode}.jpg`}
+                    alt="Goodwin desktop"
+                    width={635}
+                    height={352}
+                  />
+                </div>
+                <div
+                  className={`mobile-view ${
+                    responsiveMode === 'mobile' ? '' : 'hidden'
+                  }`}
+                >
+                  <Image
+                    className={`mobile-view ${
+                      colorMode === 'light' ? 'light' : 'dark'
+                    }`}
+                    src={`/projects/goodwin-mobile-${colorMode}.jpg`}
+                    alt="Goodwin mobile"
+                    width={210}
+                    height={372}
+                  />
+                </div>
+              </li>
             </ul>
 
             <div
               ref={(el) => (colLeftRefs.current[2] = el)}
               className={`col-left ${highlightIndex >= 2 ? 'highlight' : ''}`}
             >
-              <h4>Click2Sure    
+              <h4>
+                Click2Sure
                 <Image
-                src="/company-logos/click2sure.jpg"
-                alt="Goodwin desktop"
-                width={39}
-                height={39}
-              />
+                  src="/company-logos/click2sure.jpg"
+                  alt="Goodwin desktop"
+                  width={39}
+                  height={39}
+                />
               </h4>
               <em>Jan 2018 - Dec 2019</em>
               <strong>Markup Specialist</strong>
-           
             </div>
             <ul>
               <li>
@@ -453,18 +468,18 @@ export default function Index({ globalData }) {
               className={`col-left ${highlightIndex >= 3 ? 'highlight' : ''}`}
             >
               <h4>
-              SPILL, Barsamini Toort
-              <Image
-                src="/company-logos/spill.jpg"
-                alt="Goodwin desktop"
-                width={39}
-                height={39}
-              />
+                SPILL, Barsamini Toort
+                <Image
+                  src="/company-logos/spill.jpg"
+                  alt="Goodwin desktop"
+                  width={39}
+                  height={39}
+                />
               </h4>
               <em>Mar 2013 - Mar 2014</em>
-              <strong>Markup Specialist <br /> WordPress Developer</strong>
-
-          
+              <strong>
+                Markup Specialist <br /> WordPress Developer
+              </strong>
             </div>
             <ul>
               <li>
@@ -481,13 +496,19 @@ export default function Index({ globalData }) {
                 blog, aligning it seamlessly with the provided design.
               </li>
               <li>
-                <Image
+                <ImageViewerModal
+                  src="/projects/isamo.jpg"
+                  alt="Iso Wordpress Blog"
+                  buttonText="View Website Snapshot"
+                  buttonUrl="https://web.archive.org/web/20141208205146/http://blog.isa-mo.com/"
+                />
+                {/* <Image
                   className="desktop-view dark"
                   src="/projects/isamo.jpg"
                   alt="Goodwin desktop"
                   width={635}
                   height={358}
-                />
+                /> */}
                 <Image
                   className="desktop-view dark"
                   src="/projects/mungo-maud.jpg"
@@ -501,7 +522,9 @@ export default function Index({ globalData }) {
               ref={(el) => (colLeftRefs.current[4] = el)}
               className={`col-left ${highlightIndex >= 4 ? 'highlight' : ''}`}
             >
-              <h4>Aragast Ben <span className='company-logo'>AB</span></h4>
+              <h4>
+                Aragast Ben <span className="company-logo">AB</span>
+              </h4>
               <em>Oct 2011 - Nov 2012</em>
               <strong>Markup Specialist </strong>
             </div>
@@ -528,15 +551,17 @@ export default function Index({ globalData }) {
               ref={(el) => (colLeftRefs.current[5] = el)}
               className={`col-left ${highlightIndex >= 5 ? 'highlight' : ''}`}
             >
-              <h4>NexusLab <Image
-                src="/company-logos/nexuslab.jpg"
-                alt="Goodwin desktop"
-                width={39}
-                height={39}
-              /></h4>
+              <h4>
+                NexusLab{' '}
+                <Image
+                  src="/company-logos/nexuslab.jpg"
+                  alt="Goodwin desktop"
+                  width={39}
+                  height={39}
+                />
+              </h4>
               <em>Sep 2010 - Jul 2011</em>
               <strong>WordPress Developer</strong>
-              
             </div>
             <ul>
               <li>

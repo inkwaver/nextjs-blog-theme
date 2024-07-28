@@ -7,11 +7,23 @@ const DEFAULT_BLUR_URL = 'data:image/svg+xml;base64,' + btoa(
    </svg>`
 );
 
+const getImageDimensions = (src) => {
+  return new Promise((resolve, reject) => {
+    const img = new window.Image(); // Use window.Image() to avoid confusion with next/image
+    img.onload = () => {
+      resolve({ width: img.width, height: img.height });
+    };
+    img.onerror = () => {
+      reject('Failed to load image');
+    };
+    img.src = src;
+  });
+};
+
 const ImageViewerModal = ({
   src,
   alt,
   caption,
-  width,
   isPriority = false,
   buttonText = 'View Source Image',
   buttonUrl,
@@ -19,37 +31,34 @@ const ImageViewerModal = ({
   blur = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [aspectRatio, setAspectRatio] = useState(null);
+  const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Calculate aspect ratio of the image
-    const img = document.createElement('img');
-    img.src = src;
-    img.onload = () => {
-      setAspectRatio(img.width / img.height);
-      setLoading(false);
+    const fetchDimensions = async () => {
+      try {
+        const dimensions = await getImageDimensions(src);
+        setImageDimensions(dimensions);
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+        setLoading(false);
+      }
     };
-    img.onerror = () => {
-      console.error('Failed to load image');
-      setLoading(false);
-    };
+    fetchDimensions();
   }, [src]);
 
   useEffect(() => {
-    // Handle Escape key to close modal
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
         closeModal();
       }
     };
 
-    // Add event listener when modal is open
     if (isOpen) {
       window.addEventListener('keydown', handleKeyDown);
     }
 
-    // Clean up event listener when modal is closed
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
@@ -71,16 +80,13 @@ const ImageViewerModal = ({
 
   return (
     <>
-      <figure
-        className="thumbnail-container"
-        style={{ width: width || '100%', paddingTop: aspectRatio ? `${(1 / aspectRatio) * 100}%` : '56.25%' }}
-      >
+      <figure className="thumbnail-container" style={{ width: '100%', position: 'relative' }}>
         <button
           className="thumbnail-button"
           onClick={openModal}
           aria-label="Open image"
         >
-          <div className="thumbnail-wrapper">
+          <div className="thumbnail-wrapper" style={{ position: 'relative', paddingTop: `${(imageDimensions.height / imageDimensions.width) * 100}%` }}>
             <Image
               className="thumbnail"
               src={src}
@@ -114,8 +120,8 @@ const ImageViewerModal = ({
               className="modal-content"
               src={src}
               alt={alt || caption}
-              fill
-              sizes="100vw"
+              width={imageDimensions.width}
+              height={imageDimensions.height}
               priority={isPriority}
               placeholder={blur ? 'blur' : 'empty'}
               blurDataURL={blur ? DEFAULT_BLUR_URL : undefined}
@@ -142,8 +148,6 @@ const ImageViewerModal = ({
 };
 
 export default ImageViewerModal;
-
-
 
 
 {/* <ImageViewerModal src="/path/to/image.jpg" alt="Description of the image" /> */}
