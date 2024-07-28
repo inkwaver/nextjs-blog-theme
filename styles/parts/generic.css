@@ -163,4 +163,6 @@ svg,svg path{
     max-width: var(--wrapper-sec);
     width: 100%;
   }
-  
+.col-70 {
+  width: 70%;
+}

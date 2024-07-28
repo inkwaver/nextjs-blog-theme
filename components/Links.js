@@ -19,7 +19,7 @@ const Links = ({ links, onLinkClick }) => {
       });
     };
 
-    observer.current = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+    observer.current = new IntersectionObserver(handleIntersection, { threshold: 0.3 });
 
     links.forEach((link) => {
       const targetElement = document.getElementById(link.href.substring(1));
