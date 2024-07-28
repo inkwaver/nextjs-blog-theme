@@ -83,6 +83,9 @@ footer.main {
 
 .home-wrapper {
   margin-top: 100vh;
+  .dev-exp {
+    border-bottom: .1rem solid var(--color-n3);
+  }
 }
 
 

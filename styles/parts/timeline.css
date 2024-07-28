@@ -100,7 +100,9 @@
       padding-left: var(--size-39);
       padding-bottom: var(--size-63);
       max-width: calc(6*var(--size-102));
-  
+      &:last-child{
+        padding-bottom: var(--size-24);
+      }
       li {
         color: var(--color-n6);
         font-size: var(--font-size-paragraph);
