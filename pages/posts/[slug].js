@@ -6,7 +6,7 @@ import {
   postFilePaths,
   getPosts,
 } from '../../utils/mdx-utils';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { MDXRemote } from 'next-mdx-remote';
 import Head from 'next/head';
 import Link from 'next/link';

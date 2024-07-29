@@ -8,7 +8,7 @@ import Header from '../components/Header';
 import Layout from '../components/Layout';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 // import ArrowIcon from '../components/ArrowIcon';
 import ImageViewerModal from '../components/ImageViewerModal';
 

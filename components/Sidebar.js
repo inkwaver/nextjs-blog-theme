@@ -53,7 +53,7 @@ const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => 
 
   const handleProjectClick = (project) => {
     setActiveProject(project);
-    const firstPost = [...caseStudyByProject[project] || [], ...showCaseByProject[project] || []].find(post => post.data.order === 1);
+    const firstPost = [...(caseStudyByProject[project] || []), ...(showCaseByProject[project] || [])].find(post => post.data.order === 1);
     if (firstPost) {
       router.push(`/posts/${firstPost.filePath.replace(/\.mdx?$/, '')}`);
     }
