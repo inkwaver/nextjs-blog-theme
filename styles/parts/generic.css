@@ -174,8 +174,12 @@ main.main {
 
 .col-container {
   display: flex;
+  justify-content: space-between;
   .col-50{
     width: 50%;
+  }
+  .alig-right {
+    margin-left: auto;
   }
 }
 
@@ -189,6 +193,14 @@ main.main {
 
 .max-731 {
   max-width: 731px;
+  width: 100%;
+  img{
+    width: 100%;
+  }
+}
+
+.max-258 {
+  max-width: 258px;
   width: 100%;
   img{
     width: 100%;
