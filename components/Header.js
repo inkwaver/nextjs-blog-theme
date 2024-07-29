@@ -10,6 +10,7 @@ export default function Header() {
   const router = useRouter();
   const [avatarSize, setAvatarSize] = useState(240);
   const [isChecked, setIsChecked] = useState(false);
+  const [rootUrl, setRootUrl] = useState('');
 
   // Function to determine if a link is active
   const isActiveLink = (href) => {
@@ -21,6 +22,11 @@ export default function Header() {
   };
 
   useEffect(() => {
+    // Dynamically set the root URL
+    if (typeof window !== 'undefined') {
+      setRootUrl(window.location.origin);
+    }
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
 
@@ -49,7 +55,7 @@ export default function Header() {
 
   return (
     <header className={`main ${avatarSize <= 45 ? 'sticked' : 'hero-header'}`}>
-         {/* eslint-disable */}
+      {/* eslint-disable */}
       <input
         checked={isChecked}
         onChange={handleChange}
@@ -65,7 +71,6 @@ export default function Header() {
       <div className='wrapper-main header-wrap'>
         <div className="main-inner">
           <h1 className="logo">
-         
             <Link href="/">
               <span className={isActiveLink('/') ? 'active' : ''}>
                 <Image
@@ -100,7 +105,7 @@ export default function Header() {
             Case Study
           </Link>
           <Link
-            href="http://localhost:3000/#devExp"
+            href={`${rootUrl}/#devExp`}
             rel="noopener noreferrer"
             className="button cv-btn ghost"
           >
