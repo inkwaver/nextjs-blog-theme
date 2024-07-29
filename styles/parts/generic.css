@@ -206,3 +206,36 @@ main.main {
     width: 100%;
   }
 }
+
+.next-prev-posts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--color-static-p1);
+  padding: var(--size-24);
+  gap: var(--size-39);
+  * {
+    color: var(--color-static-s1);
+  }
+  svg, svg path{
+    fill  : var(--color-static-s3);
+    width: var(--size-15x2);
+  }
+  h4{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  a{
+    display: flex;
+    flex-direction: column;
+  }
+  .thumb-holder {
+    display: inline-block;
+    min-height: 103px;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

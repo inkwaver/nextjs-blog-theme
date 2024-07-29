@@ -206,13 +206,13 @@ export default function Index({ globalData }) {
                 rel="noopener noreferrer"
               >
                 <span className="img-holder">
-                  <Image
+                  <img
                     layout="fill"
                     src={image.path}
                     alt={image.alt}
                     loading="lazy"
-                    placeholder="blur"
-                    blurDataURL={image.path}
+                    // placeholder="blur"
+                    // blurDataURL={image.path}
                   />
                 </span>
 
@@ -288,6 +288,12 @@ export default function Index({ globalData }) {
                 project success.
               </li>
               <li>
+              {/* <ImageViewerModal
+                  src="/projects/CaseStudygif.gif"
+                  alt="Martingale Assets"
+                  buttonText="View Website"
+                  buttonUrl="https://www.martingale.com/"
+                /> */}
               <ImageViewerModal
                   src="/projects/MartingaleAssets.jpg"
                   alt="Martingale Assets"

@@ -93,14 +93,14 @@ footer.main {
   display: 'flex';
   flex-direction: 'row';
   justify-content: 'space-between';
-
+ 
 
 
   .project-img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--size-24);
-
+    max-width: 1400px;
     a {
       display: block;
       text-decoration: none;
@@ -111,7 +111,7 @@ footer.main {
     .img-holder {
       display: inline-block;
       width: 100%;
-      height: 40vw;
+      /* height: 40vw; */
       margin-right: 1.5rem;
       opacity: 1;
       position: relative;
