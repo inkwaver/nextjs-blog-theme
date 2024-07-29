@@ -16,7 +16,7 @@
         li {
           font-size: var(--font-size-paragraph);
           line-height: calc(1.6*(var(--font-size-paragraph)));
-          margin-bottom: calc((var(--font-size-paragraph)));
+          margin-bottom: .3rem;
         }
       }
     }
