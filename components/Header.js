@@ -79,6 +79,7 @@ export default function Header() {
                   width={avatarSize}
                   height={avatarSize}
                   alt="Image description"
+                  loading="eager" // Ensure the avatar image loads immediately
                 />
               </span>
             </Link>
