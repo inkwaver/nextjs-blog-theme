@@ -19,6 +19,8 @@
   --sidebar-active-cat-ul-li-2nt-color:var(--white); */
 
   /* sidebar-color schem v1 end */
+  --sidebar-active-cat-ul-li-1st:var(--color-n3);
+  --sidebar-active-cat-ul-li-1st-active:var(--color-p1);
   --sidebar-chapter-color: var(--color-p3);
 
   --sidebar-active-cat-ul-li-2nt-higlight-color: var(--color-p1);
@@ -43,6 +45,9 @@
     }
     > li > a {
       padding-left: 15px;
+      &.active, &.active *{
+        color: var(--color-p1);
+      }
     }
     & > li > a.active + .content-links {
       display: block;
