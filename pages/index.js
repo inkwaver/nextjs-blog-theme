@@ -287,6 +287,20 @@ export default function Index({ globalData }) {
                 existing projects, contributing to customer satisfaction and
                 project success.
               </li>
+              <li>
+              <ImageViewerModal
+                  src="/projects/MartingaleAssets.jpg"
+                  alt="Martingale Assets"
+                  buttonText="View Website"
+                  buttonUrl="https://www.martingale.com/"
+                />
+                     <ImageViewerModal
+                  src="/projects/StayActiveRehab.jpg"
+                  alt="Stay Active Rehab"
+                  buttonText="View Website Snapshot"
+                  buttonUrl="https://www.stayactiverehab.com/"
+                />
+              </li>
             </ul>
 
             <div
@@ -529,22 +543,42 @@ export default function Index({ globalData }) {
               <strong>Wordpress Dev (freelance)</strong>
             </div>
             <ul>
-              <li>
-                Redesigned the UI and refined the layouts of the Cafe4tune
-                social network.
+            <li>
+                Managed multiple WordPress-based websites, ensuring
+                functionality, performance, and visual appeal.
               </li>
               <li>
-                Developed cross-browser compatible code to ensure the product
-                looked identical on multiple modern and old browsers (IE7, IE8).
+                Developed custom WP Shortcodes to empower clients
+                with intuitive site management capabilities, enhancing their
+                control over content and layout.
               </li>
               <li>
-                <Image
-                  className="desktop-view dark"
-                  src="/projects/cafe4tune.jpg"
-                  alt="Goodwin desktop"
-                  width={635}
-                  height={358}
+                Collaborated with clients to understand their specific
+                requirements and extend website functionality accordingly,
+                providing tailored solutions to meet their needs.
+              </li>
+              <li>
+                Incorporated client-requested features and improvements into
+                existing projects, contributing to customer satisfaction and
+                project success.
+              </li>
+              <li>
+              <ImageViewerModal
+                  src="/projects/butterfield.png"
+                  alt="butterfield"
+                  buttonText="View Website Snapshot"
+                  buttonUrl="https://web.archive.org/web/20141220035155mp_/http://www.butterfield.com/"
                 />
+             
+              </li>
+              <li>
+              <ImageViewerModal
+                   src="/projects/esfcamps.jpg"
+                  alt="butterfield"
+                  buttonText="View Website Snapshot"
+                  buttonUrl="https://web.archive.org/web/20141223010029/http://www.esfcamps.com/"
+                />
+        
               </li>
             </ul>
             <div
