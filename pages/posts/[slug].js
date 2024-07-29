@@ -10,7 +10,7 @@ import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import Head from 'next/head';
 import Link from 'next/link';
-import ArrowIcon from '../../components/ArrowIcon';
+// import ArrowIcon from '../../components/ArrowIcon';
 import CustomLink from '../../components/CustomLink';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
@@ -38,7 +38,7 @@ export default function PostPage({
   prevPost,
   nextPost,
   globalData,
-  thumbnail,
+  // thumbnail,
   devProjects,
   designProjects,
   caseStudy,
