@@ -13,7 +13,7 @@ const PageCover = ({ id, title, subtitle, description, img }) => {
         {typeof img === 'string' && img.startsWith('<svg') ? (
           <div dangerouslySetInnerHTML={{ __html: img }} />
         ) : typeof img === 'string' ? (
-          <Image src={img} alt="" layout='fill' objectFit='contain' />
+          <Image src={img} alt="" layout='fill' objectFit='contain' priority="true"/>
         ) : (
           img
         )}
