@@ -38,7 +38,7 @@ export default function PostPage({
   prevPost,
   nextPost,
   globalData,
-  // thumbnail,
+   thumbnail,
   devProjects,
   designProjects,
   caseStudy,
@@ -49,7 +49,7 @@ export default function PostPage({
       <SEO
         title={frontMatter.title ? `${frontMatter.title} - ${globalData.name}` : 'Default Title'}
         description={frontMatter.description || 'Default description'}
-        ogImage={frontMatter.ogImage || '/avatar-nch.png'}
+        ogImage={frontMatter.thumbnail || '/avatar-nch.png'}
       />
       <Header className="single-header" name={globalData.name} />
 
