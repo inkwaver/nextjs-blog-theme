@@ -112,10 +112,10 @@ export default function Header() {
           >
             Dev Projects
           </Link>
-          <Link className="icon-24" href="#">
+          <Link className="icon-24" target="_blank" href="https://www.linkedin.com/in/narekchilingaryan/">
             <LinkedIn />
           </Link>
-          <Link className="icon-24" href="#">
+          <Link className="icon-24"  target="_blank" href="https://www.behance.net/narek-ws">
             <Behance />
           </Link>
           <Link
