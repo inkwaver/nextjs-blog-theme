@@ -28,7 +28,6 @@
     "@tailwindcss/typography": "^0.5.0",
     "@types/mdx": "^2.0.11",
     "classnames": "^2.3.1",
-    "cypress": "^10.1.0",
     "gray-matter": "^4.0.2",
     "next": "latest",
     "next-compose-plugins": "^2.2.1",
