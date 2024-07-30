@@ -2,9 +2,9 @@
 import Head from 'next/head';
 
 export default function SEO({ title, description, ogImage, url, twitterHandle }) {
-  const defaultTitle = "Default Title";
+  const defaultTitle = "Narek Chilingaryan UI/UX Designer";
   const defaultDescription = "Default description";
-  const defaultOgImage = "/avatar-nch.png";
+  const defaultOgImage = "/narek-ch.png";
   const defaultUrl = "https://narek-ch.space";
   const defaultTwitterHandle = "@YourTwitterHandle";
 

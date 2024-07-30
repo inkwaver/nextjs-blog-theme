@@ -20,6 +20,8 @@ import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 import PageCover from '../../components/PageCover';
 import ImageViewerModal from '../../components/ImageViewerModal';
+import ResponsiveIframe from '../../components/ResponsiveIframe';
+
 import {
  Prev,
  Next,
@@ -30,6 +32,7 @@ const components = {
   Image,
   PageCover,
   ImageViewerModal,
+  ResponsiveIframe,
 };
 
 export default function PostPage({
