@@ -41,7 +41,7 @@ export default function PostPage({
   prevPost,
   nextPost,
   globalData,
-   thumbnail,
+  //  thumbnail,
   devProjects,
   designProjects,
   caseStudy,
