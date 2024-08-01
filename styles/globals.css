@@ -41,10 +41,6 @@ body {
 }
 
 
-.dev-exp {
-  padding-top: calc(2* (var(--font-size-big) + var(--size-39)));
-
-}
 
 
 /* 

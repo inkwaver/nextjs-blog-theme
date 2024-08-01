@@ -123,7 +123,7 @@ export default function Index({ globalData }) {
         </h1> */}
         {/* eslint-disable jsx-a11y/anchor-is-valid */}
 
-        <div className="design-flow mb-102">
+        <div className="design-flow mb-102 wrapper-main viewport-h">
           <h2 className="big-title color-n3 mb-39"> Design Flow</h2>
           <ul>
             <li className="design-flow-card">
@@ -189,7 +189,7 @@ export default function Index({ globalData }) {
           </ul>
         </div>
 
-        <div className="project-part home-snipet mb-102 design-exp">
+        <div className="project-part home-snipet mb-102 design-exp wrapper-main viewport-h">
           <h2 className="big-title color-n3 mb-39">
             {' '}
             <span className="icon-mid">
@@ -221,7 +221,7 @@ export default function Index({ globalData }) {
             ))}
           </div>
         </div>
-        <div className="mb-102">
+        <div className="mb-102 wrapper-main viewport-h">
           <h2 className="big-title color-n3 mb-39">Development Skills</h2>
           <ul className="subtitle">
             <li>Front-End Technologies: HTML, CSS, JavaScript</li>
@@ -248,7 +248,7 @@ export default function Index({ globalData }) {
             </li>
           </ul>
         </div>
-        <div id="devExp" className="dev-exp ">
+        <div id="devExp" className="dev-exp wrapper-main viewport-h">
           <div className="project-block">
             <div
               ref={(el) => (colLeftRefs.current[0] = el)}
