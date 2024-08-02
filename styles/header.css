@@ -111,7 +111,7 @@ header.main {
 
             .logo-name {
   
-
+                font-weight: 900;
                 color: var(--logo-name-big-color);
                 font-size: var(--logo-name-big);
                 margin-bottom: .5rem;

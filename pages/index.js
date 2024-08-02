@@ -8,9 +8,11 @@ import Header from '../components/Header';
 import Layout from '../components/Layout';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 // import ArrowIcon from '../components/ArrowIcon';
 import ImageViewerModal from '../components/ImageViewerModal';
+import DesignFlowCard from '../components/parts/DesignFlowCard';
+import IconWithLabel from '../components/parts/IconWithLabel';
 
 import {
   ResearchIcon,
@@ -35,12 +37,12 @@ export default function Index({ globalData }) {
       {
         path: '/projects/festberg.jpg',
         alt: 'Festberg Showcase',
-        link: 'https://goodwin.am/',
+        link: '/posts//show-case-beargeek',
       },
       {
         path: '/projects/beargeek.jpg',
         alt: 'Festberg Showcase',
-        link: 'https://goodwin.am/',
+        link: '/posts/show-case-beargeek',
       },
     ],
   };
@@ -122,105 +124,94 @@ export default function Index({ globalData }) {
           {globalData.blogTitle}
         </h1> */}
         {/* eslint-disable jsx-a11y/anchor-is-valid */}
-
-        <div className="design-flow mb-102 wrapper-main viewport-h">
-          <h2 className="big-title color-n3 mb-39"> Design Flow</h2>
-          <ul>
-            <li className="design-flow-card">
-              <span className="icon">
-                <ResearchIcon />
-              </span>
-              <h4 className="title-normal">Research</h4>
-              <p>
-                Extensive research on similar websites to gather UX insights and
-                identify important components.
-              </p>
-            </li>
-            <li className="design-flow-card">
-              <span className="icon">
-                <SitemapIcon />
-              </span>
-              <h4 className="title-normal">Sitemap</h4>
-              <p>
-                detailed sitemap and information arch hyearchy to understand and
-                define the key sections of the platform.
-              </p>
-            </li>
-            <li className="design-flow-card">
-              <span className="icon">
-                <InfArch />
-              </span>
-              <h4 className="title-normal">Information Architecture</h4>
-              <p>
-                Analyzed and reorganized the information architecture to ensure
-                logical and user-friendly navigation.
-              </p>
-            </li>
-            <li className="design-flow-card">
-              <span className="icon">
-                <Wireframing />
-              </span>
-              <h4 className="title-normal">Wireframing</h4>
-              <p>
-                informational wireframes focusing on the possible future look
-                and functionality of the platform.
-              </p>
-            </li>
-            <li className="design-flow-card">
-              <span className="icon">
-                <DesignSys />
-              </span>
-              <h4 className="title-normal">Design System</h4>
-              <p>
-                Established a design system using an atomic design approach,
-                reusable components, consistency and efficiency.
-              </p>
-            </li>
-            <li className="design-flow-card">
-              <span className="icon">
-                <Prototyping />
-              </span>
-              <h4 className="title-normal">Figma Prototyping</h4>
-              <p>
-                Interactive prototypes in Figma to visualize and test the
-                design, allowing for improvements based on user feedback.
-              </p>
-            </li>
-          </ul>
-        </div>
-
-        <div className="project-part home-snipet mb-102 design-exp wrapper-main viewport-h">
-          <h2 className="big-title color-n3 mb-39">
-            {' '}
-            <span className="icon-mid">
-              <DesExp />
-            </span>
-            Feat Design
+        <section className="design-section">
+          <h2 className="big-title design-heading  mb-39 sticky-header z-index-12  wrapper-main">
+            <IconWithLabel Icon={DesExp} label="Design" />
           </h2>
-          <div className="project-img">
-            {images.smartbet.map((image, index) => (
-              <a
-                key={index}
-                href={image.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="img-holder">
-                  <img
-                    layout="fill"
-                    src={image.path}
-                    alt={image.alt}
-                    loading="lazy"
-                    // placeholder="blur"
-                    // blurDataURL={image.path}
-                  />
-                </span>
-
-                <figcaption>{image.alt}</figcaption>
-              </a>
-            ))}
+          <div className="viewport-h flex-v-middle">
+            <p className="content-dec wrapper-main">
+              "My design process is built on a series of essential steps that
+              ensure success. Missing any of these can lead to wasted time and
+              effort. For a detailed example, see how these steps were
+              meticulously implemented in the Real Estate case study."
+            </p>
           </div>
-        </div>
+
+          <div className="design-flow mb-102 wrapper-main viewport-h ">
+            <h2 className="big-title color-n3 mb-39 sticky-header body-bg">
+              <span className="invisible mr-15">
+                <IconWithLabel Icon={DesExp} label="Design" />
+              </span>
+              Flow
+            </h2>
+            <ul className="max-wdth-1500">
+              <DesignFlowCard
+                Icon={ResearchIcon}
+                title="Research"
+                description="Extensive research on similar websites to gather UX insights and identify important components."
+              />
+              <DesignFlowCard
+                Icon={SitemapIcon}
+                title="Sitemap"
+                description="Detailed sitemap and information architecture to understand and define the key sections of the platform."
+              />
+              <DesignFlowCard
+                Icon={InfArch}
+                title="Information Architecture"
+                description="Analyzed and reorganized the information architecture to ensure logical and user-friendly navigation."
+              />
+              <DesignFlowCard
+                Icon={Wireframing}
+                title="Wireframing"
+                description="Informational wireframes focusing on the possible future look and functionality of the platform."
+              />
+              <DesignFlowCard
+                Icon={DesignSys}
+                title="Design System"
+                description="Established a design system using an atomic design approach, ensuring consistency and efficiency."
+              />
+              <DesignFlowCard
+                Icon={Prototyping}
+                title="Figma Prototyping"
+                description="Interactive prototypes in Figma to visualize and test the design, allowing for improvements based on user feedback."
+              />
+            </ul>
+          </div>
+
+          <div className="project-part home-snipet mb-102 design-exp wrapper-main viewport-h ">
+            <h2 className="big-title color-n3 mb-39 sticky-header body-bg">
+              {' '}
+              <span className="invisible mr-15">
+              <IconWithLabel Icon={DesExp} label="Design" />
+              </span>
+              Projects
+            </h2>
+            <div className="project-img max-wdth-1500">
+              {images.smartbet.map((image, index) => (
+                <a
+                  key={index}
+                  href={image.link}
+                  // target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="img-holder">
+                    <img
+                      layout="fill"
+                      src={image.path}
+                      alt={image.alt}
+                      loading="lazy"
+                      // placeholder="blur"
+                      // blurDataURL={image.path}
+                    />
+                  </span>
+
+                  <figcaption>{image.alt}</figcaption>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <div className="mb-102 wrapper-main viewport-h">
           <h2 className="big-title color-n3 mb-39">Development Skills</h2>
           <ul className="subtitle">
@@ -288,19 +279,19 @@ export default function Index({ globalData }) {
                 project success.
               </li>
               <li>
-              {/* <ImageViewerModal
+                {/* <ImageViewerModal
                   src="/projects/CaseStudygif.gif"
                   alt="Martingale Assets"
                   buttonText="View Website"
                   buttonUrl="https://www.martingale.com/"
                 /> */}
-              <ImageViewerModal
+                <ImageViewerModal
                   src="/projects/MartingaleAssets.jpg"
                   alt="Martingale Assets"
                   buttonText="View Website"
                   buttonUrl="https://www.martingale.com/"
                 />
-                     <ImageViewerModal
+                <ImageViewerModal
                   src="/projects/StayActiveRehab.jpg"
                   alt="Stay Active Rehab"
                   buttonText="View Website Snapshot"
@@ -549,14 +540,14 @@ export default function Index({ globalData }) {
               <strong>Wordpress Dev (freelance)</strong>
             </div>
             <ul>
-            <li>
+              <li>
                 Managed multiple WordPress-based websites, ensuring
                 functionality, performance, and visual appeal.
               </li>
               <li>
-                Developed custom WP Shortcodes to empower clients
-                with intuitive site management capabilities, enhancing their
-                control over content and layout.
+                Developed custom WP Shortcodes to empower clients with intuitive
+                site management capabilities, enhancing their control over
+                content and layout.
               </li>
               <li>
                 Collaborated with clients to understand their specific
@@ -569,22 +560,20 @@ export default function Index({ globalData }) {
                 project success.
               </li>
               <li>
-              <ImageViewerModal
+                <ImageViewerModal
                   src="/projects/butterfield.png"
                   alt="butterfield"
                   buttonText="View Website Snapshot"
                   buttonUrl="https://web.archive.org/web/20141220035155mp_/http://www.butterfield.com/"
                 />
-             
               </li>
               <li>
-              <ImageViewerModal
-                   src="/projects/esfcamps.jpg"
+                <ImageViewerModal
+                  src="/projects/esfcamps.jpg"
                   alt="butterfield"
                   buttonText="View Website Snapshot"
                   buttonUrl="https://web.archive.org/web/20141223010029/http://www.esfcamps.com/"
                 />
-        
               </li>
             </ul>
             <div
@@ -647,19 +636,19 @@ export default function Index({ globalData }) {
                 existing themes.
               </li>
               <li>
-              <ImageViewerModal
+                <ImageViewerModal
                   src="/projects/ada.jpg"
                   alt="Ada Minasyan"
                   buttonText="View Website Snapshot"
                   buttonUrl="https://web.archive.org/web/20130523110823/http://adaminasyan.com/"
                 />
-                     <ImageViewerModal
+                <ImageViewerModal
                   src="/projects/leonela.jpg"
                   alt="Ada Minasyan"
                   buttonText="View Website Snapshot"
                   buttonUrl="https://web.archive.org/web/20130523110823/http://adaminasyan.com/"
                 />
-                       <ImageViewerModal
+                <ImageViewerModal
                   src="/projects/axon.jpg"
                   alt="Ada Minasyan"
                   buttonText="View Website Snapshot"

@@ -36,11 +36,14 @@ body {
 
 .avatar {
   border-radius: 50%;
-  border: .1rem solid white !important;
   background: rgba(0, 0, 0, .3);
+  border: .3rem solid var(--color-n6) !important;
 }
 
+.sticked .avatar {
+  border: .1rem solid var(--color-n6) !important;
 
+}
 
 
 /* 
@@ -96,7 +99,6 @@ footer.main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--size-24);
-    max-width: 1400px;
     a {
       display: block;
       text-decoration: none;
