@@ -93,11 +93,15 @@ export default function Index({ globalData }) {
             <IconWithLabel Icon={DesExp} label="Design" />
           </h2>
           <div className="viewport-h flex-v-middle intersect-section">
+            <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
+              <span className="invisible mr-15">
+                <IconWithLabel Icon={DesExp} label="Design" />
+              </span>
+              Journey
+            </h2>
             <p className="content-dec wrapper-main">
-              "My design process is built on a series of essential steps that
-              ensure success. Missing any of these can lead to wasted time and
-              effort. For a detailed example, see how these steps were
-              meticulously implemented in the Real Estate case study."
+            “My journey in web development began in 2010 as a markup specialist and WordPress team developer. Over the past 14 years, I’ve not only honed my technical skills but also cultivated a deep appreciation for design. Working closely with designers, I’ve been captivated by how they transform ideas into visually stunning experiences, which sparked my passion for design. This story is one of growth, evolution, and a continuous drive to merge technical precision with creative vision.”
+            {/* "From transforming beautiful designs into code to mastering the nuances of layout and spacing, my journey has been one of both challenge and discovery. It wasn’t always easy—early on, designers and I would navigate countless revisions, struggling to achieve that perfect result. But over the years, I’ve learned to measure every space, to understand design proportions, and to bring sketches to life in code." */}
             </p>
           </div>
 
@@ -108,6 +112,9 @@ export default function Index({ globalData }) {
               </span>
               Flow
             </h2>
+            <p className="content-dec wrapper-main">
+            "My design process is built on a series of essential steps that ensure success. Missing any of these can lead to wasted time and effort. For a detailed example, see how these steps were meticulously implemented in the Real Estate case study."
+            </p>
             <ul className="max-wdth-1500">
               <DesignFlowCard
                 Icon={ResearchIcon}
@@ -149,11 +156,15 @@ export default function Index({ globalData }) {
               </span>
               Projects
             </h2>
+            <p className="content-dec wrapper-main">
+            "Welcome to my portfolio! Here, you'll discover a detailed exploration of my design process through a comprehensive case study. This project showcases my journey from research and strategy through to final implementation, with a focus on tackling complex design challenges, especially within WordPress.
+
+            </p>
             <div className="project-img max-wdth-1500">
               {images.smartbet.map((image, index) => (
                 <a key={index} href={image.link} rel="noopener noreferrer">
                   <span className="img-holder">
-                    <Image
+                    <img
                       layout="fill"
                       src={image.path}
                       alt={image.alt}
