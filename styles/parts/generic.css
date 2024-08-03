@@ -87,9 +87,9 @@ p {
   border-radius: 10rem;
 }
 
-.dev-exp .icon-mid {
+/* .dev-exp .icon-mid {
   margin-right: calc(-1.8 * (var(--size-39)));
-}
+} */
 .design-exp .icon-mid {
   margin-right: var(--size-15);
 }
@@ -286,5 +286,5 @@ main.main {
 }
 
 .design-heading {
-  
+
 }

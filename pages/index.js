@@ -10,7 +10,7 @@ import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 import Image from 'next/legacy/image';
 // import ArrowIcon from '../components/ArrowIcon';
-import ImageViewerModal from '../components/ImageViewerModal';
+// import ImageViewerModal from '../components/ImageViewerModal';
 import DesignFlowCard from '../components/parts/DesignFlowCard';
 import IconWithLabel from '../components/parts/IconWithLabel';
 import ProjectExperience from '../components/parts/ProjectExperience';
@@ -46,7 +46,6 @@ export default function Index({ globalData }) {
       },
     ],
   };
- 
 
   return (
     <Layout>
@@ -116,7 +115,7 @@ export default function Index({ globalData }) {
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg">
               {' '}
               <span className="invisible mr-15">
-              <IconWithLabel Icon={DesExp} label="Design" />
+                <IconWithLabel Icon={DesExp} label="Design" />
               </span>
               Projects
             </h2>
@@ -145,43 +144,57 @@ export default function Index({ globalData }) {
             </div>
           </div>
         </section>
-
-        <div className="mb-102 wrapper-main viewport-h">
-          <h2 className="big-title color-n3 mb-39">Development Skills</h2>
-          <ul className="subtitle">
-            <li>Front-End Technologies: HTML, CSS, JavaScript</li>
-            <li>Front-End Frameworks: React, Angular</li>
-            <li>WordPress Development: Theme development, Gutenberg blocks</li>
-            <li>Responsive Design: Mobile and web optimization</li>
-            <li>CSS Layout: Flexbox, CSS Grid</li>
-            <li>
-              Cross-Browser Compatibility: Ensuring consistent rendering on
-              various browsers
-            </li>
-            <li>Performance Optimization: Asset optimization for web speed</li>
-            <li>
-              Theming and Dark/Light Modes: Implementing theme systems with
-              light and dark modes
-            </li>
-            <li>
-              Testing and Debugging: Ensuring seamless user experience through
-              rigorous testing
-            </li>
-            <li>
-              Testing and Debugging: Ensuring seamless user experience through
-              rigorous testing
-            </li>
-          </ul>
-        </div>
-        <div id="devExp" className="dev-exp wrapper-main viewport-h">
-        <h2 className="big-title color-n3 ">
-                Experience{' '}
-                <span className="icon-mid">
-                  <DevExp />
-                </span>
-              </h2>
-              <ProjectExperience />
-          {/* 
+        <section className="dev-section">
+        <h2 className="big-title design-heading  mb-39 sticky-header z-index-12  wrapper-main">
+        <IconWithLabel Icon={DesExp} label="Dev" />
+          </h2>
+     
+          <div className="mb-102 wrapper-main viewport-h">
+            <h2 className="big-title color-n3 mb-39 sticky-header body-bg">
+              <span className="invisible mr-15">
+                <IconWithLabel Icon={DesExp} label="Dev" />
+              </span>
+              Skills
+            </h2>
+            <ul className="subtitle">
+              <li>Front-End Technologies: HTML, CSS, JavaScript</li>
+              <li>Front-End Frameworks: React, Angular</li>
+              <li>
+                WordPress Development: Theme development, Gutenberg blocks
+              </li>
+              <li>Responsive Design: Mobile and web optimization</li>
+              <li>CSS Layout: Flexbox, CSS Grid</li>
+              <li>
+                Cross-Browser Compatibility: Ensuring consistent rendering on
+                various browsers
+              </li>
+              <li>
+                Performance Optimization: Asset optimization for web speed
+              </li>
+              <li>
+                Theming and Dark/Light Modes: Implementing theme systems with
+                light and dark modes
+              </li>
+              <li>
+                Testing and Debugging: Ensuring seamless user experience through
+                rigorous testing
+              </li>
+              <li>
+                Testing and Debugging: Ensuring seamless user experience through
+                rigorous testing
+              </li>
+            </ul>
+          </div>
+          <div id="devExp" className="dev-exp wrapper-main viewport-h">
+          <h2 className="big-title color-n3 mb-39 sticky-header body-bg">
+              <span className="invisible mr-15">
+                <IconWithLabel Icon={DesExp} label="Dev" />
+              </span>
+              Experience
+            </h2>
+      
+            <ProjectExperience />
+            {/* 
           <div className='btn-holder'>
 
             <Link href="/posts/dev-projects">
@@ -191,7 +204,8 @@ export default function Index({ globalData }) {
 
             </Link>
           </div> */}
-        </div>
+          </div>
+        </section>
 
         {/* <h2>Developemt posts</h2>
         <ul className="w-full">
