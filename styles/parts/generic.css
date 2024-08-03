@@ -95,7 +95,7 @@ p {
 }
 .design-exp h2.big-title {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .big-title {
@@ -289,14 +289,20 @@ main.main {
 }
 .intro-title-sticky{
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 .design-intro-title {
   font-size: var(--size-24);
   padding-left: var(--size-24);
+  color: var(--color-n3);
+  line-height: 2rem;
+  font-weight: 100;
+  margin-left: 24px;
 }
-
+.white-space-break {
+  white-space: break-spaces;
+}
 .is-title-sticky {
   .invisible {
     display: none;

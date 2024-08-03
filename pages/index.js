@@ -93,7 +93,9 @@ export default function Index({ globalData }) {
          
           <h2 className="big-title design-heading mb-39 sticky-header z-index-12 wrapper-main is-title-sticky intro-title-sticky">
             <IconWithLabel Icon={DesExp} label="Design" />  
-            <span className='design-intro-title'>Should be functional and cary message with flavor of estetic</span>
+            <span className='design-intro-title content-dec wrapper-main white-space-break'>
+              should tell a cohesive story, breaking it down into logical, step-by-step pieces. By using color and shape effectively, each element should contribute to the narrative, guiding the user through a clear, visually engaging journey while delivering the message with clarity and purpose.
+            </span>
           </h2>
           <div className="viewport-h flex-v-middle intersect-section">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
