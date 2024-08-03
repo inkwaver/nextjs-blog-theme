@@ -251,9 +251,7 @@ main.main {
   min-height: 100vh;
   padding-bottom: var(--size-39);
 }
-.home-page .big-title {
-  padding-top: var(--size-63x2);
-}
+
 .max-wdth-1500{
   max-width: 1500px;
   width: 100%;
@@ -285,6 +283,20 @@ main.main {
   z-index: 12;
 }
 
+.home-page .big-title {
+  padding-top: var(--size-63x2);
+  white-space: nowrap;
+}
+.intro-title-sticky{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.design-intro-title {
+  font-size: var(--size-24);
+  padding-left: var(--size-24);
+}
+
 .is-title-sticky {
   .invisible {
     display: none;
@@ -293,5 +305,14 @@ main.main {
     .invisible {
       display: inline-block;
     }
+    &.intro-title-sticky {
+      justify-content: flex-start;
+
+      .design-intro-title {
+        visibility: hidden;
+
+      }
+    }
   }
+
 }

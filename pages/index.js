@@ -18,6 +18,7 @@ import {
   Prototyping,
   DesExp,
   InfArch,
+  DevExp,
 } from '../components/Icons/DesignFlowIcons'; // Ensure these icons are correctly exported
 
 export default function Index({ globalData }) {
@@ -89,8 +90,10 @@ export default function Index({ globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <main className="w-full home-wrapper main">
         <section className="design-section">
-          <h2 className="big-title design-heading mb-39 sticky-header z-index-12 wrapper-main">
-            <IconWithLabel Icon={DesExp} label="Design" />
+         
+          <h2 className="big-title design-heading mb-39 sticky-header z-index-12 wrapper-main is-title-sticky intro-title-sticky">
+            <IconWithLabel Icon={DesExp} label="Design" />  
+            <span className='design-intro-title'>Should be functional and cary message with flavor of estetic</span>
           </h2>
           <div className="viewport-h flex-v-middle intersect-section">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
@@ -179,12 +182,12 @@ export default function Index({ globalData }) {
         </section>
         <section className="dev-section">
           <h2 className="big-title design-heading mb-39 sticky-header z-index-12 wrapper-main">
-            <IconWithLabel Icon={DesExp} label="Dev" />
+            <IconWithLabel Icon={DevExp} label="Development" />
           </h2>
           <div className="mb-102 wrapper-main viewport-h intersect-section">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
               <span className="invisible mr-15">
-                <IconWithLabel Icon={DesExp} label="Dev" />
+                <IconWithLabel Icon={DesExp} label="Development" />
               </span>
               Skills
             </h2>
@@ -216,7 +219,7 @@ export default function Index({ globalData }) {
           <div id="devExp" className="dev-exp wrapper-main viewport-h intersect-section">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
               <span className="invisible mr-15">
-                <IconWithLabel Icon={DesExp} label="Dev" />
+                <IconWithLabel Icon={DesExp} label="Development" />
               </span>
               Experience
             </h2>
