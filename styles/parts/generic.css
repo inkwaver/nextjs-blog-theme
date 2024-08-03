@@ -285,6 +285,13 @@ main.main {
   z-index: 12;
 }
 
-.design-heading {
-
+.is-title-sticky {
+  .invisible {
+    display: none;
+  }
+  &.title-sticky {
+    .invisible {
+      display: inline-block;
+    }
+  }
 }
