@@ -22,9 +22,9 @@
   white-space: break-spaces;
 }
 .is-title-sticky {
-  .invisible {
+  /* .invisible {
     display: none;
-  }
+  } */
   &.title-sticky {
     .invisible {
       display: inline-block;
@@ -72,6 +72,22 @@
     display: flex;
     /* align-items: center; */
   }
+
+  .first-container {
+    padding-bottom: 50vh;
+    .big-title{
+        margin-top: -5.7rem;
+      }
+  }
+  .invisible {
+    display: none;
+  }
+  .content-dec{
+    max-width: 778px;
+    font-size: var(--font-size-Subtitle);
+    line-height: calc(1.5* var(--font-size-Subtitle));
+  }
+
   /* .intersect-section {
     * {
         opacity: 0;

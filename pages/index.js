@@ -96,7 +96,7 @@ export default function Index({ globalData }) {
 
     
 
-          <div className="viewport-h  intersect-section wrapper-main" >
+          {/* <div className="viewport-h  intersect-section wrapper-main" >
           <p className=" indipend-paragraph">
             should tell a cohesive story, breaking it down into logical,
             step-by-step pieces. By using color and shape effectively, each
@@ -104,11 +104,11 @@ export default function Index({ globalData }) {
             a clear, visually engaging journey while delivering the message with
             clarity and purpose.
           </p>
-          </div>
+          </div> */}
 
-          <div className="viewport-h  intersect-section wrapper-main">
-            <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
-              <span className="invisible mr-15">
+          <div className="viewport-h  intersect-section wrapper-main first-container">
+            <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky ">
+              <span className=" mr-15">
                 <IconWithLabel Icon={DesExp} label="Design" />
               </span>
               Journey

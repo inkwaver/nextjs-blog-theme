@@ -254,9 +254,7 @@ main.main {
   margin-right: var(--size-15);
 }
 
-.content-dec{
-  max-width: 778px;
-}
+
 .flex-v-middle {
   display: flex;
   flex-direction: row;
