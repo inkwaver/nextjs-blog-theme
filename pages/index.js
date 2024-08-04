@@ -90,7 +90,7 @@ export default function Index({ globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <main className="w-full home-wrapper main content-slide-container">
         <section className="design-section ">
-          <h2 className="big-title design-heading  sticky-header  wrapper-main is-title-sticky intro-title-sticky">
+          <h2 className="big-title design-heading  sticky-header   wrapper-main is-title-sticky intro-title-sticky">
             <IconWithLabel Icon={DesExp} label="Design" />
           </h2>
 
@@ -184,7 +184,7 @@ export default function Index({ globalData }) {
               Projects
             </h2>
 
-            <p className="content-dec wrapper-main">
+            <p className="content-dec ">
               "Welcome to my portfolio! Here, you'll discover a detailed
               exploration of my design process through a comprehensive case
               study. This project showcases my journey from research and
@@ -211,13 +211,13 @@ export default function Index({ globalData }) {
         </section>
 
         <section className="dev-section">
-          <h2 className="big-title design-heading mb-39 sticky-header z-index-12 wrapper-main">
+          <h2 className="big-title design-heading  sticky-header  wrapper-main is-title-sticky intro-title-sticky">
             <IconWithLabel Icon={DevExp} label="Development" />
           </h2>
 
-          <div className="mb-102 wrapper-main viewport-h intersect-section">
+          <div className="mb-102 wrapper-main viewport-h intersect-section first-container">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
-              <span className="invisible mr-15">
+              <span className=" mr-15">
                 <IconWithLabel Icon={DesExp} label="Development" />
               </span>
               Skills

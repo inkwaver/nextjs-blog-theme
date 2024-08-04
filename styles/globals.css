@@ -116,7 +116,7 @@ footer.main {
       position: relative;
       border-radius: .5rem;
       overflow: hidden;
-
+      margin-top: var(--size-102);
       &:hover {
         opacity: .8;
         transition: ease-in-out .1s;

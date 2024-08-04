@@ -3,7 +3,7 @@
 @media screen and (max-width: 1562px) {
    
     .design-flow-card {
-        width: 484px;
+        max-width: 484px;
     }
     .design-flow ul {
         display: grid;
