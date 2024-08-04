@@ -1,4 +1,5 @@
 :root {
+
 --wrapper-main: 1920px;
 --wrapper-sec: 60rem;
 --font: Arial, Helvetica, sans-serif;
@@ -84,6 +85,14 @@
 --intro-color: var(--color-n1);
 
 }
+
+
+@media screen and (max-width: 500px) {
+    :root{
+        --wrapper-margin: 15px;
+    }
+}
+
 .dark:root{
 --color-n6: #1A1A1A;
 --color-n5: #404040;

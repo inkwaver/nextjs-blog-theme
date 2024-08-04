@@ -38,6 +38,7 @@ export default function SEO({ title, description, ogImage, url, twitterHandle })
       <meta name="twitter:description" content={pageDescription} />
       <meta name="twitter:image" content={pageImage} />
       <meta name="twitter:site" content={twitterSite} />
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
       {/* JSON-LD for Google */}
       <script type="application/ld+json">

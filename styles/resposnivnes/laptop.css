@@ -101,7 +101,7 @@
     .content-slide-container .big-title .icon-mid {
         transform: translate (0,0);
     }
-    
+
 
 }
 
@@ -143,7 +143,7 @@
 }
 
 @media screen and (max-width: 811px) {
-  
+
     .home-page header.main.hero-header .main-inner {
         flex-direction: column;
         justify-content: center;
@@ -154,6 +154,7 @@
         text-align: center;
 
     }
+   
     .design-flow {
         align-items: center;
         display: flex;
