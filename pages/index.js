@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Layout from '../components/Layout';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
-import Image from 'next/legacy/image';
+// import Image from 'next/legacy/image';
 import IconWithLabel from '../components/parts/IconWithLabel';
 import ProjectExperience from '../components/parts/ProjectExperience';
 import DesignFlowCard from '../components/parts/DesignFlowCard'; // Ensure this path is correct
@@ -191,6 +191,7 @@ export default function Index({ globalData }) {
               strategy through to final implementation, with a focus on tackling
               complex design challenges, especially within WordPress.
             </p>
+           {/* eslint-disable */}
 
             <div className="project-img max-wdth-1500">
               {images.smartbet.map((image, index) => (

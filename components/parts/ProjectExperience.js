@@ -48,7 +48,7 @@ const ProjectExperience = () => {
     colLeftRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
-
+    /* eslint-disable */
     return () => {
       colLeftRefs.current.forEach((ref) => {
         if (ref) observer.unobserve(ref);

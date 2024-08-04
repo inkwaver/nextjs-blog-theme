@@ -2,7 +2,7 @@
     display: none;
 }
 
-@media screen and (max-width: 811px) {
+@media screen and (max-width: 928px) {
   .main-menu-close, .header-links {
     display: none;
     /* background-color: white; */
