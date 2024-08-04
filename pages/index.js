@@ -88,25 +88,42 @@ export default function Index({ globalData }) {
     <Layout>
       <Header name={globalData.name} />
       <SEO title={globalData.name} description={globalData.blogTitle} />
-      <main className="w-full home-wrapper main">
-        <section className="design-section">
-         
-          <h2 className="big-title design-heading mb-39 sticky-header z-index-12 wrapper-main is-title-sticky intro-title-sticky">
-            <IconWithLabel Icon={DesExp} label="Design" />  
-            <span className='design-intro-title content-dec wrapper-main white-space-break'>
-              should tell a cohesive story, breaking it down into logical, step-by-step pieces. By using color and shape effectively, each element should contribute to the narrative, guiding the user through a clear, visually engaging journey while delivering the message with clarity and purpose.
-            </span>
+      <main className="w-full home-wrapper main content-slide-container">
+        <section className="design-section ">
+          <h2 className="big-title design-heading  sticky-header  wrapper-main is-title-sticky intro-title-sticky">
+            <IconWithLabel Icon={DesExp} label="Design" />
           </h2>
-          <div className="viewport-h flex-v-middle intersect-section">
+
+    
+
+          <div className="viewport-h  intersect-section wrapper-main" >
+          <p className=" indipend-paragraph">
+            should tell a cohesive story, breaking it down into logical,
+            step-by-step pieces. By using color and shape effectively, each
+            element should contribute to the narrative, guiding the user through
+            a clear, visually engaging journey while delivering the message with
+            clarity and purpose.
+          </p>
+          </div>
+
+          <div className="viewport-h  intersect-section wrapper-main">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
               <span className="invisible mr-15">
                 <IconWithLabel Icon={DesExp} label="Design" />
               </span>
               Journey
             </h2>
-            <p className="content-dec wrapper-main">
-            “My journey in web development began in 2010 as a markup specialist and WordPress team developer. Over the past 14 years, I’ve not only honed my technical skills but also cultivated a deep appreciation for design. Working closely with designers, I’ve been captivated by how they transform ideas into visually stunning experiences, which sparked my passion for design. This story is one of growth, evolution, and a continuous drive to merge technical precision with creative vision.”
-            {/* "From transforming beautiful designs into code to mastering the nuances of layout and spacing, my journey has been one of both challenge and discovery. It wasn’t always easy—early on, designers and I would navigate countless revisions, struggling to achieve that perfect result. But over the years, I’ve learned to measure every space, to understand design proportions, and to bring sketches to life in code." */}
+
+            <p className="content-dec ">
+              “My journey in web development began in 2010 as a markup
+              specialist and WordPress team developer. Over the past 14 years,
+              I’ve not only honed my technical skills but also cultivated a deep
+              appreciation for design. Working closely with designers, I’ve been
+              captivated by how they transform ideas into visually stunning
+              experiences, which sparked my passion for design. This story is
+              one of growth, evolution, and a continuous drive to merge
+              technical precision with creative vision.”
+              {/* "From transforming beautiful designs into code to mastering the nuances of layout and spacing, my journey has been one of both challenge and discovery. It wasn’t always easy—early on, designers and I would navigate countless revisions, struggling to achieve that perfect result. But over the years, I’ve learned to measure every space, to understand design proportions, and to bring sketches to life in code." */}
             </p>
           </div>
 
@@ -117,10 +134,15 @@ export default function Index({ globalData }) {
               </span>
               Flow
             </h2>
-            <p className="content-dec wrapper-main">
-            "My design process is built on a series of essential steps that ensure success. Missing any of these can lead to wasted time and effort. For a detailed example, see how these steps were meticulously implemented in the Real Estate case study."
+
+            <p className="content-dec ">
+              "My design process is built on a series of essential steps that
+              ensure success. Missing any of these can lead to wasted time and
+              effort. For a detailed example, see how these steps were
+              meticulously implemented in the Real Estate case study."
             </p>
-            <ul className="max-wdth-1500">
+
+            <ul className="max-wdth-1500 flow-cards">
               <DesignFlowCard
                 Icon={ResearchIcon}
                 title="Research"
@@ -161,10 +183,15 @@ export default function Index({ globalData }) {
               </span>
               Projects
             </h2>
-            <p className="content-dec wrapper-main">
-            "Welcome to my portfolio! Here, you'll discover a detailed exploration of my design process through a comprehensive case study. This project showcases my journey from research and strategy through to final implementation, with a focus on tackling complex design challenges, especially within WordPress.
 
+            <p className="content-dec wrapper-main">
+              "Welcome to my portfolio! Here, you'll discover a detailed
+              exploration of my design process through a comprehensive case
+              study. This project showcases my journey from research and
+              strategy through to final implementation, with a focus on tackling
+              complex design challenges, especially within WordPress.
             </p>
+
             <div className="project-img max-wdth-1500">
               {images.smartbet.map((image, index) => (
                 <a key={index} href={image.link} rel="noopener noreferrer">
@@ -182,10 +209,12 @@ export default function Index({ globalData }) {
             </div>
           </div>
         </section>
+
         <section className="dev-section">
           <h2 className="big-title design-heading mb-39 sticky-header z-index-12 wrapper-main">
             <IconWithLabel Icon={DevExp} label="Development" />
           </h2>
+
           <div className="mb-102 wrapper-main viewport-h intersect-section">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
               <span className="invisible mr-15">
@@ -193,6 +222,7 @@ export default function Index({ globalData }) {
               </span>
               Skills
             </h2>
+
             <ul className="subtitle">
               <li>Front-End Technologies: HTML, CSS, JavaScript</li>
               <li>Front-End Frameworks: React, Angular</li>
@@ -218,13 +248,18 @@ export default function Index({ globalData }) {
               </li>
             </ul>
           </div>
-          <div id="devExp" className="dev-exp wrapper-main viewport-h intersect-section">
+
+          <div
+            id="devExp"
+            className="dev-exp wrapper-main viewport-h intersect-section"
+          >
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
               <span className="invisible mr-15">
                 <IconWithLabel Icon={DesExp} label="Development" />
               </span>
               Experience
             </h2>
+
             <ProjectExperience />
           </div>
         </section>
