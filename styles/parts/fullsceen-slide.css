@@ -49,7 +49,7 @@
     > section {
         padding-bottom: 30vh;
     }
-  .viewport-h {
+  .viewport-h:not(:last-child) {
     /* background-color: rgba(255,44,200, .6); */
     min-height: 100vh;
     display: flex;

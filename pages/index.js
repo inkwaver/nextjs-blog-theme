@@ -94,8 +94,6 @@ export default function Index({ globalData }) {
             <IconWithLabel Icon={DesExp} label="Design" />
           </h2>
 
-    
-
           {/* <div className="viewport-h  intersect-section wrapper-main" >
           <p className=" indipend-paragraph">
             should tell a cohesive story, breaking it down into logical,
@@ -191,7 +189,7 @@ export default function Index({ globalData }) {
               strategy through to final implementation, with a focus on tackling
               complex design challenges, especially within WordPress.
             </p>
-           {/* eslint-disable */}
+            {/* eslint-disable */}
 
             <div className="project-img max-wdth-1500">
               {images.smartbet.map((image, index) => (
@@ -216,37 +214,69 @@ export default function Index({ globalData }) {
             <IconWithLabel Icon={DevExp} label="Development" />
           </h2>
 
-          <div className="mb-102 wrapper-main viewport-h intersect-section first-container">
+          <div className="design-flow  mb-102 wrapper-main viewport-h intersect-section first-container">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
               <span className=" mr-15">
                 <IconWithLabel Icon={DesExp} label="Development" />
               </span>
               Skills
             </h2>
-
-            <ul className="subtitle">
-              <li>Front-End Technologies: HTML, CSS, JavaScript</li>
-              <li>Front-End Frameworks: React, Angular</li>
-              <li>
-                WordPress Development: Theme development, Gutenberg blocks
-              </li>
-              <li>Responsive Design: Mobile and web optimization</li>
-              <li>CSS Layout: Flexbox, CSS Grid</li>
-              <li>
-                Cross-Browser Compatibility: Ensuring consistent rendering on
-                various browsers
-              </li>
-              <li>
-                Performance Optimization: Asset optimization for web speed
-              </li>
-              <li>
-                Theming and Dark/Light Modes: Implementing theme systems with
-                light and dark modes
-              </li>
-              <li>
-                Testing and Debugging: Ensuring seamless user experience through
-                rigorous testing
-              </li>
+            <p className="content-dec ">
+              I specialize in crafting user interfaces with smooth interactions,
+              animations, and semantic code. My approach emphasizes clean,
+              minimal code to achieve optimal performance, ensuring smooth
+              navigation even on lower-powered devices. While I am comfortable
+              working with frameworks like React and Angular, my strengths lie
+              in HTML5, CSS techniques, and producing well-documented,
+              maintainable components rather than in complex logic or
+              framework-specific expertise
+            </p>
+            <ul className="max-wdth-1500 flow-cards">
+              <DesignFlowCard
+                Icon={ResearchIcon}
+                title="Web & Mobile Mastery:"
+                description=" Developing high-quality web and mobile experiences through advanced semantic markup and optimized CSS methodologies"
+              />
+              <DesignFlowCard
+                Icon={SitemapIcon}
+                title="Modern Layout Techniques"
+                description="Using CSS Grid and Flexbox techniques to create responsive, modern designs that adapt seamlessly to various devices and screen sizes."
+              />
+              <DesignFlowCard
+                Icon={InfArch}
+                title="WordPress Theme Development"
+                description="Creating WordPress themes with an emphasis on performance, SEO, and intuitive user interfaces for enhanced usability"
+              />
+              <DesignFlowCard
+                Icon={Wireframing}
+                title="Code Quality & Accessibility"
+                description="Writing clean, semantic code with a focus on accessibility and smooth browser rendering on all devices."
+              />
+              <DesignFlowCard
+                Icon={DesignSys}
+                title="Pixel-Perfect Precision:"
+                description="My commitment to pixel-perfect precision ensures that every detail aligns with the intended design."
+              />
+              <DesignFlowCard
+                Icon={Prototyping}
+                title="Design & Optimization Skills"
+                description="Optimizing assets for web performance to ensure lightweight templates and smoother user experiences, combined with a keen eye for UI/UX design."
+              />
+              <DesignFlowCard
+                Icon={Wireframing}
+                title="Performance on Less Powerful Devices"
+                description="Ensuring optimal performance and smooth user experiences, even on less powerful devices."
+              />
+              <DesignFlowCard
+                Icon={DesignSys}
+                title="Collaborative Teamwork & Communication"
+                description="A collaborative team player with strong communication skills, able to listen and engage effectively."
+              />
+              <DesignFlowCard
+                Icon={Prototyping}
+                title="Familiarity with Front-End Frameworks"
+                description="Skilled in utilizing front-end technologies like React and Angular to structure markup efficiently and build robust, maintainable interfaces."
+              />
             </ul>
           </div>
 
