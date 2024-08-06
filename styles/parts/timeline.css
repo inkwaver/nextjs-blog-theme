@@ -40,7 +40,7 @@
         transition: all ease-in .5s;
       }
   
-      &:first-child:after {
+      /* &:first-child:after {
         top: calc(var(--size-39) + var(--size-9) / 1.5);
       }
   
@@ -51,7 +51,7 @@
       &:first-child .company-logo {
         top: calc(var(--size-39) + var(--size-9) /1000);
         margin-top: -.3rem;
-      }
+      } */
      
       h4 {
         font-size: var(--font-size-title);
@@ -104,10 +104,10 @@
     }
   
     ul {
-      padding-left: var(--size-39);
+      padding-left: var(--size-15x3);
       padding-bottom: var(--size-63);
       max-width: calc(6*var(--size-102));
-      padding-top: var(--size-24);
+      /* padding-top: var(--size-24); */
       &:last-child{
         padding-bottom: var(--size-24);
       }
@@ -120,6 +120,7 @@
         img {
           opacity: .5;
           transition: all ease-in .5s;
+          display: none;
          
         }
         &:not(.project-overview) img{
@@ -146,6 +147,7 @@
           & img {
             opacity: 1;
             transition: all ease-in .5s;
+            display: block;
           }
         }
   
