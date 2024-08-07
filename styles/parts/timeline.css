@@ -120,7 +120,7 @@
         img {
           opacity: .5;
           transition: all ease-in .5s;
-          display: none;
+          /* display: none; */
          
         }
         &:not(.project-overview) img{
@@ -147,10 +147,9 @@
           & img {
             opacity: 1;
             transition: all ease-in .5s;
-            display: block;
+            /* display: block; */
           }
         }
-  
         em {
           transition: all ease-in .5s;
           font-weight: bold;

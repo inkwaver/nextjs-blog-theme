@@ -73,14 +73,14 @@ export default function Header() {
           <h1 className="logo">
             <Link href="/">
               <span className={isActiveLink('/') ? 'active' : ''}>
-                <Image
+                <img
                   className="avatar"
                   src="/narek-ch.png"
                   width={avatarSize}
                   height={avatarSize}
                   alt="Image description"
-                  priority={true}
-                  loading="eager" // Ensure the avatar image loads immediately
+                  // priority={true}
+                  // loading="eager" // Ensure the avatar image loads immediately
                 />
               </span>
             </Link>
