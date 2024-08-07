@@ -30,6 +30,7 @@
 .sidebar {
   background-color: var(--sidebar-bg);
   border-left: 0.1rem solid var(--sidebar-border-left-color);
+
   .sidebar-inner {
     position: sticky;
     top: 4rem;
