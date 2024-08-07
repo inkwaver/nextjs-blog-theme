@@ -177,6 +177,9 @@ main.main {
   justify-content: space-between;
   .col-50 {
     width: 50%;
+    .col-50 {
+      width: 100%;
+    }
   }
   .alig-right {
     margin-left: auto;
