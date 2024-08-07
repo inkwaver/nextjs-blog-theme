@@ -208,4 +208,23 @@ footer.main {
 }
 
 
+footer.main {
+  background-color: var(--color-n2);
+  /* padding: var(--size-63) 0 var(--size-63) 0; */
+  *, path, svg {
+    color: var(--color-n6);
+    fill: var(--color-n6);
+    list-style-type: none;
+  }
+  .first-floor {
+  padding: var(--size-63)  var(--wrapper-margin);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--size-24);
+  }
+
+}
+
 /* components/ImageViewerModal.module.css */

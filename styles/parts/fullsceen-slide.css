@@ -48,6 +48,9 @@
 .content-slide-container {
     > section {
         padding-bottom: 30vh;
+        &:last-child{
+          padding-bottom: 0;
+        }
     }
   .viewport-h:not(:last-child) {
     /* background-color: rgba(255,44,200, .6); */
