@@ -19,6 +19,9 @@ import {
   DesExp,
   InfArch,
   DevExp,
+  RenderQuality,
+  Speed,
+  Seo,
 } from '../components/Icons/DesignFlowIcons'; // Ensure these icons are correctly exported
 
 export default function Index({ globalData }) {
@@ -233,21 +236,22 @@ export default function Index({ globalData }) {
             </p>
             <ul className="max-wdth-1500 flow-cards">
               <DesignFlowCard
-                Icon={ResearchIcon}
-                title="Web & Mobile Mastery:"
-                description=" Developing high-quality web and mobile experiences through advanced semantic markup and optimized CSS methodologies"
+                Icon={RenderQuality}
+                title="Best UI & Render Quality"
+                description="High-quality UIs are created with pixel-perfect precision, using semantic HTML and advanced CSS to ensure optimal rendering across all devices."
               />
               <DesignFlowCard
-                Icon={SitemapIcon}
-                title="Modern Layout Techniques"
-                description="Using CSS Grid and Flexbox techniques to create responsive, modern designs that adapt seamlessly to various devices and screen sizes."
+                Icon={Speed}
+                title="Lightweight & Fast Loading"
+                description="Clean, minimal code is written to ensure fast loading times and smooth performance, even on low-powered devices."
               />
               <DesignFlowCard
-                Icon={InfArch}
-                title="WordPress Theme Development"
-                description="Creating WordPress themes with an emphasis on performance, SEO, and intuitive user interfaces for enhanced usability"
+                Icon={Seo}
+                title="SEO Optimized & Accessible"
+                description="Optimized for SEO and accessibility with structured markup and ARIA labels, enhancing both search visibility and user experience."
               />
-              <DesignFlowCard
+
+              {/* <DesignFlowCard
                 Icon={Wireframing}
                 title="Code Quality & Accessibility"
                 description="Writing clean, semantic code with a focus on accessibility and smooth browser rendering on all devices."
@@ -276,7 +280,7 @@ export default function Index({ globalData }) {
                 Icon={Prototyping}
                 title="Familiarity with Front-End Frameworks"
                 description="Skilled in utilizing front-end technologies like React and Angular to structure markup efficiently and build robust, maintainable interfaces."
-              />
+              /> */}
             </ul>
           </div>
 
