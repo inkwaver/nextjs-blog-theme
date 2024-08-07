@@ -1,5 +1,5 @@
-import { LinkedIn, Behance } from './Icons/DesignFlowIcons';
-import Link from 'next/link';
+// import { LinkedIn, Behance } from './Icons/DesignFlowIcons';
+// import Link from 'next/link';
 
 export default function Footer({ copyrightText }) {
   return (
