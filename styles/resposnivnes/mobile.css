@@ -1,0 +1,50 @@
+@media screen and (max-width: 425px) {
+  .big-title {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  .thumb-holder {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .home-page header.main .header-description .logo-name {
+    display: block;
+  }
+  header.main.sticked .header-description .logo-name {
+    font-size: 18px;
+  }
+
+
+
+  .content-slide-container .first-container .big-title {
+    margin-top: -3.4rem;
+  }
+  .content-slide-container h2.big-title {
+    line-height: 21px;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    .icon-mid {
+      transform: translate(0, 0);
+      width: 30px;
+      height: 30px;
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    span:not(.icon-mid){
+        display: inline-block;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+
+    }
+  }
+
+
+
+}

@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Footer({ copyrightText }) {
   return (
     <footer className="main py-16 flex flex-col items-center">
-   <div className='first-floor wrapper-main'> 
+   {/* <div className='first-floor wrapper-main'> 
    <section>
         <h3>Design</h3>
         <ul>
@@ -22,7 +22,7 @@ export default function Footer({ copyrightText }) {
       </section>
       <section>
         <p className="connect">
-          Connect Via
+          Connect Via - 
         <Link className="icon-24" target="_blank" href="https://www.linkedin.com/in/narekchilingaryan/">
             <LinkedIn />
           </Link>
@@ -39,9 +39,9 @@ export default function Footer({ copyrightText }) {
             Download CV
           </Link>
       </section>
-   </div>
+   </div> */}
       
-      <p className="wrapper-main">
+      <p className="wrapper-main copyright">
         {copyrightText}
       </p>
     </footer>
