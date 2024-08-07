@@ -37,7 +37,7 @@
     width: 24px;
      path{
         width: 24px;
-
+        fill: var(--color-n2);
     }
   }
 }

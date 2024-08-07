@@ -1,4 +1,9 @@
 @media screen and (max-width: 650px) {
+
+  .col-40, .col-70 {
+    width: 100%;
+  }
+
   .big-title {
     font-size: 2.5rem;
     line-height: 2.5rem;

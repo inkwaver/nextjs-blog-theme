@@ -8,7 +8,7 @@ display: none;
   }
   .single-content .sidebar-inner {
     position: fixed;
-    background: white;
+    background: var(--white);
     right: 0;
     height: 88vh;
     overflow-y: auto;
@@ -34,6 +34,7 @@ display: none;
   #toc:checked ~ .sidebar-inner {
     height: auto;
     margin-top: 2rem;
+    opacity: .6;
     .toc-menu {
         .close-toc {
             display: none;
