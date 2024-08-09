@@ -275,3 +275,40 @@
     }
   }
   
+
+  .desktop-view, .mobile-view {
+    position: relative;
+    &:before, &:after{
+      content: "";
+    display: block;
+    background-color: var(--color-n2);
+    opacity: 0.5;
+    width: .5rem;
+    height: 10rem;
+    top: 50%;
+    margin-top: -5rem;
+    position: absolute;
+    border-radius: 6px;
+    left: -2rem;
+    z-index: 11;
+    transition: all ease-in-out .1s;
+    }
+    &:after{
+      left: auto;
+      right: -2rem;
+    }
+    .toolbar-view {
+      background-color: var(--color-n2);
+      padding: 1rem;
+      border-radius: 9px 9px 0 0;
+      font-weight: 600;
+      width: 100%;
+      *{
+        color: var(--color-n6);
+      }
+    }
+  }
+
+  .mobile-view  {
+    width: 210px;
+  }

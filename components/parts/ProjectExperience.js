@@ -196,7 +196,7 @@ const ProjectExperience = () => {
         />
         <div className="view-mode">
           <section>
-            <h6>Responsiveness -</h6>
+            {/* <h6>Responsiveness -</h6> */}
             <label className="button desk-btn" htmlFor="desktopView">
               Desktop
             </label>
@@ -219,6 +219,9 @@ const ProjectExperience = () => {
             responsiveMode === 'desktop' ? '' : 'hidden'
           }`}
         >
+          <div className='desktop-bar toolbar-view'>
+            <span className='device-name'>Desktop -   1200</span>
+          </div>
           <Image
             className={`desktop-view ${
               colorMode === 'light' ? 'light' : 'dark'
@@ -234,6 +237,9 @@ const ProjectExperience = () => {
             responsiveMode === 'mobile' ? '' : 'hidden'
           }`}
         >
+           <div className='desktop-bar toolbar-view'>
+            <span className='device-name'>Mobile -   320</span>
+          </div>
           <Image
             className={`mobile-view ${
               colorMode === 'light' ? 'light' : 'dark'

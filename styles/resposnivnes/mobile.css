@@ -41,7 +41,11 @@
         height: 18px;
       }
     }
-    span:not(.icon-mid){
+    /* &.title-sticky, &.title-sticky * {
+      background-color: var(--color-n1);
+      color: white;
+    } */
+   &.title-sticky span:not(.icon-mid){
         display: inline-block;
         line-height: 21px;
         display: flex;
