@@ -71,6 +71,7 @@ const ProjectExperience = () => {
   }, []);
 
   return (         <div className="project-block">
+    <input id="more-projects" type='checkbox'/>
     <div
       ref={(el) => (colLeftRefs.current[0] = el)}
       className={`col-left ${highlightIndex >= 0 ? 'highlight' : ''}`}
@@ -127,7 +128,7 @@ const ProjectExperience = () => {
 
     <div
       ref={(el) => (colLeftRefs.current[1] = el)}
-      className={`col-left ${highlightIndex >= 1 ? 'highlight' : ''}`}
+      className={`col-left feat-pin ${highlightIndex >= 1 ? 'highlight' : ''}`}
     >
       <h4>
         SmartBet
@@ -141,7 +142,7 @@ const ProjectExperience = () => {
       <em>Sep 2020 - Jul 2021</em>
       <strong>Markup Specialist</strong>
     </div>
-    <ul>
+    <ul className='feat-pin'>
       <li>
         Led the comprehensive redesign of the primary project's user
         interface, focusing on enhancing user experience and visual
@@ -159,7 +160,7 @@ const ProjectExperience = () => {
         Developed a mobile-responsive version of the website, ensuring
         it met criteria for easy theming and dark/light modes.
       </li>
-      <li className="project-overview">
+      <li className="project-overview ">
         <input
           readOnly
           checked={responsiveMode === 'desktop'}
@@ -487,6 +488,7 @@ const ProjectExperience = () => {
         />
       </li>
     </ul>
+    <label className='more-project-btn' htmlFor="more-projects">More Projects</label>
   </div>
 
   );

@@ -312,3 +312,30 @@
   .mobile-view  {
     width: 210px;
   }
+
+
+  .project-block {
+   input{
+    display: none;
+   }
+   .more-project-btn {
+    position: relative;
+    z-index: 11;
+   }
+    .col-left, ul{
+      position: absolute;
+      z-index: 11;
+      opacity: 0;
+      transition: all ease-in-out .3s;
+    }
+    #more-projects:checked ~ .col-left,
+    #more-projects:checked ~ ul {
+      position: relative;
+      opacity: 1;
+    }
+    ul.feat-pin, div.feat-pin.col-left {
+      position: relative;
+      z-index: 21;
+      opacity: 1;
+  }
+  }
