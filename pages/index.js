@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Layout from '../components/Layout';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
-// import Image from 'next/legacy/image';
+import Image from 'next/legacy/image';
 import IconWithLabel from '../components/parts/IconWithLabel';
 import ProjectExperience from '../components/parts/ProjectExperience';
 import DesignFlowCard from '../components/parts/DesignFlowCard'; // Ensure this path is correct
@@ -193,12 +193,34 @@ export default function Index({ globalData }) {
               complex design challenges, especially within WordPress.
             </p>
             {/* eslint-disable */}
+            <div className='case-study-preview'>
+              <div className='projec-play'>
+                <div className='project-thumbnail'>
+                  <img loading="lazy" src='/gif/CaseStudygif.gif' />
 
+                </div>
+                <p>
+                <strong>Outcome: </strong>
+                  Improved client satisfaction by simplifying the apartment search experience.
+                </p>
+              
+              </div>
+              <div className='project-details'>
+                <h3>Case Study </h3>
+                <p><strong>Redesign Project:</strong> Real Estate Company Website</p>
+                <ul>
+                  <li><strong>Objective:</strong> Enhance desktop experience for a smoother apartment search.</li>
+                  <li><strong>Approach:</strong> Leveraged WordPress for a clean, user-friendly redesign, focusing on simplicity and functionality.</li>
+                  <li><strong>Research & Planning:</strong> Mapped out sitemaps, wireframes, and conducted atomic design to streamline the user journey.</li>
+                  <li><strong>Execution:</strong> Crafted prototypes and documented the design process to ensure a smooth alpha launch.</li>
+                </ul>
+              </div>
+            </div>
             <div className="project-img max-wdth-1500">
               {images.smartbet.map((image, index) => (
                 <a key={index} href={image.link} rel="noopener noreferrer">
                   <span className="img-holder">
-                    <img
+                    <Image
                       layout="fill"
                       src={image.path}
                       alt={image.alt}

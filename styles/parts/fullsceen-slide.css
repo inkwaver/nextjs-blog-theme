@@ -1,14 +1,14 @@
 .sticky-header {
   position: sticky;
   top: -3rem;
-  z-index: 11;
+  z-index: 111;
   display: inline-block;
 }
 .intro-title-sticky {
   display: flex;
   /* align-items: center; */
   /* justify-content: center; */
-  z-index: 20;
+  z-index: 112;
 }
 .design-intro-title {
   font-size: var(--size-24);
@@ -65,7 +65,7 @@
   }
   .big-title {
     margin-bottom: var(--size-24);
-    transition: all ease-in-out .3s;
+    transition: all ease-in .3s;
     .icon-mid {
         transform: translate(0, -.5rem);
     }
