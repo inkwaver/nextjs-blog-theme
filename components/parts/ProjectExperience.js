@@ -393,7 +393,7 @@ const ProjectExperience = () => {
       </li>
       <li>
         <ImageViewerModal
-          src="/projects/butterfield.png"
+          src="/projects/butterfield.jpg"
           alt="butterfield"
           buttonText="View Website Snapshot"
           buttonUrl="https://web.archive.org/web/20141220035155mp_/http://www.butterfield.com/"
