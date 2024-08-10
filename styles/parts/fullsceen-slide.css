@@ -80,8 +80,8 @@
   }
   h2.big-title {
     display: flex;
+    width: 100%;
     /* margin-bottom: var(--size-63x2); */
-    /* align-items: center; */
   }
 
   .first-container {
