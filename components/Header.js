@@ -75,11 +75,11 @@ export default function Header() {
               <span className={isActiveLink('/') ? 'active' : ''}>
                 <Image
                   className="avatar"
-                  src="/narek-ch.png"
+                  src="/narek-ch.jpg"
                   width={avatarSize}
                   height={avatarSize}
                   alt="Image description"
-                  // priority={true}
+                  priority={false}
                   // loading="eager" // Ensure the avatar image loads immediately
                 />
               </span>
