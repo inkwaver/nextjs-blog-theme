@@ -16,32 +16,29 @@ const ImageViewerModal = ({
   buttonUrl,
   children,
   blur = false,
-  width,
+  width,  // optional width prop
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchDimensions = async () => {
-      const img = new window.Image();
-      img.onload = () => {
-        setImageDimensions({ width: img.width, height: img.height });
-        setLoading(false);
-      };
-      img.onerror = () => {
-        console.error('Failed to load image');
-        setLoading(false);
-      };
-      img.src = src;
+    const img = new window.Image();
+    img.onload = () => {
+      setImageDimensions({ width: img.width, height: img.height });
+      setLoading(false);
     };
-    fetchDimensions();
+    img.onerror = () => {
+      console.error('Failed to load image');
+      setLoading(false);
+    };
+    img.src = src;
   }, [src]);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
-        closeModal();
+        setIsOpen(false);
       }
     };
     if (isOpen) {
@@ -58,11 +55,9 @@ const ImageViewerModal = ({
 
   if (loading) return <div>Loading...</div>;
 
-  const aspectRatio = (imageDimensions.height / imageDimensions.width) * 100;
-
   return (
     <>
-      <figure className="thumbnail-container" style={{ width: '100%', position: 'relative' }}>
+      <figure className="thumbnail-container" style={{ position: 'relative' }}>
         <button
           className="thumbnail-button"
           onClick={openModal}
@@ -73,7 +68,7 @@ const ImageViewerModal = ({
             style={{
               position: 'relative',
               width: width ? `${width}px` : '100%',
-              paddingBottom: width ? `${(imageDimensions.height / imageDimensions.width) * 100}%` : `${aspectRatio}%`,
+              paddingBottom: `${(imageDimensions.height / imageDimensions.width) * 100}%`, // maintain aspect ratio
               overflow: 'hidden',
             }}
           >
@@ -81,12 +76,12 @@ const ImageViewerModal = ({
               className="thumbnail"
               src={src}
               alt={alt || caption}
-              layout="fill"
-              objectFit="cover"
+              layout="responsive"
+              width={imageDimensions.width}
+              height={imageDimensions.height}
               priority={isPriority}
               placeholder={blur ? 'blur' : 'empty'}
               blurDataURL={blur ? DEFAULT_BLUR_URL : undefined}
-              formats={['image/avif', 'image/webp']} // Specify the formats for next/image to serve
             />
           </div>
           {caption && <figcaption className="caption">{caption}</figcaption>}
@@ -96,7 +91,7 @@ const ImageViewerModal = ({
       {isOpen && (
         <div className="modal" role="dialog" aria-labelledby="modal-title">
           <div className="modal-content-wrapper">
-            <button className="close" onClick={closeModal} aria-label="Close modal">close</button>
+            <button className="close" onClick={closeModal} aria-label="Close modal">Close</button>
             <Image
               className="modal-content"
               src={src}
@@ -106,7 +101,6 @@ const ImageViewerModal = ({
               priority={isPriority}
               placeholder={blur ? 'blur' : 'empty'}
               blurDataURL={blur ? DEFAULT_BLUR_URL : undefined}
-              formats={['image/avif', 'image/webp']} // Same as above for the modal image
             />
             <button className="view-source-button" onClick={viewSource} aria-label="View source image">{buttonText}</button>
             {caption && <figcaption className="modal-caption">{caption}</figcaption>}
