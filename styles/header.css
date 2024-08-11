@@ -203,6 +203,7 @@ header.main {
     .header-description p {
       /* transition: all ease-in .1s; */
       transform: translate(-100vh, -100vw);
+      display: none;
     }
   }
 }
