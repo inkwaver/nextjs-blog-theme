@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-// import Image from "next/legacy/image";
+import Image from "next/legacy/image";
 import { useRouter } from 'next/router';
 import { LinkedIn, Behance } from './Icons/DesignFlowIcons';
 import ThemeSwitcher from './ThemeSwitcher.js';
@@ -73,7 +73,7 @@ export default function Header() {
           <h1 className="logo">
             <Link href="/">
               <span className={isActiveLink('/') ? 'active' : ''}>
-                <img
+                <Image
                   className="avatar"
                   src="/narek-ch.png"
                   width={avatarSize}
