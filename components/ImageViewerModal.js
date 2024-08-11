@@ -16,6 +16,7 @@ const ImageViewerModal = ({
   buttonUrl,
   children,
   blur = false,
+  width, // Optional width prop
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
@@ -57,6 +58,9 @@ const ImageViewerModal = ({
 
   if (loading) return <div>Loading...</div>;
 
+  // Calculate height proportionally if width is provided
+  const aspectRatio = (imageDimensions.height / imageDimensions.width) * 100;
+
   return (
     <>
       <figure className="thumbnail-container" style={{ width: '100%', position: 'relative' }}>
@@ -65,13 +69,21 @@ const ImageViewerModal = ({
           onClick={openModal}
           aria-label="Open image"
         >
-          <div className="thumbnail-wrapper" style={{ position: 'relative', paddingTop: `${(imageDimensions.height / imageDimensions.width) * 100}%` }}>
+          <div
+            className="thumbnail-wrapper"
+            style={{
+              position: 'relative',
+              width: width ? `${width}px` : '100%',
+              paddingBottom: width ? `${(imageDimensions.height / imageDimensions.width) * 100}%` : `${aspectRatio}%`,
+              overflow: 'hidden',
+            }}
+          >
             <Image
               className="thumbnail"
               src={src}
               alt={alt || caption}
-              layout="fill"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              layout="fill" // Use fill to cover the relative container
+              objectFit="cover" // Ensure the image covers the entire area without distortion
               priority={isPriority}
               placeholder={blur ? 'blur' : 'empty'}
               blurDataURL={blur ? DEFAULT_BLUR_URL : undefined}
