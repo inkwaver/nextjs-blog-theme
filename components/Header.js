@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
 import { LinkedIn, Behance } from './Icons/DesignFlowIcons';
 import ThemeSwitcher from './ThemeSwitcher.js';
@@ -8,6 +7,7 @@ import { CloseIcon, MenuIcon } from '../components/Icons/DesignFlowIcons';
 
 export default function Header() {
   const router = useRouter();
+  const [avatarSize, setAvatarSize] = useState(240);
   const [isChecked, setIsChecked] = useState(false);
   const [rootUrl, setRootUrl] = useState('');
 
@@ -21,16 +21,11 @@ export default function Header() {
     }
 
     const handleScroll = () => {
-      const headerElement = document.querySelector('.main');
       const scrollPosition = window.scrollY;
 
-      if (headerElement) {
-        if (scrollPosition > 50) {
-          headerElement.classList.add('sticked');
-        } else {
-          headerElement.classList.remove('sticked');
-        }
-      }
+      // Decrease avatar size gradually as the user scrolls
+      const newAvatarSize = Math.max(45, 240 - scrollPosition);
+      setAvatarSize(newAvatarSize);
     };
 
     if (router.pathname === '/') {
@@ -39,14 +34,14 @@ export default function Header() {
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
+    } else {
+      setAvatarSize(45);
     }
   }, [router.pathname]);
 
   return (
-
-    <header className={`main ${router.pathname !== '/' ? 'sticked' : ''}`}>
-    {/* eslint-disable */}
-
+    <header className={`main ${avatarSize <= 45 ? 'sticked' : 'hero-header'}`}>
+      {/* eslint-disable */}
       <input
         checked={isChecked}
         onChange={handleChange}
@@ -64,14 +59,16 @@ export default function Header() {
           <h1 className="logo">
             <Link href="/">
               <span className={router.pathname === '/' ? 'active' : ''}>
-                <div className='avatar-img'></div>
-                <Image
+                <div
                   className="avatar"
-                  src="/narek-ch.png"
-                  width={240}  // Fixed width
-                  height={240} // Fixed height
-                  alt="Image description"
-                  priority={true} // Ensure the avatar image loads immediately
+                  style={{
+                    width: avatarSize,
+                    height: avatarSize,
+                    backgroundImage: 'url(/avatar-nch.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    borderRadius: '50%', // Make the div circular
+                  }}
                 />
               </span>
             </Link>
@@ -86,6 +83,7 @@ export default function Header() {
               that's high-resolution, features smooth scrolling, is
               mobile-friendly, and prioritizes accessibility.
             </p>
+            {/* eslint-enable */}
           </div>
         </div>
         <div className="header-links">
