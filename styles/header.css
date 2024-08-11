@@ -232,3 +232,9 @@ header.main {
   .sticked .avatar {
     transform: scale(0.1875); /* Scale down to approximately 45px from 240px */
   }
+  .logo .avatar {
+    background-image: url(/avatar-nch.png);
+    background-size: cover;
+    background-position: 'center';
+    border-radius: '50%';
+  }

@@ -64,10 +64,7 @@ export default function Header() {
                   style={{
                     width: avatarSize,
                     height: avatarSize,
-                    backgroundImage: 'url(/avatar-nch.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    borderRadius: '50%', // Make the div circular
+                 
                   }}
                 />
               </span>
