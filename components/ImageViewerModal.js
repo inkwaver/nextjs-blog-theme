@@ -16,7 +16,7 @@ const ImageViewerModal = ({
   buttonUrl,
   children,
   blur = false,
-  width, // Optional width prop
+  width,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
@@ -58,7 +58,6 @@ const ImageViewerModal = ({
 
   if (loading) return <div>Loading...</div>;
 
-  // Calculate height proportionally if width is provided
   const aspectRatio = (imageDimensions.height / imageDimensions.width) * 100;
 
   return (
@@ -82,11 +81,12 @@ const ImageViewerModal = ({
               className="thumbnail"
               src={src}
               alt={alt || caption}
-              layout="fill" // Use fill to cover the relative container
-              objectFit="cover" // Ensure the image covers the entire area without distortion
+              layout="fill"
+              objectFit="cover"
               priority={isPriority}
               placeholder={blur ? 'blur' : 'empty'}
               blurDataURL={blur ? DEFAULT_BLUR_URL : undefined}
+              formats={['image/avif', 'image/webp']} // Specify the formats for next/image to serve
             />
           </div>
           {caption && <figcaption className="caption">{caption}</figcaption>}
@@ -106,6 +106,7 @@ const ImageViewerModal = ({
               priority={isPriority}
               placeholder={blur ? 'blur' : 'empty'}
               blurDataURL={blur ? DEFAULT_BLUR_URL : undefined}
+              formats={['image/avif', 'image/webp']} // Same as above for the modal image
             />
             <button className="view-source-button" onClick={viewSource} aria-label="View source image">{buttonText}</button>
             {caption && <figcaption className="modal-caption">{caption}</figcaption>}
