@@ -111,18 +111,33 @@ const ProjectExperience = () => {
           buttonText="View Website"
           buttonUrl="https://www.martingale.com/"
         /> */}
-        <ImageViewerModal
+            <Image
+          className="desktop-view dark"
+          src="/projects/MartingaleAssets.jpg"
+          alt="Martingale Assets"
+          width={635}
+          height={358}
+        />
+        {/* <ImageViewerModal
           src="/projects/MartingaleAssets.jpg"
           alt="Martingale Assets"
           buttonText="View Website"
           buttonUrl="https://www.martingale.com/"
+        /> */}
+
+        <Image
+          className="desktop-view dark"
+           src="/projects/StayActiveRehab.jpg"
+          alt="Stay Active Rehab"
+          width={635}
+          height={358}
         />
-        <ImageViewerModal
+        {/* <ImageViewerModal
           src="/projects/StayActiveRehab.jpg"
           alt="Stay Active Rehab"
           buttonText="View Website Snapshot"
           buttonUrl="https://www.stayactiverehab.com/"
-        />
+        /> */}
       </li>
     </ul>
 
@@ -339,12 +354,19 @@ const ProjectExperience = () => {
         blog, aligning it seamlessly with the provided design.
       </li>
       <li>
-        <ImageViewerModal
+        {/* <ImageViewerModal
           src="/projects/isamo.jpg"
           alt="Iso Wordpress Blog"
           buttonText="View Website Snapshot"
           buttonUrl="https://web.archive.org/web/20141208205146/http://blog.isa-mo.com/"
-        />
+        /> */}
+            <Image
+            className="desktop-view dark"
+            src="/projects/isamo.jpg"
+            alt="Iso Wordpress Blog"
+            width={635}
+            height={358}
+          />
         {/* <Image
           className="desktop-view dark"
           src="/projects/isamo.jpg"
@@ -392,20 +414,34 @@ const ProjectExperience = () => {
         project success.
       </li>
       <li>
-        <ImageViewerModal
+        {/* <ImageViewerModal
           src="/projects/butterfield.jpg"
           alt="butterfield"
           buttonText="View Website Snapshot"
           buttonUrl="https://web.archive.org/web/20141220035155mp_/http://www.butterfield.com/"
+        /> */}
+           <Image
+          className="desktop-view dark"
+          src="/projects/butterfield.jpg"
+          alt="Goodwin desktop"
+          width={635}
+          height={358}
         />
       </li>
       <li>
-        <ImageViewerModal
+      <Image
+          className="desktop-view dark"
+          src="/projects/esfcamps.jpg"
+          alt="Goodwin desktop"
+          width={635}
+          height={358}
+        />
+        {/* <ImageViewerModal
           src="/projects/esfcamps.jpg"
           alt="butterfield"
           buttonText="View Website Snapshot"
           buttonUrl="https://web.archive.org/web/20141223010029/http://www.esfcamps.com/"
-        />
+        /> */}
       </li>
     </ul>
     <div
@@ -468,23 +504,44 @@ const ProjectExperience = () => {
         existing themes.
       </li>
       <li>
-        <ImageViewerModal
+      <Image
+          className="desktop-view dark"
+          src="/projects/ada.jpg"
+          alt="Ada Minasyan"
+          width={635}
+          height={358}
+        />
+        {/* <ImageViewerModal
           src="/projects/ada.jpg"
           alt="Ada Minasyan"
           buttonText="View Website Snapshot"
           buttonUrl="https://web.archive.org/web/20130523110823/http://adaminasyan.com/"
+        /> */}
+           <Image
+          className="desktop-view dark"
+           src="/projects/leonela.jpg"
+          alt="Leonle waltrix"
+          width={635}
+          height={358}
         />
-        <ImageViewerModal
+        {/* <ImageViewerModal
           src="/projects/leonela.jpg"
           alt="Ada Minasyan"
           buttonText="View Website Snapshot"
           buttonUrl="https://web.archive.org/web/20130523110823/http://adaminasyan.com/"
-        />
-        <ImageViewerModal
+        /> */}
+        {/* <ImageViewerModal
           src="/projects/axon.jpg"
           alt="Ada Minasyan"
           buttonText="View Website Snapshot"
           buttonUrl="https://web.archive.org/web/20130523110823/http://adaminasyan.com/"
+        /> */}
+            <Image
+          className="desktop-view dark"
+          src="/projects/axon.jpg"
+          alt="Leonle waltrix"
+          width={635}
+          height={358}
         />
       </li>
     </ul>
