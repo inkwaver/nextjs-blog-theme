@@ -221,3 +221,14 @@ header.main {
         }
     }
 }
+
+.avatar-img {
+    background-color: red;
+}
+.hero-header .avatar {
+    transition: transform 0.3s ease;
+  }
+  
+  .sticked .avatar {
+    transform: scale(0.1875); /* Scale down to approximately 45px from 240px */
+  }
