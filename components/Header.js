@@ -75,7 +75,7 @@ export default function Header() {
               <span className={isActiveLink('/') ? 'active' : ''}>
                 <Image
                   className="avatar"
-                  src="/narek-ch.jpg"
+                  src="/avatar-nch.png"
                   width={avatarSize}
                   height={avatarSize}
                   alt="Image description"
