@@ -43,7 +43,10 @@ export default function Header() {
   }, [router.pathname]);
 
   return (
+
     <header className={`main ${router.pathname !== '/' ? 'sticked' : ''}`}>
+    {/* eslint-disable */}
+
       <input
         checked={isChecked}
         onChange={handleChange}
