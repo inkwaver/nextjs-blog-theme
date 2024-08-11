@@ -59,14 +59,14 @@ export default function Header() {
           <h1 className="logo">
             <Link href="/">
               <span className={router.pathname === '/' ? 'active' : ''}>
-                <div
+                {/* <div
                   className="avatar"
                   style={{
                     width: avatarSize,
                     height: avatarSize,
                  
                   }}
-                />
+                /> */}
               </span>
             </Link>
           </h1>
