@@ -215,9 +215,9 @@ header.main {
   transition: transform 0.3s ease;
 }
 
-.logo .avatar {
+/* .logo .avatar {
   background-image: url(/avatar-nch.png);
   background-size: cover;
   background-position: 'center';
   border-radius: '50%';
-}
+} */
