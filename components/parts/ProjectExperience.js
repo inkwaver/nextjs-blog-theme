@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Image from "next/legacy/image";
-import ImageViewerModal from '../ImageViewerModal';
+// import ImageViewerModal from '../ImageViewerModal';
 
 const ProjectExperience = () => {
   const [responsiveMode, setResponsiveMode] = useState('desktop');
