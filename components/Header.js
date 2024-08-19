@@ -84,8 +84,9 @@ export default function Header() {
                 className="avatar"
                 src="/narek-ch.jpg"
                 alt="Image description"
-                width={240}
-                height={240}
+                // width={240}
+                // height={240}
+                fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading="eager"
               />
