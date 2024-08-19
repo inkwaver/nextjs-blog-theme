@@ -199,6 +199,7 @@ header.main {
       height: var(--size-15x3);
       width: var(--size-15x3);
       display: block;
+      position: relative;
     }
     .header-links {
       align-self: center;
