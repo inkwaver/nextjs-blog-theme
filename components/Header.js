@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
 import { LinkedIn, Behance } from './Icons/DesignFlowIcons';
 import ThemeSwitcher from './ThemeSwitcher.js';
@@ -59,28 +59,32 @@ export default function Header() {
       <input
         checked={isChecked}
         onChange={handleChange}
-        className='burger-anchor'
+        className="burger-anchor"
         id="hamburger"
-        type='checkbox'
+        type="checkbox"
         aria-label="Menu toggle"
       />
-      <label className='menu-icon' htmlFor="hamburger">
+      <label className="menu-icon" htmlFor="hamburger">
         <MenuIcon className="main-menu-open" />
         <CloseIcon className="main-menu-close" />
       </label>
-      <div className='wrapper-main header-wrap'>
+      <div className="wrapper-main header-wrap">
         <div className="main-inner">
           <h1 className="logo">
-            <Link className={isActiveLink('/') ? 'active' : ''} href="/">
-                <Image
-                  className="avatar"
-                  src="/narek-ch.jpg"
-                  width={avatarSize}
-                  height={avatarSize}
-                  alt="Image description"
-                  priority={false}
-                  // loading="eager" // Ensure the avatar image loads immediately
-                />
+            <Link
+              className={isActiveLink('/') ? 'active' : ''}
+              href="/"
+              style={{ width: avatarSize + 'px', height: avatarSize + 'px' }}
+            >
+              <Image
+                className="avatar"
+                src="/narek-ch.jpg"
+                alt="Image description"
+                priority={false}
+                // loading="eager" // Uncomment if you want the avatar image to load immediately
+                width={avatarSize} // Ensures the image has the same width
+                height={avatarSize} // Ensures the image has the same height
+              />
             </Link>
           </h1>
           <div className="header-description">
@@ -89,8 +93,8 @@ export default function Header() {
             </Link>
 
             <p className="paragraph">
-              I <strong>design interfaces</strong> and translate them into markup
-              that's high-resolution, features smooth scrolling, is
+              I <strong>design interfaces</strong> and translate them into
+              markup that's high-resolution, features smooth scrolling, is
               mobile-friendly, and prioritizes accessibility.
             </p>
             {/* eslint-enable */}
@@ -111,10 +115,18 @@ export default function Header() {
           >
             Dev Projects
           </Link>
-          <Link className="icon-24" target="_blank" href="https://www.linkedin.com/in/narekchilingaryan/">
+          <Link
+            className="icon-24"
+            target="_blank"
+            href="https://www.linkedin.com/in/narekchilingaryan/"
+          >
             <LinkedIn />
           </Link>
-          <Link className="icon-24"  target="_blank" href="https://www.behance.net/narek-ws">
+          <Link
+            className="icon-24"
+            target="_blank"
+            href="https://www.behance.net/narek-ws"
+          >
             <Behance />
           </Link>
           <Link
