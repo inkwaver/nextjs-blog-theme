@@ -74,7 +74,7 @@ export default function Header() {
             <Link
               className={isActiveLink('/') ? 'active' : ''}
               href="/"
-              style={{ width: avatarSize + 'px', height: avatarSize + 'px' }}
+              style={{ width: `${avatarSize}px`, height: `${avatarSize}px` }}
             >
               <Image
                 className="avatar"
@@ -82,8 +82,9 @@ export default function Header() {
                 alt="Image description"
                 priority={false}
                 // loading="eager" // Uncomment if you want the avatar image to load immediately
-                width={avatarSize} // Ensures the image has the same width
-                height={avatarSize} // Ensures the image has the same height
+                width={240} // Static width
+                height={240} // Static height
+                style={{ transform: `scale(${avatarSize / 240})` }} // Adjust the scale based on avatarSize
               />
             </Link>
           </h1>

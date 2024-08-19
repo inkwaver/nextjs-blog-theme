@@ -44,6 +44,7 @@ body {
 
 .sticked .avatar {
   border: 0.1rem solid var(--color-n6) !important;
+  transform: none !important;
 }
 
 /* 
