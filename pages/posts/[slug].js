@@ -15,7 +15,8 @@ import CustomLink from '../../components/CustomLink';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Sidebar from '../../components/Sidebar';
-import Layout, { GradientBackground } from '../../components/Layout';
+// import Layout, { GradientBackground } from '../../components/Layout';
+import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 import PageCover from '../../components/PageCover';
 import ImageViewerModal from '../../components/ImageViewerModal';
@@ -28,6 +29,7 @@ const components = {
   ImageViewerModal,
 };
 
+
 export default function PostPage({
   source,
   frontMatter,
@@ -38,6 +40,7 @@ export default function PostPage({
   devProjects,
   designProjects,
   caseStudy,
+  showCase,
 }) {
   return (
     <Layout className="single">
@@ -77,7 +80,13 @@ export default function PostPage({
           <article className="content">
             <MDXRemote {...source} components={components} />
           </article>
-          <Sidebar caseStudy={caseStudy} designProjects={designProjects} devProjects={devProjects} />
+          <Sidebar
+            caseStudy={caseStudy}
+            showCase={showCase}
+            devProjects={devProjects}
+            designProjects={designProjects}
+            tags={frontMatter.tags}
+          />
         </main>
         <div className="grid md:grid-cols-2 mt-12">
           {prevPost && (
@@ -111,6 +120,7 @@ export default function PostPage({
   );
 }
 
+
 export const getStaticProps = async ({ params }) => {
   const globalData = getGlobalData();
   const { mdxSource, data } = await getPostBySlug(params.slug);
@@ -118,6 +128,7 @@ export const getStaticProps = async ({ params }) => {
   const devProjects = getPosts('dev-projects');
   const designProjects = getPosts('design');
   const caseStudy = getPosts('case-study');
+  const showCase = getPosts('show-case');
 
   const tag = data.tags && data.tags[0];
   const prevPost = getPreviousPostBySlug(params.slug, tag);
@@ -136,6 +147,7 @@ export const getStaticProps = async ({ params }) => {
       devProjects,
       designProjects,
       caseStudy,
+      showCase ,
     },
   };
 };

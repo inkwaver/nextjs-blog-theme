@@ -76,7 +76,7 @@
     header.main.sticked .header-description .logo-name {
         font-size: var(--font-size-Subtitle);
         margin-bottom: 0;
-        margin-left: 1rem;
+        /* margin-left: 1rem; */
     }
     .home-page header.main .header-description p {
         font-size: var(--font-size-paragraph);

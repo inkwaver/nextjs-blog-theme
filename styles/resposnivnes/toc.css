@@ -46,6 +46,9 @@ display: none;
     .parts > span.active-cat{
         display: none;
     }
+    h3.title {
+      display: none;
+    }
     li.chapter{
         display: none;
     }

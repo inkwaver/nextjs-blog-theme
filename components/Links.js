@@ -1,58 +1,51 @@
-// Links.js
 import React, { useEffect, useRef } from 'react';
-// import Link from 'next/link';
 
 const Links = ({ links }) => {
-    if (!links || links.length === 0) return null;
-/* eslint-disable */
-    const observer = useRef(null);  // Initialize with null
+  const observer = useRef(null);
 
-    useEffect(() => {
-        observer.current = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+  useEffect(() => {
+    if (!links || links.length === 0) return;
 
-        // Observe each paragraph element
-        links.forEach((link) => {
-            const targetElement = document.getElementById(link.href.substring(1));
-            if (targetElement) {
-                observer.current.observe(targetElement);
-            }
-        });
-
-        // Cleanup function
-        return () => {
-            if (observer.current) {
-                observer.current.disconnect();
-            }
-        };
-    }, [links]);
-/* eslint-enable */
     const handleIntersection = (entries) => {
-        entries.forEach((entry) => {
-            const targetElement = document.querySelector(`.content-links a[href="#${entry.target.id}"]`);
-            
-            if (targetElement) {
-                if (entry.isIntersecting) {
-                    // Add highlight class
-                    targetElement.classList.add('highlight');
-                } else {
-                    // Remove highlight class
-                    targetElement.classList.remove('highlight');
-                }
-            }
-        });
+      entries.forEach((entry) => {
+        const targetElement = document.querySelector(`.content-links a[href="#${entry.target.id}"]`);
+        if (targetElement) {
+          if (entry.isIntersecting) {
+            targetElement.classList.add('highlight');
+          } else {
+            targetElement.classList.remove('highlight');
+          }
+        }
+      });
     };
-    
-    return (
-        <ul className='content-links'>
-            {links.map((link) => (
-                <li key={link.title}>
-                    <a href={link.href} rel="noopener noreferrer">
-                        {link.title}
-                    </a>
-                </li>
-            ))}
-        </ul>
-    );
+
+    observer.current = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+    links.forEach((link) => {
+      const targetElement = document.getElementById(link.href.substring(1));
+      if (targetElement) {
+        observer.current.observe(targetElement);
+      }
+    });
+
+    return () => {
+      if (observer.current) {
+        observer.current.disconnect();
+      }
+    };
+  }, [links]);
+
+  return (
+    <ul className='content-links'>
+      {links && links.length > 0 && links.map((link) => (
+        <li key={link.title}>
+          <a href={link.href} rel="noopener noreferrer">
+            {link.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 export default Links;
