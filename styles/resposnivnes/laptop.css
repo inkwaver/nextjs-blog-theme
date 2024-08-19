@@ -41,7 +41,13 @@
       
         white-space: nowrap;
     }
-
+    .case-study-preview .projec-play {
+        flex-direction: column;
+        max-width: 616px;
+    }
+    .case-study-preview .project-details {
+        width: 100%;
+    }
   
 }
 @media screen and (max-width: 1060px) {

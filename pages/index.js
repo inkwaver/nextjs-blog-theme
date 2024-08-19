@@ -211,7 +211,7 @@ export default function Index({ globalData }) {
                   <li> <strong>Outcome: </strong>
                   Improved client satisfaction by simplifying the apartment search experience.</li>
                 </ul>
-                <a  class="button " href="/posts/case-study-real-estate-brief">View Case Study</a>
+                <a  className="button " href="/posts/case-study-real-estate-brief">View Case Study</a>
               </div>
               
               </div>
