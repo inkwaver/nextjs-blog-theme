@@ -76,6 +76,7 @@ export default function Header() {
               </span>
             </Link>
           </h1>
+          
           <div className="header-description">
             <Link className="huge-title" href="/">
               <span className="logo-name">Narek Chilingaryan</span>
