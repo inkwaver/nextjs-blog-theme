@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Links from './Links';
 import { CloseIcon, TocIcon } from '../components/Icons/DesignFlowIcons';
 
+// eslint-disable-next-line react/jsx-no-comment-textnodes
 const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => {
   const router = useRouter();
   const [activeProject, setActiveProject] = useState(null);
@@ -17,12 +18,15 @@ const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => 
 
   const isActiveLink = (href) => {
     const isActive = router.pathname === href || router.asPath === href;
-    //console.log(`Is ${href} active?`, isActive);
     return isActive;
   };
 
   const handleChange = (event) => {
     setIsChecked(event.target.checked);
+  };
+
+  const handleLinkClick = () => {
+    setIsChecked(true);
   };
 
   // Sort and group posts
@@ -47,14 +51,9 @@ const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => 
   const activePost = [...caseStudy, ...showCase].find(post => isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`));
   const urlActiveProject = activePost ? activePost.data.project : null;
 
-  // console.log('Active post:', activePost);
-  // console.log('Active project:', urlActiveProject);
-
   const handleProjectClick = (project) => {
-    // console.log('Clicked project:', project);
     setActiveProject(project);
-    const firstPost = [...caseStudyByProject[project] || [], ...showCaseByProject[project] || []].find(post => post.data.order === 1);
-    // console.log('First post:', firstPost);
+    const firstPost = [...(caseStudyByProject[project] || []), ...(showCaseByProject[project] || [])].find(post => post.data.order === 1);
     if (firstPost) {
       router.push(`/posts/${firstPost.filePath.replace(/\.mdx?$/, '')}`);
     }
@@ -62,9 +61,9 @@ const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => 
 
   return (
     <aside className="main sidebar">
-         {/* eslint-disable */}
       <input checked={isChecked} onChange={handleChange} type='checkbox' id="toc"/>
       <div className='sidebar-inner'>
+        {/* eslint-disable */}
         <label className='toc-menu' htmlFor='toc'>
           <CloseIcon className="close-toc"/>
           <TocIcon className="open-toc"/>
@@ -73,7 +72,6 @@ const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => 
           <ul>
             {clientTags.includes('case-study') && (
               <li>
-                <h3 className='title'>Case Study</h3>
                 {Object.keys(caseStudyByProject).map((project) => (
                   <div className='parts' key={project}>
                     <span
@@ -86,12 +84,12 @@ const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => 
                       {caseStudyByProject[project].map((post) => (
                         <li key={post.filePath} className={post.data.classname || ''}>
                           <Link className={`${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`} href={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}>
-                            <span className={` ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
+                            <span onClick={handleLinkClick} className={` ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
                               <span className="menu-date">{post.data.date}</span>
                               <span className="menu-title">{post.data.title}</span>
                             </span>
                           </Link>
-                          <Links links={post.data.links} />
+                          <Links links={post.data.links} onLinkClick={handleLinkClick} />
                         </li>
                       ))}
                     </ul>
@@ -115,12 +113,12 @@ const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => 
                       {showCaseByProject[project].map((post) => (
                         <li key={post.filePath} className={post.data.classname || ''}>
                           <Link className={`${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`} href={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}>
-                            <span className={` ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
+                            <span onClick={handleLinkClick} className={` ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
                               <span className="menu-date">{post.data.date}</span>
                               <span className="menu-title">{post.data.title}</span>
                             </span>
                           </Link>
-                          <Links links={post.data.links} />
+                          <Links links={post.data.links} onLinkClick={handleLinkClick} />
                         </li>
                       ))}
                     </ul>
@@ -135,12 +133,12 @@ const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => 
                 {devProjects.map((post) => (
                   <li key={post.filePath} className={post.data.classname || ''}>
                     <Link className={`${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`} href={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}>
-                      <span className={` ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
+                      <span onClick={handleLinkClick} className={` ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
                         <span className="menu-date">{post.data.date}</span>
                         <span className="menu-title">{post.data.title}</span>
                       </span>
                     </Link>
-                    <Links links={post.data.links} />
+                    <Links links={post.data.links} onLinkClick={handleLinkClick} />
                   </li>
                 ))}
               </li>
@@ -152,12 +150,12 @@ const Sidebar = ({ devProjects, designProjects, caseStudy, showCase, tags }) => 
                 {designProjects.map((post) => (
                   <li key={post.filePath} className={post.data.classname || ''}>
                     <Link className={`${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`} href={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}>
-                      <span className={` ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
+                      <span onClick={handleLinkClick} className={` ${isActiveLink(`/posts/${post.filePath.replace(/\.mdx?$/, '')}`) ? 'active' : ''}`}>
                         <span className="menu-date">{post.data.date}</span>
                         <span className="menu-title">{post.data.title}</span>
                       </span>
                     </Link>
-                    <Links links={post.data.links} />
+                    <Links links={post.data.links} onLinkClick={handleLinkClick} />
                   </li>
                 ))}
               </li>

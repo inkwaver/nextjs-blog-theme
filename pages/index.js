@@ -1,23 +1,27 @@
-// import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect } from 'react';
 import { getPosts } from '../utils/mdx-utils';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-// import Sidebar from '../components/Sidebar';
-// import Layout, { GradientBackground } from '../components/Layout';
 import Layout from '../components/Layout';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
-import Image from 'next/image';
-// import ArrowIcon from '../components/ArrowIcon';
+// import Image from 'next/legacy/image';
+import IconWithLabel from '../components/parts/IconWithLabel';
+import ProjectExperience from '../components/parts/ProjectExperience';
+import DesignFlowCard from '../components/parts/DesignFlowCard'; // Ensure this path is correct
+
 import {
   ResearchIcon,
   SitemapIcon,
+  Wireframing,
+  DesignSys,
+  Prototyping,
+  DesExp,
+  InfArch,
   DevExp,
-} from '../components/Icons/DesignFlowIcons';
+} from '../components/Icons/DesignFlowIcons'; // Ensure these icons are correctly exported
 
-// export default function Index({ devProjects, designProjects, globalData }) {
-  export default function Index({  globalData }) {
+export default function Index({ globalData }) {
   const images = {
     smartbet: [
       {
@@ -28,68 +32,54 @@ import {
       {
         path: '/projects/festberg.jpg',
         alt: 'Festberg Showcase',
-        link: 'https://goodwin.am/',
+        link: '/posts/show-case-beargeek',
       },
       {
         path: '/projects/beargeek.jpg',
         alt: 'Festberg Showcase',
-        link: 'https://goodwin.am/',
+        link: '/posts/show-case-beargeek',
       },
     ],
   };
 
-  const colLeftRefs = useRef([]);
-  const [highlightIndex, setHighlightIndex] = useState(null);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
   useEffect(() => {
-    const options = {
-      root: null, // viewport
-      rootMargin: '0px',
-      threshold: 0.3, // trigger when 10% of the element is visible
-    };
+    // Intersection Observer for `intersect-section`
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('intersect-active');
+          } else {
+            entry.target.classList.remove('intersect-active');
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
 
-    const observer = new IntersectionObserver((entries) => {
-      let newHighlightIndex = highlightIndex;
-      entries.forEach((entry) => {
-        const index = colLeftRefs.current.indexOf(entry.target);
-        if (entry.isIntersecting) {
-          newHighlightIndex = index;
-        } else if (
-          !entry.isIntersecting &&
-          entry.boundingClientRect.top > 0 &&
-          window.scrollY < lastScrollTop
-        ) {
-          // Scrolling up and element is out of view
-          newHighlightIndex = index - 1;
-        }
-      });
-
-      if (newHighlightIndex !== highlightIndex) {
-        setHighlightIndex(newHighlightIndex);
-      }
-    }, options);
-  {/* eslint-disable */}
-    colLeftRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
+    // Observe elements with the class `intersect-section`
+    document.querySelectorAll('.intersect-section').forEach((section) => {
+      observer.observe(section);
     });
 
-    return () => {
-      colLeftRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
-      });
-    };
-  }, [lastScrollTop, highlightIndex]);
-
-  useEffect(() => {
+    // Handling sticky headers
     const handleScroll = () => {
-      setLastScrollTop(window.scrollY);
-      if (window.scrollY === 0) {
-        setHighlightIndex(null);
-      }
+      document.querySelectorAll('.is-title-sticky').forEach((header) => {
+        const stickyPosition = header.getBoundingClientRect().top;
+        const isSticky = stickyPosition <= 0;
+        if (isSticky) {
+          header.classList.add('title-sticky');
+        } else {
+          header.classList.remove('title-sticky');
+        }
+      });
     };
 
     window.addEventListener('scroll', handleScroll);
+
+    // Cleanup on component unmount
     return () => {
+      observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -98,497 +88,195 @@ import {
     <Layout>
       <Header name={globalData.name} />
       <SEO title={globalData.name} description={globalData.blogTitle} />
-      {/* <Sidebar name={globalData.name} designProjects={designProjects} devProjects={devProjects}></Sidebar> */}
-      <main className="w-full home-wrapper main">
-        {/* <h1 className="text-3xl lg:text-5xl text-center mb-12">
-          {globalData.blogTitle}
-        </h1> */}
-        {/* eslint-disable jsx-a11y/anchor-is-valid */}
+      <main className="w-full home-wrapper main content-slide-container">
+        <section className="design-section ">
+          <h2 className="big-title design-heading  sticky-header   wrapper-main is-title-sticky intro-title-sticky">
+            <IconWithLabel Icon={DesExp} label="Design" />
+          </h2>
 
-        <div className="design-flow mb-102">
-          <h2 className="big-title color-n3 mb-39">Design Flow</h2>
-          <ul>
-            <li className="design-flow-card">
-              <span className="icon">
-                <ResearchIcon />
-              </span>
-              <h4 className="title-normal">Research</h4>
-              <p>
-                Extensive research on similar websites to gather UX insights and
-                identify important components.
-              </p>
-            </li>
-            <li className="design-flow-card">
-              <span className="icon">
-                <SitemapIcon />
-              </span>
-              <h4 className="title-normal">Sitemap</h4>
-              <p>
-                detailed sitemap and information arch hyearchy to understand and
-                define the key sections of the platform.
-              </p>
-            </li>
-            <li className="design-flow-card">
-              <span className="icon">
-                <SitemapIcon />
-              </span>
-              <h4 className="title-normal">Information Architecture</h4>
-              <p>
-                Analyzed and reorganized the information architecture to ensure
-                logical and user-friendly navigation.
-              </p>
-            </li>
-            <li className="design-flow-card">
-              <span className="icon">
-                <SitemapIcon />
-              </span>
-              <h4 className="title-normal">Wireframing</h4>
-              <p>
-                informational wireframes focusing on the possible future look
-                and functionality of the platform.
-              </p>
-            </li>
-            <li className="design-flow-card">
-              <span className="icon">
-                <SitemapIcon />
-              </span>
-              <h4 className="title-normal">Design System</h4>
-              <p>
-                Established a design system using an atomic design approach,
-                reusable components, consistency and efficiency.
-              </p>
-            </li>
-            <li className="design-flow-card">
-              <span className="icon">
-                <SitemapIcon />
-              </span>
-              <h4 className="title-normal">Figma Prototyping</h4>
-              <p>
-                Interactive prototypes in Figma to visualize and test the
-                design, allowing for improvements based on user feedback.
-              </p>
-            </li>
-          </ul>
-        </div>
+    
 
-        <div className="project-part home-snipet mb-102" id="smartbet">
-          <div className="project-img">
-            {images.smartbet.map((image, index) => (
-              <a
-                key={index}
-                href={image.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="img-holder">
-                  <Image layout="fill" 
-                          src={image.path} 
-                          alt={image.alt} 
-                          loading="lazy"
-                          placeholder="blur"
-                          blurDataURL={image.path}
-                          />
-                </span>
-
-                <figcaption>{image.alt}</figcaption>
-              </a>
-            ))}
-          </div>
-        </div>
-        <div className="mb-102">
-          <h2 className="big-title color-n3 mb-39">Development Skills</h2>
-          <ul className="subtitle">
-            <li>Front-End Technologies: HTML, CSS, JavaScript</li>
-            <li>Front-End Frameworks: React, Angular</li>
-            <li>WordPress Development: Theme development, Gutenberg blocks</li>
-            <li>Responsive Design: Mobile and web optimization</li>
-            <li>CSS Layout: Flexbox, CSS Grid</li>
-            <li>
-              Cross-Browser Compatibility: Ensuring consistent rendering on
-              various browsers
-            </li>
-            <li>Performance Optimization: Asset optimization for web speed</li>
-            <li>
-              Theming and Dark/Light Modes: Implementing theme systems with
-              light and dark modes
-            </li>
-            <li>
-              Testing and Debugging: Ensuring seamless user experience through
-              rigorous testing
-            </li>
-            <li>
-              Testing and Debugging: Ensuring seamless user experience through
-              rigorous testing
-            </li>
-          </ul>
-        </div>
-        <div id="devExp" className="dev-exp ">
-          <div className="project-block">
-            <div
-              ref={(el) => (colLeftRefs.current[0] = el)}
-              className={`col-left ${highlightIndex >= 0 ? 'highlight' : ''}`}
-            >
-              <h2 className="big-title color-n3 ">
-                Experience{' '}
-                <span className="icon-mid">
-                  <DevExp />
-                </span>
-              </h2>
-              <h4>WordPress Developer</h4>
-              <em>Jun 2022 - Feb 2023</em>
-              <strong>Webinos Inc, Freelance</strong>
-            </div>
-            <ul>
-              <li>
-                Managed multiple WordPress-based websites, ensuring
-                functionality, performance, and visual appeal.
-              </li>
-              <li>
-                Developed custom Gutenberg blocks and fields to empower clients
-                with intuitive site management capabilities, enhancing their
-                control over content and layout.
-              </li>
-              <li>
-                Collaborated with clients to understand their specific
-                requirements and extend website functionality accordingly,
-                providing tailored solutions to meet their needs.
-              </li>
-              <li>
-                Incorporated client-requested features and improvements into
-                existing projects, contributing to customer satisfaction and
-                project success.
-              </li>
-            </ul>
-
-            <div
-              ref={(el) => (colLeftRefs.current[1] = el)}
-              className={`col-left ${highlightIndex >= 1 ? 'highlight' : ''}`}
-            >
-              <h4>Markup Specialist</h4>
-              <em>Sep 2020 - Jul 2021</em>
-              <strong>SmartBet</strong>
-              <Image
-                src="/company-logos/smartbet_io.jpg"
-                alt="Goodwin desktop"
-                width={39}
-                height={39}
-              />
-            </div>
-            <ul>
-              <li>
-                Led the comprehensive redesign of the primary project's user
-                interface, focusing on enhancing user experience and visual
-                appeal.
-              </li>
-              <li>
-                Implemented a theming system that allowed for seamless color
-                scheme changes across the entire site using a single file.
-              </li>
-              <li>
-                Ensured each color scheme featured both dark and light mode
-                options, catering to user preferences.
-              </li>
-              <li>
-                Developed a mobile-responsive version of the website, ensuring
-                it met criteria for easy theming and dark/light modes.
-              </li>
-              <li className="project-overview">
-                <input
-                  readOnly
-                  checked
-                  id="desktopView"
-                  name="responsive"
-                  type="radio"
-                />
-                <input id="mobileView" name="responsive" type="radio" />
-                <input
-                  readOnly
-                  checked
-                  id="darkMode"
-                  name="color"
-                  type="radio"
-                />
-                <input id="lightMode" name="color" type="radio" />
-                <div className="view-mode">
-                  <section>
-                    <h6>Responsivnes -</h6>
-                    <label className="button desk-btn" htmlFor="desktopView">
-                      Desktop
-                    </label>
-                    <label className="button mob-btn" htmlFor="mobileView">
-                      Mobile
-                    </label>
-                  </section>
-                  <section>
-                    <h6>Color Mode -</h6>
-                    <label className="button light" htmlFor="lightMode">
-                      Light
-                    </label>
-                    <label className="button dark" htmlFor="darkMode">
-                      Dark
-                    </label>
-                  </section>
-                </div>
-                <div className="desktop-view">
-                  <Image
-                    className="desktop-view light"
-                    src="/projects/goodwin-desk-light.jpg"
-                    alt="Goodwin desktop"
-                    width={635}
-                    height={352}
-                  />
-                  <Image
-                    className="desktop-view dark"
-                    src="/projects/goodwin-desk-dark.jpg"
-                    alt="Goodwin desktop"
-                    width={635}
-                    height={352}
-                  />
-                </div>
-                <div className="mobile-view">
-                  <Image
-                    className="desktop-view light"
-                    src="/projects/goodwin-mobile-light.jpg"
-                    alt="Goodwin desktop"
-                    width={210}
-                    height={372}
-                  />
-                  <Image
-                    className="desktop-view dark"
-                    src="/projects/goodwin-mobile-dark.jpg"
-                    alt="Goodwin desktop"
-                    width={210}
-                    height={372}
-                  />
-                </div>
-              </li>
-            </ul>
-
-            <div
-              ref={(el) => (colLeftRefs.current[2] = el)}
-              className={`col-left ${highlightIndex >= 2 ? 'highlight' : ''}`}
-            >
-              <h4>Markup Specialist</h4>
-              <em>Jan 2018 - Dec 2019</em>
-              <strong>Click2Sure</strong>
-              <Image
-                src="/company-logos/click2sure.jpg"
-                alt="Goodwin desktop"
-                width={39}
-                height={39}
-              />
-            </div>
-            <ul>
-              <li>
-                Collaborated with a cross-functional team to design and develop
-                user interfaces for the insurance company's platform.
-              </li>
-              <li>
-                Utilized Angular to create responsive and visually appealing
-                user interfaces, ensuring a seamless user experience.
-              </li>
-              <li>
-                Developed and maintained reusable Angular components to
-                streamline the development process, enhancing code efficiency
-                and consistency.
-              </li>
-              <li>
-                Conducted thorough testing and debugging to identify and rectify
-                any issues or inconsistencies in the user interface.
-              </li>
-              <li>
-                Translated wireframes and design mockups into functional HTML
-                and CSS.
-              </li>
-              <li>
-                Implemented best practices in HTML and CSS to optimize web page
-                performance and ensure compatibility across various browsers.
-              </li>
-              <li>
-                <Image
-                  className="desktop-view dark"
-                  src="/projects/click2sure.jpg"
-                  alt="Goodwin desktop"
-                  width={635}
-                  height={358}
-                />
-              </li>
-            </ul>
-            <div
-              ref={(el) => (colLeftRefs.current[3] = el)}
-              className={`col-left ${highlightIndex >= 3 ? 'highlight' : ''}`}
-            >
-              <h4>
-                Markup Specialist <br /> WordPress Developer
-              </h4>
-              <em>Mar 2013 - Mar 2014</em>
-              <strong>SPILL, Barsamini Toort</strong>
-
-              <Image
-                src="/company-logos/spill.jpg"
-                alt="Goodwin desktop"
-                width={39}
-                height={39}
-              />
-            </div>
-            <ul>
-              <li>
-                Developed WordPress templates from scratch for blogs, news, and
-                portfolio websites.
-              </li>
-              <li>Bugfixed and redesigned existing projects.</li>
-              <li>
-                Developed cross-browser compatible code to ensure the product
-                looked identical on multiple modern and old browsers
-              </li>
-              <li>
-                Designed and implemented a custom markup structure for a Tumblr
-                blog, aligning it seamlessly with the provided design.
-              </li>
-              <li>
-                <Image
-                  className="desktop-view dark"
-                  src="/projects/isamo.jpg"
-                  alt="Goodwin desktop"
-                  width={635}
-                  height={358}
-                />
-                <Image
-                  className="desktop-view dark"
-                  src="/projects/mungo-maud.jpg"
-                  alt="Goodwin desktop"
-                  width={635}
-                  height={358}
-                />
-              </li>
-            </ul>
-            <div
-              ref={(el) => (colLeftRefs.current[4] = el)}
-              className={`col-left ${highlightIndex >= 4 ? 'highlight' : ''}`}
-            >
-              <h4>Markup Specialist </h4>
-              <em>Oct 2011 - Nov 2012</em>
-              <strong>Aragast Ben</strong>
-            </div>
-            <ul>
-              <li>
-                Redesigned the UI and refined the layouts of the Cafe4tune
-                social network.
-              </li>
-              <li>
-                Developed cross-browser compatible code to ensure the product
-                looked identical on multiple modern and old browsers (IE7, IE8).
-              </li>
-              <li>
-                <Image
-                  className="desktop-view dark"
-                  src="/projects/cafe4tune.jpg"
-                  alt="Goodwin desktop"
-                  width={635}
-                  height={358}
-                />
-              </li>
-            </ul>
-            <div
-              ref={(el) => (colLeftRefs.current[5] = el)}
-              className={`col-left ${highlightIndex >= 5 ? 'highlight' : ''}`}
-            >
-              <h4>WordPress Developer</h4>
-              <em>Sep 2010 - Jul 2011</em>
-              <strong>NexusLab</strong>
-              <Image
-                src="/company-logos/nexuslab.jpg"
-                alt="Goodwin desktop"
-                width={39}
-                height={39}
-              />
-            </div>
-            <ul>
-              <li>
-                Created pixel-perfect, cross-browser compatible WordPress themes
-                based on provided designs.
-              </li>
-              <li>Ensured support for IE6, IE7, and IE8 browsers.</li>
-              <li>
-                Optimized styles and content image assets for improved
-                performance.
-              </li>
-              <li>
-                Conducted bug fixes and implemented additional features in
-                existing themes.
-              </li>
-            </ul>
-          </div>
-
-          {/* 
-          <div className='btn-holder'>
-
-            <Link href="/posts/dev-projects">
-              <button className='flex items-center h-full pr-2 dark:bg-primary rounded-3xl flex justify-center align-center p-2 w-24 h-10 transition'>
-                More Projects
-              </button>
-
-            </Link>
+          {/* <div className="viewport-h  intersect-section wrapper-main" >
+          <p className=" indipend-paragraph">
+            should tell a cohesive story, breaking it down into logical,
+            step-by-step pieces. By using color and shape effectively, each
+            element should contribute to the narrative, guiding the user through
+            a clear, visually engaging journey while delivering the message with
+            clarity and purpose.
+          </p>
           </div> */}
-        </div>
 
-        {/* <h2>Developemt posts</h2>
-        <ul className="w-full">
-          {designProjects.map((post) => (
-            <li
-              key={post.filePath}
-              className="md:first:rounded-t-lg "
-            >
-              <div> {post.data.label}</div>
+          <div className="viewport-h  intersect-section wrapper-main first-container">
+            <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky ">
+              <span className=" mr-15">
+                <IconWithLabel Icon={DesExp} label="Design" />
+              </span>
+              Journey
+            </h2>
 
-              <Link
-                as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
-                href={`/posts/[slug]`}
-              >
-                <span className="py-6 lg:py-10 px-6 lg:px-16 block focus:outline-none focus:ring-4">
-                  {post.data.date && <p className="...">{post.data.date}</p>}
-                  <h2 className="...">{post.data.title}</h2>
-                  {post.data.description && <p className="...">{post.data.description}</p>}
-                  {post.data.thumbnail && (
-                    <Image
-                      src={post.data.thumbnail}
-                      alt={`${post.data.title} Thumbnail`}
-                      width={150}
-                      height={150}
+            <p className="content-dec ">
+              “My journey in web development began in 2010 as a markup
+              specialist and WordPress team developer. Over the past 14 years,
+              I’ve not only honed my technical skills but also cultivated a deep
+              appreciation for design. Working closely with designers, I’ve been
+              captivated by how they transform ideas into visually stunning
+              experiences, which sparked my passion for design. This story is
+              one of growth, evolution, and a continuous drive to merge
+              technical precision with creative vision.”
+              {/* "From transforming beautiful designs into code to mastering the nuances of layout and spacing, my journey has been one of both challenge and discovery. It wasn’t always easy—early on, designers and I would navigate countless revisions, struggling to achieve that perfect result. But over the years, I’ve learned to measure every space, to understand design proportions, and to bring sketches to life in code." */}
+            </p>
+          </div>
+
+          <div className="design-flow mb-102 wrapper-main viewport-h intersect-section">
+            <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
+              <span className="invisible mr-15">
+                <IconWithLabel Icon={DesExp} label="Design" />
+              </span>
+              Flow
+            </h2>
+
+            <p className="content-dec ">
+              "My design process is built on a series of essential steps that
+              ensure success. Missing any of these can lead to wasted time and
+              effort. For a detailed example, see how these steps were
+              meticulously implemented in the Real Estate case study."
+            </p>
+
+            <ul className="max-wdth-1500 flow-cards">
+              <DesignFlowCard
+                Icon={ResearchIcon}
+                title="Research"
+                description="Extensive research on similar websites to gather UX insights and identify important components."
+              />
+              <DesignFlowCard
+                Icon={SitemapIcon}
+                title="Sitemap"
+                description="Detailed sitemap and information architecture to understand and define the key sections of the platform."
+              />
+              <DesignFlowCard
+                Icon={InfArch}
+                title="Information Architecture"
+                description="Analyzed and reorganized the information architecture to ensure logical and user-friendly navigation."
+              />
+              <DesignFlowCard
+                Icon={Wireframing}
+                title="Wireframing"
+                description="Informational wireframes focusing on the possible future look and functionality of the platform."
+              />
+              <DesignFlowCard
+                Icon={DesignSys}
+                title="Design System"
+                description="Established a design system using an atomic design approach, ensuring consistency and efficiency."
+              />
+              <DesignFlowCard
+                Icon={Prototyping}
+                title="Figma Prototyping"
+                description="Interactive prototypes in Figma to visualize and test the design, allowing for improvements based on user feedback."
+              />
+            </ul>
+          </div>
+
+          <div className="project-part home-snipet mb-102 design-exp wrapper-main viewport-h intersect-section">
+            <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
+              <span className="invisible mr-15">
+                <IconWithLabel Icon={DesExp} label="Design" />
+              </span>
+              Projects
+            </h2>
+
+            <p className="content-dec ">
+              "Welcome to my portfolio! Here, you'll discover a detailed
+              exploration of my design process through a comprehensive case
+              study. This project showcases my journey from research and
+              strategy through to final implementation, with a focus on tackling
+              complex design challenges, especially within WordPress.
+            </p>
+           {/* eslint-disable */}
+
+            <div className="project-img max-wdth-1500">
+              {images.smartbet.map((image, index) => (
+                <a key={index} href={image.link} rel="noopener noreferrer">
+                  <span className="img-holder">
+                    <img
+                      layout="fill"
+                      src={image.path}
+                      alt={image.alt}
+                      loading="lazy"
                     />
-                  )}
-                  <ArrowIcon className="mt-4" />
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul> */}
+                  </span>
+                  <figcaption>{image.alt}</figcaption>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="dev-section">
+          <h2 className="big-title design-heading  sticky-header  wrapper-main is-title-sticky intro-title-sticky">
+            <IconWithLabel Icon={DevExp} label="Development" />
+          </h2>
+
+          <div className="mb-102 wrapper-main viewport-h intersect-section first-container">
+            <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
+              <span className=" mr-15">
+                <IconWithLabel Icon={DesExp} label="Development" />
+              </span>
+              Skills
+            </h2>
+
+            <ul className="subtitle">
+              <li>Front-End Technologies: HTML, CSS, JavaScript</li>
+              <li>Front-End Frameworks: React, Angular</li>
+              <li>
+                WordPress Development: Theme development, Gutenberg blocks
+              </li>
+              <li>Responsive Design: Mobile and web optimization</li>
+              <li>CSS Layout: Flexbox, CSS Grid</li>
+              <li>
+                Cross-Browser Compatibility: Ensuring consistent rendering on
+                various browsers
+              </li>
+              <li>
+                Performance Optimization: Asset optimization for web speed
+              </li>
+              <li>
+                Theming and Dark/Light Modes: Implementing theme systems with
+                light and dark modes
+              </li>
+              <li>
+                Testing and Debugging: Ensuring seamless user experience through
+                rigorous testing
+              </li>
+            </ul>
+          </div>
+
+          <div
+            id="devExp"
+            className="dev-exp wrapper-main viewport-h intersect-section"
+          >
+            <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
+              <span className="invisible mr-15">
+                <IconWithLabel Icon={DesExp} label="Development" />
+              </span>
+              Experience
+            </h2>
+
+            <ProjectExperience />
+          </div>
+        </section>
       </main>
-      {/* <GradientBackground
-        variant="large"
-        className="fixed top-20 opacity-40 dark:opacity-60"
-      />
-      <GradientBackground
-        variant="small"
-        className="absolute bottom-0 opacity-20 dark:opacity-10"
-      /> */}
       <Footer copyrightText={globalData.footerText} />
     </Layout>
   );
 }
 
 export function getStaticProps() {
-  const allPosts = getPosts(); // Get all posts
-  // const devProjects = getPosts('dev-projects'); // Get posts with the 'design' tag
-  // const designProjects = getPosts('design'); // Get posts with the 'design' tag
-
+  const allPosts = getPosts();
   const globalData = getGlobalData();
 
   return {
     props: {
       allPosts,
-      // devProjects,
-      // designProjects,
       globalData,
     },
   };

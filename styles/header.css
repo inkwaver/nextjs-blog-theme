@@ -2,7 +2,7 @@ header.main {
     /* padding: var(--size-15) var(--wrapper-margin); */
     width: 100%;
     /* position: fixed; */
-    z-index: 13;
+    z-index: 69;
     position: fixed;
     left: 0;
     top: 0;
@@ -42,7 +42,7 @@ header.main {
 }
 .header-wrap {
     display: flex;
-    padding: 0 var(--size-24);
+    padding: 0 var(--wrapper-margin);
 }
 
 header.main.sticked,
@@ -111,7 +111,7 @@ header.main {
 
             .logo-name {
   
-
+                font-weight: 900;
                 color: var(--logo-name-big-color);
                 font-size: var(--logo-name-big);
                 margin-bottom: .5rem;
@@ -167,7 +167,7 @@ header.main {
 
     }
     .header-wrap {
-        padding:var(--size-9x2) var(--size-24);
+        padding:var(--size-9x2) var(--wrapper-margin);
        
     }
     .header-description {

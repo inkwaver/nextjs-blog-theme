@@ -2,10 +2,11 @@
 .design-flow {
     max-width: 1500px;
   
-    ul {
+    .flow-cards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: var(--size-24);
+      margin-top: var(--size-102);
     }
   }
   

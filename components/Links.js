@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const Links = ({ links }) => {
+const Links = ({ links, onLinkClick }) => {
   const observer = useRef(null);
 
   useEffect(() => {
@@ -8,7 +8,7 @@ const Links = ({ links }) => {
 
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
-        const targetElement = document.querySelector(`.content-links a[href="#${entry.target.id}"]`);
+        const targetElement = document.querySelector(`.active-cat + .articles > li > a.active + .content-links a[href="#${entry.target.id}"]`);
         if (targetElement) {
           if (entry.isIntersecting) {
             targetElement.classList.add('highlight');
@@ -19,7 +19,7 @@ const Links = ({ links }) => {
       });
     };
 
-    observer.current = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+    observer.current = new IntersectionObserver(handleIntersection, { threshold: 0.3 });
 
     links.forEach((link) => {
       const targetElement = document.getElementById(link.href.substring(1));
@@ -39,7 +39,7 @@ const Links = ({ links }) => {
     <ul className='content-links'>
       {links && links.length > 0 && links.map((link) => (
         <li key={link.title}>
-          <a href={link.href} rel="noopener noreferrer">
+          <a href={link.href} rel="noopener noreferrer" onClick={onLinkClick}>
             {link.title}
           </a>
         </li>

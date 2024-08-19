@@ -1,140 +1,416 @@
 ---
-title: "Low-Fidelity Wireframes"
-description: "Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon."
+title: 'Low-Fidelity Wireframes'
+description: 'Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon.'
 # date: "2024"
 tags: ['case-study']
 
 project: 'Real Estate'
 
-# thumbnail: "/logo.jpg"
+thumbnail: "/thumb/lofi wireframe.jpg"
 label: 'kaka'
-order : 5
+order: 5
 
 links:
-  - title: "Webinos "
-    href: "#webinos"
-  - title: "SmartBet (2020 - 2021)"
-    href: "#smartbet"
-  - title: "Click2Sure (2018 - 2019)"
-    href: "#click2suress"
-  - title: "ffffff"
-    href: "#fff"
-
-images:
-  smartbet:
-    - path: /projects/Goodwin-Dark.png
-      alt: Goodwin Light Mode
-      link: https://goodwin.am/
-    - path: /projects/Goodwin-Light.png
-      alt: Goodwin Light Mode
-      link: https://goodwin.am/
-
-  webinos:
-    - path: /projects/StayActiveRehab.jpg
-      alt: Stay Active Rehab
-      link: https://www.stayactiverehab.com/
-    - path: /projects/MartingaleAssets.jpg
-      alt: MartingaleAssets
-      link: https://www.martingale.com/
-  click2Sure:
-    - path: /projects/Click2Sure.jpg
-      alt: Click2Sure (snapshot)
-      link: https://web.archive.org/web/20180811101626/http://click2sure.co.za/
+  - title: 'Introduction to Low-Fidelity Wireframes'
+    href: '#intro'
+  - title: 'Header Component Structure'
+    href: '#headerComponentStructure'
+  - title: 'Bookmark'
+    href: '#bookmark'
+  - title: 'Innovative Bookmarking Feature'
+    href: '#boomarkingfeat'
+  - title: 'Listing Card Structure'
+    href: '#listingCard'
+  - title: 'Property Listing'
+    href: '#propertyListingWire'
+  - title: 'Single Property'
+    href: '#singleProperty'
+  - title: 'Homepage'
+    href: '#homepageWire'
 ---
 
 import Image from 'next/image';
+import PageCover from '../components/PageCover';
+import ImageViewerModal from '../components/ImageViewerModal';
 
+<div id="intro">
+<PageCover 
+  title="Low-Fidelity Wireframes"
+  subtitle="Low Fi Wireframe"
+  description={
+    <>
+    <p>
+    The following wireframes illustrate the basic framework and key components of our real estate website. These initial designs prioritize user-friendly navigation and intuitive functionality, laying the groundwork for the detailed development of our platform.
+    </p>
 
-<div className="project-part" id="webinos">
- 
-    
-    <div className="project-descript">
-    ## Wordpress Developer
-    **Webinos Inc. · Freelance**  
-    *Jun 2022 - Feb 2023 · 9 mos*  
-    *Location: Yerevan, Armenia · Remote*
+    </>
 
-    <div className="project-img">
+}
+img={ <svg width="184" height="186" viewBox="0 0 184 186" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-            {images.webinos.map((image, index) => (
-            <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
-                <Image layout='fill' loading="lazy" src={image.path} alt={image.alt} />
-                <figcaption>{image.alt}</figcaption>
-            </a>
-            ))}
+<path d="M165.859 0.515625H18.1595C13.3497 0.525601 8.73938 2.43739 5.33652 5.83307C1.93365 9.22875 0.0150048 13.8321 0 18.6368V167.768C0.0100211 172.574 1.92707 177.18 5.33101 180.577C8.73495 183.974 13.3481 185.884 18.1595 185.889H165.859C170.669 185.884 175.28 183.973 178.681 180.576C182.082 177.178 183.995 172.572 184 167.768V38.7819V18.6368C183.99 13.8338 182.076 9.23045 178.676 5.83423C175.276 2.43802 170.668 0.525621 165.859 0.515625ZM7.13883 9.51946C8.47842 7.89322 10.1606 6.58218 12.0656 5.67978C13.9705 4.77737 16.0512 4.30583 18.1595 4.29875H165.859C169.665 4.30376 173.313 5.81597 176.003 8.50379C178.694 11.1916 180.208 14.8356 180.213 18.6368V36.8715H3.84398V18.6368C3.84622 15.3072 5.01148 12.0827 7.13883 9.51946ZM165.859 182.106H18.1595C14.3525 182.101 10.7027 180.589 8.00894 177.902C5.31523 175.214 3.79719 171.57 3.78718 167.768V40.6546H180.099V167.768C180.094 171.549 178.596 175.176 175.93 177.861C173.264 180.545 169.645 182.071 165.859 182.106ZM21.6816 28.0568C23.1837 28.0567 24.6518 27.6104 25.8993 26.7748C27.1469 25.9391 28.1176 24.7518 28.688 23.3637C29.2584 21.9757 29.4027 20.4495 29.1027 18.9793C28.8027 17.5091 28.0719 16.1611 27.0031 15.1068C25.9343 14.0525 24.5758 13.3395 23.1004 13.0583C21.6249 12.7771 20.0991 12.9405 18.7168 13.5277C17.3345 14.1149 16.1582 15.0994 15.3375 16.3561C14.5167 17.6127 14.0885 19.0848 14.1072 20.5851C14.1321 22.5754 14.9411 24.4757 16.3589 25.8742C17.7767 27.2728 19.689 28.0569 21.6816 28.0568ZM21.6816 16.8966C22.4346 16.8968 23.1705 17.1213 23.7951 17.5413C24.4198 17.9613 24.905 18.5578 25.1886 19.2546C25.4723 19.9514 25.5415 20.7169 25.3876 21.4532C25.2336 22.1895 24.8634 22.8633 24.3242 23.3884C23.7851 23.9135 23.1014 24.2662 22.3607 24.4013C21.6199 24.5364 20.8556 24.4478 20.1655 24.147C19.4753 23.8461 18.8907 23.3465 18.4861 22.712C18.0816 22.0776 17.8756 21.3371 17.8944 20.5851C17.9191 19.5982 18.329 18.6601 19.0366 17.971C19.7442 17.2818 20.6934 16.8962 21.6816 16.8966ZM40.5039 28.0568C42.0059 28.0567 43.4741 27.6104 44.7216 26.7748C45.9692 25.9391 46.9399 24.7518 47.5103 23.3637C48.0807 21.9757 48.225 20.4495 47.925 18.9793C47.625 17.5091 46.8941 16.1611 45.8254 15.1068C44.7566 14.0525 43.3981 13.3395 41.9226 13.0583C40.4472 12.7771 38.9213 12.9405 37.5391 13.5277C36.1568 14.1149 34.9805 15.0994 34.1597 16.3561C33.3389 17.6127 32.9107 19.0848 32.9295 20.5851C32.9544 22.5754 33.7634 24.4757 35.1812 25.8742C36.599 27.2728 38.5113 28.0569 40.5039 28.0568ZM40.5039 16.8966C41.2569 16.8968 41.9927 17.1213 42.6174 17.5413C43.2421 17.9613 43.7272 18.5578 44.0109 19.2546C44.2945 19.9514 44.3638 20.7169 44.2098 21.4532C44.0559 22.1895 43.6857 22.8633 43.1465 23.3884C42.6073 23.9135 41.9237 24.2662 41.1829 24.4013C40.4422 24.5364 39.6779 24.4478 38.9878 24.147C38.2976 23.8461 37.7129 23.3465 37.3084 22.712C36.9039 22.0776 36.6979 21.3371 36.7167 20.5851C36.7414 19.5982 37.1513 18.6601 37.8588 17.971C38.5664 17.2818 39.5156 16.8962 40.5039 16.8966ZM60.5002 28.0568C62.0022 28.0567 63.4704 27.6104 64.7179 26.7748C65.9655 25.9391 66.9361 24.7518 67.5065 23.3637C68.0769 21.9757 68.2213 20.4495 67.9213 18.9793C67.6213 17.5091 66.8904 16.1611 65.8216 15.1068C64.7529 14.0525 63.3944 13.3395 61.9189 13.0583C60.4435 12.7771 58.9176 12.9405 57.5354 13.5277C56.1531 14.1149 54.9768 15.0994 54.156 16.3561C53.3352 17.6127 52.907 19.0848 52.9258 20.5851C52.9507 22.5754 53.7597 24.4757 55.1775 25.8742C56.5953 27.2728 58.5076 28.0569 60.5002 28.0568ZM60.5002 16.8966C61.2532 16.8968 61.989 17.1213 62.6137 17.5413C63.2384 17.9613 63.7235 18.5578 64.0072 19.2546C64.2908 19.9514 64.3601 20.7169 64.2061 21.4532C64.0522 22.1895 63.682 22.8633 63.1428 23.3884C62.6036 23.9135 61.92 24.2662 61.1792 24.4013C60.4385 24.5364 59.6742 24.4478 58.9841 24.147C58.2939 23.8461 57.7092 23.3465 57.3047 22.712C56.9002 22.0776 56.6942 21.3371 56.713 20.5851C56.7377 19.5982 57.1476 18.6601 57.8551 17.971C58.5627 17.2818 59.5119 16.8962 60.5002 16.8966ZM93.7326 20.5851C93.7326 20.0834 93.9321 19.6023 94.2873 19.2476C94.6424 18.8928 95.124 18.6935 95.6262 18.6935H166.295C166.797 18.6935 167.279 18.8928 167.634 19.2476C167.989 19.6023 168.189 20.0834 168.189 20.5851C168.189 21.0868 167.989 21.5679 167.634 21.9226C167.279 22.2774 166.797 22.4767 166.295 22.4767H95.6262C95.124 22.4767 94.6424 22.2774 94.2873 21.9226C93.9321 21.5679 93.7326 21.0868 93.7326 20.5851ZM57.9249 159.71C57.9249 160.211 57.7254 160.692 57.3703 161.047C57.0151 161.402 56.5335 161.601 56.0313 161.601H18.8223C18.3201 161.601 17.8384 161.402 17.4833 161.047C17.1282 160.692 16.9287 160.211 16.9287 159.71C16.9287 159.208 17.1282 158.727 17.4833 158.372C17.8384 158.017 18.3201 157.818 18.8223 157.818H56.0313C56.5335 157.818 57.0151 158.017 57.3703 158.372C57.7254 158.727 57.9249 159.208 57.9249 159.71ZM57.9249 171.172C57.9249 171.674 57.7254 172.155 57.3703 172.51C57.0151 172.865 56.5335 173.064 56.0313 173.064H18.8223C18.3201 173.064 17.8384 172.865 17.4833 172.51C17.1282 172.155 16.9287 171.674 16.9287 171.172C16.9287 170.671 17.1282 170.19 17.4833 169.835C17.8384 169.48 18.3201 169.281 18.8223 169.281H56.0313C56.5335 169.281 57.0151 169.48 57.3703 169.835C57.7254 170.19 57.9249 170.671 57.9249 171.172ZM113.407 159.71C113.407 160.211 113.208 160.692 112.852 161.047C112.497 161.402 112.016 161.601 111.513 161.601H74.2287C73.7265 161.601 73.2448 161.402 72.8897 161.047C72.5346 160.692 72.3351 160.211 72.3351 159.71C72.3351 159.208 72.5346 158.727 72.8897 158.372C73.2448 158.017 73.7265 157.818 74.2287 157.818H111.513C112.016 157.818 112.497 158.017 112.852 158.372C113.208 158.727 113.407 159.208 113.407 159.71ZM113.407 171.172C113.407 171.674 113.208 172.155 112.852 172.51C112.497 172.865 112.016 173.064 111.513 173.064H74.2287C73.7265 173.064 73.2448 172.865 72.8897 172.51C72.5346 172.155 72.3351 171.674 72.3351 171.172C72.3351 170.671 72.5346 170.19 72.8897 169.835C73.2448 169.48 73.7265 169.281 74.2287 169.281H111.513C112.016 169.281 112.497 169.48 112.852 169.835C113.208 170.19 113.407 170.671 113.407 171.172ZM167.545 51.4554H18.8223C18.3201 51.4554 17.8384 51.6547 17.4833 52.0094C17.1282 52.3642 16.9287 52.8453 16.9287 53.347V103.946C16.9287 104.448 17.1282 104.929 17.4833 105.284C17.8384 105.639 18.3201 105.838 18.8223 105.838H167.545C168.047 105.838 168.529 105.639 168.884 105.284C169.239 104.929 169.438 104.448 169.438 103.946V53.347C169.438 52.8453 169.239 52.3642 168.884 52.0094C168.529 51.6547 168.047 51.4554 167.545 51.4554ZM165.651 102.055H20.7159V55.2385H165.651V102.055ZM56.0313 114.104H18.8223C18.3201 114.104 17.8384 114.303 17.4833 114.658C17.1282 115.013 16.9287 115.494 16.9287 115.996V148.984C16.9287 149.486 17.1282 149.967 17.4833 150.322C17.8384 150.677 18.3201 150.876 18.8223 150.876H56.0313C56.5335 150.876 57.0151 150.677 57.3703 150.322C57.7254 149.967 57.9249 149.486 57.9249 148.984V115.996C57.9249 115.494 57.7254 115.013 57.3703 114.658C57.0151 114.303 56.5335 114.104 56.0313 114.104ZM54.1377 147.093H20.7159V117.887H54.1377V147.093ZM111.513 114.104H74.2287C73.7265 114.104 73.2448 114.303 72.8897 114.658C72.5346 115.013 72.3351 115.494 72.3351 115.996V148.984C72.3351 149.486 72.5346 149.967 72.8897 150.322C73.2448 150.677 73.7265 150.876 74.2287 150.876H111.513C112.016 150.876 112.497 150.677 112.852 150.322C113.208 149.967 113.407 149.486 113.407 148.984V115.996C113.407 115.494 113.208 115.013 112.852 114.658C112.497 114.303 112.016 114.104 111.513 114.104ZM109.62 147.093H76.1223V117.887H109.62V147.093ZM166.939 114.104H129.654C129.152 114.104 128.67 114.303 128.315 114.658C127.96 115.013 127.76 115.494 127.76 115.996V148.984C127.76 149.486 127.96 149.967 128.315 150.322C128.67 150.677 129.152 150.876 129.654 150.876H166.939C167.441 150.876 167.923 150.677 168.278 150.322C168.633 149.967 168.832 149.486 168.832 148.984V115.996C168.832 115.494 168.633 115.013 168.278 114.658C167.923 114.303 167.441 114.104 166.939 114.104ZM165.045 147.093H131.548V117.887H165.045V147.093ZM168.832 159.71C168.832 160.211 168.633 160.692 168.278 161.047C167.923 161.402 167.441 161.601 166.939 161.601H129.654C129.152 161.601 128.67 161.402 128.315 161.047C127.96 160.692 127.76 160.211 127.76 159.71C127.76 159.208 127.96 158.727 128.315 158.372C128.67 158.017 129.152 157.818 129.654 157.818H166.939C167.441 157.818 167.923 158.017 168.278 158.372C168.633 158.727 168.832 159.208 168.832 159.71ZM168.832 171.172C168.832 171.674 168.633 172.155 168.278 172.51C167.923 172.865 167.441 173.064 166.939 173.064H129.654C129.152 173.064 128.67 172.865 128.315 172.51C127.96 172.155 127.76 171.674 127.76 171.172C127.76 170.671 127.96 170.19 128.315 169.835C128.67 169.48 129.152 169.281 129.654 169.281H166.939C167.441 169.281 167.923 169.48 168.278 169.835C168.633 170.19 168.832 170.671 168.832 171.172Z" fill="#FFE7BF"/>
+</svg>
+}
+/>
+{/* 
+ <div className="content-holder col-container">
 
-    </div>
+<div className="col-50"></div>
 
-    - Successfully managed multiple **WordPress-based** websites, ensuring their functionality, performance, and visual appeal.
-    - Developed custom Gutenberg blocks and fields to empower clients with intuitive site management capabilities, enhancing their control over content and layout.
-    - Meticulously conducted tests and diligently debugged ongoing projects, guaranteeing a seamless user experience and resolving any issues promptly.
-    - Collaborated closely with clients to understand their specific requirements and extend website functionality accordingly, providing tailored solutions to meet their needs.
-    - Demonstrated adaptability by incorporating client-requested features and improvements into existing projects, contributing to customer satisfaction and project success.
+</div>  */}
 
-  </div>
- 
+<div className="content-holder ">
+
+{' '}
+
+<div className="col-40">
+  ### Introduction to Low-Fidelity Wireframes The following low-fidelity
+  wireframes are an early representation of our website’s design, focusing on
+  layout and functionality rather than detailed aesthetics.
 </div>
 
+{' '}
 
-  <div className="project-part" id="smartbet">
-    <div className="project-descript">
-        ## Smartbet · UI Developer
-        **Smartbet · Full-time**  
-        *Sep 2020 - Jul 2021 · 11 mos*  
-        *Location: Yerevan, Armenia · On-site*
-
-    <div className="project-img">
-
-                {images.smartbet.map((image, index) => (
-                <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
-                <Image layout='fill' loading="lazy" src={image.path} alt={image.alt} />
-                    <figcaption>{image.alt}</figcaption>
-                </a>
-                ))}
-
-        </div>
-
-    - Led the comprehensive redesign of the primary project's user interface, with a specific focus on enhancing user experience and visual appeal. Key considerations included:
-    - Easy theming: Implemented a theming system that allowed for seamless color scheme changes across the entire site using a single file.
-    - Dark/light modes: Ensured that each color scheme featured both dark and light mode options, catering to user preferences.
-    - Mobile optimization: Developed a mobile-responsive version of the website, ensuring that it met the criteria for easy theming and dark/light modes.
-  </div>
+<div className="col-40">
+  These wireframes serve as a blueprint for the user interface, outlining the
+  core structure and primary elements required to meet user needs and business
+  goals.
 </div>
 
+{' '}
 
-<div className="project-part" id="click2sure">
-  <div className="project-descript">
-    ## User Interface Engineer
-    **Click2Sure · Full-time**  
-    *Jan 2018 - Nov 2019 · 1 yr 11 mos*  
-    *Location: Yerevan, Armenia · On-site*
-
-    <div className="project-img">
-      {images.click2Sure.map((image, index) => (
-        <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
-                <Image layout='fill' loading="lazy" src={image.path} alt={image.alt} />
-          <figcaption>{image.alt}</figcaption>
-        </a>
-      ))}
-    </div>
-
-    - Collaborated with a cross-functional team to design and develop user interfaces for the insurance company's platform.
-    - Utilized Angular to create responsive and visually appealing user interfaces, ensuring a seamless user experience.
-    - Developed and maintained reusable Angular components to streamline the development process, enhancing code efficiency and consistency.
-    - Conducted thorough testing and debugging to identify and rectify any issues or inconsistencies in the user interface.
-    - Worked closely with the design team to translate wireframes and design mockups into functional HTML and CSS layouts.
-    - Implemented best practices in HTML and CSS to optimize web page performance and ensure compatibility across various browsers.
-    - Stayed up-to-date with emerging web development trends and technologies, incorporating relevant innovations into the user interface design.
-  </div>
+<div className="col-40">
+  Our goal with these wireframes is to ensure that the fundamental components of
+  the website are arranged logically and intuitively, facilitating easy
+  navigation and a seamless user experience.
 </div>
 
+{' '}
 
-     <div className='btn-holder'>
+<div className="col-40">
+  By focusing on functionality, we can identify potential issues early in the
+  design process and iterate accordingly. These wireframes will guide us in
+  developing a user-friendly interface that meets our users' needs effectively.
+</div>
 
-            <a href="/narek-ch_wp-dev-web.pdf" target="_blank" rel="noopener noreferrer">
-              <button className='flex items-center h-full pr-2 dark:bg-primary rounded-3xl flex justify-center align-center p-2 w-24 h-10 transition'>
-                Download CV
-                </button>
-              </a>
+{' '}
 
-          </div>
+<div className="col-40">
+  Feedback at this stage is crucial as it will help us refine our design before
+  moving on to high-fidelity prototypes and final visual designs.
+</div>
+
+    <div className="col-40">
+
+#### Key Points:
+
+   <br/>
+   - **Purpose:** To establish a clear layout and functional blueprint for the website.
+   - **User-Centric:** Designed to prioritize user needs and ease of navigation.
+   - **Iterative:** Part of a flexible design process that will evolve based on feedback.
+   - **Scope** Focused on functionality, not final visuals.
+  </div>
+</div>
+</div>
+<div id="headerComponentStructure">
+<PageCover 
+  title="Header Component Structure"
+  subtitle="Low Fi Wireframe"
+  description={
+     <ul>
+      <li>
+        <span>Primary Navigation:</span>
+       Simplified access to major categories including Buy, Rent, and Off-plan, allowing users to filter properties based on their specific requirements.
+      </li>
+      <li>
+        <span>Primary Search Panel:</span>
+        Includes Location, Property Type, Beds/Baths, and Price to facilitate quick property searches.
+      </li>
+      <li>
+        <span>Advanced Filter Options:</span>
+         Provides additional criteria for refined search results without overwhelming the user.
+      </li>
+         <li>
+        <span>Bookmark Functionality: </span>
+        Allows users to save properties for later review, enhancing user engagement and satisfaction.
+      </li>
+    </ul>
+  }
+  img={<svg width="184" height="185" viewBox="0 0 184 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M184 54.6333H0V0.515625H184V54.6333ZM10.8235 43.8097H173.176V11.3392H10.8235V43.8097Z" fill="#FFE7BF"/>
+<path d="M184 173.691H173.177V184.515H184V173.691Z" fill="#FFE7BF"/>
+<path d="M162.353 184.515H151.53V173.691H162.353V184.515ZM140.706 184.515H129.883V173.691H140.706V184.515ZM119.059 184.515H108.236V173.691H119.059V184.515ZM97.4122 184.515H86.5886V173.691H97.4122V184.515ZM75.7651 184.515H64.9416V173.691H75.7651V184.515ZM54.118 184.515H43.2945V173.691H54.118V184.515ZM32.471 184.515H21.6475V173.691H32.471V184.515Z" fill="#FFE7BF"/>
+<path d="M10.8235 173.691H0V184.515H10.8235V173.691Z" fill="#FFE7BF"/>
+<path d="M10.8235 162.869H0V152.045H10.8235V162.869ZM10.8235 141.222H0V130.398H10.8235V141.222ZM10.8235 119.575H0V108.751H10.8235V119.575ZM10.8235 97.9276H0V87.1041H10.8235V97.9276ZM10.8235 76.2806H0V65.457H10.8235V76.2806Z" fill="#FFE7BF"/>
+<path d="M184 162.869H173.177V152.045H184V162.869ZM184 141.222H173.177V130.398H184V141.222ZM184 119.575H173.177V108.751H184V119.575ZM184 97.9276H173.177V87.1041H184V97.9276ZM184 76.2806H173.177V65.457H184V76.2806Z" fill="#FFE7BF"/>
+<path d="M48.7057 22.1621H27.0586V32.9856H48.7057V22.1621Z" fill="#FFE7BF"/>
+<path d="M156.941 22.1621H70.3525V32.9856H156.941V22.1621Z" fill="#FFE7BF"/>
+</svg>
+
+}
+/>
+
+ <div className="content-holder ">
+
+<div className="max-731">
+  <ImageViewerModal
+    src="/case-study/real-estate/search-bar/header-search.jpg"
+    alt="Primary Fields"
+  />
+  <ImageViewerModal
+    src="/case-study/real-estate/search-bar/search-location.jpg"
+    alt="Primary Fields"
+  />
+  <ImageViewerModal
+    src="/case-study/real-estate/search-bar/search-type.jpg"
+    alt="Primary Fields"
+  />
+  <ImageViewerModal
+    src="/case-study/real-estate/search-bar/search-beds-baths.jpg"
+    alt="Primary Fields"
+  />
+  <ImageViewerModal
+    src="/case-study/real-estate/search-bar/search-price.jpg"
+    alt="Primary Fields"
+  />
+  <ImageViewerModal
+    src="/case-study/real-estate/search-bar/search-filter.jpg"
+    alt="Primary Fields"
+  />
+</div>
+
+</div>
+</div>
+<div id="bookmark">
+<PageCover
+  title="Bookmark"
+  subtitle="Low Fi Wireframe"
+  description={
+     <p>
+  The bookmarking feature allows users to save their favorite properties effortlessly. This section outlines how users can save and review properties without needing to log in.
+    </p>
+  }
+  img={<svg width="184" height="231" viewBox="0 0 184 231" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clipPath="url(#clip0_8632_650)">
+<path d="M118.834 119.219C120.95 119.219 122.667 117.504 122.667 115.39V96.2459C122.667 94.1323 120.95 92.417 118.834 92.417H65.1673C63.0513 92.417 61.334 94.1323 61.334 96.2459V149.851C61.334 151.964 63.0513 153.679 65.1673 153.679H103.501C105.617 153.679 107.334 151.964 107.334 149.851C107.334 147.737 105.617 146.022 103.501 146.022H69.0007V100.075H115.001V115.39C115.001 117.504 116.718 119.219 118.834 119.219Z" fill="#FFE7BF"/>
+<path d="M130.334 176.653H30.6669V88.5879C30.6669 86.4743 28.9496 84.759 26.8336 84.759H13.0873L88.1823 9.7661C90.2063 7.75209 93.8019 7.73678 95.8336 9.7661L123.794 37.6941C124.906 38.7892 126.546 39.1338 127.972 38.5211C129.406 37.9315 130.341 36.5301 130.341 34.9832V8.18093H153.341V65.6145C153.341 66.6329 153.74 67.6055 154.461 68.3253L170.913 84.759H157.167C155.051 84.759 153.334 86.4743 153.334 88.5879V111.561C153.334 113.675 155.051 115.39 157.167 115.39C159.283 115.39 161 113.675 161 111.561V92.4168H180.167C181.716 92.4168 183.103 91.4825 183.701 90.0505C184.299 88.6185 183.97 86.9721 182.873 85.877L160.993 64.0216V4.33671C160.993 2.22316 159.275 0.507812 157.159 0.507812H126.493C124.377 0.507812 122.659 2.22316 122.659 4.33671V25.725L101.239 4.33671C96.3473 -0.556622 87.6379 -0.571938 82.7466 4.33671L1.11961 85.877C0.0309387 86.9721 -0.298728 88.6185 0.291605 90.0505C0.881939 91.4825 2.28494 92.4168 3.83361 92.4168H23.0003V180.481C23.0003 182.595 24.7176 184.31 26.8336 184.31H130.334C132.45 184.31 134.167 182.595 134.167 180.481C134.167 178.368 132.45 176.653 130.334 176.653Z" fill="#FFE7BF"/>
+<path d="M168.023 123.308C162.441 122.428 156.722 123.967 152.421 127.612C151.325 128.546 150.343 129.588 149.5 130.713C148.657 129.58 147.675 128.546 146.579 127.612C142.293 123.959 136.589 122.42 130.977 123.308C121.869 124.786 115 133.263 115 143.51C115 148.625 116.986 153.434 120.612 157.049L146.786 183.192C147.537 183.935 148.519 184.31 149.5 184.31C150.481 184.31 151.463 183.935 152.214 183.192L178.388 157.049C182.007 153.419 184 148.617 184 143.012C184 133.263 177.131 124.786 168.023 123.308ZM172.968 151.627L149.5 175.06L126.032 151.619C123.863 149.452 122.667 146.565 122.667 143.012C122.667 136.97 126.768 131.747 132.204 130.866C132.871 130.759 133.53 130.706 134.182 130.706C136.911 130.706 139.503 131.648 141.619 133.44C144.195 135.63 145.667 138.823 145.667 142.192C145.667 144.306 147.384 146.021 149.5 146.021C151.616 146.021 153.333 144.306 153.333 142.192C153.333 138.823 154.805 135.63 157.381 133.44C159.996 131.211 163.346 130.3 166.796 130.866C172.232 131.747 176.333 136.97 176.333 143.494C176.333 146.565 175.137 149.452 172.968 151.627Z" fill="#FFE7BF"/>
+</g>
+<defs>
+<clipPath id="clip0_8632_650">
+<rect width="184" height="229.734" fill="white" transform="translate(0 0.515625)"/>
+</clipPath>
+</defs>
+</svg>
+
+}
+/>
+
+<div id="boomarkingfeat" className="content-holder ">
+
+{' '}
+
+<div className="col-40">
+  ### Innovative Bookmarking Feature We are introducing a user-friendly
+  bookmarking feature for our real estate website that utilizes local storage.
+  Users can save property listings directly to their browser without the need
+  for an account, ensuring privacy and convenience. For those who prefer, an
+  option to sign up is available, allowing bookmarks to be synced across
+  devices.
+</div>
+
+{' '}
+
+<div className="col-40">
+  #### How It Works:
+  <br />- **Bookmark Option:** Users click a bookmark icon to save a property. A
+  modal offers two choices: use local storage or sign up for more features. -
+  **Local Storage:** This option saves the property to the user's device,
+  providing a private and hassle-free experience. - **Sign Up:** Users can
+  create an account for enhanced features like syncing bookmarks and receiving
+  property updates.
+</div>
+<br />
+<div className="col-40">
+  #### Benefits::
+  <br />- **Privacy and Trust:** No personal information is required, fostering
+  trust and encouraging user engagement. - **Convenience:** Local storage allows
+  easy access to saved properties without needing to log in. - **Flexibility:**
+  Users can choose between local storage and account-based bookmarking, catering
+  to different preferences.
+</div>
+
+<div className="max-731">
+ #### Bookmark List Functionality
+ <br/>
+    <ImageViewerModal
+    src="/case-study/real-estate/bookmarks.jpg"
+    alt="bookmarks"
+  />
+</div>
+</div>
+</div>
+<div id="listingCard">
+<PageCover 
+  title="Listing Card Structure"
+  subtitle="Low Fi Wireframe"
+  description={
+     <p>Listing cards provide a snapshot of property details and are the primary means for users to browse available listings.
+    </p>
+  }
+  img={<svg width="305" height="229" viewBox="0 0 305 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M153.67 145.932C152.901 145.932 152.099 145.664 151.464 145.096L102.179 102.327C100.274 100.69 97.4343 100.69 95.5297 102.327L46.5119 145.096C45.1085 146.299 43.0035 146.166 41.8006 144.762C40.5977 143.359 40.7313 141.254 42.1347 140.051L91.1525 97.3147C95.5297 93.5056 102.179 93.4722 106.556 97.3147L155.841 140.084C157.245 141.287 157.378 143.392 156.176 144.796C155.541 145.564 154.605 145.932 153.67 145.932Z" fill="#FFE7BF"/>
+<path d="M110.9 194.916C109.063 194.916 107.559 193.413 107.559 191.575V163.875H90.4513V191.575C90.4513 193.413 88.9477 194.916 87.1099 194.916C85.2722 194.916 83.7686 193.413 83.7686 191.575V160.534C83.7686 158.696 85.2722 157.192 87.1099 157.192H110.9C112.738 157.192 114.242 158.696 114.242 160.534V191.575C114.242 193.446 112.738 194.916 110.9 194.916Z" fill="#FFE7BF"/>
+<path d="M129.678 194.916H68.3307C61.8485 194.916 56.6025 189.637 56.6025 183.188V130.328C56.6025 128.49 58.1062 126.986 59.9439 126.986C61.7817 126.986 63.2853 128.49 63.2853 130.328V183.188C63.2853 185.961 65.5574 188.234 68.3307 188.234H129.678C132.485 188.234 134.757 185.961 134.757 183.188V130.829C134.757 128.991 136.261 127.488 138.098 127.488C139.936 127.488 141.44 128.991 141.44 130.829V183.188C141.406 189.67 136.127 194.916 129.678 194.916Z" fill="#FFE7BF"/>
+<path d="M296.011 63.5001H8.98785C7.1501 63.5001 5.64648 61.9965 5.64648 60.1587C5.64648 58.321 7.1501 56.8174 8.98785 56.8174H296.045C297.882 56.8174 299.386 58.321 299.386 60.1587C299.386 61.9965 297.882 63.5001 296.011 63.5001Z" fill="#FFE7BF"/>
+<path d="M44.3402 41.3133C40.5645 41.3133 37.457 38.2392 37.457 34.4301C37.457 30.6209 40.5311 27.5469 44.3402 27.5469C48.116 27.5469 51.19 30.6209 51.19 34.4301C51.19 38.2392 48.116 41.3133 44.3402 41.3133ZM44.3402 34.263V34.6306L44.5073 34.4301C44.5073 34.3298 44.4405 34.263 44.3402 34.263Z" fill="#FFE7BF"/>
+<path d="M78.0551 41.3133C74.2793 41.3133 71.1719 38.2392 71.1719 34.4301C71.1719 30.6209 74.2459 27.5469 78.0551 27.5469C81.8642 27.5469 84.9383 30.6209 84.9383 34.4301C84.9383 38.2392 81.8642 41.3133 78.0551 41.3133ZM78.0551 34.263V34.6306L78.2556 34.4301C78.2556 34.3298 78.1887 34.263 78.0551 34.263Z" fill="#FFE7BF"/>
+<path d="M111.802 41.3133C108.026 41.3133 104.919 38.2392 104.919 34.4301C104.919 30.6209 107.993 27.5469 111.802 27.5469C115.611 27.5469 118.685 30.6209 118.685 34.4301C118.685 38.2392 115.578 41.3133 111.802 41.3133ZM111.802 34.263V34.6306L112.003 34.4301C112.003 34.3298 111.902 34.263 111.802 34.263Z" fill="#FFE7BF"/>
+<path d="M282.145 228.129H22.8549C10.258 228.129 0 217.872 0 205.275V23.3706C0 10.7736 10.258 0.515625 22.8549 0.515625H282.145C294.742 0.515625 305 10.7736 305 23.3706V205.241C305.033 217.872 294.775 228.129 282.145 228.129ZM22.8549 13.8811C17.609 13.8811 13.3655 18.158 13.3655 23.3706V205.241C13.3655 210.487 17.6424 214.731 22.8549 214.731H282.145C287.391 214.731 291.634 210.454 291.634 205.241V23.3706C291.634 18.1246 287.358 13.8811 282.145 13.8811H22.8549Z" fill="#FFE7BF"/>
+<path d="M262.999 98.9191H208.669C206.831 98.9191 205.327 97.4154 205.327 95.5777C205.327 93.7399 206.831 92.2363 208.669 92.2363H262.999C264.837 92.2363 266.341 93.7399 266.341 95.5777C266.341 97.4154 264.87 98.9191 262.999 98.9191Z" fill="#FFE7BF"/>
+<path d="M262.999 128.557H181.503C179.666 128.557 178.162 127.053 178.162 125.215C178.162 123.378 179.666 121.874 181.503 121.874H262.999C264.837 121.874 266.341 123.378 266.341 125.215C266.341 127.053 264.871 128.557 262.999 128.557Z" fill="#FFE7BF"/>
+<path d="M262.999 158.161H208.669C206.831 158.161 205.327 156.658 205.327 154.82C205.327 152.982 206.831 151.479 208.669 151.479H262.999C264.837 151.479 266.341 152.982 266.341 154.82C266.341 156.658 264.87 158.161 262.999 158.161Z" fill="#FFE7BF"/>
+<path d="M262.999 187.766H181.503C179.666 187.766 178.162 186.262 178.162 184.424C178.162 182.587 179.666 181.083 181.503 181.083H262.999C264.837 181.083 266.341 182.587 266.341 184.424C266.341 186.262 264.871 187.766 262.999 187.766Z" fill="#FFE7BF"/>
+<path d="M99.0049 141.856C91.6539 141.856 85.6729 135.874 85.6729 128.523C85.6729 121.172 91.6539 115.191 99.0049 115.191C106.356 115.191 112.337 121.172 112.337 128.523C112.337 135.874 106.356 141.856 99.0049 141.856ZM99.0049 121.874C95.3294 121.874 92.3556 124.848 92.3556 128.523C92.3556 132.199 95.3294 135.173 99.0049 135.173C102.68 135.173 105.654 132.199 105.654 128.523C105.654 124.848 102.647 121.874 99.0049 121.874Z" fill="#FFE7BF"/>
+</svg>
+
+}
+/>
+
+<div className="content-holder ">
+
+  <div className="col-40">
+    ### Suitable Card Example
+    I've come across various types of cards during my research, each presenting different kinds of information. I believe these cards, when viewed in sets, should be minimal, clear, and informative—not confusing or overly verbose. This led me to a particular type found on buyout.com.
+  </div>
+   <div className="max-258">
+     <ImageViewerModal
+    src="/case-study/real-estate/card-buyout.png"
+    alt="bookmarks"
+  />
+  </div>
+  <br/>
+  <br/>
+     <div className="max-731">
+      ### Card Structure
+     <ImageViewerModal
+    src="/case-study/real-estate/card-wireframe.jpg"
+    alt="bookmarks"
+  />
+
+</div>
+</div>
+</div>
+<div id="propertyListingWire">
+<PageCover 
+  title="Property Listing"
+  subtitle="Low Fi Wireframe"
+  description={
+     <p>Property listings are the core feature of any real estate website. An effective listing system enhances user experience by providing easy access to essential information and enabling efficient search and sorting. This section explores the structure of property listings, including card design, filtering options, and viewing modes, and discusses best practices for creating user-friendly listings.
+     </p>
+  }
+  img={<svg width="221" height="228" viewBox="0 0 221 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M220.541 159.733C220.379 158.488 219.972 157.288 219.344 156.201C218.715 155.115 217.877 154.163 216.878 153.403L168.858 116.682V20.2671C168.858 19.8697 168.779 19.4761 168.627 19.1089C168.475 18.7417 168.252 18.408 167.971 18.127C167.69 17.8459 167.357 17.623 166.989 17.4709C166.622 17.3188 166.229 17.2405 165.831 17.2405H132.538L116.706 1.3984C116.14 0.834329 115.374 0.516994 114.574 0.515625H3.02667C2.22394 0.515625 1.4541 0.834505 0.88649 1.40212C0.31888 1.96973 0 2.73957 0 3.54229V193.466C0.00333559 194.266 0.323688 195.033 0.890937 195.598C1.45819 196.163 2.22612 196.48 3.02667 196.48H16.1826V210.213C16.1859 211.014 16.5063 211.78 17.0735 212.345C17.6408 212.91 18.4087 213.227 19.2092 213.227H114.698V219.533C114.699 221.649 115.54 223.679 117.036 225.176C118.532 226.673 120.562 227.514 122.678 227.516H194.587C196.701 227.513 198.728 226.672 200.222 225.177C201.717 223.681 202.558 221.654 202.56 219.54V166.521L205.269 168.591C206.77 169.739 208.578 170.416 210.464 170.536C212.35 170.656 214.23 170.214 215.864 169.266C217.499 168.317 218.816 166.906 219.649 165.209C220.481 163.512 220.791 161.607 220.541 159.733ZM162.83 23.2812V112.432C161.183 111.777 159.403 111.525 157.639 111.697C155.875 111.868 154.178 112.458 152.688 113.418V38.6289C152.688 38.233 152.611 37.8409 152.459 37.4752C152.308 37.1094 152.085 36.7772 151.805 36.4977L138.589 23.2812H162.83ZM117.589 10.8063L142.397 35.6149H117.589V10.8063ZM6.04072 6.54374H111.56V38.6289C111.56 39.4316 111.879 40.2015 112.447 40.7691C113.015 41.3367 113.784 41.6556 114.587 41.6556H146.66V118.008L109.162 146.686H62.9446C62.1452 146.686 61.3786 147.004 60.8133 147.569C60.2481 148.134 59.9305 148.901 59.9305 149.7C59.9305 150.499 60.2481 151.266 60.8133 151.831C61.3786 152.397 62.1452 152.714 62.9446 152.714H101.282L100.382 153.403C99.1522 154.345 98.1698 155.572 97.5195 156.978C96.8692 158.384 96.5705 159.927 96.649 161.474H62.9446C62.1452 161.474 61.3786 161.791 60.8133 162.357C60.2481 162.922 59.9305 163.688 59.9305 164.488C59.9305 165.287 60.2481 166.054 60.8133 166.619C61.3786 167.184 62.1452 167.502 62.9446 167.502H99.1738C100.683 169.135 102.717 170.186 104.922 170.473C105.349 170.53 105.78 170.559 106.211 170.559C108.301 170.561 110.334 169.872 111.992 168.599L114.698 166.528V190.469H6.04072V6.54374ZM22.2107 207.199V196.492H114.698V207.202L22.2107 207.199ZM166.341 221.488H150.912V188.989H166.341V221.488ZM196.527 219.54C196.521 220.055 196.314 220.546 195.951 220.91C195.587 221.274 195.096 221.481 194.582 221.488H172.366V185.975C172.366 185.174 172.049 184.406 171.484 183.839C170.919 183.272 170.153 182.951 169.352 182.948H147.901C147.503 182.948 147.11 183.026 146.742 183.178C146.375 183.33 146.041 183.553 145.76 183.834C145.479 184.116 145.256 184.449 145.104 184.816C144.952 185.184 144.874 185.577 144.874 185.975V221.488H122.678C122.164 221.481 121.673 221.274 121.31 220.91C120.946 220.546 120.74 220.055 120.734 219.54V161.91L158.628 132.932L196.527 161.91V219.54ZM213.877 163.141C213.305 163.881 212.464 164.366 211.537 164.49C210.61 164.614 209.672 164.366 208.926 163.802L160.459 126.74C159.933 126.338 159.29 126.12 158.628 126.12C157.966 126.12 157.322 126.338 156.796 126.74L108.329 163.802C107.584 164.366 106.646 164.613 105.719 164.49C104.792 164.367 103.951 163.883 103.378 163.143C103.097 162.775 102.89 162.355 102.771 161.906C102.651 161.458 102.622 160.991 102.683 160.531C102.744 160.071 102.896 159.628 103.128 159.227C103.361 158.825 103.671 158.474 104.039 158.192L156.093 118.384C156.711 117.915 157.466 117.662 158.242 117.665H158.456C158.577 117.673 158.698 117.673 158.819 117.665C159.664 117.613 160.499 117.865 161.173 118.377L213.226 158.192C213.967 158.763 214.452 159.604 214.576 160.531C214.7 161.458 214.452 162.396 213.887 163.141H213.877ZM59.9305 59.8206C59.9305 59.0179 60.2494 58.2481 60.817 57.6805C61.3846 57.1129 62.1545 56.794 62.9572 56.794H130.719C131.471 56.8628 132.17 57.2101 132.679 57.7678C133.188 58.3254 133.47 59.0531 133.47 59.808C133.47 60.563 133.188 61.2907 132.679 61.8483C132.17 62.4059 131.471 62.7532 130.719 62.8221H62.9446C62.1484 62.8188 61.3856 62.5019 60.8214 61.9401C60.2572 61.3783 59.9372 60.6168 59.9305 59.8206ZM59.9305 74.6009C59.9305 73.7981 60.2494 73.0283 60.817 72.4607C61.3846 71.8931 62.1545 71.5742 62.9572 71.5742H130.719C131.471 71.643 132.17 71.9904 132.679 72.548C133.188 73.1056 133.47 73.8333 133.47 74.5882C133.47 75.3432 133.188 76.0709 132.679 76.6285C132.17 77.1861 131.471 77.5335 130.719 77.6023H62.9446C62.1484 77.599 61.3856 77.2821 60.8214 76.7203C60.2572 76.1585 59.9372 75.397 59.9305 74.6009ZM21.9837 83.1462H47.8239C48.6266 83.1462 49.3964 82.8273 49.964 82.2597C50.5317 81.692 50.8505 80.9222 50.8505 80.1195V54.2894C50.8505 53.4867 50.5317 52.7168 49.964 52.1492C49.3964 51.5816 48.6266 51.2627 47.8239 51.2627H21.9837C21.181 51.2627 20.4111 51.5816 19.8435 52.1492C19.2759 52.7168 18.957 53.4867 18.957 54.2894V80.1321C18.9604 80.9326 19.2807 81.6992 19.848 82.2641C20.4152 82.829 21.1831 83.1462 21.9837 83.1462ZM25.0104 57.3035H44.8224V77.118H24.9978L25.0104 57.3035ZM59.9305 104.759C59.9305 103.956 60.2494 103.187 60.817 102.619C61.3846 102.051 62.1545 101.732 62.9572 101.732H130.719C131.474 101.798 132.176 102.144 132.688 102.702C133.2 103.26 133.484 103.99 133.484 104.748C133.484 105.505 133.2 106.235 132.688 106.793C132.176 107.351 131.474 107.698 130.719 107.763H62.9446C62.148 107.76 61.3848 107.443 60.8205 106.88C60.2563 106.318 59.9365 105.556 59.9305 104.759ZM59.9305 119.539C59.9305 118.737 60.2494 117.967 60.817 117.399C61.3846 116.832 62.1545 116.513 62.9572 116.513H130.719C131.138 116.474 131.561 116.524 131.959 116.658C132.358 116.792 132.725 117.007 133.035 117.291C133.346 117.575 133.594 117.92 133.764 118.305C133.934 118.69 134.022 119.106 134.022 119.527C134.022 119.947 133.934 120.364 133.764 120.748C133.594 121.133 133.346 121.479 133.035 121.762C132.725 122.046 132.358 122.262 131.959 122.396C131.561 122.53 131.138 122.579 130.719 122.541H62.9446C62.1484 122.537 61.3856 122.221 60.8214 121.659C60.2572 121.097 59.9372 120.335 59.9305 119.539ZM21.9837 128.085H47.8239C48.6266 128.085 49.3964 127.766 49.964 127.198C50.5317 126.63 50.8505 125.861 50.8505 125.058V99.2304C50.8505 98.4276 50.5317 97.6578 49.964 97.0902C49.3964 96.5226 48.6266 96.2037 47.8239 96.2037H21.9837C21.181 96.2037 20.4111 96.5226 19.8435 97.0902C19.2759 97.6578 18.957 98.4276 18.957 99.2304V125.071C18.9604 125.871 19.2807 126.638 19.848 127.203C20.4152 127.767 21.1831 128.085 21.9837 128.085ZM25.0104 102.244H44.8224V122.056H24.9978L25.0104 102.244ZM21.9837 173.036H47.8239C48.6244 173.036 49.3923 172.718 49.9596 172.154C50.5268 171.589 50.8472 170.822 50.8505 170.022V144.169C50.8505 143.771 50.7722 143.378 50.6201 143.011C50.468 142.643 50.2451 142.31 49.964 142.029C49.683 141.748 49.3493 141.525 48.9821 141.373C48.6149 141.22 48.2213 141.142 47.8239 141.142H21.9837C21.5862 141.142 21.1926 141.22 20.8254 141.373C20.4582 141.525 20.1246 141.748 19.8435 142.029C19.5625 142.31 19.3395 142.643 19.1874 143.011C19.0353 143.378 18.957 143.771 18.957 144.169V170.009C18.957 170.812 19.2759 171.582 19.8435 172.149C20.4111 172.717 21.181 173.036 21.9837 173.036ZM25.0104 147.195H44.8224V167.008H24.9978L25.0104 147.195Z" fill="#5378A7"/>
+</svg>
+
+
+}
+/>
+<div className="content-holder col-container">
+
+  <div className="col-40">
+    ### Grid View
+   The grid view offers a condensed display of multiple properties, allowing users to quickly compare options. It typically features a few properties per row, balancing images with essential text details.
+  </div>
+   <div className="col-50">
+     <ImageViewerModal
+    src="/case-study/real-estate/listing-grid.jpg"
+    alt="Grid View"
+  />
+  </div>
+
+</div>
+
+<div className="content-holder col-container">
+
+  <div className="col-40">
+    ### Grid/Map View
+   The map view provides an interactive display of property locations, allowing users to explore listings geographically. Clickable markers and pop-up details enhance usability and provide quick access to key information.
+   <br/>
+   <br/>
+    #### Sort By Dropdown
+    The Sort By Dropdown allows users to sort and filter listings based on specific criteria such as popularity, price, and location. The aim is to streamline the search process by providing relevant and straightforward filter options without overwhelming users.
+  </div>
+   <div className="col-50">
+     <ImageViewerModal
+    src="/case-study/real-estate/listing-grid-map.jpg"
+    alt="Grid View Map"
+  />
+  </div>
+
+</div>
+</div>
+<div id="singleProperty">
+<PageCover id="lowFiWireframe"
+  title="Single Property"
+  subtitle="Low Fi Wireframe"
+  description={
+     <p>Our goal for the single property page is to deliver a clean, user-friendly experience that avoids the complexity and clutter found on many competitor websites. We prioritize clear presentation and essential functionalities to enhance user engagement and satisfaction.
+     </p>
+  }
+  img={<svg width="184" height="228" viewBox="0 0 184 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M183.648 227.844H0V75.3072L71.5234 0.84375H183.648V227.844ZM11.4803 216.366H172.167V12.3214H76.4136L11.4803 79.9256V216.366Z" fill="#FFE7BF"/>
+<path d="M79.7059 83.3552H5.74016C2.57151 83.3552 0 80.7837 0 77.6151C0 74.4464 2.57151 71.8776 5.74016 71.8776H68.2283V6.58391C68.2283 3.41526 70.7971 0.84375 73.9685 0.84375C77.1371 0.84375 79.7059 3.41526 79.7059 6.58391V83.3552Z" fill="#FFE7BF"/>
+<path d="M150.474 44.839H78.2431C75.0744 44.839 72.5029 42.2701 72.5029 39.0988C72.5029 35.9301 75.0744 33.3613 78.2431 33.3613H150.474C153.643 33.3613 156.211 35.9301 156.211 39.0988C156.211 42.2701 153.64 44.839 150.474 44.839Z" fill="#FFE7BF"/>
+<path d="M150.474 83.3551H78.2431C75.0744 83.3551 72.5029 80.7836 72.5029 77.6149C72.5029 74.4463 75.0744 71.8774 78.2431 71.8774H150.474C153.643 71.8774 156.211 74.4463 156.211 77.6149C156.211 80.7836 153.64 83.3551 150.474 83.3551Z" fill="#FFE7BF"/>
+<path d="M151.447 115.757H32.205C29.0364 115.757 26.4648 113.186 26.4648 110.017C26.4648 106.848 29.0364 104.277 32.205 104.277H151.447C154.615 104.277 157.184 106.848 157.184 110.017C157.184 113.186 154.615 115.757 151.447 115.757Z" fill="#FFE7BF"/>
+<path d="M89.1769 124.577L45.7275 167.603H61.5523V205.273H115.978V186.166V167.058H131.803L89.1769 124.577ZM110.49 161.521V199.827H67.1321V162.066L59.174 162.157L89.1769 132.383L118.631 161.612H110.49V161.521Z" fill="#FFE7BF"/>
+<rect x="81" y="168.844" width="17" height="18" stroke="#FFE7BF" strokeWidth="2"/>
+</svg> 
+}
+/>
+
+<div className="content-holder col-container">
+
+  <div className="col-40">
+    ### Title or No Title
+   “On many property pages, titles often duplicate information already provided in the Property Info section, making them redundant. To enhance clarity and save space, we have made the title optional on the initial screen. This adjustment not only streamlines the user experience by reducing visual clutter but also ensures all necessary information is accessible in the meta title area, preserving SEO effectiveness.”
+   <br/>
+   </div>
+   <div className="col-50">
+     <ImageViewerModal
+    src="/case-study/real-estate/title-no-title.png"
+    alt="Grid View Map"
+  />
+  </div>
+
+</div>
+</div>
+<div id="homepageWire">
+<PageCover
+  title="Homepage"
+  subtitle="Low Fi Wireframe"
+  description={
+     <p>The bookmarking feature allows users to save their favorite properties effortlessly. This section outlines how users can save and review properties without needing to log in.
+     </p>
+  }
+  img={<svg width="183" height="168" viewBox="0 0 183 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M182.05 61.9002L158.555 45.6805V11.5061C158.555 10.2461 157.545 9.2452 156.294 9.2452H134.033C132.773 9.2452 131.772 10.255 131.772 11.5061V27.2255L92.8987 0.406199C92.6484 0.227471 92.3267 0.129175 92.005 0.111285H91.9782H91.9514C91.8799 0.0844773 91.8352 0.039793 91.7727 0.039793C91.1739 -0.0763812 90.5573 0.0666032 90.0837 0.406199L0.978136 61.8986C0.477691 62.2382 0.155965 62.7655 0.039793 63.3642C-0.0763812 63.9629 0.0666032 64.5527 0.406199 65.0532L10.8619 80.2006C11.2015 80.701 11.7288 81.0228 12.3007 81.1389C12.4347 81.1658 12.5777 81.1836 12.7118 81.1836C13.1675 81.1836 13.6233 81.0496 13.9897 80.7725L18.1541 77.9129V154.829C18.1541 161.853 23.8735 167.573 30.8975 167.573H152.102C159.127 167.573 164.846 161.853 164.846 154.829V77.9129L169.01 80.7725C169.404 81.0496 169.859 81.1836 170.288 81.1836C170.994 81.1836 171.709 80.844 172.138 80.2185L182.594 65.0532C182.933 64.5528 183.076 63.954 182.96 63.3642C182.88 62.7655 182.533 62.2487 182.05 61.9002ZM154.025 13.7683V42.571L136.295 30.3549V13.7687L154.025 13.7683ZM160.343 154.831C160.343 159.38 156.635 163.07 152.104 163.07H30.9056C26.3747 163.07 22.6661 159.389 22.6661 154.831V74.778L91.5044 27.2614L160.315 74.778V154.831H160.343ZM169.7 75.7868L164.785 72.3998L162.292 70.6572L92.9887 22.8295L92.7832 22.6687C92.7564 22.6687 92.7564 22.6419 92.7385 22.6419C92.667 22.5972 92.5776 22.5704 92.5061 22.5257C92.39 22.481 92.2738 22.3916 92.1397 22.3648C92.0683 22.3202 91.9789 22.3202 91.9074 22.2933H91.8806H91.8538C91.7197 22.2665 91.5768 22.2487 91.4606 22.2487C91.3265 22.2487 91.1657 22.2755 91.0227 22.2933H90.9959H90.969C90.8976 22.3202 90.8529 22.3201 90.7903 22.338C90.7188 22.3648 90.6563 22.4095 90.5848 22.4542C90.4507 22.5257 90.2899 22.5436 90.1469 22.6329L13.2831 75.7705L5.39217 64.3317L91.5053 4.91202L177.619 64.3477L169.7 75.7868Z" fill="#FFE7BF"/>
+<path d="M44.0625 103.858C44.0625 130.032 65.3404 151.301 91.5058 151.301C117.68 151.301 138.949 130.023 138.949 103.858C138.949 77.6921 117.68 56.3867 91.5058 56.3867C65.3315 56.3867 44.0625 77.6914 44.0625 103.858ZM119.558 101.597C119.353 94.4563 118.182 87.8433 116.582 82.0166C119.809 81.0068 122.99 79.8183 126.1 78.451C130.926 84.9926 133.973 92.9818 134.402 101.605L119.558 101.597ZM115.278 130.052C117.905 130.874 120.515 131.839 123.052 132.911C119.415 136.843 115.072 140.114 110.193 142.473C111.846 139.185 113.651 134.976 115.278 130.052ZM112.257 124.475C106.082 122.876 99.9069 121.955 93.7764 121.776V106.102H115.054C114.822 112.786 113.741 119.006 112.257 124.475ZM79.2632 144.994C77.3686 141.696 74.4552 136.048 72.0604 128.774C77.8066 127.29 83.5438 126.459 89.2453 126.281V146.736C85.8137 146.549 82.4715 145.977 79.2632 144.994C79.29 144.994 79.29 144.994 79.2632 144.994ZM48.6119 101.597C49.0677 92.9914 52.0703 85.0111 56.8961 78.4864C60.0328 79.8626 63.2142 81.0512 66.4136 82.0521C64.8139 87.8609 63.6701 94.4739 63.4377 101.587L48.6119 101.597ZM79.3799 62.6781C82.5344 61.7397 85.832 61.141 89.2369 60.9623V81.3912C83.6069 81.2303 77.8427 80.3813 72.1055 78.9248C74.5095 71.6058 77.4405 65.9756 79.3799 62.6781C79.362 62.6781 79.362 62.6781 79.3799 62.6781ZM70.783 83.25C76.958 84.8496 83.1331 85.7432 89.2458 85.9042V101.579H67.9946C68.2181 94.8944 69.2904 88.7191 70.783 83.25ZM89.2458 106.101V121.775C83.1599 121.954 76.958 122.848 70.7651 124.456C69.2816 118.987 68.2003 112.785 67.9949 106.11L89.2458 106.101ZM115.251 77.6914C113.624 72.7227 111.774 68.4958 110.103 65.1802C115.018 67.5574 119.433 70.8282 123.097 74.8317C120.541 75.9041 117.905 76.8603 115.251 77.6914ZM115.027 101.596H93.7761V85.9214C99.8887 85.7427 106.064 84.8222 112.239 83.2225C113.722 88.6916 114.822 94.8939 115.027 101.596ZM72.8829 65.1974C71.2118 68.5396 69.3799 72.7666 67.7623 77.7086C65.135 76.8865 62.4986 75.9213 59.916 74.8489C63.553 70.8454 67.9677 67.5567 72.8829 65.1974ZM48.6122 106.1H63.4558C63.6614 113.214 64.8052 119.827 66.4049 125.662C63.1788 126.672 59.9974 127.861 56.8875 129.228C52.0706 122.668 49.0679 114.723 48.6122 106.1ZM59.8723 132.846C62.4549 131.774 65.0643 130.809 67.7186 129.986C69.345 134.928 71.177 139.164 72.8214 142.48C67.9242 140.094 63.5274 136.823 59.8723 132.846ZM93.7676 146.733V126.305C99.4423 126.483 105.18 127.332 110.926 128.825C108.522 136.099 105.644 141.729 103.723 145.018C100.542 145.974 97.1992 146.546 93.7676 146.733ZM126.1 129.254C122.99 127.877 119.836 126.689 116.61 125.688C118.209 119.852 119.353 113.239 119.559 106.108H134.403C133.947 114.723 130.926 122.713 126.1 129.254ZM103.607 62.6756H103.634C105.555 65.9464 108.487 71.5942 110.891 78.8685C105.171 80.3341 99.425 81.183 93.7592 81.3617V60.9328C97.1551 61.1473 100.479 61.7373 103.607 62.6756Z" fill="#FFE7BF"/>
+</svg>
+
+}
+/>
+
+<div className="content-holder ">
+
+  <div className="max-731">
+      ### Home Page structure
+     <ImageViewerModal
+    src="/case-study/real-estate/homepage.jpg"
+    alt="bookmarks"
+  />
+
+</div>
+</div>
+</div>

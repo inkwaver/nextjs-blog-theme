@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { useRouter } from 'next/router';
 import { LinkedIn, Behance } from './Icons/DesignFlowIcons';
 import ThemeSwitcher from './ThemeSwitcher.js';
@@ -72,20 +72,18 @@ export default function Header() {
       <div className="wrapper-main header-wrap">
         <div className="main-inner">
           <h1 className="logo">
-            <Link
-              className={isActiveLink('/') ? 'active' : ''}
-              href="/"
-              style={{ width: `${avatarSize}px`, height: `${avatarSize}px`,transform: `scale(${avatarSize / 240})` }}
-            >
-              <Image
-                className="avatar"
-                src="/narek-ch.jpg"
-                alt="Image description"
-                // priority={false}
-                // loading="eager" // Uncomment if you want the avatar image to load immediately
-                width={240} // Static width
-                height={240} // Static height
-              />
+            <Link href="/">
+              <span className={isActiveLink('/') ? 'active' : ''}>
+                <Image
+                  className="avatar"
+                  src="/narek-ch.png"
+                  width={avatarSize}
+                  height={avatarSize}
+                  alt="Image description"
+                  priority={true}
+                  loading="eager" // Ensure the avatar image loads immediately
+                />
+              </span>
             </Link>
           </h1>
           <div className="header-description">
@@ -116,18 +114,10 @@ export default function Header() {
           >
             Dev Projects
           </Link>
-          <Link
-            className="icon-24"
-            target="_blank"
-            href="https://www.linkedin.com/in/narekchilingaryan/"
-          >
+          <Link className="icon-24" target="_blank" href="https://www.linkedin.com/in/narekchilingaryan/">
             <LinkedIn />
           </Link>
-          <Link
-            className="icon-24"
-            target="_blank"
-            href="https://www.behance.net/narek-ws"
-          >
+          <Link className="icon-24"  target="_blank" href="https://www.behance.net/narek-ws">
             <Behance />
           </Link>
           <Link

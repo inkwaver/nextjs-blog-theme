@@ -76,6 +76,7 @@ export const getNextPostBySlug = (slug, tag) => {
   return {
     title: post.data.title,
     slug: nextPostSlug,
+    thumbnail: post.data.thumbnail, // Include the thumbnail
   };
 };
 
@@ -93,5 +94,6 @@ export const getPreviousPostBySlug = (slug, tag) => {
   return {
     title: post.data.title,
     slug: previousPostSlug,
+    thumbnail: post.data.thumbnail, // Include the thumbnail
   };
 };

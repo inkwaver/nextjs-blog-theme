@@ -1,27 +1,36 @@
 ---
-title: "UX Research"
-description: "Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon."
+title: 'UX Research'
+description: 'Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon.'
 tags: ['case-study']
 project: 'Real Estate'
 label: 'kaka'
+thumbnail: "/thumb/Research.jpg"
+
 order: 3
 links:
-  - title: "Research and Analysis"
-    href: "#Research"
-  - title: "Primary and Advanced Search Panels"
-    href: "#primaryPanel"
-  - title: "Primary Panel Fields Across Competitors"
-    href: "#primaryPanelCompetitor"
-  - title: "Advanced Filter Panel"
-    href: "#fff"
-  - title: "Listing Cards"
-    href: "#fff"
-  - title: "Listing Card structure"
-    href: "#fff"
-  - title: "Property Listing Page"
-    href: "#fff"
-  - title: "Single Property"
-    href: "#fff"
+  - title: 'Research and Analysis'
+    href: '#Research'
+
+  - title: 'Primary and Advanced Search Panels'
+    href: '#primaryPanel'
+
+  - title: 'Primary Panel Fields Across Competitors'
+    href: '#primaryPanelCompetitor'
+
+  - title: 'Advanced Filter Panel'
+    href: '#advancedFilterPanel'
+
+  - title: 'Listing Cards'
+    href: '#listingCard'
+
+  - title: 'Listing Card structure'
+    href: '#listingCardStructure'
+
+  - title: 'Property Listing Page'
+    href: '#propertyListing'
+
+  - title: 'Single Property'
+    href: '#singleProperty'
 images:
   smartbet:
     - path: /projects/Goodwin-Dark.png
@@ -47,10 +56,9 @@ import Image from 'next/image';
 import PageCover from '../components/PageCover';
 import ImageViewerModal from '../components/ImageViewerModal';
 
-
 <PageCover id="Research"
   title="Intro UX Research"
-  subtitle="Chapter 02 - Competitor and Similar UX  Analysis"
+  subtitle="Competitor and Similar UX  Analysis"
   description={
     <>
     <p>
@@ -88,69 +96,369 @@ import ImageViewerModal from '../components/ImageViewerModal';
 
 The aim is to understand the UX strategies these websites employ and how they can be adapted to our needs. By analyzing the current functionalities and key views of these websites, we hope to uncover insights that will guide the design and development process, leading to a more user-friendly and efficient website for our client.
 
+<br />
 ### Key Views Focus
 
 - Primary Search Panels
 - Listing Page
 - Single Property (View)
-
+    <br/>
 </div>
 
-<PageCover id ="primaryPanel"
+<PageCover
+  id="primaryPanel"
   title="Primary and 
 Advanced
 Search Panels "
-  subtitle="Chapter 02 - Competitor and Similar Research and Analisys"
-  description={<>
-    <p>The search panel is essential for real estate websites, allowing users to filter and find properties efficiently. This research examines primary search panel fields across top competitors to identify best practices and innovative features for our future website.</p>
-    <ul>
-      <li>
-     Essential Function: The search panel helps users filter properties by key criteria like location and price.
-      </li>
-      <li>
-       Improving User Experience: Effective search panels enhance user satisfaction and ease of navigation.
-      </li>
-      <li>
-       Competitive Analysis: Studying competitors helps identify successful design elements for our own site.
-      </li>
-         <li>
-      Informing Future Design: Insights from this research will guide the development of a user-friendly search panel for our website.
-      </li>
-    </ul>
+  subtitle="Competitor and Similar Research and Analisys"
+  description={
+    <>
+      <p>
+        The search panel is essential for real estate websites, allowing users
+        to filter and find properties efficiently. This research examines
+        primary search panel fields across top competitors to identify best
+        practices and innovative features for our future website.
+      </p>
+      <ul>
+        <li>
+          Essential Function: The search panel helps users filter properties by
+          key criteria like location and price.
+        </li>
+        <li>
+          Improving User Experience: Effective search panels enhance user
+          satisfaction and ease of navigation.
+        </li>
+        <li>
+          Competitive Analysis: Studying competitors helps identify successful
+          design elements for our own site.
+        </li>
+        <li>
+          Informing Future Design: Insights from this research will guide the
+          development of a user-friendly search panel for our website.
+        </li>
+      </ul>
     </>
   }
-  img={ <svg width="305" height="187" viewBox="0 0 305 187" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M279.562 0.515625H25.4269C18.6302 0.515625 12.248 3.16495 7.44699 7.97842C2.64598 12.7855 0 19.1822 0 25.9874V88.754C0 95.5529 2.6396 101.95 7.44699 106.757C12.248 111.564 18.6302 114.213 25.4205 114.213C25.4269 114.213 66.9209 114.213 66.9273 114.213L71.0589 165.648C71.2119 167.551 72.3787 169.236 74.1129 170.04C75.9619 170.902 78.1998 170.621 79.7491 169.293L98.7045 152.459C99.5844 153.187 116.404 188.049 118.062 186.351C119.031 186.645 120.083 186.543 120.975 186.064L136.705 177.644C138.566 176.648 139.268 174.324 138.273 172.46L121.179 140.432L145.688 134.01C149.737 132.988 150.846 127.223 147.493 124.759L134.193 114.219C134.193 114.219 279.562 114.219 279.568 114.219C293.232 114.5 305.276 102.441 304.995 88.7604V25.9938C304.995 11.9556 293.582 0.534779 279.562 0.528396V0.515625ZM71.9005 64.8335C68.4703 61.9352 62.8213 64.9612 63.3313 69.4299L64.7595 87.2346H30.4957C28.6467 87.2346 27.142 85.7281 27.1484 83.8831V30.8456C27.1165 29.0453 28.6913 27.4493 30.4957 27.494C30.4957 27.494 197.078 27.494 197.084 27.494C198.882 27.4557 200.469 29.0517 200.431 30.852V83.8959C200.431 84.7896 200.087 85.6259 199.449 86.2643C198.818 86.8963 197.977 87.2474 197.078 87.2474H100.171L71.9005 64.8463V64.8335ZM114.555 134.239C112.221 134.788 110.965 137.661 112.151 139.749L129.729 172.677L120.746 177.484L103.168 144.549C102.09 142.404 99.017 141.849 97.2572 143.49L78.3146 160.311C76.6313 139.34 73.0609 94.8507 71.3968 74.1923L96.4092 94.0144L139.051 127.811L114.561 134.233L114.555 134.239ZM297.344 88.7476C297.535 98.3107 289.119 106.744 279.568 106.546C279.568 106.546 124.533 106.546 124.527 106.546L109.83 94.9017C109.83 94.9017 197.071 94.8953 197.078 94.9017C200.017 94.9017 202.778 93.759 204.856 91.6779C206.935 89.5967 208.076 86.8325 208.076 83.8959V30.852C208.197 24.9341 202.988 19.712 197.071 19.8397C197.071 19.8397 30.4893 19.8397 30.4829 19.8397C27.55 19.8397 24.7893 20.9824 22.7108 23.0636C20.6323 25.1447 19.491 27.909 19.4846 30.852V83.8895C19.4846 89.9606 24.4131 94.9017 30.4829 94.9081H65.3652L66.3025 106.552H25.4141C15.8631 106.75 7.44062 98.3235 7.64464 88.754V25.9874C7.64464 21.2314 9.49364 16.7627 12.8473 13.3984C16.2074 10.034 20.6705 8.1827 25.4205 8.1827H279.549C289.355 8.1827 297.331 16.1754 297.331 25.9874V88.754L297.344 88.7476Z" fill="#FFE7BF"/>
-</svg>
-}
+  img={
+    <svg
+      width="305"
+      height="187"
+      viewBox="0 0 305 187"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M279.562 0.515625H25.4269C18.6302 0.515625 12.248 3.16495 7.44699 7.97842C2.64598 12.7855 0 19.1822 0 25.9874V88.754C0 95.5529 2.6396 101.95 7.44699 106.757C12.248 111.564 18.6302 114.213 25.4205 114.213C25.4269 114.213 66.9209 114.213 66.9273 114.213L71.0589 165.648C71.2119 167.551 72.3787 169.236 74.1129 170.04C75.9619 170.902 78.1998 170.621 79.7491 169.293L98.7045 152.459C99.5844 153.187 116.404 188.049 118.062 186.351C119.031 186.645 120.083 186.543 120.975 186.064L136.705 177.644C138.566 176.648 139.268 174.324 138.273 172.46L121.179 140.432L145.688 134.01C149.737 132.988 150.846 127.223 147.493 124.759L134.193 114.219C134.193 114.219 279.562 114.219 279.568 114.219C293.232 114.5 305.276 102.441 304.995 88.7604V25.9938C304.995 11.9556 293.582 0.534779 279.562 0.528396V0.515625ZM71.9005 64.8335C68.4703 61.9352 62.8213 64.9612 63.3313 69.4299L64.7595 87.2346H30.4957C28.6467 87.2346 27.142 85.7281 27.1484 83.8831V30.8456C27.1165 29.0453 28.6913 27.4493 30.4957 27.494C30.4957 27.494 197.078 27.494 197.084 27.494C198.882 27.4557 200.469 29.0517 200.431 30.852V83.8959C200.431 84.7896 200.087 85.6259 199.449 86.2643C198.818 86.8963 197.977 87.2474 197.078 87.2474H100.171L71.9005 64.8463V64.8335ZM114.555 134.239C112.221 134.788 110.965 137.661 112.151 139.749L129.729 172.677L120.746 177.484L103.168 144.549C102.09 142.404 99.017 141.849 97.2572 143.49L78.3146 160.311C76.6313 139.34 73.0609 94.8507 71.3968 74.1923L96.4092 94.0144L139.051 127.811L114.561 134.233L114.555 134.239ZM297.344 88.7476C297.535 98.3107 289.119 106.744 279.568 106.546C279.568 106.546 124.533 106.546 124.527 106.546L109.83 94.9017C109.83 94.9017 197.071 94.8953 197.078 94.9017C200.017 94.9017 202.778 93.759 204.856 91.6779C206.935 89.5967 208.076 86.8325 208.076 83.8959V30.852C208.197 24.9341 202.988 19.712 197.071 19.8397C197.071 19.8397 30.4893 19.8397 30.4829 19.8397C27.55 19.8397 24.7893 20.9824 22.7108 23.0636C20.6323 25.1447 19.491 27.909 19.4846 30.852V83.8895C19.4846 89.9606 24.4131 94.9017 30.4829 94.9081H65.3652L66.3025 106.552H25.4141C15.8631 106.75 7.44062 98.3235 7.64464 88.754V25.9874C7.64464 21.2314 9.49364 16.7627 12.8473 13.3984C16.2074 10.034 20.6705 8.1827 25.4205 8.1827H279.549C289.355 8.1827 297.331 16.1754 297.331 25.9874V88.754L297.344 88.7476Z"
+        fill="#FFE7BF"
+      />
+    </svg>
+  }
 />
 
-<div className="content-holder col-container">
+<div id="primaryPanelCompetitor" className="content-holder col-container">
   <div className="col-50">
   ### Primary Panel Fields Across Competitors
 
-  All competitors include Location, Property Type, and Price filters. However, only green-acres.ae offers a currency filter, and emirates.estate provides a multiselect option for property types.
+All competitors include Location, Property Type, and Price filters. However, only green-acres.ae offers a currency filter, and emirates.estate provides a multiselect option for property types.
 
-  ### Common Fields:
+<br />
+### Common Fields:
 
-  - Location
-  - Property Type 
-  - Price
-  - Beds/Baths
+- Location
+- Property Type
+- Price
+- Beds/Baths
+  <br />
 
-  ### Unique Features:
+### Unique Features:
 
-  **Multiselect Options:** emirates.estate, green-acres.ae \
-  **Currency Filter** emirates.estate, green-acres.ae \
-  **Buy/Rent Options:** emirates.estate, green-acres.ae \
+**Multiselect Options:** emirates.estate, green-acres.ae \
+ **Currency Filter** emirates.estate, green-acres.ae \
+ **Buy/Rent Options:** emirates.estate, green-acres.ae \
 
+<br/>
   </div>
   <div className="col-50">
   
     <ImageViewerModal src="/case-study/real-estate/primary-fields.jpg" alt="Primary Fields" />
 
-      {/* <Image className='img-static' layout='fill' loading="lazy" src="/case-study/real-estate/primary-fields.jpg" alt="ff"/>
+      {/* <Image className='img-static'  layout='fill' loading="lazy" src="/case-study/real-estate/primary-fields.jpg" alt="ff"/>
                     <figcaption>alt</figcaption> */}
-   
+
   </div>
+
+</div>
+
+<div id="advancedFilterPanel" className="content-holder col-container">
+    <div className="col-50">
+    ### Advanced Filter Panel
+
+    All competitors exept from one using non wordpress platfrom , so in our case we need to consider that wordpress has its limitation and find balance between functionlity of website and not  also overcomplicate user with to many filter options rather than neccesary one
+
+{' '}
+
+<br />
+### Common Fields:
+
+    - Property Area (min/max values)
+    - Limited important Amenities list
+
+
+    </div>
+
+  </div>
+
+<PageCover id ="listingCard"
+  title="Listing Cards "
+  subtitle="Competitor and Similar Research and Analisys"
+  description={<>
+    <p>
+    Listing cards provide a snapshot of property details and are the primary means for users to browse available listings.</p>
+    
+    </>
+  }
+  img={ <svg width="305" height="229" viewBox="0 0 305 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M153.67 146.232C152.901 146.232 152.099 145.965 151.464 145.397L102.179 102.628C100.274 100.99 97.4343 100.99 95.5297 102.628L46.5119 145.397C45.1085 146.6 43.0035 146.466 41.8006 145.063C40.5977 143.66 40.7313 141.554 42.1347 140.352L91.1525 97.6155C95.5297 93.8063 102.179 93.7729 106.556 97.6155L155.841 140.385C157.245 141.588 157.378 143.693 156.176 145.096C155.541 145.865 154.605 146.232 153.67 146.232Z" fill="#FFE7BF"/>
+<path d="M110.9 195.216C109.063 195.216 107.559 193.713 107.559 191.875V164.175H90.4513V191.875C90.4513 193.713 88.9477 195.216 87.1099 195.216C85.2722 195.216 83.7686 193.713 83.7686 191.875V160.834C83.7686 158.996 85.2722 157.492 87.1099 157.492H110.9C112.738 157.492 114.242 158.996 114.242 160.834V191.875C114.242 193.746 112.738 195.216 110.9 195.216Z" fill="#FFE7BF"/>
+<path d="M129.678 195.217H68.3307C61.8485 195.217 56.6025 189.938 56.6025 183.489V130.628C56.6025 128.791 58.1062 127.287 59.9439 127.287C61.7817 127.287 63.2853 128.791 63.2853 130.628V183.489C63.2853 186.262 65.5574 188.534 68.3307 188.534H129.678C132.485 188.534 134.757 186.262 134.757 183.489V131.13C134.757 129.292 136.261 127.788 138.098 127.788C139.936 127.788 141.44 129.292 141.44 131.13V183.489C141.406 189.971 136.127 195.217 129.678 195.217Z" fill="#FFE7BF"/>
+<path d="M296.011 63.8019H8.98785C7.1501 63.8019 5.64648 62.2983 5.64648 60.4605C5.64648 58.6228 7.1501 57.1191 8.98785 57.1191H296.045C297.882 57.1191 299.386 58.6228 299.386 60.4605C299.386 62.2983 297.882 63.8019 296.011 63.8019Z" fill="#FFE7BF"/>
+<path d="M44.3402 41.6141C40.5645 41.6141 37.457 38.54 37.457 34.7309C37.457 30.9217 40.5311 27.8477 44.3402 27.8477C48.116 27.8477 51.19 30.9217 51.19 34.7309C51.19 38.54 48.116 41.6141 44.3402 41.6141ZM44.3402 34.5638V34.9313L44.5073 34.7309C44.5073 34.6306 44.4405 34.5638 44.3402 34.5638Z" fill="#FFE7BF"/>
+<path d="M78.0551 41.6141C74.2793 41.6141 71.1719 38.54 71.1719 34.7309C71.1719 30.9217 74.2459 27.8477 78.0551 27.8477C81.8642 27.8477 84.9383 30.9217 84.9383 34.7309C84.9383 38.54 81.8642 41.6141 78.0551 41.6141ZM78.0551 34.5638V34.9313L78.2556 34.7309C78.2556 34.6306 78.1887 34.5638 78.0551 34.5638Z" fill="#FFE7BF"/>
+<path d="M111.802 41.6141C108.026 41.6141 104.919 38.54 104.919 34.7309C104.919 30.9217 107.993 27.8477 111.802 27.8477C115.611 27.8477 118.685 30.9217 118.685 34.7309C118.685 38.54 115.578 41.6141 111.802 41.6141ZM111.802 34.5638V34.9313L112.003 34.7309C112.003 34.6306 111.902 34.5638 111.802 34.5638Z" fill="#FFE7BF"/>
+<path d="M282.145 228.43H22.8549C10.258 228.43 0 218.172 0 205.575V23.6714C0 11.0744 10.258 0.816406 22.8549 0.816406H282.145C294.742 0.816406 305 11.0744 305 23.6714V205.542C305.033 218.172 294.775 228.43 282.145 228.43ZM22.8549 14.1819C17.609 14.1819 13.3655 18.4588 13.3655 23.6714V205.542C13.3655 210.788 17.6424 215.031 22.8549 215.031H282.145C287.391 215.031 291.634 210.754 291.634 205.542V23.6714C291.634 18.4254 287.358 14.1819 282.145 14.1819H22.8549Z" fill="#FFE7BF"/>
+<path d="M262.999 99.2198H208.669C206.831 99.2198 205.327 97.7162 205.327 95.8785C205.327 94.0407 206.831 92.5371 208.669 92.5371H262.999C264.837 92.5371 266.341 94.0407 266.341 95.8785C266.341 97.7162 264.87 99.2198 262.999 99.2198Z" fill="#FFE7BF"/>
+<path d="M262.999 128.859H181.503C179.666 128.859 178.162 127.355 178.162 125.517C178.162 123.679 179.666 122.176 181.503 122.176H262.999C264.837 122.176 266.341 123.679 266.341 125.517C266.341 127.355 264.871 128.859 262.999 128.859Z" fill="#FFE7BF"/>
+<path d="M262.999 158.462H208.669C206.831 158.462 205.327 156.958 205.327 155.121C205.327 153.283 206.831 151.779 208.669 151.779H262.999C264.837 151.779 266.341 153.283 266.341 155.121C266.341 156.958 264.87 158.462 262.999 158.462Z" fill="#FFE7BF"/>
+<path d="M262.999 188.067H181.503C179.666 188.067 178.162 186.564 178.162 184.726C178.162 182.888 179.666 181.385 181.503 181.385H262.999C264.837 181.385 266.341 182.888 266.341 184.726C266.341 186.564 264.871 188.067 262.999 188.067Z" fill="#FFE7BF"/>
+<path d="M99.0049 142.156C91.6539 142.156 85.6729 136.175 85.6729 128.824C85.6729 121.473 91.6539 115.492 99.0049 115.492C106.356 115.492 112.337 121.473 112.337 128.824C112.337 136.175 106.356 142.156 99.0049 142.156ZM99.0049 122.175C95.3294 122.175 92.3556 125.149 92.3556 128.824C92.3556 132.5 95.3294 135.474 99.0049 135.474C102.68 135.474 105.654 132.5 105.654 128.824C105.654 125.149 102.647 122.175 99.0049 122.175Z" fill="#FFE7BF"/>
+</svg>
+
+}
+/>
+
+<div id="listingCardStructure" className="content-holder col-container">
+    <div className="col-50">
+### Listing Card structure
+#### Introduction to Minimal Necessary  Fields for Listing Cards
+
+{' '}
+
+<br />
+Listing cards are a key element on real estate websites, providing a snapshot of
+property information to users. During our research, we encountered a variety of card
+configurations, each with different levels of complexity. Given the repetitive nature
+of listing cards, it is crucial to include only the most necessary information to
+maintain clarity and usability. After consulting with realtors, we have determined
+that our listing cards should focus on displaying the property image, essential details
+such as the number of bedrooms and bathrooms, price, and location. Additionally,
+the card should include an actionable button and serve as a link to the property’s
+detailed page. This streamlined approach ensures that users receive the information
+they need at a glance without being overwhelmed by excessive details.
+<br />
+### Key Points:
+<div className="col-50">
+  - Concise Information: Listing cards should present essential property details
+  in a clear and concise manner, making it easy for users to quickly assess and
+  compare properties. - User Interest: By focusing on the most relevant
+  information, listing cards can effectively capture and maintain user interest.
+  - Realtor Input: Consultations with realtors have guided us to include only
+  the property image, basic details (number of bedrooms and bathrooms, price,
+  and location), and an actionable button. - Navigation: Each listing card will
+  link directly to the property's detailed page, providing a seamless user
+  experience and easy access to more comprehensive information.
+</div>
+<br />
+
+### Conclusion:
+
+   <div className='col-50'>
+    In summary, the design of our listing cards will prioritize simplicity and functionality, ensuring that users have access to all the critical information they need without unnecessary clutter. This approach not only improves the user experience but also aligns with best practices in real estate web design.
+      <br/>
+    
+    * Property image
+    * Basic details: 
+      * Number of beds/baths, 
+      * price
+      * location
+    * Action buttons: View details
+  </div>
+    </div>
+      <div className='col-50'>
+   <ImageViewerModal src="/case-study/real-estate/listing-card-example.jpg" alt="Primary Fields" />
+  </div>
+  </div>
+
+<div id ="propertyListing">
+  <PageCover 
+  title="Property Listing"
+  subtitle="Competitor and Similar Research and Analisys"
+  description={<>
+    <p>
+    Property listings are the core feature of any real estate website. An effective listing system enhances user experience by providing easy access to essential information and enabling efficient search and sorting. This section explores the structure of property listings, including card design, filtering options, and viewing modes, and discusses best practices for creating user-friendly listings.
+    </p>
+    
+    </>
+  }
+  img={ 
+    <svg width="221" height="228" viewBox="0 0 221 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M220.541 160.033C220.379 158.788 219.972 157.588 219.344 156.501C218.715 155.414 217.877 154.463 216.878 153.702L168.858 116.981V20.567C168.858 20.1695 168.779 19.7759 168.627 19.4087C168.475 19.0415 168.252 18.7078 167.971 18.4268C167.69 18.1457 167.357 17.9228 166.989 17.7707C166.622 17.6186 166.229 17.5403 165.831 17.5403H132.538L116.706 1.69821C116.14 1.13413 115.374 0.816798 114.574 0.81543H3.02667C2.22394 0.81543 1.4541 1.13431 0.88649 1.70192C0.31888 2.26953 0 3.03937 0 3.8421V193.765C0.00333559 194.566 0.323688 195.333 0.890937 195.897C1.45819 196.462 2.22612 196.779 3.02667 196.779H16.1826V210.513C16.1859 211.314 16.5063 212.08 17.0735 212.645C17.6408 213.21 18.4087 213.527 19.2092 213.527H114.698V219.833C114.699 221.949 115.54 223.979 117.036 225.476C118.532 226.973 120.562 227.814 122.678 227.815H194.587C196.701 227.813 198.728 226.972 200.222 225.476C201.717 223.981 202.558 221.954 202.56 219.84V166.821L205.269 168.891C206.77 170.039 208.578 170.716 210.464 170.836C212.35 170.956 214.23 170.514 215.864 169.565C217.499 168.617 218.816 167.205 219.649 165.509C220.481 163.812 220.791 161.906 220.541 160.033ZM162.83 23.581V112.731C161.183 112.077 159.403 111.825 157.639 111.996C155.875 112.168 154.178 112.758 152.688 113.718V38.9287C152.688 38.5328 152.611 38.1407 152.459 37.775C152.308 37.4092 152.085 37.077 151.805 36.7975L138.589 23.581H162.83ZM117.589 11.1061L142.397 35.9147H117.589V11.1061ZM6.04072 6.84354H111.56V38.9287C111.56 39.7315 111.879 40.5013 112.447 41.0689C113.015 41.6365 113.784 41.9554 114.587 41.9554H146.66V118.308L109.162 146.986H62.9446C62.1452 146.986 61.3786 147.303 60.8133 147.869C60.2481 148.434 59.9305 149.2 59.9305 150C59.9305 150.799 60.2481 151.566 60.8133 152.131C61.3786 152.696 62.1452 153.014 62.9446 153.014H101.282L100.382 153.702C99.1522 154.644 98.1698 155.871 97.5195 157.277C96.8692 158.683 96.5705 160.226 96.649 161.774H62.9446C62.1452 161.774 61.3786 162.091 60.8133 162.656C60.2481 163.222 59.9305 163.988 59.9305 164.788C59.9305 165.587 60.2481 166.354 60.8133 166.919C61.3786 167.484 62.1452 167.802 62.9446 167.802H99.1738C100.683 169.435 102.717 170.486 104.922 170.773C105.349 170.83 105.78 170.859 106.211 170.859C108.301 170.861 110.334 170.172 111.992 168.899L114.698 166.828V190.769H6.04072V6.84354ZM22.2107 207.499V196.792H114.698V207.501L22.2107 207.499ZM166.341 221.787H150.912V189.288H166.341V221.787ZM196.527 219.84C196.521 220.354 196.314 220.846 195.951 221.21C195.587 221.573 195.096 221.781 194.582 221.787H172.366V186.274C172.366 185.474 172.049 184.706 171.484 184.139C170.919 183.571 170.153 183.251 169.352 183.248H147.901C147.503 183.248 147.11 183.326 146.742 183.478C146.375 183.63 146.041 183.853 145.76 184.134C145.479 184.415 145.256 184.749 145.104 185.116C144.952 185.483 144.874 185.877 144.874 186.274V221.787H122.678C122.164 221.781 121.673 221.573 121.31 221.21C120.946 220.846 120.74 220.354 120.734 219.84V162.21L158.628 133.232L196.527 162.21V219.84ZM213.877 163.441C213.305 164.181 212.464 164.666 211.537 164.79C210.61 164.914 209.672 164.666 208.926 164.102L160.459 127.04C159.933 126.638 159.29 126.419 158.628 126.419C157.966 126.419 157.322 126.638 156.796 127.04L108.329 164.102C107.584 164.666 106.646 164.913 105.719 164.79C104.792 164.667 103.951 164.183 103.378 163.443C103.097 163.075 102.89 162.654 102.771 162.206C102.651 161.758 102.622 161.291 102.683 160.831C102.744 160.371 102.896 159.928 103.128 159.527C103.361 159.125 103.671 158.774 104.039 158.492L156.093 118.684C156.711 118.215 157.466 117.962 158.242 117.965H158.456C158.577 117.973 158.698 117.973 158.819 117.965C159.664 117.913 160.499 118.165 161.173 118.676L213.226 158.492C213.967 159.063 214.452 159.903 214.576 160.83C214.7 161.757 214.452 162.696 213.887 163.441H213.877ZM59.9305 60.1204C59.9305 59.3177 60.2494 58.5479 60.817 57.9803C61.3846 57.4127 62.1545 57.0938 62.9572 57.0938H130.719C131.471 57.1626 132.17 57.5099 132.679 58.0676C133.188 58.6252 133.47 59.3529 133.47 60.1078C133.47 60.8628 133.188 61.5905 132.679 62.1481C132.17 62.7057 131.471 63.053 130.719 63.1219H62.9446C62.1484 63.1186 61.3856 62.8017 60.8214 62.2399C60.2572 61.6781 59.9372 60.9166 59.9305 60.1204ZM59.9305 74.9007C59.9305 74.0979 60.2494 73.3281 60.817 72.7605C61.3846 72.1929 62.1545 71.874 62.9572 71.874H130.719C131.471 71.9428 132.17 72.2902 132.679 72.8478C133.188 73.4054 133.47 74.1331 133.47 74.8881C133.47 75.643 133.188 76.3707 132.679 76.9283C132.17 77.4859 131.471 77.8333 130.719 77.9021H62.9446C62.1484 77.8988 61.3856 77.5819 60.8214 77.0201C60.2572 76.4583 59.9372 75.6968 59.9305 74.9007ZM21.9837 83.446H47.8239C48.6266 83.446 49.3964 83.1271 49.964 82.5595C50.5317 81.9919 50.8505 81.222 50.8505 80.4193V54.5892C50.8505 53.7865 50.5317 53.0166 49.964 52.449C49.3964 51.8814 48.6266 51.5625 47.8239 51.5625H21.9837C21.181 51.5625 20.4111 51.8814 19.8435 52.449C19.2759 53.0166 18.957 53.7865 18.957 54.5892V80.4319C18.9604 81.2324 19.2807 81.999 19.848 82.5639C20.4152 83.1288 21.1831 83.446 21.9837 83.446ZM25.0104 57.6033H44.8224V77.4178H24.9978L25.0104 57.6033ZM59.9305 105.059C59.9305 104.256 60.2494 103.486 60.817 102.919C61.3846 102.351 62.1545 102.032 62.9572 102.032H130.719C131.474 102.098 132.176 102.444 132.688 103.002C133.2 103.56 133.484 104.29 133.484 105.048C133.484 105.805 133.2 106.535 132.688 107.093C132.176 107.651 131.474 107.997 130.719 108.063H62.9446C62.148 108.06 61.3848 107.742 60.8205 107.18C60.2563 106.618 59.9365 105.855 59.9305 105.059ZM59.9305 119.839C59.9305 119.036 60.2494 118.267 60.817 117.699C61.3846 117.131 62.1545 116.812 62.9572 116.812H130.719C131.138 116.774 131.561 116.823 131.959 116.957C132.358 117.092 132.725 117.307 133.035 117.591C133.346 117.874 133.594 118.22 133.764 118.605C133.934 118.99 134.022 119.406 134.022 119.826C134.022 120.247 133.934 120.663 133.764 121.048C133.594 121.433 133.346 121.779 133.035 122.062C132.725 122.346 132.358 122.561 131.959 122.695C131.561 122.83 131.138 122.879 130.719 122.841H62.9446C62.1484 122.837 61.3856 122.52 60.8214 121.959C60.2572 121.397 59.9372 120.635 59.9305 119.839ZM21.9837 128.384H47.8239C48.6266 128.384 49.3964 128.066 49.964 127.498C50.5317 126.93 50.8505 126.16 50.8505 125.358V99.5302C50.8505 98.7274 50.5317 97.9576 49.964 97.39C49.3964 96.8224 48.6266 96.5035 47.8239 96.5035H21.9837C21.181 96.5035 20.4111 96.8224 19.8435 97.39C19.2759 97.9576 18.957 98.7274 18.957 99.5302V125.37C18.9604 126.171 19.2807 126.937 19.848 127.502C20.4152 128.067 21.1831 128.384 21.9837 128.384ZM25.0104 102.544H44.8224V122.356H24.9978L25.0104 102.544ZM21.9837 173.335H47.8239C48.6244 173.335 49.3923 173.018 49.9596 172.453C50.5268 171.889 50.8472 171.122 50.8505 170.321V144.469C50.8505 144.071 50.7722 143.678 50.6201 143.31C50.468 142.943 50.2451 142.609 49.964 142.328C49.683 142.047 49.3493 141.824 48.9821 141.672C48.6149 141.52 48.2213 141.442 47.8239 141.442H21.9837C21.5862 141.442 21.1926 141.52 20.8254 141.672C20.4582 141.824 20.1246 142.047 19.8435 142.328C19.5625 142.609 19.3395 142.943 19.1874 143.31C19.0353 143.678 18.957 144.071 18.957 144.469V170.309C18.957 171.111 19.2759 171.881 19.8435 172.449C20.4111 173.017 21.181 173.335 21.9837 173.335ZM25.0104 147.495H44.8224V167.307H24.9978L25.0104 147.495Z" fill="#5378A7"/>
+</svg>
+
+}
+/>
+
+<div  className="content-holder col-container">
+  <div className='col-50'>
+    <div className='col-70'>
+
+### Grid View
+
+The grid view offers a condensed display of multiple properties, allowing users to quickly compare options. It typically features a few properties per row, balancing images with essential text details.
+
+</div>
+
+  </div>
+  <div className='col-50'>
+     <ImageViewerModal src="/case-study/real-estate/grid-view.jpg" alt="Grid View" >
+     Grid view Examplae from buyout.com
+     </ImageViewerModal>
+  </div>
+</div>
+
+<div className="content-holder col-container">
+  <div className="col-50">
+    <div className="col-70">
+      ### Grid/Map View The map view provides an interactive display of property
+      locations, allowing users to explore listings geographically. Clickable
+      markers and pop-up details enhance usability and provide quick access to
+      key information.
+    </div>
+  </div>
+  <div className="col-50">
+    <ImageViewerModal src="/case-study/real-estate/grid-map.jpg" alt="Grid Map">
+      Grid/Map Examplae from buyout.com
+    </ImageViewerModal>
+  </div>
+</div>
+
+<div className="content-holder col-container">
+  <div className="col-50">
+    <div className="col-70">
+      ### Filtering Options (List Page Filter Bar) The List Page Filter Bar
+      allows users to sort and filter listings based on specific criteria such
+      as popularity, price, and location. The aim is to streamline the search
+      process by providing relevant and straightforward filter options without
+      overwhelming users.
+    </div>
+  </div>
+  <div className="col-50">
+    <ImageViewerModal
+      src="/case-study/real-estate/filter-bar.jpg"
+      alt="Grid Map"
+    >
+      Grid/Map Examplae from buyout.com
+    </ImageViewerModal>
+  </div>
+</div>
+</div>
+<div id = "singleProperty">
+<PageCover 
+  title="Single Property"
+  subtitle="Competitor and Similar Research and Analisys"
+  description={<>
+    <p>
+    Our goal for the single property page is to deliver a clean, user-friendly experience that avoids the complexity and clutter found on many competitor websites. We prioritize clear presentation and essential functionalities to enhance user engagement and satisfaction.
+    </p>
+    
+    </>
+  }
+  img={ 
+    <svg width="184" height="228" viewBox="0 0 184 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M183.648 227.697H0V75.1607L71.5234 0.697266H183.648V227.697ZM11.4803 216.22H172.167V12.1749H76.4136L11.4803 79.7792V216.22Z" fill="#FFE7BF"/>
+<path d="M79.7059 83.2087H5.74016C2.57151 83.2087 0 80.6372 0 77.4686C0 74.2999 2.57151 71.7311 5.74016 71.7311H68.2283V6.43743C68.2283 3.26877 70.7971 0.697266 73.9685 0.697266C77.1371 0.697266 79.7059 3.26877 79.7059 6.43743V83.2087Z" fill="#FFE7BF"/>
+<path d="M150.474 44.6925H78.2431C75.0744 44.6925 72.5029 42.1237 72.5029 38.9523C72.5029 35.7837 75.0744 33.2148 78.2431 33.2148H150.474C153.643 33.2148 156.211 35.7837 156.211 38.9523C156.211 42.1237 153.64 44.6925 150.474 44.6925Z" fill="#FFE7BF"/>
+<path d="M150.474 83.2091H78.2431C75.0744 83.2091 72.5029 80.6376 72.5029 77.4689C72.5029 74.3003 75.0744 71.7314 78.2431 71.7314H150.474C153.643 71.7314 156.211 74.3003 156.211 77.4689C156.211 80.6376 153.64 83.2091 150.474 83.2091Z" fill="#FFE7BF"/>
+<path d="M151.447 115.611H32.205C29.0364 115.611 26.4648 113.04 26.4648 109.871C26.4648 106.702 29.0364 104.131 32.205 104.131H151.447C154.615 104.131 157.184 106.702 157.184 109.871C157.184 113.04 154.615 115.611 151.447 115.611Z" fill="#FFE7BF"/>
+<path d="M89.1769 124.431L45.7275 167.456H61.5523V205.126H115.978V186.019V166.912H131.803L89.1769 124.431ZM110.49 161.375V199.68H67.1321V161.919L59.174 162.01L89.1769 132.237L118.631 161.465H110.49V161.375Z" fill="#FFE7BF"/>
+<rect x="81" y="168.697" width="17" height="18" stroke="#FFE7BF" strokeWidth="2"/>
+</svg>
+
+}
+/>
+
+<div className="content-holder col-container">
+  <div className="col-50">
+    <div className="col-70">
+      ### Single Property Page
+      allows users to sort and filter listings based on specific criteria such
+      as popularity, price, and location. The aim is to streamline the search
+      process by providing relevant and straightforward filter options without
+      overwhelming users.
+      <br/>
+      ### Key Features:
+
+      #### Header with Key Information
+      <br/>
+
+        <div className="col-70">
+          * Price and Currency Converter: The property price is displayed prominently at the top, with a built-in currency converter for international users.
+          * Share and Save: Users can easily share the property on social media or save it for later reference with just a click.
+        </div>
+        <br/>
+         #### Property Overview
+        <br/>
+
+        <div className="col-70">
+         Brief and Expandable Description: A concise description of the property is provided, with a “Read More” button to access the full details if needed.
+        </div>
+      <br/>
+         #### Location and Nearby Amenities
+        <br/>
+
+        <div className="col-70">
+        Address and Map: The property’s address is clearly displayed alongside an interactive map showing nearby amenities like hospitals and parks.
+        </div>
+        <br/>
+
+           #### Detailed Property Information
+        <br/>
+
+        <div className="col-70">
+        Basic Information and Realtor Contact: Essential details such as the reference number, property type, and realtor contact are presented clearly for quick reference.
+        </div>
+           <br/>
+
+           #### Amenities Section
+        <br/>
+
+        <div className="col-70">
+        Initial and Expandable View: Up to 6 key amenities are shown initially, with an option to expand for additional details, keeping the initial view clean and focused.
+        </div>
+              <br/>
+
+           ### Design Rationale:
+        <br/>
+
+        <div className="col-70">
+            * User-Centric: The design focuses on providing a straightforward and intuitive experience, allowing users to access essential information quickly.
+            * Simplicity and Clarity: By minimizing clutter and presenting information in a clear, structured manner, we ensure a smooth and engaging user experience.
+            * Flexibility: The expandable sections and additional options cater to both users who prefer concise information and those seeking more details.
+        </div>
+        <br/>
+
+        <div className="col-70">
+           By implementing these features and principles, we aim to create a single property page that is both functional and enjoyable to use, setting a new standard for real estate websites.
+        </div>
+    </div>
+
+  </div>
+  <div className="col-50">
+    <ImageViewerModal
+      src="/case-study/real-estate/single-property-view.jpg"
+      alt="Grid Map"
+    >
+      Grid/Map Examplae from buyout.com
+    </ImageViewerModal>
+  </div>
+</div>
 </div>

@@ -4,7 +4,7 @@
 --font: Arial, Helvetica, sans-serif;
 
 --font-size-huge: 4.3rem;
---font-size-big: 3.5rem;
+--font-size-big: 3.6rem;
 --font-size-title: 1.66rem;
 --font-size-Subtitle: 1.33rem;
 --font-size-paragraph: 1rem;
@@ -80,8 +80,8 @@
 --logo-name-small: var(--size-24);
 --logo-name-big: var(--font-size-huge);
 --logo-name-big-font-weight: 900;
---logo-name-big-color: var(--color-n3);
---intro-color: var(--color-n2);
+--logo-name-big-color: var(--color-n5);
+--intro-color: var(--color-n1);
 
 }
 .dark:root{

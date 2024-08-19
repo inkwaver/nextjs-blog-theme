@@ -2,9 +2,9 @@
 import Head from 'next/head';
 
 export default function SEO({ title, description, ogImage, url, twitterHandle }) {
-  const defaultTitle = "Default Title";
+  const defaultTitle = "Narek Chilingaryan UI/UX Designer";
   const defaultDescription = "Default description";
-  const defaultOgImage = "/avatar-nch.png";
+  const defaultOgImage = "/narek-ch.png";
   const defaultUrl = "https://narek-ch.space";
   const defaultTwitterHandle = "@YourTwitterHandle";
 
@@ -27,10 +27,10 @@ export default function SEO({ title, description, ogImage, url, twitterHandle })
       <meta property="og:type" content="website" />
       
       {/* LinkedIn Specific Meta Tags (same as Open Graph) */}
-      <meta property="linkedin:title" content={pageTitle} />
+      {/* <meta property="linkedin:title" content={pageTitle} />
       <meta property="linkedin:description" content={pageDescription} />
       <meta property="linkedin:image" content={pageImage} />
-      <meta property="linkedin:url" content={pageUrl} />
+      <meta property="linkedin:url" content={pageUrl} /> */}
 
       {/* Twitter (X) Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
