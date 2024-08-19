@@ -28,6 +28,8 @@ header.main {
       flex-direction: row;
       align-items: center;
       gap: 1rem;
+      width: 200px;
+    margin-bottom: 24px;
     }
   }
 
@@ -195,6 +197,7 @@ header.main {
     }
     .logo {
       height: var(--size-15x3);
+      width: var(--size-15x3);
       display: block;
     }
     .header-links {
