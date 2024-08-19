@@ -71,8 +71,7 @@ export default function Header() {
       <div className='wrapper-main header-wrap'>
         <div className="main-inner">
           <h1 className="logo">
-            <Link href="/">
-              <span className={isActiveLink('/') ? 'active' : ''}>
+            <Link className={isActiveLink('/') ? 'active' : ''} href="/">
                 <Image
                   className="avatar"
                   src="/narek-ch.jpg"
@@ -82,7 +81,6 @@ export default function Header() {
                   priority={false}
                   // loading="eager" // Ensure the avatar image loads immediately
                 />
-              </span>
             </Link>
           </h1>
           <div className="header-description">
