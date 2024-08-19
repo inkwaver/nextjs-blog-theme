@@ -10,17 +10,24 @@ export default function Header() {
   const router = useRouter();
   const [avatarSize, setAvatarSize] = useState(240);
   const [isChecked, setIsChecked] = useState(false);
+  const [rootUrl, setRootUrl] = useState('');
 
   // Function to determine if a link is active
   const isActiveLink = (href) => {
     return router.pathname === href;
   };
 
+    
   const handleChange = (event) => {
     setIsChecked(event.target.checked);
   };
 
   useEffect(() => {
+    // Dynamically set the root URL
+    if (typeof window !== 'undefined') {
+      setRootUrl(window.location.origin);
+    }
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
 
@@ -49,44 +56,46 @@ export default function Header() {
 
   return (
     <header className={`main ${avatarSize <= 45 ? 'sticked' : 'hero-header'}`}>
-         {/* eslint-disable */}
+      {/* eslint-disable */}
       <input
         checked={isChecked}
         onChange={handleChange}
-        className='burger-anchor'
+        className="burger-anchor"
         id="hamburger"
-        type='checkbox'
+        type="checkbox"
         aria-label="Menu toggle"
       />
-      <label className='menu-icon' htmlFor="hamburger">
+      <label className="menu-icon" htmlFor="hamburger">
         <MenuIcon className="main-menu-open" />
         <CloseIcon className="main-menu-close" />
       </label>
-      <div className='wrapper-main header-wrap'>
+      <div className="wrapper-main header-wrap">
         <div className="main-inner">
           <h1 className="logo">
-         
-            <Link href="/">
-              <span className={isActiveLink('/') ? 'active' : ''}>
-                <Image
-                  className="avatar"
-                  src="/narek-ch.png"
-                  width={avatarSize}
-                  height={avatarSize}
-                  alt="Image description"
-                />
-              </span>
+            <Link
+              className={isActiveLink('/') ? 'active' : ''}
+              href="/"
+              style={{ width: `${avatarSize}px`, height: `${avatarSize}px`,transform: `scale(${avatarSize / 240})` }}
+            >
+              <Image
+                className="avatar"
+                src="/narek-ch.jpg"
+                alt="Image description"
+                // priority={false}
+                // loading="eager" // Uncomment if you want the avatar image to load immediately
+                width={240} // Static width
+                height={240} // Static height
+              />
             </Link>
           </h1>
-          
           <div className="header-description">
             <Link className="huge-title" href="/">
               <span className="logo-name">Narek Chilingaryan</span>
             </Link>
 
             <p className="paragraph">
-              I <strong>design interfaces</strong> and translate them into markup
-              that's high-resolution, features smooth scrolling, is
+              I <strong>design interfaces</strong> and translate them into
+              markup that's high-resolution, features smooth scrolling, is
               mobile-friendly, and prioritizes accessibility.
             </p>
             {/* eslint-enable */}
@@ -101,16 +110,24 @@ export default function Header() {
             Case Study
           </Link>
           <Link
-            href="http://localhost:3000/#devExp"
+            href={`${rootUrl}/#devExp`}
             rel="noopener noreferrer"
             className="button cv-btn ghost"
           >
             Dev Projects
           </Link>
-          <Link className="icon-24" href="#">
+          <Link
+            className="icon-24"
+            target="_blank"
+            href="https://www.linkedin.com/in/narekchilingaryan/"
+          >
             <LinkedIn />
           </Link>
-          <Link className="icon-24" href="#">
+          <Link
+            className="icon-24"
+            target="_blank"
+            href="https://www.behance.net/narek-ws"
+          >
             <Behance />
           </Link>
           <Link
