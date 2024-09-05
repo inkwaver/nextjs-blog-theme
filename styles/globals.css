@@ -15,6 +15,7 @@
 @import url(./resposnivnes/mobile.css);
 @import url(./resposnivnes/toc.css);
 @import url(./resposnivnes/menu.css);
+@import url(./parts/content-nav.css);
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities;

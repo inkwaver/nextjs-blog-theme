@@ -79,7 +79,7 @@
 --wrapper-margin: var(--size-39);
 /* header */
 --logo-name-small: var(--size-24);
---logo-name-big: var(--font-size-huge);
+--logo-name-big: var(--size-15x3);
 --logo-name-big-font-weight: 900;
 --logo-name-big-color: var(--color-n5);
 --intro-color: var(--color-n1);
