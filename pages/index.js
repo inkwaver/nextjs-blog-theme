@@ -101,44 +101,7 @@ export default function Index({ globalData }) {
           <Link className="button design" href="">Flow</Link>
           <Link className="button design" href="">Projects</Link>
         </div>
-        <div className='exp-graph'>
-          <div className='design-block exp-block'>
-            <h4>
-              UI/UX Design
-            </h4>
-            <div className='graph'>
-            UX Research, Wireframing, Design System, Atomic Design
-            Prototyping
-            </div>
-          </div>
-          <div className='dev-block exp-block'>
-            <h4>
-             DEVELOPMENT
-            </h4>
-            <div className='graph'>
-            Markup Specialist "{"Accesibilty, Seo, High resolution, Responsive, BEM,  "}"
-            </div>
-          </div>
-          <div className='days'>
-            <div>2010</div>
-            <div>2011</div>
-            <div>2012</div>
-            <div>2013</div>
-            <div>2014</div>
-            <div>2015</div>
-            <div>2016</div>
 
-            <div>2017</div>
-            <div>2018</div>
-            <div>2019</div>
-            <div>2020</div>
-            <div>2021</div>
-            <div>2022</div>
-            <div>2023</div>
-            <div>2024</div>
-
-          </div>
-        </div>
       </nav>
       <main className="w-full home-wrapper main content-slide-container">
         <section className="design-section ">
@@ -157,6 +120,7 @@ export default function Index({ globalData }) {
           </div> */}
 
           <div className="viewport-h  intersect-section wrapper-main first-container">
+                    
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky ">
               <span className=" mr-15">
                 <IconWithLabel Icon={DesExp} label="Design" />
@@ -175,6 +139,44 @@ export default function Index({ globalData }) {
               technical precision with creative vision.”
               {/* "From transforming beautiful designs into code to mastering the nuances of layout and spacing, my journey has been one of both challenge and discovery. It wasn’t always easy—early on, designers and I would navigate countless revisions, struggling to achieve that perfect result. But over the years, I’ve learned to measure every space, to understand design proportions, and to bring sketches to life in code." */}
             </p>
+            <div className='exp-graph'>
+                <div className='design-block exp-block'>
+                  <h4>
+                    UI/UX Design
+                  </h4>
+                  <div className='graph'>
+                  UX Research, Wireframing, Design System, Atomic Design
+                  Prototyping
+                  </div>
+                </div>
+                <div className='dev-block exp-block'>
+                  <h4>
+                  DEVELOPMENT
+                  </h4>
+                  <div className='graph'>
+                  Markup Specialist "{"Accesibilty, Seo, High resolution, Responsive, BEM,  "}"
+                  </div>
+                </div>
+                <div className='days'>
+                  <div>2010</div>
+                  <div>2011</div>
+                  <div>2012</div>
+                  <div>2013</div>
+                  <div>2014</div>
+                  <div>2015</div>
+                  <div>2016</div>
+
+                  <div>2017</div>
+                  <div>2018</div>
+                  <div>2019</div>
+                  <div>2020</div>
+                  <div>2021</div>
+                  <div>2022</div>
+                  <div>2023</div>
+                  <div>2024</div>
+
+                </div>
+            </div>
           </div>
 
           <div className="design-flow mb-102 wrapper-main viewport-h intersect-section">

@@ -83,7 +83,7 @@ footer.main {
 } */
 
 .home-wrapper {
-  margin-top: 100vh;
+  /* margin-top: 100vh; */
   .dev-exp {
     border-bottom: 0.1rem solid var(--color-n3);
   }

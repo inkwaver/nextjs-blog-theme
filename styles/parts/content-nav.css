@@ -2,10 +2,12 @@
 .content-nav {
     display: flex;
     height: calc(100vh - 4rem);
-    align-items: center;
+    align-items: flex-start;
+        justify-content: flex-end;
     padding-top: 20rem;
-    padding: 20rem var(--wrapper-margin) 0 var(--wrapper-margin) ;
-    position: relative;
+    padding: 2rem var(--wrapper-margin) 0 var(--wrapper-margin);
+    position: sticky;
+    top:3rem;
     z-index: 444;
     gap:var(--size-24);
     margin-top:4rem;
@@ -28,12 +30,7 @@
             background-color: var(--color-p5);
         }
     }
-    .days {
-        display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 9px;
-    }
+
 }
 .exp-graph {
     position: absolute;
@@ -76,5 +73,18 @@
         font-weight: 900;
         margin-bottom: var(--size-9);
     }
+.days {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 9px;
+
+    >div:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        background-color: lightblue;
+    }
+}
    
 }

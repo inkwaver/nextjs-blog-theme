@@ -8,7 +8,7 @@ import { CloseIcon, MenuIcon } from '../components/Icons/DesignFlowIcons';
 
 export default function Header() {
   const router = useRouter();
-  const [avatarSize, setAvatarSize] = useState(240);
+  const [avatarSize, setAvatarSize] = useState(180);
   const [isChecked, setIsChecked] = useState(false);
   const [rootUrl, setRootUrl] = useState('');
 
@@ -31,7 +31,7 @@ export default function Header() {
       const scrollPosition = window.scrollY;
 
       // Decrease avatar size gradually as user scrolls
-      const newAvatarSize = Math.max(45, 240 - scrollPosition);
+      const newAvatarSize = Math.max(45, 180 - scrollPosition);
       setAvatarSize(newAvatarSize);
     };
 
@@ -77,15 +77,15 @@ export default function Header() {
               style={{
                 width: `${avatarSize}px`,
                 height: `${avatarSize}px`,
-                transform: `scale(${avatarSize / 240})`,
+                transform: `scale(${avatarSize / 180})`,
               }}
             >
               <Image
                 className="avatar"
                 src="/narek-ch.jpg"
                 alt="Image description"
-                // width={240}
-                // height={240}
+                // width={180}
+                // height={180}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading="eager"
