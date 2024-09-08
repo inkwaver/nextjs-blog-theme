@@ -319,7 +319,8 @@
     position: relative;
     z-index: 11;
   }
-  .col-left,
+
+  /* .col-left,
   ul {
     position: absolute;
     z-index: 11;
@@ -336,7 +337,8 @@
     height: auto;
     overflow: visible;
     display: inline-block;
-  }
+  } */
+
   ul.feat-pin,
   div.feat-pin.col-left {
     position: relative;
@@ -389,15 +391,15 @@
     width: 50%;
     transition: opacity ease-in-out .3s;
     z-index: 15;
-    background-color: rgba(255,255,255,.9);
-    border: 0.1rem solid var(--color-p5);
+    /* background-color: rgba(255,255,255,.9); */
+    /* border: 0.1rem solid var(--color-p5); */
     border-radius: 15px;
-    padding: var(--size-24);
+    /* padding: var(--size-24); */
     top: 0;
     
     ul {
       /* margin-top: var(--size-15); */
-      padding: var(--size-24);
+      padding:0 var(--size-24);
       /* margin-left: -177px; */
 
       li {

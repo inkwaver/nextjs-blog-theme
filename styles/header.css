@@ -88,7 +88,7 @@ header.main {
 
 .home-page {
   header.main {
-    height: 100vh;
+    height: 90vh;
     /* overflow: hidden; */
 
     .main-inner {
@@ -179,6 +179,10 @@ header.main {
     height: 4.2rem;
     background-color: var(--white);
     border-bottom: 0.1rem solid var(--color-n5);
+    /* & + .content-nav {
+      height:4rem;
+      transition: all ease-in .4s;
+    } */
     .header-description {
       width: 100%;
       margin-left: 1rem;

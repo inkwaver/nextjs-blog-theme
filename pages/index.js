@@ -245,15 +245,15 @@ export default function Index({ globalData }) {
             </p>
             {/* eslint-disable */}
             <div className='case-study-preview'>
-            <h3>Case Study </h3>
-            <p><strong>Redesign Project:</strong> Real Estate Company Website</p>
+           
               <div className='projec-play'>
                 <div className='project-thumbnail'>
                   <img loading="lazy" src='/gif/CaseStudygif.gif' />
 
                 </div>
                 <div className='project-details'>
-                
+                <h3>Case Study </h3>
+                <p><strong>Redesign Project:</strong> Real Estate Company Website</p>
                 <ul>
                   <li><strong>Objective:</strong> Enhance desktop experience for a smoother apartment search.</li>
                   <li><strong>Approach:</strong> Leveraged WordPress for a clean, user-friendly redesign, focusing on simplicity and functionality.</li>
