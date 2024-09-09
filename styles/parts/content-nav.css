@@ -8,7 +8,7 @@
     padding: 2rem var(--wrapper-margin) 0 var(--wrapper-margin);
     position: sticky;
     top:3rem;
-    z-index: 444;
+    z-index: 667;
     gap:var(--size-24);
     margin-top:4rem;
     .nav-group{
@@ -33,16 +33,20 @@
 
 }
 .exp-graph {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    z-index: 1;
-    padding: var(--wrapper-margin);
+    position: sticky;
+  width: 100%;
+  height: 100%;
+  top: 67vh;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1;
+  padding: var(--wrapper-margin);
+  margin-top: -106vh;
+  /* background: white; */
+  backdrop-filter: blur(2rem) ;
+  z-index: 665;
     .design-block {
         align-self: flex-end;
         width: 40%;

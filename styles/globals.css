@@ -51,6 +51,12 @@ body {
   transform: none !important;
 }
 
+.viewport-h {
+  padding-top: 13rem;
+}
+.design-section, .dev-section {
+  padding-top: 13rem;
+}
 /* 
 .single {
   display: grid;

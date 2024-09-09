@@ -93,18 +93,18 @@ export default function Index({ globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <nav className='content-nav wrapper-main'>
         <div className='nav-group'>
-          <Link className="button dev" href="">Skills</Link>
-          <Link className="button dev"  href="">Experience</Link>
+          <Link className="button dev" href="#devSkills">Skills</Link>
+          <Link className="button dev"  href="#devExp">Experience</Link>
         </div>
         <div className='nav-group'>
-          <Link className="button design" href="">Journey</Link>
-          <Link className="button design" href="">Flow</Link>
-          <Link className="button design" href="">Projects</Link>
+          <Link className="button design" href="#journey">Journey</Link>
+          <Link className="button design" href="#designFlow">Flow</Link>
+          <Link className="button design" href="#designProjets">Projects</Link>
         </div>
 
       </nav>
       <main className="w-full home-wrapper main content-slide-container">
-        <section className="design-section ">
+        <section id="journey" className="design-section ">
           <h2 className="big-title design-heading  sticky-header   wrapper-main is-title-sticky intro-title-sticky">
             <IconWithLabel Icon={DesExp} label="Design" />
           </h2>
@@ -119,7 +119,7 @@ export default function Index({ globalData }) {
           </p>
           </div> */}
 
-          <div className="viewport-h  intersect-section wrapper-main first-container">
+          <div  className="viewport-h  intersect-section wrapper-main first-container">
                     
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky ">
               <span className=" mr-15">
@@ -179,7 +179,7 @@ export default function Index({ globalData }) {
             </div>
           </div>
 
-          <div className="design-flow mb-102 wrapper-main viewport-h intersect-section">
+          <div id="designFlow" className="design-flow mb-102 wrapper-main viewport-h intersect-section">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
               <span className="invisible mr-15">
                 <IconWithLabel Icon={DesExp} label="Design" />
@@ -228,7 +228,7 @@ export default function Index({ globalData }) {
             </ul>
           </div>
 
-          <div className="project-part home-snipet mb-102 design-exp wrapper-main viewport-h intersect-section">
+          <div id="designProjets" className="project-part home-snipet mb-102 design-exp wrapper-main viewport-h intersect-section">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
               <span className="invisible mr-15">
                 <IconWithLabel Icon={DesExp} label="Design" />
@@ -286,12 +286,12 @@ export default function Index({ globalData }) {
           </div>
         </section>
 
-        <section className="dev-section">
+        <section id="devSkills" className="dev-section">
           <h2 className="big-title design-heading  sticky-header  wrapper-main is-title-sticky intro-title-sticky">
             <IconWithLabel Icon={DevExp} label="Development" />
           </h2>
 
-          <div className="design-flow  mb-102 wrapper-main viewport-h intersect-section first-container">
+          <div  className="design-flow  mb-102 wrapper-main viewport-h intersect-section first-container">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
               <span className=" mr-15">
                 <IconWithLabel Icon={DesExp} label="Development" />

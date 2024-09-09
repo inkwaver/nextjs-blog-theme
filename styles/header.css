@@ -2,7 +2,7 @@ header.main {
   /* padding: var(--size-15) var(--wrapper-margin); */
   width: 100%;
   /* position: fixed; */
-  z-index: 333;
+  z-index: 666;
   position: fixed;
   left: 0;
   top: 0;
