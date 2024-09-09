@@ -1,98 +1,135 @@
-
 .content-nav {
+  display: flex;
+  /* height: calc(100vh - 4rem); */
+  height: 100vh;
+  align-items: flex-start;
+  justify-content: flex-end;
+  /* flex-direction: row-reverse; */
+  padding-top: 20rem;
+  padding: 2rem var(--wrapper-margin) 0 var(--wrapper-margin);
+  position: sticky;
+  top: 3rem;
+  z-index: 667;
+  gap: var(--size-24);
+  margin-top: 4rem;
+  .nav-group {
     display: flex;
-    /* height: calc(100vh - 4rem); */
-    align-items: flex-start;
-        justify-content: flex-end;
-    padding-top: 20rem;
-    padding: 2rem var(--wrapper-margin) 0 var(--wrapper-margin);
-    position: sticky;
-    top:3rem;
-    z-index: 667;
-    gap:var(--size-24);
-    margin-top:4rem;
-    .nav-group{
-        display:flex;
-        gap:var(--size-9);
-        position: relative;
-        z-index: 2;
+    gap: var(--size-9);
+    position: relative;
+    z-index: 2;
+    transition: all ease-in-out 0.3s;
+    &.nav-dev {
+      margin-top: 69vh;
+      /* margin-right: 2.5rem; */
+      transform: translate(-33vw, 0);
     }
-    .button{
-        cursor: pointer;
-        &.design{
-            border-color: var(--color-s1);
-            color: var(--color-static-p1);
-            background-color: var(--color-s4);
-        }
-        &.dev{
-            border-color: var(--color-p1);
-            color: var(--color-p1);
-            background-color: var(--color-p5);
-        }
+    &.nav-design {
+      margin-top: 69vh;
+      margin-right: 2.5rem;
     }
+  }
+  .button {
+    cursor: pointer;
+    &.design {
+      border-color: var(--color-s1);
+      color: var(--color-static-p1);
+      background-color: var(--color-s4);
+    }
+    &.dev {
+      border-color: var(--color-p1);
+      color: var(--color-p1);
+      background-color: var(--color-p5);
+    }
+  }
+}
+header.sticked {
+  & + .content-nav {
+    height: auto !important;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
 
+    .nav-group {
+      margin-top: 0;
+      &.nav-dev {
+        margin-top: 0;
+        /* margin-right: 2.5rem; */
+        transform: translate(0, 0);
+    }
+    &.nav-design {
+        margin-top: 0;
+        margin-right: 0;
+    }
+    }
+  }
+  & + .content-nav {
+  }
 }
 .exp-graph {
-    position: sticky;
+  position: sticky;
   width: 100%;
   height: 100%;
-  top: 67vh;
+  top: 56vh;
   left: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   z-index: 1;
   padding: var(--wrapper-margin);
-  margin-top: -106vh;
+  margin-top: -214vh;
   /* background: white; */
-  backdrop-filter: blur(2rem) ;
+  /* backdrop-filter: blur(2rem); */
   z-index: 665;
-    .design-block {
-        align-self: flex-end;
-        width: 40%;
-        h4{
-            color:var(--color-s4);
-        }
-        .graph{
-            background-color: var(--color-s7);
-            padding: var(--size-9x2);
-            border:.1rem solid var(--color-s2);
-            color: var(--color-static-p1);
-        }
+
+  .design-block {
+    align-self: flex-end;
+    width: 40%;
+    margin-bottom: 3rem;
+  backdrop-filter: blur(2rem);
+
+    h4 {
+      color: var(--color-s4);
     }
-    .dev-block {
-        /* width: 96%; */
-        h4{
-            color:var(--color-p4);
-        }
-        .graph{
-            background-color: var(--color-p6);
-            padding: var(--size-9x2);
-            border:.1rem solid var(--color-p2);
-            color: var(--color-p1);
-        }
+    .graph {
+      background-color: var(--color-s7);
+      padding: var(--size-9x2);
+      border: 0.1rem solid var(--color-s2);
+      color: var(--color-static-p1);
     }
-    h4{
-        font-size: var(--size-15x2);
-        font-weight: 900;
-        margin-bottom: var(--size-9);
+  }
+  .dev-block {
+    /* width: 96%; */
+  backdrop-filter: blur(2rem);
+
+    h4 {
+      color: var(--color-p4);
     }
-.days {
+    .graph {
+      background-color: var(--color-p6);
+      padding: var(--size-9x2);
+      border: 0.1rem solid var(--color-p2);
+      color: var(--color-p1);
+    }
+  }
+  h4 {
+    font-size: var(--size-15x2);
+    font-weight: 900;
+    margin-bottom: 2rem;
+  }
+  .days {
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 9px;
 
-    >div:after {
-        content: "";
-        position: absolute;
-        height: 100%;
-        background-color: lightblue;
+    > div:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      background-color: lightblue;
     }
-}
-   
+  }
 }
 
 .home-wrapper {
-    margin-top: 100vh;
+  margin-top: 100vh;
 }

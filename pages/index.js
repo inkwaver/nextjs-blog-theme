@@ -91,12 +91,12 @@ export default function Index({ globalData }) {
     <Layout>
       <Header name={globalData.name} />
       <SEO title={globalData.name} description={globalData.blogTitle} />
-      <nav className='content-nav wrapper-main'>
-        <div className='nav-group'>
+      <nav className='content-nav wrapper-main '>
+        <div className='nav-group nav-dev'>
           <Link className="button dev" href="#devSkills">Skills</Link>
           <Link className="button dev"  href="#devExp">Experience</Link>
         </div>
-        <div className='nav-group'>
+        <div className='nav-group nav-design'>
           <Link className="button design" href="#journey">Journey</Link>
           <Link className="button design" href="#designFlow">Flow</Link>
           <Link className="button design" href="#designProjets">Projects</Link>
