@@ -45,7 +45,6 @@ export default function Index({ globalData }) {
     ],
   };
   
-  
   useEffect(() => {
     // Mapping section IDs to their corresponding button classes
     const idToButtonClass = {
@@ -74,7 +73,7 @@ export default function Index({ globalData }) {
           entry.boundingClientRect
         );
   
-        // Always handle the 'intersect-active' class
+        // Handle the 'intersect-active' class
         if (entry.isIntersecting) {
           entry.target.classList.add('intersect-active');
         } else {
@@ -90,7 +89,7 @@ export default function Index({ globalData }) {
         }
       });
   
-      // If there is an active entry closest to the top, activate its corresponding button
+      // Activate the button corresponding to the closest section
       if (activeEntry) {
         const activeSectionId = activeEntry.target.id;
         const activeButtonClass = idToButtonClass[activeSectionId];
@@ -117,10 +116,10 @@ export default function Index({ globalData }) {
       }
     };
   
-    // Create IntersectionObserver instance with refined settings
+    // Create IntersectionObserver instance
     const observer = new IntersectionObserver(handleNavLinkActive, {
-      threshold: 0.1, // Trigger when 10% of the section is visible
-      rootMargin: '-10% 0px -10% 0px', // Adjusted margins for better coverage
+      threshold: [0.1], // Trigger when 10% of the section is visible
+      rootMargin: '0px 0px -20% 0px', // Adjusted to provide more buffer space at the bottom
     });
   
     // Observe sections with specific IDs for navigation button activation
