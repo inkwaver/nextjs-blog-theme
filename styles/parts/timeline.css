@@ -37,7 +37,7 @@
       position: absolute;
       right: calc(-1 * (var(--size-9) / 1.5));
       top: calc(var(--size-9) / 2);
-      transition: all ease-in 0.5s;
+      transition: all ease-in 0.3s;
     }
 
     /* &:first-child:after {

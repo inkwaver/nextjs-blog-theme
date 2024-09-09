@@ -17,14 +17,15 @@
     gap: var(--size-9);
     position: relative;
     z-index: 2;
-    transition: all ease-in-out 0.3s;
+     transition: transform ease-in-out 0.3s,
+     margin ease-in-out 0.3s; 
     &.nav-dev {
-      margin-top: 69vh;
+      padding-top: 69vh;
       /* margin-right: 2.5rem; */
       transform: translate(-33vw, 0);
     }
     &.nav-design {
-      margin-top: 69vh;
+        padding-top: 69vh;
       margin-right: 2.5rem;
     }
   }
@@ -34,11 +35,17 @@
       border-color: var(--color-s1);
       color: var(--color-static-p1);
       background-color: var(--color-s4);
+      &.active {
+        color: var(--color-s4);
+      }
     }
     &.dev {
       border-color: var(--color-p1);
       color: var(--color-p1);
       background-color: var(--color-p5);
+      &.active {
+        color: var(--color-p5);
+      }
     }
   }
 }
@@ -51,12 +58,12 @@ header.sticked {
     .nav-group {
       margin-top: 0;
       &.nav-dev {
-        margin-top: 0;
+        padding-top: 0;
         /* margin-right: 2.5rem; */
         transform: translate(0, 0);
     }
     &.nav-design {
-        margin-top: 0;
+        padding-top: 0;
         margin-right: 0;
     }
     }

@@ -175,7 +175,7 @@ header.main {
 
 header.main {
   &.sticked {
-    transition: all ease-in 0.1s;
+    /* transition: all ease-in 0.1s; */
     height: 4.2rem;
     background-color: var(--white);
     border-bottom: 0.1rem solid var(--color-n5);
@@ -220,7 +220,7 @@ header.main {
   background-color: red;
 }
 .hero-header .avatar {
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; */
 }
 
 /* .logo .avatar {

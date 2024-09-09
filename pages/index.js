@@ -44,27 +44,92 @@ export default function Index({ globalData }) {
       },
     ],
   };
-
+  
+  
   useEffect(() => {
-    // Intersection Observer for `intersect-section`
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('intersect-active');
-          } else {
-            entry.target.classList.remove('intersect-active');
-          }
+    // Mapping section IDs to their corresponding button classes
+    const idToButtonClass = {
+      devSkills: 'dev-skills',
+      devExp: 'dev-exp',
+      journey: 'journey',
+      designFlow: 'designflow',
+      designProjets: 'design-projets',
+    };
+  
+    // Intersection Observer callback
+    const handleNavLinkActive = (entries) => {
+      let activeEntry = null; // To store the section closest to the top
+  
+      entries.forEach((entry) => {
+        const sectionId = entry.target.id;
+        const buttonClass = idToButtonClass[sectionId];
+  
+        // Debug: Log the entry being processed and its intersection status
+        console.log(
+          'Processing section:',
+          sectionId || '<no id>',
+          'Is intersecting:',
+          entry.isIntersecting,
+          'Entry bounding client rect:',
+          entry.boundingClientRect
+        );
+  
+        // Always handle the 'intersect-active' class
+        if (entry.isIntersecting) {
+          entry.target.classList.add('intersect-active');
+        } else {
+          entry.target.classList.remove('intersect-active');
+        }
+  
+        // Determine the active entry closest to the top of the viewport
+        if (entry.isIntersecting && (!activeEntry || entry.boundingClientRect.top < activeEntry.boundingClientRect.top)) {
+          activeEntry = entry;
+        }
+      });
+  
+      // If there is an active entry closest to the top, activate its corresponding button
+      if (activeEntry) {
+        const activeSectionId = activeEntry.target.id;
+        const activeButtonClass = idToButtonClass[activeSectionId];
+  
+        // Remove the active class from all buttons
+        Object.values(idToButtonClass).forEach((cls) => {
+          const button = document.querySelector(`.${cls}`);
+          button?.classList.remove('active');
         });
-      },
-      { threshold: 0.6 }
+  
+        // Debug: Log the button being activated
+        console.log('Activating button:', activeButtonClass);
+  
+        // Add the active class to the button corresponding to the closest section
+        if (activeButtonClass) {
+          document.querySelector(`.${activeButtonClass}`)?.classList.add('active');
+        }
+      }
+    };
+  
+    // Create IntersectionObserver instance with adjusted settings
+    const observer = new IntersectionObserver(handleNavLinkActive, {
+      threshold: [0.1, 0.5, 0.9], // Multiple thresholds for finer detection
+      rootMargin: '100px 0px -100px 0px', // Revert to pixel units
+    });
+  
+    // Observe sections with specific IDs for navigation button activation
+    const sections = document.querySelectorAll(
+      '#devSkills, #devExp, #journey, #designFlow, #designProjets'
     );
-
-    // Observe elements with the class `intersect-section`
-    document.querySelectorAll('.intersect-section').forEach((section) => {
+  
+    // Also observe elements with the class 'intersect-section'
+    const intersectSections = document.querySelectorAll('.intersect-section');
+  
+    // Combine all sections to be observed
+    const allSections = [...sections, ...intersectSections];
+  
+    allSections.forEach((section) => {
+      console.log('Observing section:', section.id || section.className); // Debug: Log each section being observed
       observer.observe(section);
     });
-
+  
     // Handling sticky headers
     const handleScroll = () => {
       document.querySelectorAll('.is-title-sticky').forEach((header) => {
@@ -77,15 +142,16 @@ export default function Index({ globalData }) {
         }
       });
     };
-
+  
     window.addEventListener('scroll', handleScroll);
-
+  
     // Cleanup on component unmount
     return () => {
       observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  
 
   return (
     <Layout>
@@ -93,13 +159,13 @@ export default function Index({ globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <nav className='content-nav wrapper-main '>
         <div className='nav-group nav-dev'>
-          <Link className="button dev" href="#devSkills">Skills</Link>
-          <Link className="button dev"  href="#devExp">Experience</Link>
+          <Link className="button dev dev-skills" href="#devSkills">Skills</Link>
+          <Link className="button dev dev-exp"  href="#devExp">Experience</Link>
         </div>
         <div className='nav-group nav-design'>
-          <Link className="button design" href="#journey">Journey</Link>
-          <Link className="button design" href="#designFlow">Flow</Link>
-          <Link className="button design" href="#designProjets">Projects</Link>
+          <Link className="button design journey" href="#journey">Journey</Link>
+          <Link className="button design designflow" href="#designFlow">Flow</Link>
+          <Link className="button design design-projets" href="#designProjets">Projects</Link>
         </div>
 
       </nav>
