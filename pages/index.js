@@ -82,7 +82,10 @@ export default function Index({ globalData }) {
         }
   
         // Determine the active entry closest to the top of the viewport
-        if (entry.isIntersecting && (!activeEntry || entry.boundingClientRect.top < activeEntry.boundingClientRect.top)) {
+        if (
+          entry.isIntersecting &&
+          (!activeEntry || entry.boundingClientRect.top < activeEntry.boundingClientRect.top)
+        ) {
           activeEntry = entry;
         }
       });
@@ -105,13 +108,19 @@ export default function Index({ globalData }) {
         if (activeButtonClass) {
           document.querySelector(`.${activeButtonClass}`)?.classList.add('active');
         }
+      } else {
+        // If no active entry, remove the 'active' class from all buttons
+        Object.values(idToButtonClass).forEach((cls) => {
+          const button = document.querySelector(`.${cls}`);
+          button?.classList.remove('active');
+        });
       }
     };
   
-    // Create IntersectionObserver instance with adjusted settings
+    // Create IntersectionObserver instance with refined settings
     const observer = new IntersectionObserver(handleNavLinkActive, {
-      threshold: [0.1, 0.5, 0.9], // Multiple thresholds for finer detection
-      rootMargin: '100px 0px -100px 0px', // Revert to pixel units
+      threshold: 0.1, // Trigger when 10% of the section is visible
+      rootMargin: '-10% 0px -10% 0px', // Adjusted margins for better coverage
     });
   
     // Observe sections with specific IDs for navigation button activation
@@ -130,7 +139,7 @@ export default function Index({ globalData }) {
       observer.observe(section);
     });
   
-    // Handling sticky headers
+    // Sticky header handling function
     const handleScroll = () => {
       document.querySelectorAll('.is-title-sticky').forEach((header) => {
         const stickyPosition = header.getBoundingClientRect().top;
@@ -143,6 +152,7 @@ export default function Index({ globalData }) {
       });
     };
   
+    // Add scroll event listener for sticky headers
     window.addEventListener('scroll', handleScroll);
   
     // Cleanup on component unmount
@@ -152,6 +162,7 @@ export default function Index({ globalData }) {
     };
   }, []);
   
+  
 
   return (
     <Layout>
@@ -159,18 +170,18 @@ export default function Index({ globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <nav className='content-nav wrapper-main '>
         <div className='nav-group nav-dev'>
-          <Link className="button dev dev-skills" href="#devSkills">Skills</Link>
+          <Link className="button dev dev-skills" href="#devSkillsSection">Skills</Link>
           <Link className="button dev dev-exp"  href="#devExp">Experience</Link>
         </div>
         <div className='nav-group nav-design'>
-          <Link className="button design journey" href="#journey">Journey</Link>
+          <Link className="button design journey" href="#journeySection">Journey</Link>
           <Link className="button design designflow" href="#designFlow">Flow</Link>
           <Link className="button design design-projets" href="#designProjets">Projects</Link>
         </div>
 
       </nav>
       <main className="w-full home-wrapper main content-slide-container">
-        <section id="journey" className="design-section ">
+        <section id="journeySection"  className="design-section ">
           <h2 className="big-title design-heading  sticky-header   wrapper-main is-title-sticky intro-title-sticky">
             <IconWithLabel Icon={DesExp} label="Design" />
           </h2>
@@ -185,7 +196,7 @@ export default function Index({ globalData }) {
           </p>
           </div> */}
 
-          <div  className="viewport-h  intersect-section wrapper-main first-container">
+          <div id="journey"  className="viewport-h  intersect-section wrapper-main first-container">
                     
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky ">
               <span className=" mr-15">
@@ -352,12 +363,12 @@ export default function Index({ globalData }) {
           </div>
         </section>
 
-        <section id="devSkills" className="dev-section">
+        <section id="devSkillsSection" className="dev-section">
           <h2 className="big-title design-heading  sticky-header  wrapper-main is-title-sticky intro-title-sticky">
             <IconWithLabel Icon={DevExp} label="Development" />
           </h2>
 
-          <div  className="design-flow  mb-102 wrapper-main viewport-h intersect-section first-container">
+          <div id="devSkills"   className="design-flow  mb-102 wrapper-main viewport-h intersect-section first-container">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
               <span className=" mr-15">
                 <IconWithLabel Icon={DesExp} label="Development" />
