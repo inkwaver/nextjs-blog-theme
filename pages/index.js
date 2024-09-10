@@ -59,7 +59,7 @@ export default function Index({ globalData }) {
 
       entries.forEach((entry) => {
         const sectionId = entry.target.id;
-        const buttonClass = idToButtonClass[sectionId];
+        // const buttonClass = idToButtonClass[sectionId];
 
         console.log(
           'Processing section:',
