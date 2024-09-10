@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import Image from "next/legacy/image";
 // import ImageViewerModal from '../ImageViewerModal';
 
-const ProjectExperience = () => {
+const ProjectExperience = ({ onVisibleSectionChange }) => {
   const [responsiveMode, setResponsiveMode] = useState('desktop');
   const [colorMode, setColorMode] = useState('dark');
   const colLeftRefs = useRef([]);
@@ -16,6 +16,8 @@ const ProjectExperience = () => {
   const handleColorModeChange = (event) => {
     setColorMode(event.target.value);
   };
+
+
 
   useEffect(() => {
     const options = {
@@ -42,25 +44,32 @@ const ProjectExperience = () => {
 
       if (newHighlightIndex !== highlightIndex) {
         setHighlightIndex(newHighlightIndex);
+        // Notify parent of visibility change
+        if (typeof onVisibleSectionChange === 'function') {
+          onVisibleSectionChange(newHighlightIndex !== null ? 'devExp' : null); // Notify that "Experience" section is visible or none
+        }
       }
     }, options);
 
     colLeftRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
-    /* eslint-disable */
+
     return () => {
       colLeftRefs.current.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
-  }, [lastScrollTop, highlightIndex]);
+  }, [highlightIndex, lastScrollTop, onVisibleSectionChange]);
 
   useEffect(() => {
     const handleScroll = () => {
       setLastScrollTop(window.scrollY);
       if (window.scrollY === 0) {
         setHighlightIndex(null);
+        if (typeof onVisibleSectionChange === 'function') {
+          onVisibleSectionChange(null); // Clear active state when at the top
+        }
       }
     };
 
@@ -68,7 +77,7 @@ const ProjectExperience = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [onVisibleSectionChange]);
 
   return (         <div className="project-block">
     <input id="more-projects" type='checkbox'/>

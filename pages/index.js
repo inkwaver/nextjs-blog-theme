@@ -46,7 +46,6 @@ export default function Index({ globalData }) {
   };
   
   useEffect(() => {
-    // Mapping section IDs to their corresponding button classes
     const idToButtonClass = {
       devSkills: 'dev-skills',
       devExp: 'dev-exp',
@@ -54,16 +53,14 @@ export default function Index({ globalData }) {
       designFlow: 'designflow',
       designProjets: 'design-projets',
     };
-  
-    // Intersection Observer callback
+
     const handleNavLinkActive = (entries) => {
-      let activeEntry = null; // To store the section closest to the top
-  
+      let activeEntry = null;
+
       entries.forEach((entry) => {
         const sectionId = entry.target.id;
         const buttonClass = idToButtonClass[sectionId];
-  
-        // Debug: Log the entry being processed and its intersection status
+
         console.log(
           'Processing section:',
           sectionId || '<no id>',
@@ -72,73 +69,46 @@ export default function Index({ globalData }) {
           'Entry bounding client rect:',
           entry.boundingClientRect
         );
-  
-        // Handle the 'intersect-active' class
+
         if (entry.isIntersecting) {
           entry.target.classList.add('intersect-active');
         } else {
           entry.target.classList.remove('intersect-active');
         }
-  
-        // Determine the active entry closest to the top of the viewport
-        if (
-          entry.isIntersecting &&
-          (!activeEntry || entry.boundingClientRect.top < activeEntry.boundingClientRect.top)
-        ) {
+
+        if (entry.isIntersecting && (!activeEntry || entry.boundingClientRect.top < activeEntry.boundingClientRect.top)) {
           activeEntry = entry;
         }
       });
-  
-      // Activate the button corresponding to the closest section
+
       if (activeEntry) {
         const activeSectionId = activeEntry.target.id;
         const activeButtonClass = idToButtonClass[activeSectionId];
-  
-        // Remove the active class from all buttons
+
         Object.values(idToButtonClass).forEach((cls) => {
           const button = document.querySelector(`.${cls}`);
           button?.classList.remove('active');
         });
-  
-        // Debug: Log the button being activated
+
         console.log('Activating button:', activeButtonClass);
-  
-        // Add the active class to the button corresponding to the closest section
+
         if (activeButtonClass) {
           document.querySelector(`.${activeButtonClass}`)?.classList.add('active');
         }
-      } else {
-        // If no active entry, remove the 'active' class from all buttons
-        Object.values(idToButtonClass).forEach((cls) => {
-          const button = document.querySelector(`.${cls}`);
-          button?.classList.remove('active');
-        });
       }
     };
-  
-    // Create IntersectionObserver instance
+
     const observer = new IntersectionObserver(handleNavLinkActive, {
-      threshold: [0.1], // Trigger when 10% of the section is visible
-      rootMargin: '0px 0px -20% 0px', // Adjusted to provide more buffer space at the bottom
+      threshold: [0.1, 0.5, 0.9],
+      rootMargin: '10px 0px -10px 0px',
     });
-  
-    // Observe sections with specific IDs for navigation button activation
-    const sections = document.querySelectorAll(
-      '#devSkills, #devExp, #journey, #designFlow, #designProjets'
-    );
-  
-    // Also observe elements with the class 'intersect-section'
-    const intersectSections = document.querySelectorAll('.intersect-section');
-  
-    // Combine all sections to be observed
-    const allSections = [...sections, ...intersectSections];
-  
-    allSections.forEach((section) => {
-      console.log('Observing section:', section.id || section.className); // Debug: Log each section being observed
+
+    const sections = document.querySelectorAll('#devSkills, #devExp, #journey, #designFlow, #designProjets');
+
+    sections.forEach((section) => {
       observer.observe(section);
     });
-  
-    // Sticky header handling function
+
     const handleScroll = () => {
       document.querySelectorAll('.is-title-sticky').forEach((header) => {
         const stickyPosition = header.getBoundingClientRect().top;
@@ -149,18 +119,23 @@ export default function Index({ globalData }) {
           header.classList.remove('title-sticky');
         }
       });
+
+      // Ensure active class is removed when at the top of the page
+      if (window.scrollY === 0) {
+        Object.values(idToButtonClass).forEach((cls) => {
+          const button = document.querySelector(`.${cls}`);
+          button?.classList.remove('active');
+        });
+      }
     };
-  
-    // Add scroll event listener for sticky headers
+
     window.addEventListener('scroll', handleScroll);
-  
-    // Cleanup on component unmount
+
     return () => {
       observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
   
 
   return (
