@@ -49,7 +49,8 @@
     }
   }
 }
-header.sticked {
+
+/* header.sticked {
   & + .content-nav {
     height: auto !important;
     flex-direction: row-reverse;
@@ -59,7 +60,6 @@ header.sticked {
       margin-top: 0;
       &.nav-dev {
         padding-top: 0;
-        /* margin-right: 2.5rem; */
         transform: translate(0, 0);
     }
     &.nav-design {
@@ -70,19 +70,19 @@ header.sticked {
   }
   & + .content-nav {
   }
-}
+} */
 .exp-graph {
   position: sticky;
   width: 100%;
   height: 100%;
-  top: 56vh;
+  /* top: 56vh; */
   left: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   z-index: 1;
   padding: var(--wrapper-margin);
-  margin-top: -214vh;
+  /* margin-top: -214vh; */
   /* background: white; */
   /* backdrop-filter: blur(2rem); */
   z-index: 665;

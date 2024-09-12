@@ -55,6 +55,7 @@ export default function Header() {
 
   return (
     <header className={`main ${avatarSize <= 45 ? 'sticked' : 'hero-header'}`}>
+    {/* <header className="sticked"> */}
       {/* eslint-disable */}
       <input
         checked={isChecked}
@@ -74,36 +75,28 @@ export default function Header() {
             <Link
               className={isActiveLink('/') ? 'active' : ''}
               href="/"
-              style={{
-                width: `${avatarSize}px`,
-                height: `${avatarSize}px`,
-                transform: `scale(${avatarSize / 180})`,
-              }}
+           
             >
               <Image
                 className="avatar"
                 src="/narek-ch.jpg"
                 alt="Image description"
-                // width={180}
-                // height={180}
-                fill
+                width={45}
+                height={45}
+                // fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading="eager"
               />
             </Link>
           </h1>
-          <div className="header-description">
+    
             <Link className="huge-title" href="/">
               <span className="logo-name">Narek Chilingaryan</span>
             </Link>
 
-            <p className="paragraph">
-              I <strong>design interfaces</strong> and translate them into
-              markup that's high-resolution, features smooth scrolling, is
-              mobile-friendly, and prioritizes accessibility.
-            </p>
+        
             {/* eslint-enable */}
-          </div>
+      
         </div>
         <div className="header-links">
           <Link

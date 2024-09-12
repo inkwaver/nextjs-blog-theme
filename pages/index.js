@@ -155,6 +155,23 @@ export default function Index({ globalData }) {
 
       </nav>
       <main className="w-full home-wrapper main content-slide-container">
+        <section className='hero-sect viewport-h '>
+        <Image
+                className="avatar"
+                src="/narek-ch.jpg"
+                alt="Image description"
+                width={45}
+                height={45}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                loading="eager"
+              />
+                  <p className="paragraph">
+              I <strong>design interfaces</strong> and translate them into
+              markup that's high-resolution, features smooth scrolling, is
+              mobile-friendly, and prioritizes accessibility.
+            </p>
+        </section>
         <section id="journeySection"  className="design-section ">
           <h2 className="big-title design-heading  sticky-header   wrapper-main is-title-sticky intro-title-sticky">
             <IconWithLabel Icon={DesExp} label="Design" />
