@@ -1,18 +1,18 @@
 .hero-sect {
-    position: absolute;
+  position: absolute;
 
-    /* .image-holder {
+  /* .image-holder {
         width: 1750px;
     } */
 
-    .paragraph {}
+  .paragraph {
+  }
 }
 
-.journey-container {}
+.journey-container {
+}
 
 /* temp layout styles start */
-
-
 
 /* .content-navigation {
     position: sticky;
@@ -71,100 +71,94 @@
     }
 } */
 
-
 .section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 
-    /* &:nth-child(even) {
+  /* &:nth-child(even) {
         background-color: pink;
     } */
 
-    &.first {
-        flex-direction: column;
-        height: auto;
-    }
+  &.first {
+    flex-direction: column;
+    height: auto;
+  }
 
+  .hero-section {
+    height: 12rem;
+    width: 21rem;
+    /* background-color: gray; */
+    margin-bottom: -12rem;
+    position: relative;
+    align-self: flex-start;
+    position: absolute;
+    z-index: 4;
+    /* top: calc(100vh - 29rem); */
+    top: 12rem;
+  }
 
-
-
-    .hero-section {
-        height: 12rem;
-        width: 21rem;
-        /* background-color: gray; */
-        margin-bottom: -12rem;
-        position: relative;
-        align-self: flex-start;
-        position: absolute;
-        z-index: 4;
-        /* top: calc(100vh - 29rem); */
-        top: 12rem;
-    }
-
-
-    .graph-section {
-        height: 100vh;
-        width: 100%;
-        /* background-color: aquamarine; */
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        position: sticky;
-        top: 0;
-        z-index: 544;
-        opacity: .6;
-/* 
+  .graph-section {
+    height: 100vh;
+    width: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    z-index: 544;
+    /* opacity: 0.6; */
+    /* 
         &>div {
             height: 9rem;
         } */
 
-        .g1 {
-            width: 40%;
-            /* background-color: yellow; */
-            align-self: flex-end;
-            h4 {
-                color: var(--color-s4);
-              }
-              .graph {
-                background-color: var(--color-s7);
-                padding: var(--size-9x2);
-                border: 0.1rem solid var(--color-s2);
-                color: var(--color-static-p1);
-              }
-          
-        }
-
-        .g2 {
-            width: 100%;
-            h4 {
-                color: var(--color-p4);
-              }
-            .graph {
-                background-color: var(--color-p6);
-                padding: var(--size-9x2);
-                border: 0.1rem solid var(--color-p2);
-                color: var(--color-p1);
-              }
-        }
+    .g1 {
+      width: 40%;
+      /* background-color: yellow; */
+      align-self: flex-end;
+      h4 {
+        color: var(--color-s4);
+        opacity: 0;
+        transition: all ease-in-out 0.3s;
+      }
+      .graph {
+        background-color: var(--color-s7);
+        padding: var(--size-9x2);
+        border: 0.1rem solid var(--color-s2);
+        color: var(--color-static-p1);
+      }
     }
 
-    .journey-section {
-        height: 100vh;
-        width: 100%;
-        /* background-color: green; */
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        padding-top: 7rem;
-        /* position: relative;
+    .g2 {
+      width: 100%;
+      h4 {
+        color: var(--color-p4);
+        opacity: 0;
+        transition: all ease-in-out 0.3s;
+
+      }
+      .graph {
+        background-color: var(--color-p6);
+        padding: var(--size-9x2);
+        border: 0.1rem solid var(--color-p2);
+        color: var(--color-p1);
+      }
+    }
+  }
+
+  .journey-section {
+    height: 100vh;
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 7rem;
+    /* position: relative;
         z-index: 6; */
-    }
-
-
+  }
 }
 
 /* temp layout styles end */
-
-
-

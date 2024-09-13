@@ -1,11 +1,11 @@
 .content-nav {
   position: sticky;
   top: 0;
+  z-index: 600;
   transition: all ease-in-out .5s;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  z-index: 44;
   transition: all ease-in-out;
   margin-bottom: -57px;
   .nav-group {
@@ -21,12 +21,14 @@
 
     &.nav-dev {
       width: 60%;
-      transform: translate(0, calc(100vh - 10rem));
+      transform: translate(0, calc(100vh - 11rem));
     }
 
     &.nav-design {
       width: 40%;
       padding-right: 0;
+      transform: translate(0, calc(100vh - 17rem))
+
     }
   }
 
@@ -60,8 +62,7 @@ header.sticked+main.main {
   .content-nav {
     position: sticky;
     top: 5rem;
-  z-index: 544;
-
+    z-index: 600;
     transition: all ease-in-out .5s;
     flex-direction: row-reverse;
     justify-content: flex-start;
@@ -83,6 +84,10 @@ header.sticked+main.main {
 
     }
 
+  }
+  .graph-section .g1 h4, .graph-section .g2 h4{
+    opacity: 1;
+    transition: all ease-in-out .3s;
   }
 }
 
