@@ -1,7 +1,7 @@
 .content-nav {
   display: flex;
   /* height: calc(100vh - 4rem); */
-  height: 100vh;
+  /* height: 100vh; */
   align-items: flex-start;
   justify-content: flex-end;
   /* flex-direction: row-reverse; */
@@ -20,12 +20,10 @@
      transition: transform ease-in-out 0.3s,
      margin ease-in-out 0.3s; 
     &.nav-dev {
-      padding-top: 69vh;
       /* margin-right: 2.5rem; */
       transform: translate(-33vw, 0);
     }
     &.nav-design {
-        padding-top: 69vh;
       margin-right: 2.5rem;
     }
   }

@@ -164,7 +164,7 @@ ul {
 }
 
 main.main {
-  padding: var(--wrapper-margin);
+  padding:0  var(--wrapper-margin);
 }
 
 .wrapper-sec {

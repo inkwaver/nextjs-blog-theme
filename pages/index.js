@@ -44,7 +44,7 @@ export default function Index({ globalData }) {
       },
     ],
   };
-  
+
   useEffect(() => {
     const idToButtonClass = {
       devSkills: 'dev-skills',
@@ -136,16 +136,20 @@ export default function Index({ globalData }) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
 
   return (
     <Layout>
       <Header name={globalData.name} />
       <SEO title={globalData.name} description={globalData.blogTitle} />
+
+ 
+
+      <main className="w-full home-wrapper main content-slide-container">
       <nav className='content-nav wrapper-main '>
         <div className='nav-group nav-dev'>
           <Link className="button dev dev-skills" href="#devSkillsSection">Skills</Link>
-          <Link className="button dev dev-exp"  href="#devExp">Experience</Link>
+          <Link className="button dev dev-exp" href="#devExp">Experience</Link>
         </div>
         <div className='nav-group nav-design'>
           <Link className="button design journey" href="#journeySection">Journey</Link>
@@ -154,41 +158,113 @@ export default function Index({ globalData }) {
         </div>
 
       </nav>
-      <main className="w-full home-wrapper main content-slide-container">
-        <section className='hero-sect viewport-h '>
-        <Image
-                className="avatar"
-                src="/narek-ch.jpg"
-                alt="Image description"
-                width={45}
-                height={45}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                loading="eager"
-              />
-                  <p className="paragraph">
-              I <strong>design interfaces</strong> and translate them into
-              markup that's high-resolution, features smooth scrolling, is
-              mobile-friendly, and prioritizes accessibility.
-            </p>
-        </section>
-        <section id="journeySection"  className="design-section ">
-          <h2 className="big-title design-heading  sticky-header   wrapper-main is-title-sticky intro-title-sticky">
-            <IconWithLabel Icon={DesExp} label="Design" />
-          </h2>
+      <div className='content-navigation '>
+        <div className='navigation-group ng-dev'>
+            <Link href="/">Skills</Link>
+            <Link href="/">Experience</Link>
+          <h3>Development</h3>
 
-          {/* <div className="viewport-h  intersect-section wrapper-main" >
-          <p className=" indipend-paragraph">
-            should tell a cohesive story, breaking it down into logical,
-            step-by-step pieces. By using color and shape effectively, each
-            element should contribute to the narrative, guiding the user through
-            a clear, visually engaging journey while delivering the message with
-            clarity and purpose.
-          </p>
-          </div> */}
+        </div>
+        <div className='navigation-group ng-design'>
 
-          <div id="journey"  className="viewport-h  intersect-section wrapper-main first-container">
-                    
+            <Link href="/">Journey</Link>
+            <Link href="/">Flow</Link>
+            <Link href="/">Project</Link>
+        <h3>Design</h3>
+
+        </div>
+      </div>
+      <div className='section first intersect-section'>
+
+        <div className='hero-section'>hero</div>
+        
+      
+
+        <div className='graph-section'>
+          <div className='g1'></div>
+          <div className='g2'></div>
+        </div>
+
+        <div className='journey-section'>
+          journey
+        </div>
+
+      </div>
+      <div className='section '>
+        1
+      </div>
+      <div className='section'>
+        1
+      </div>
+      <div className='section'>
+        1
+      </div>
+      <div className='section'>
+        1
+      </div>
+      <div className='section'>
+        1
+      </div>
+
+      <div id="journey" className="intersect-section wrapper-main first-container journey-container">
+            <section className='hero-sect '>
+              <div className='image-holder'>
+                <Image
+                  className="avatar"
+                  src="/narek-ch.jpg"
+                  alt="Image description"
+                  width={90}
+                  height={90}
+                  // fill
+                  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="lazy"
+                />
+              </div>
+
+              <p className="paragraph">
+                I <strong>design interfaces</strong> and translate them into
+                markup that's high-resolution, features smooth scrolling, is
+                mobile-friendly, and prioritizes accessibility.
+              </p>
+            </section>
+            <div className='exp-graph'>
+              <div className='design-block exp-block'>
+                <h4>
+                  UI/UX Design
+                </h4>
+                <div className='graph'>
+                  UX Research, Wireframing, Design System, Atomic Design
+                  Prototyping
+                </div>
+              </div>
+              <div className='dev-block exp-block'>
+                <h4>
+                  DEVELOPMENT
+                </h4>
+                <div className='graph'>
+                  Markup Specialist "{"Accesibilty, Seo, High resolution, Responsive, BEM,  "}"
+                </div>
+              </div>
+              <div className='days'>
+                <div>2010</div>
+                <div>2011</div>
+                <div>2012</div>
+                <div>2013</div>
+                <div>2014</div>
+                <div>2015</div>
+                <div>2016</div>
+
+                <div>2017</div>
+                <div>2018</div>
+                <div>2019</div>
+                <div>2020</div>
+                <div>2021</div>
+                <div>2022</div>
+                <div>2023</div>
+                <div>2024</div>
+
+              </div>
+            </div>
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky ">
               <span className=" mr-15">
                 <IconWithLabel Icon={DesExp} label="Design" />
@@ -207,45 +283,31 @@ export default function Index({ globalData }) {
               technical precision with creative vision.”
               {/* "From transforming beautiful designs into code to mastering the nuances of layout and spacing, my journey has been one of both challenge and discovery. It wasn’t always easy—early on, designers and I would navigate countless revisions, struggling to achieve that perfect result. But over the years, I’ve learned to measure every space, to understand design proportions, and to bring sketches to life in code." */}
             </p>
-            <div className='exp-graph'>
-                <div className='design-block exp-block'>
-                  <h4>
-                    UI/UX Design
-                  </h4>
-                  <div className='graph'>
-                  UX Research, Wireframing, Design System, Atomic Design
-                  Prototyping
-                  </div>
-                </div>
-                <div className='dev-block exp-block'>
-                  <h4>
-                  DEVELOPMENT
-                  </h4>
-                  <div className='graph'>
-                  Markup Specialist "{"Accesibilty, Seo, High resolution, Responsive, BEM,  "}"
-                  </div>
-                </div>
-                <div className='days'>
-                  <div>2010</div>
-                  <div>2011</div>
-                  <div>2012</div>
-                  <div>2013</div>
-                  <div>2014</div>
-                  <div>2015</div>
-                  <div>2016</div>
-
-                  <div>2017</div>
-                  <div>2018</div>
-                  <div>2019</div>
-                  <div>2020</div>
-                  <div>2021</div>
-                  <div>2022</div>
-                  <div>2023</div>
-                  <div>2024</div>
-
-                </div>
-            </div>
+            
           </div>
+
+
+        <section id="journeySection" className="design-section ">
+
+
+
+
+
+          <h2 className="big-title design-heading  sticky-header   wrapper-main is-title-sticky intro-title-sticky">
+            <IconWithLabel Icon={DesExp} label="Design" />
+          </h2>
+
+          {/* <div className="viewport-h  intersect-section wrapper-main" >
+          <p className=" indipend-paragraph">
+            should tell a cohesive story, breaking it down into logical,
+            step-by-step pieces. By using color and shape effectively, each
+            element should contribute to the narrative, guiding the user through
+            a clear, visually engaging journey while delivering the message with
+            clarity and purpose.
+          </p>
+          </div> */}
+
+          
 
           <div id="designFlow" className="design-flow mb-102 wrapper-main viewport-h intersect-section">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
@@ -313,28 +375,28 @@ export default function Index({ globalData }) {
             </p>
             {/* eslint-disable */}
             <div className='case-study-preview'>
-           
+
               <div className='projec-play'>
                 <div className='project-thumbnail'>
                   <img loading="lazy" src='/gif/CaseStudygif.gif' />
 
                 </div>
                 <div className='project-details'>
-                <h3>Case Study </h3>
-                <p><strong>Redesign Project:</strong> Real Estate Company Website</p>
-                <ul>
-                  <li><strong>Objective:</strong> Enhance desktop experience for a smoother apartment search.</li>
-                  <li><strong>Approach:</strong> Leveraged WordPress for a clean, user-friendly redesign, focusing on simplicity and functionality.</li>
-                  <li><strong>Research & Planning:</strong> Mapped out sitemaps, wireframes, and conducted atomic design to streamline the user journey.</li>
-                  <li><strong>Execution:</strong> Crafted prototypes and documented the design process to ensure a smooth alpha launch.</li>
-                  <li> <strong>Outcome: </strong>
-                  Improved client satisfaction by simplifying the apartment search experience.</li>
-                </ul>
-                <a  className="button " href="/posts/case-study-real-estate-brief">View Case Study</a>
+                  <h3>Case Study </h3>
+                  <p><strong>Redesign Project:</strong> Real Estate Company Website</p>
+                  <ul>
+                    <li><strong>Objective:</strong> Enhance desktop experience for a smoother apartment search.</li>
+                    <li><strong>Approach:</strong> Leveraged WordPress for a clean, user-friendly redesign, focusing on simplicity and functionality.</li>
+                    <li><strong>Research & Planning:</strong> Mapped out sitemaps, wireframes, and conducted atomic design to streamline the user journey.</li>
+                    <li><strong>Execution:</strong> Crafted prototypes and documented the design process to ensure a smooth alpha launch.</li>
+                    <li> <strong>Outcome: </strong>
+                      Improved client satisfaction by simplifying the apartment search experience.</li>
+                  </ul>
+                  <a className="button " href="/posts/case-study-real-estate-brief">View Case Study</a>
+                </div>
+
               </div>
-              
-              </div>
-        
+
             </div>
             <div className="project-img max-wdth-1500">
               {images.smartbet.map((image, index) => (
@@ -359,7 +421,7 @@ export default function Index({ globalData }) {
             <IconWithLabel Icon={DevExp} label="Development" />
           </h2>
 
-          <div id="devSkills"   className="design-flow  mb-102 wrapper-main viewport-h intersect-section first-container">
+          <div id="devSkills" className="design-flow  mb-102 wrapper-main viewport-h intersect-section first-container">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
               <span className=" mr-15">
                 <IconWithLabel Icon={DesExp} label="Development" />

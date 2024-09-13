@@ -36,7 +36,7 @@ export default function Header() {
     };
 
     // Apply the avatar size change and scroll effect only on the home page
-    if (router.pathname === '/') {
+    if (router.pathname === '/' || router.pathname === '/home') {
       // Check the initial scroll position
       handleScroll();
 

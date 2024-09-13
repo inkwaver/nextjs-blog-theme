@@ -1,14 +1,150 @@
-.hero {
-    height: 100vh;
-    width: 100%;
+.hero-sect {
+    position: absolute;
+
+    .image-holder {
+        width: 1750px;
+    }
+
+    .paragraph {}
+}
+
+.journey-container {}
+
+/* temp layout styles start */
+
+
+
+.content-navigation {
+    position: sticky;
+    top: 0;
+    transition: all ease-in-out .5s;
+
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap:3rem;
-    .hero-avatar {
-        border-radius: 50%;
-        overflow: hidden;
-        /* padding: 1rem; */
-        border: 0.1rem solid;
+    justify-content: flex-end;
+    z-index: 44;
+    transition: all ease-in-out;
+
+    .navigation-group  {
+        /* position: sticky;
+        top: 5rem; */
+        transition: all ease-in-out .4s;
+        transform: translate(0,  calc(100vh - 19rem));
+        /* top: calc(100vh - 19rem); */
+        /* padding-left: 2rem; */
+        h3 {
+            opacity: 1;
+            transition: all ease-in-out .4s;
+        }
+    }
+    .ng-design {
+        width: 40%;
+        padding-right:0;
+
+    }
+    .ng-dev {
+        width: 60%;
+        transform: translate(0,  calc(100vh - 10rem));
     }
 }
+
+header.sticked+main.main {
+    .content-navigation {
+        position: sticky;
+        top: 5rem;
+        transition: all ease-in-out .5s;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+    
+        > .navigation-group  {
+            h3 {
+                opacity: 0;
+                transition: all ease-in-out 1s;
+            }
+          width: unset;
+            transform: translate(0, 0);
+            transition: all ease-in-out .4s;
+          /* animation: slide-in 0.5s ease-in-out forwards; */
+        }
+        .ng-design {
+            padding-right: 2rem;
+    
+        }
+        
+    }
+}
+
+
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(even) {
+        background-color: pink;
+    }
+
+    &.first {
+        flex-direction: column;
+        height: auto;
+    }
+
+
+
+
+    .hero-section {
+        height: 12rem;
+        width: 21rem;
+        background-color: gray;
+        margin-bottom: -12rem;
+        position: relative;
+        align-self: flex-start;
+        position: absolute;
+        z-index: 4;
+        /* top: calc(100vh - 29rem); */
+        top: 12rem;
+    }
+
+
+    .graph-section {
+        height: 100vh;
+        width: 100%;
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        opacity: .6;
+
+        &>div {
+            height: 9rem;
+        }
+
+        .g1 {
+            width: 40%;
+            background-color: yellow;
+            align-self: flex-end;
+        }
+
+        .g2 {
+            width: 100%;
+            background-color: blue;
+        }
+    }
+
+    .journey-section {
+        height: 100vh;
+        width: 100%;
+        background-color: green;
+        display: flex;
+        align-items: center;
+        /* position: relative;
+        z-index: 6; */
+    }
+
+
+}
+
+/* temp layout styles end */

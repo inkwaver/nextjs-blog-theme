@@ -47,7 +47,7 @@
 
 .content-slide-container {
     > section {
-        padding-bottom: 30vh;
+        /* padding-bottom: 30vh; */
         &:last-child{
           padding-bottom: 0;
         }
