@@ -143,22 +143,25 @@ export default function Index({ globalData }) {
       <Header name={globalData.name} />
       <SEO title={globalData.name} description={globalData.blogTitle} />
 
- 
+
 
       <main className="w-full home-wrapper main content-slide-container">
-      <nav className='content-nav wrapper-main '>
-        <div className='nav-group nav-dev'>
-          <Link className="button dev dev-skills" href="#devSkillsSection">Skills</Link>
-          <Link className="button dev dev-exp" href="#devExp">Experience</Link>
-        </div>
-        <div className='nav-group nav-design'>
-          <Link className="button design journey" href="#journeySection">Journey</Link>
-          <Link className="button design designflow" href="#designFlow">Flow</Link>
-          <Link className="button design design-projets" href="#designProjets">Projects</Link>
-        </div>
+        <nav className='content-nav wrapper-main '>
+          <div className='nav-group nav-dev'>
+            <Link className="button dev dev-skills" href="#devSkillsSection">Skills</Link>
+            <Link className="button dev dev-exp" href="#devExp">Experience</Link>
+            <h3>Development</h3>
+          </div>
+          <div className='nav-group nav-design'>
+            <Link className="button design journey" href="#journey">Journey</Link>
+            <Link className="button design designflow" href="#designFlow">Flow</Link>
+            <Link className="button design design-projets" href="#designProjets">Projects</Link>
+            <h3>Design</h3>
 
-      </nav>
-      <div className='content-navigation '>
+          </div>
+
+        </nav>
+        {/* <div className='content-navigation '>
         <div className='navigation-group ng-dev'>
             <Link href="/">Skills</Link>
             <Link href="/">Experience</Link>
@@ -173,121 +176,115 @@ export default function Index({ globalData }) {
         <h3>Design</h3>
 
         </div>
-      </div>
-      <div className='section first intersect-section'>
+      </div> */}
+        <div className='section first intersect-section'>
 
-        <div className='hero-section'>hero</div>
-        
-      
+          <div className='hero-section'>
 
-        <div className='graph-section'>
-          <div className='g1'></div>
-          <div className='g2'></div>
-        </div>
-
-        <div className='journey-section'>
-          journey
-        </div>
-
-      </div>
-      <div className='section '>
-        1
-      </div>
-      <div className='section'>
-        1
-      </div>
-      <div className='section'>
-        1
-      </div>
-      <div className='section'>
-        1
-      </div>
-      <div className='section'>
-        1
-      </div>
-
-      <div id="journey" className="intersect-section wrapper-main first-container journey-container">
-            <section className='hero-sect '>
-              <div className='image-holder'>
-                <Image
-                  className="avatar"
-                  src="/narek-ch.jpg"
-                  alt="Image description"
-                  width={90}
-                  height={90}
-                  // fill
-                  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  loading="lazy"
-                />
-              </div>
-
-              <p className="paragraph">
-                I <strong>design interfaces</strong> and translate them into
-                markup that's high-resolution, features smooth scrolling, is
-                mobile-friendly, and prioritizes accessibility.
-              </p>
-            </section>
-            <div className='exp-graph'>
-              <div className='design-block exp-block'>
-                <h4>
-                  UI/UX Design
-                </h4>
-                <div className='graph'>
-                  UX Research, Wireframing, Design System, Atomic Design
-                  Prototyping
-                </div>
-              </div>
-              <div className='dev-block exp-block'>
-                <h4>
-                  DEVELOPMENT
-                </h4>
-                <div className='graph'>
-                  Markup Specialist "{"Accesibilty, Seo, High resolution, Responsive, BEM,  "}"
-                </div>
-              </div>
-              <div className='days'>
-                <div>2010</div>
-                <div>2011</div>
-                <div>2012</div>
-                <div>2013</div>
-                <div>2014</div>
-                <div>2015</div>
-                <div>2016</div>
-
-                <div>2017</div>
-                <div>2018</div>
-                <div>2019</div>
-                <div>2020</div>
-                <div>2021</div>
-                <div>2022</div>
-                <div>2023</div>
-                <div>2024</div>
-
-              </div>
+            <div className='image-holder'>
+              <Image
+                className="avatar"
+                src="/narek-ch.jpg"
+                alt="Image description"
+                width={90}
+                height={90}
+                // fill
+                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                loading="lazy"
+              />
             </div>
-            <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky ">
-              <span className=" mr-15">
-                <IconWithLabel Icon={DesExp} label="Design" />
-              </span>
-              Journey
-            </h2>
 
-            <p className="content-dec ">
-              “My journey in web development began in 2010 as a markup
-              specialist and WordPress team developer. Over the past 14 years,
-              I’ve not only honed my technical skills but also cultivated a deep
-              appreciation for design. Working closely with designers, I’ve been
-              captivated by how they transform ideas into visually stunning
-              experiences, which sparked my passion for design. This story is
-              one of growth, evolution, and a continuous drive to merge
-              technical precision with creative vision.”
-              {/* "From transforming beautiful designs into code to mastering the nuances of layout and spacing, my journey has been one of both challenge and discovery. It wasn’t always easy—early on, designers and I would navigate countless revisions, struggling to achieve that perfect result. But over the years, I’ve learned to measure every space, to understand design proportions, and to bring sketches to life in code." */}
+            <p className="paragraph">
+              I <strong>design interfaces</strong> and translate them into
+              markup that's high-resolution, features smooth scrolling, is
+              mobile-friendly, and prioritizes accessibility.
             </p>
-            
+
           </div>
 
 
-        <section id="journeySection" className="design-section ">
+
+          <div className='graph-section'>
+            <div className='g1'>
+              <h4>
+                UI/UX Design
+              </h4>
+              <div className='graph'>
+                UX Research, Wireframing, Design System, Atomic Design
+                Prototyping
+              </div>
+            </div>
+            <div className='g2'>
+              <h4>
+                DEVELOPMENT
+              </h4>
+              <div className='graph'>
+                Markup Specialist "{"Accesibilty, Seo, High resolution, Responsive, BEM,  "}"
+              </div>
+            </div>
+            <div className='days'>
+              <div>2010</div>
+              <div>2011</div>
+              <div>2012</div>
+              <div>2013</div>
+              <div>2014</div>
+              <div>2015</div>
+              <div>2016</div>
+
+              <div>2017</div>
+              <div>2018</div>
+              <div>2019</div>
+              <div>2020</div>
+              <div>2021</div>
+              <div>2022</div>
+              <div>2023</div>
+              <div>2024</div>
+
+            </div>
+          </div>
+
+          <section id="journey"   className='journey-section intersect-section wrapper-main '>
+          <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky ">
+            <span className=" mr-15">
+              <IconWithLabel Icon={DesExp} label="Design" />
+            </span>
+            Journey
+          </h2>
+
+          <p className="content-dec ">
+            “My journey in web development began in 2010 as a markup
+            specialist and WordPress team developer. Over the past 14 years,
+            I’ve not only honed my technical skills but also cultivated a deep
+            appreciation for design. Working closely with designers, I’ve been
+            captivated by how they transform ideas into visually stunning
+            experiences, which sparked my passion for design. This story is
+            one of growth, evolution, and a continuous drive to merge
+            technical precision with creative vision.”
+            {/* "From transforming beautiful designs into code to mastering the nuances of layout and spacing, my journey has been one of both challenge and discovery. It wasn’t always easy—early on, designers and I would navigate countless revisions, struggling to achieve that perfect result. But over the years, I’ve learned to measure every space, to understand design proportions, and to bring sketches to life in code." */}
+          </p>
+          </section>
+
+        </div>
+        {/* <div className='section '>
+          1
+        </div>
+        <div className='section'>
+          1
+        </div>
+        <div className='section'>
+          1
+        </div>
+        <div className='section'>
+          1
+        </div>
+        <div className='section'>
+          1
+        </div> */}
+
+      
+
+
+        <section className="design-section ">
 
 
 
@@ -307,7 +304,7 @@ export default function Index({ globalData }) {
           </p>
           </div> */}
 
-          
+
 
           <div id="designFlow" className="design-flow mb-102 wrapper-main viewport-h intersect-section">
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">

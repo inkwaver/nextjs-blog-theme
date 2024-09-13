@@ -1,46 +1,53 @@
 .content-nav {
-  display: flex;
-  /* height: calc(100vh - 4rem); */
-  /* height: 100vh; */
-  align-items: flex-start;
-  justify-content: flex-end;
-  /* flex-direction: row-reverse; */
-  padding-top: 20rem;
-  padding: 2rem var(--wrapper-margin) 0 var(--wrapper-margin);
   position: sticky;
-  top: 3rem;
-  z-index: 667;
-  gap: var(--size-24);
-  margin-top: 4rem;
+  top: 0;
+  transition: all ease-in-out .5s;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  z-index: 44;
+  transition: all ease-in-out;
+  margin-bottom: -57px;
   .nav-group {
-    display: flex;
-    gap: var(--size-9);
-    position: relative;
-    z-index: 2;
-     transition: transform ease-in-out 0.3s,
-     margin ease-in-out 0.3s; 
-    &.nav-dev {
-      /* margin-right: 2.5rem; */
-      transform: translate(-33vw, 0);
+    transition: all ease-in-out .4s;
+    transform: translate(0, calc(100vh - 19rem));
+
+    /* top: calc(100vh - 19rem); */
+    /* padding-left: 2rem; */
+    h3 {
+      opacity: 1;
+      transition: all ease-in-out .4s;
     }
+
+    &.nav-dev {
+      width: 60%;
+      transform: translate(0, calc(100vh - 10rem));
+    }
+
     &.nav-design {
-      margin-right: 2.5rem;
+      width: 40%;
+      padding-right: 0;
     }
   }
+
   .button {
     cursor: pointer;
+
     &.design {
       border-color: var(--color-s1);
       color: var(--color-static-p1);
       background-color: var(--color-s4);
+
       &.active {
         color: var(--color-s4);
       }
     }
+
     &.dev {
       border-color: var(--color-p1);
       color: var(--color-p1);
       background-color: var(--color-p5);
+
       &.active {
         color: var(--color-p5);
       }
@@ -48,90 +55,54 @@
   }
 }
 
-/* header.sticked {
-  & + .content-nav {
-    height: auto !important;
+
+header.sticked+main.main {
+  .content-nav {
+    position: sticky;
+    top: 5rem;
+  z-index: 544;
+
+    transition: all ease-in-out .5s;
     flex-direction: row-reverse;
     justify-content: flex-start;
 
-    .nav-group {
-      margin-top: 0;
-      &.nav-dev {
-        padding-top: 0;
-        transform: translate(0, 0);
+    >.nav-group {
+      h3 {
+        opacity: 0;
+        transition: all ease-in-out 1s;
+      }
+
+      width: unset;
+      transform: translate(0, 0);
+      transition: all ease-in-out .4s;
+      /* animation: slide-in 0.5s ease-in-out forwards; */
     }
-    &.nav-design {
-        padding-top: 0;
-        margin-right: 0;
+
+    .nav-design {
+      padding-right: 2rem;
+
     }
-    }
+
   }
-  & + .content-nav {
-  }
-} */
-.exp-graph {
-  position: sticky;
-  width: 100%;
-  height: 100%;
-  /* top: 56vh; */
-  left: 0;
+}
+
+
+
+
+
+
+
+.days {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  z-index: 1;
-  padding: var(--wrapper-margin);
-  /* margin-top: -214vh; */
-  /* background: white; */
-  /* backdrop-filter: blur(2rem); */
-  z-index: 665;
+  width: 100%;
+  justify-content: space-between;
+  padding: 9px;
 
-  .design-block {
-    align-self: flex-end;
-    width: 40%;
-    margin-bottom: 3rem;
-  backdrop-filter: blur(2rem);
-
-    h4 {
-      color: var(--color-s4);
-    }
-    .graph {
-      background-color: var(--color-s7);
-      padding: var(--size-9x2);
-      border: 0.1rem solid var(--color-s2);
-      color: var(--color-static-p1);
-    }
-  }
-  .dev-block {
-    /* width: 96%; */
-  backdrop-filter: blur(2rem);
-
-    h4 {
-      color: var(--color-p4);
-    }
-    .graph {
-      background-color: var(--color-p6);
-      padding: var(--size-9x2);
-      border: 0.1rem solid var(--color-p2);
-      color: var(--color-p1);
-    }
-  }
-  h4 {
-    font-size: var(--size-15x2);
-    font-weight: 900;
-    margin-bottom: 2rem;
-  }
-  .days {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 9px;
-
-    > div:after {
-      content: '';
-      position: absolute;
-      height: 100%;
-      background-color: lightblue;
-    }
+  >div:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-color: lightblue;
   }
 }
 
