@@ -71,6 +71,27 @@
     }
 } */
 
+.hero-section {
+  height: 12rem;
+  /* width: 21rem; */
+  /* background-color: gray; */
+  margin-bottom: -12rem;
+  position: absolute;
+  left: 0;
+  align-self: flex-start;
+  position: fixed;
+  z-index: 4;
+  top: calc(50vh - 11.6rem);
+  display: flex;
+align-items: center;
+gap: 2rem;
+  /* .image-holder {
+      span {
+          border-radius: 360rem;
+      }
+  } */
+}
+
 .section {
   height: 100vh;
   display: flex;
@@ -85,23 +106,7 @@
     height: auto;
   }
 
-  .hero-section {
-    height: 12rem;
-    width: 21rem;
-    /* background-color: gray; */
-    margin-bottom: -12rem;
-    position: relative;
-    align-self: flex-start;
-    position: fixed;
-    z-index: 4;
-    /* top: calc(100vh - 29rem); */
-    top: 12rem;
-    /* .image-holder {
-        span {
-            border-radius: 360rem;
-        }
-    } */
-  }
+ 
 
   .graph-section {
     height: 50vh;

@@ -152,6 +152,7 @@ export default function Index({ globalData }) {
 
       <main className="w-full home-wrapper main content-slide-container">
         <nav className="content-nav wrapper-main ">
+
         <div className="nav-group nav-design">
             <Link className="button design journey" href="#journey">
               Journey
@@ -196,21 +197,24 @@ export default function Index({ globalData }) {
         </div>
       </div> */}
         <div className="section first intersect-section">
+   
+
+          <div className="graph-section">
           <div className="hero-section">
             <div className="image-holder">
               <Image
                 className="avatar"
                 src="/narek-ch.jpg"
                 alt="Image description"
-                width={90}
-                height={90}
+                width={204}
+                height={204}
                 // fill
                 // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading="lazy"
               />
             </div>
             <div className="description">
-              <h2>Narek Chilingaryan</h2>
+              <h2>Narek Ch<span>ilingaryan</span></h2>
               <p className="paragraph">
                 {/* I <strong>design interfaces</strong> and translate them into
                 markup that's high-resolution, features smooth scrolling, is
@@ -220,8 +224,6 @@ export default function Index({ globalData }) {
               </p>
             </div>
           </div>
-
-          <div className="graph-section">
             <div className="g1">
               {/* <h4>UI/UX Design</h4> */}
               <div className="graph">
