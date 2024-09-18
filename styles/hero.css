@@ -92,28 +92,45 @@
     margin-bottom: -12rem;
     position: relative;
     align-self: flex-start;
-    position: absolute;
+    position: fixed;
     z-index: 4;
     /* top: calc(100vh - 29rem); */
     top: 12rem;
+    /* .image-holder {
+        span {
+            border-radius: 360rem;
+        }
+    } */
   }
 
   .graph-section {
-    height: 100vh;
+    height: 50vh;
     width: 100%;
     /* background-color: aquamarine; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     position: sticky;
-    top: 0;
+    top: 48vh;
     z-index: 544;
+    /* background: red; */
+    /* opacity: 0.6; */
+    margin-top: 50vh;
     /* opacity: 0.6; */
     /* 
         &>div {
             height: 9rem;
         } */
-
+    .g1,.g2{
+      position: relative;
+      z-index: 4;
+      margin-bottom: 2rem;
+    }
+    .graph {
+      font-size: 3rem;
+  font-weight: 900;
+  padding: var(--size-9x2);
+    }
     .g1 {
       width: 40%;
       /* background-color: yellow; */
@@ -125,9 +142,9 @@
       }
       .graph {
         background-color: var(--color-s7);
-        padding: var(--size-9x2);
-        border: 0.1rem solid var(--color-s2);
-        color: var(--color-static-p1);
+  border: 0.1rem solid var(--color-s2);
+        color: var(--color-s3);
+
       }
     }
 
@@ -141,9 +158,9 @@
       }
       .graph {
         background-color: var(--color-p6);
-        padding: var(--size-9x2);
-        border: 0.1rem solid var(--color-p2);
-        color: var(--color-p1);
+  border: 0.1rem solid var(--color-p2);
+        color: var(--color-p3);
+
       }
     }
   }
@@ -162,3 +179,28 @@
 }
 
 /* temp layout styles end */
+.days {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  /* padding: 9px; */
+  gap: .1rem;
+>div{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  color: var(--color-n5);
+}
+  >div:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-color: var(--color-n6);
+    opacity: .3;
+    width: 100%;
+    left: 0;
+    bottom: 2rem;
+    height: 50vh;
+  }
+}

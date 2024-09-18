@@ -152,17 +152,7 @@ export default function Index({ globalData }) {
 
       <main className="w-full home-wrapper main content-slide-container">
         <nav className="content-nav wrapper-main ">
-          <div className="nav-group nav-dev">
-            <Link className="button dev dev-skills" href="#devSkillsSection">
-              Skills
-            </Link>
-            <Link className="button dev dev-exp" href="#devExp">
-              Experience
-            </Link>
-            <h3>Development</h3>
-          </div>
-
-          <div className="nav-group nav-design">
+        <div className="nav-group nav-design">
             <Link className="button design journey" href="#journey">
               Journey
             </Link>
@@ -175,8 +165,19 @@ export default function Index({ globalData }) {
             >
               Projects
             </Link>
-            <h3>Design</h3>
+            {/* <h3>Design</h3> */}
           </div>
+          <div className="nav-group nav-dev">
+            <Link className="button dev dev-skills" href="#devSkillsSection">
+              Skills
+            </Link>
+            <Link className="button dev dev-exp" href="#devExp">
+              Experience
+            </Link>
+            {/* <h3>Development</h3> */}
+          </div>
+
+     
         </nav>
         {/* <div className='content-navigation '>
         <div className='navigation-group ng-dev'>
@@ -211,26 +212,30 @@ export default function Index({ globalData }) {
             <div className="description">
               <h2>Narek Chilingaryan</h2>
               <p className="paragraph">
-                I <strong>design interfaces</strong> and translate them into
+                {/* I <strong>design interfaces</strong> and translate them into
                 markup that's high-resolution, features smooth scrolling, is
-                mobile-friendly, and prioritizes accessibility.
+                mobile-friendly, and prioritizes accessibility. */}
+                UI/UX Designer with over decade of <br/>
+                Web Development experience.
               </p>
             </div>
           </div>
 
           <div className="graph-section">
             <div className="g1">
-              <h4>UI/UX Design</h4>
+              {/* <h4>UI/UX Design</h4> */}
               <div className="graph">
-                UX Research, Wireframing, Design System, Atomic Design
-                Prototyping
+                UI/UX Designer
+                {/* UX Research, Wireframing, Design System, Atomic Design
+                Prototyping */}
               </div>
             </div>
             <div className="g2">
-              <h4>DEVELOPMENT</h4>
+              {/* <h4>DEVELOPMENT</h4> */}
               <div className="graph">
-                Markup Specialist "
-                {'Accesibilty, Seo, High resolution, Responsive, BEM,  '}"
+                Web Developer
+                {/* Markup Specialist " */}
+                {/* {'Accesibilty, Seo, High resolution, Responsive, BEM,  '}" */}
               </div>
             </div>
             <div className="days">
