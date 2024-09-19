@@ -218,29 +218,47 @@ export default function Index({ globalData }) {
                 </p>
               </div>
             </div>
+
+
             <div className="g1">
-           
-              <div className="exp-block">
-                <Image
+              {/*  */}
+              <div className="exp-block festberg">
+                {/* <Image
                   src="/company-logos/nexuslab.jpg"
                   alt="Goodwin desktop"
                   width={39}
                   height={39}
-                />
-                <h4>NexusLab</h4>
-              </div>
+                /> */}
+                <div className="comp-logo">DS</div>
 
-              <div className="exp-block">
-               <div className='comp-logo'>MI</div>
-                <h4>Mikayel inck</h4>
+                <h4>Dubai State</h4>
               </div>
-              
+              {/*  */}
+              <div className="exp-block festberg">
+                {/* <Image
+                  src="/company-logos/nexuslab.jpg"
+                  alt="Goodwin desktop"
+                  width={39}
+                  height={39}
+                /> */}
+                <div className="comp-logo">FB</div>
+                <h4>FestBerg</h4>
+              </div>
+                {/*  */}
+              <div className="exp-block beargeek">
+                <div className="comp-logo">BG</div>
+
+                <h4>Berageek</h4>
+              </div>
+                {/*  */}
               <div className="graph">
                 UI/UX Designer
                 {/* UX Research, Wireframing, Design System, Atomic Design
                 Prototyping */}
               </div>
             </div>
+
+
             <div className="g2">
               {/* <h4>DEVELOPMENT</h4> */}
               <div className="graph">

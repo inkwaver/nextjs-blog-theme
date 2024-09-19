@@ -249,5 +249,6 @@ header.sticked + main.main .first.section .graph-section .days div:after {
     align-items: center;
     justify-content: center;
     font-weight: 900;
+    letter-spacing: .1rem;
   }
 }
