@@ -154,14 +154,14 @@ export default function Index({ globalData }) {
         <nav className="content-nav wrapper-main ">
 
         <div className="nav-group nav-design">
-            <Link className="button design journey" href="#journey">
+            <Link className=" design journey" href="#journey">
               Journey
             </Link>
-            <Link className="button design designflow" href="#designFlow">
+            <Link className=" design designflow" href="#designFlow">
               Flow
             </Link>
             <Link
-              className="button design design-projets"
+              className=" design design-projets"
               href="#designProjets"
             >
               Projects
@@ -169,10 +169,10 @@ export default function Index({ globalData }) {
             {/* <h3>Design</h3> */}
           </div>
           <div className="nav-group nav-dev">
-            <Link className="button dev dev-skills" href="#devSkillsSection">
+            <Link className=" dev dev-skills" href="#devSkillsSection">
               Skills
             </Link>
-            <Link className="button dev dev-exp" href="#devExp">
+            <Link className=" dev dev-exp" href="#devExp">
               Experience
             </Link>
             {/* <h3>Development</h3> */}

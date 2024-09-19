@@ -81,7 +81,7 @@
   align-self: flex-start;
   position: fixed;
   z-index: 4;
-  top: calc(50vh - 11.6rem);
+  top: calc(50vh - 9rem);
   display: flex;
 align-items: center;
 gap: 2rem;
@@ -116,11 +116,11 @@ gap: 2rem;
     flex-direction: column;
     justify-content: flex-end;
     position: sticky;
-    top: 48vh;
+    top: 49vh;
     z-index: 544;
     /* background: red; */
     /* opacity: 0.6; */
-    margin-top: 50vh;
+    margin-top: 44vh;
     /* opacity: 0.6; */
     /* 
         &>div {

@@ -51,12 +51,7 @@ p {
   }
 }
 
-.active {
-  /* Your active link styles go here */
-  color: #7d7aff;
-  /* Change the color as per your design */
-  font-weight: bold;
-}
+
 
 .color-n3 {
   color: var(--color-n3);
