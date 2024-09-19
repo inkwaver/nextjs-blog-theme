@@ -26,6 +26,11 @@
     align-items: center;
     margin-left: var(--size-15);
     line-height: 2rem;
+    color: var(--color-n2);
+    text-transform: uppercase;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .05rem;
     &:before {
       content: ' ';
       display: inline-block;
@@ -39,7 +44,7 @@
     }
 
     &.design {
-      color: var(--color-static-p1);
+      /* color: var(--color-static-p1); */
       &:before {
         border-color: var(--color-s1);
         background-color: var(--color-s6);
@@ -51,7 +56,7 @@
     }
 
     &.dev {
-      color: var(--color-p1);
+      /* color: var(--color-p1); */
 
       &:before {
         border-color: var(--color-p1);

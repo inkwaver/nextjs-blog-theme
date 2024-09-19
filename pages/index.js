@@ -222,7 +222,7 @@ export default function Index({ globalData }) {
 
             <div className="g1">
               {/*  */}
-              <div className="exp-block festberg">
+              <div className="exp-block dubai-state">
                 {/* <Image
                   src="/company-logos/nexuslab.jpg"
                   alt="Goodwin desktop"
@@ -248,7 +248,7 @@ export default function Index({ globalData }) {
               <div className="exp-block beargeek">
                 <div className="comp-logo">BG</div>
 
-                <h4>Berageek</h4>
+                <h4>Berargeek</h4>
               </div>
                 {/*  */}
               <div className="graph">

@@ -130,9 +130,10 @@
       margin-bottom: 2rem;
     }
     .graph {
-      font-size: 3rem;
-      font-weight: 900;
-      padding: var(--size-9x2);
+      font-size: 2rem;
+  font-weight: 900;
+  padding: var(--size-9x2);
+  text-transform: uppercase;
     }
     .g1 {
       width: 40%;
@@ -141,7 +142,7 @@
 
       .graph {
         background-color: var(--color-s7);
-        border: 0.1rem solid var(--color-s2);
+        border: 0.1rem solid var(--color-s5);
         color: var(--color-s3);
       }
     }
@@ -220,19 +221,24 @@ header.sticked + main.main .first.section .graph-section .days div:after {
   border: 0.1rem solid var(--color-p6);
   display: flex;
   align-items: center;
-  gap: 1rem;
-  width: 6vw;
+  gap: .2rem;
+  width: 6.3vw;
   border-radius: 9rem;
   flex-direction: row-reverse;
   padding-left: 0.4rem;
   /* border: 0.1rem solid var(--color-s6) !important; */
   background-color: var(--color-s6);
+  margin-left: 0;
   h4 {
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: var(--color-s1);
+    color: var(--color-n1);
+    font-size: .8rem;
+  font-weight: 300;
+  color: black;
+  line-height: 1rem;
   }
   > span,
   .comp-logo {
@@ -250,5 +256,18 @@ header.sticked + main.main .first.section .graph-section .days div:after {
     justify-content: center;
     font-weight: 900;
     letter-spacing: .1rem;
+  }
+}
+
+
+.exp-block {
+  &.dubai-state{
+    margin-left: 31.5vw;
+  }
+  &.festberg{
+    margin-left: 6.3vw;
+  }
+  &.beargeek{
+    margin-left: 0;
   }
 }
