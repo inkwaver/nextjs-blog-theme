@@ -21,7 +21,7 @@
     padding: var(--size-39);
     border: .1rem solid var(--color-n5);
     border-radius: var(--size-24);
-  
+    background-color: var(--white);
     .icon {
       grid-area: icon;
     }

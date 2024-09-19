@@ -102,17 +102,17 @@ export default function Header() {
           <Link
             href="/posts/case-study-real-estate-brief"
             rel="noopener noreferrer"
-            className="button cv-btn ghost"
+            className="button  ghost"
           >
             Case Study
           </Link>
-          <Link
+          {/* <Link
             href={`${rootUrl}/#devExp`}
             rel="noopener noreferrer"
             className="button cv-btn ghost"
           >
             Dev Projects
-          </Link>
+          </Link> */}
           <Link
             className="icon-24"
             target="_blank"

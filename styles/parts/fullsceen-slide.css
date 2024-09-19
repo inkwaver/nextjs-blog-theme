@@ -1,8 +1,10 @@
 .sticky-header {
   position: sticky;
-  top: -3rem;
-  z-index: 111;
+  top: 5rem;
+  z-index: 665;
   display: inline-block;
+  padding-top: .5rem;
+  margin-left: -.5rem;
 }
 .intro-title-sticky {
   display: flex;

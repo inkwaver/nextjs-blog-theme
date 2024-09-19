@@ -61,14 +61,14 @@ export default function Index({ globalData }) {
         const sectionId = entry.target.id;
         // const buttonClass = idToButtonClass[sectionId];
 
-        console.log(
-          'Processing section:',
-          sectionId || '<no id>',
-          'Is intersecting:',
-          entry.isIntersecting,
-          'Entry bounding client rect:',
-          entry.boundingClientRect
-        );
+        // console.log(
+        //   'Processing section:',
+        //   sectionId || '<no id>',
+        //   'Is intersecting:',
+        //   entry.isIntersecting,
+        //   'Entry bounding client rect:',
+        //   entry.boundingClientRect
+        // );
 
         if (entry.isIntersecting) {
           entry.target.classList.add('intersect-active');
@@ -94,7 +94,7 @@ export default function Index({ globalData }) {
           button?.classList.remove('active');
         });
 
-        console.log('Activating button:', activeButtonClass);
+        // console.log('Activating button:', activeButtonClass);
 
         if (activeButtonClass) {
           document
@@ -174,22 +174,7 @@ export default function Index({ globalData }) {
             {/* <h3>Development</h3> */}
           </div>
         </nav>
-        {/* <div className='content-navigation '>
-        <div className='navigation-group ng-dev'>
-            <Link href="/">Skills</Link>
-            <Link href="/">Experience</Link>
-          <h3>Development</h3>
 
-        </div>
-        <div className='navigation-group ng-design'>
-
-            <Link href="/">Journey</Link>
-            <Link href="/">Flow</Link>
-            <Link href="/">Project</Link>
-        <h3>Design</h3>
-
-        </div>
-      </div> */}
         <div className="section first intersect-section">
           <div className="graph-section">
             <div className="hero-section">
@@ -291,14 +276,14 @@ export default function Index({ globalData }) {
             id="journey"
             className="journey-section intersect-section wrapper-main "
           >
-            <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky ">
-              <span className=" mr-15">
+            <h2 className="big-title color-n3 mb-39 sticky-header is-title-sticky ">
+              <span className="mr-15 no-body-bg">
                 <IconWithLabel Icon={DesExp} label="Design" />
               </span>
               Journey
             </h2>
 
-            <p className="content-dec ">
+            <p className="content-dec relative z-665">
               “My journey in web development began in 2010 as a markup
               specialist and WordPress team developer. Over the past 14 years,
               I’ve not only honed my technical skills but also cultivated a deep
@@ -328,26 +313,18 @@ export default function Index({ globalData }) {
         </div> */}
 
         <section className="design-section ">
-          <h2 className="big-title design-heading  sticky-header   wrapper-main is-title-sticky intro-title-sticky">
+          {/* <h2 className="big-title design-heading  sticky-header   wrapper-main is-title-sticky intro-title-sticky">
             <IconWithLabel Icon={DesExp} label="Design" />
-          </h2>
+          </h2> */}
 
-          {/* <div className="viewport-h  intersect-section wrapper-main" >
-          <p className=" indipend-paragraph">
-            should tell a cohesive story, breaking it down into logical,
-            step-by-step pieces. By using color and shape effectively, each
-            element should contribute to the narrative, guiding the user through
-            a clear, visually engaging journey while delivering the message with
-            clarity and purpose.
-          </p>
-          </div> */}
+
 
           <div
             id="designFlow"
             className="design-flow mb-102 wrapper-main viewport-h intersect-section"
           >
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
-              <span className="invisible mr-15">
+              <span className="mr-15">
                 <IconWithLabel Icon={DesExp} label="Design" />
               </span>
               Flow
@@ -399,7 +376,7 @@ export default function Index({ globalData }) {
             className="project-part home-snipet mb-102 design-exp wrapper-main viewport-h intersect-section"
           >
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
-              <span className="invisible mr-15">
+              <span className="mr-15">
                 <IconWithLabel Icon={DesExp} label="Design" />
               </span>
               Projects
@@ -558,7 +535,7 @@ export default function Index({ globalData }) {
             className="dev-exp wrapper-main viewport-h intersect-section"
           >
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
-              <span className="invisible mr-15">
+              <span className="mr-15">
                 <IconWithLabel Icon={DesExp} label="Development" />
               </span>
               Experience

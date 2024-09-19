@@ -12,7 +12,7 @@
   .nav-group {
     transition: all ease-in-out 0.4s;
     /* transform: translate(-2rem, calc(80vh - 16rem)); */
-    transform: translate(-2rem, 48vh);
+    transform: translate(0rem,44vh);
 
     h3 {
       opacity: 1;
@@ -72,8 +72,8 @@
 header.sticked + main.main {
   .content-nav {
     position: sticky;
-    top: 5rem;
-    z-index: 600;
+    top: 7rem;
+    z-index: 667  ;
     transition: all ease-in-out 0.5s;
     /* flex-direction: row-reverse;
     justify-content: flex-start; */

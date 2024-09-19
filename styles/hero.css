@@ -223,17 +223,20 @@ header.sticked + main.main .first.section .graph-section .days div:after {
 
 .exp-block {
   /* display: inline-block; */
-  border: 0.1rem solid var(--color-p6);
+  /* border: 0.1rem solid var(--color-p6); */
   display: flex;
   align-items: center;
   gap: .2rem;
-  width: 6.3vw;
+  overflow: hidden;
+  width: 0rem;
   border-radius: 9rem;
   flex-direction: row-reverse;
-  padding-left: 0.4rem;
-  /* border: 0.1rem solid var(--color-s6) !important; */
+  padding-left: 0;
+   /* border: 0.1rem solid var(--color-s6) !important;  */
   background-color: var(--color-s6);
   margin-left: 0;
+  transition: all ease-in-out .3s;
+  overflow: hidden;
   h4 {
     width: 100%;
     overflow: hidden;
@@ -253,6 +256,8 @@ header.sticked + main.main .first.section .graph-section .days div:after {
     overflow: hidden;
     border: 0.2rem solid var(--white) !important;
     padding: 0.5rem !important;
+
+    /* padding: 0 !important; */
   }
   .comp-logo {
     font-size: 0.5rem;
@@ -264,15 +269,28 @@ header.sticked + main.main .first.section .graph-section .days div:after {
   }
 }
 
+header.sticked + main.main .section .graph-section {
+  .exp-block {
+  width: 6.3vw;
+  padding-left: 0.4rem;
 
-.exp-block {
-  &.dubai-state{
-    margin-left: 31.5vw;
+
+    &.dubai-state{
+      margin-left: 31.5vw;
+    }
+    &.festberg{
+      margin-left: 6.3vw;
+    }
+    &.beargeek{
+      margin-left: 0;
+    }
   }
-  &.festberg{
-    margin-left: 6.3vw;
-  }
-  &.beargeek{
-    margin-left: 0;
+}
+.z-665{
+  z-index: 665;
+}
+.no-body-bg {
+  .body-bg{
+    background-color: transparent;
   }
 }

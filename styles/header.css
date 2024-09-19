@@ -74,19 +74,7 @@ header.main {
     display: flex;
     margin-top: 0;
 
-    a.cv-btn {
-      margin-right: auto;
-      margin-left: 2rem;
-      font-size: 1rem;
-      border: 0.1rem solid;
-      display: inline-block;
-      width: auto;
-      /* margin-right: auto; */
-      padding: 0 1rem;
-      border-radius: 1rem;
 
-      /* margin-top: .5rem; */
-    }
 
     .logo-name {
       font-size: var(--logo-name-small);
@@ -209,6 +197,7 @@ header.main {
 } */
 
 header.sticked {
+  background-color: var(--white);
   .logo {
     img {
       transition: all ease-in-out 0.2s;
@@ -293,3 +282,5 @@ header.sticked + main.main {
     }
   }
 }
+
+
