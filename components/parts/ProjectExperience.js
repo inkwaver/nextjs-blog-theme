@@ -554,7 +554,6 @@ const ProjectExperience = ({ onVisibleSectionChange }) => {
         />
       </li>
     </ul>
-    <label className='more-project-btn' htmlFor="more-projects">More Projects</label>
   </div>
 
   );
