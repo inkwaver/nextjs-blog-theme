@@ -152,18 +152,14 @@ export default function Index({ globalData }) {
 
       <main className="w-full home-wrapper main content-slide-container">
         <nav className="content-nav wrapper-main ">
-
-        <div className="nav-group nav-design">
+          <div className="nav-group nav-design">
             <Link className=" design journey" href="#journey">
               Journey
             </Link>
             <Link className=" design designflow" href="#designFlow">
               Flow
             </Link>
-            <Link
-              className=" design design-projets"
-              href="#designProjets"
-            >
+            <Link className=" design design-projets" href="#designProjets">
               Projects
             </Link>
             {/* <h3>Design</h3> */}
@@ -177,8 +173,6 @@ export default function Index({ globalData }) {
             </Link>
             {/* <h3>Development</h3> */}
           </div>
-
-     
         </nav>
         {/* <div className='content-navigation '>
         <div className='navigation-group ng-dev'>
@@ -197,35 +191,50 @@ export default function Index({ globalData }) {
         </div>
       </div> */}
         <div className="section first intersect-section">
-   
-
           <div className="graph-section">
-          <div className="hero-section">
-            <div className="image-holder">
-              <Image
-                className="avatar"
-                src="/narek-ch.jpg"
-                alt="Image description"
-                width={204}
-                height={204}
-                // fill
-                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                loading="lazy"
-              />
-            </div>
-            <div className="description">
-              <h2>Narek Ch<span>ilingaryan</span></h2>
-              <p className="paragraph">
-                {/* I <strong>design interfaces</strong> and translate them into
+            <div className="hero-section">
+              <div className="image-holder">
+                <Image
+                  className="avatar"
+                  src="/narek-ch.jpg"
+                  alt="Image description"
+                  width={204}
+                  height={204}
+                  // fill
+                  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="lazy"
+                />
+              </div>
+              <div className="description">
+                <h2>
+                  Narek Ch<span>ilingaryan</span>
+                </h2>
+                <p className="paragraph">
+                  {/* I <strong>design interfaces</strong> and translate them into
                 markup that's high-resolution, features smooth scrolling, is
                 mobile-friendly, and prioritizes accessibility. */}
-                UI/UX Designer with over decade of <br/>
-                Web Development experience.
-              </p>
+                  UI/UX Designer with over decade of <br />
+                  Web Development experience.
+                </p>
+              </div>
             </div>
-          </div>
             <div className="g1">
-              {/* <h4>UI/UX Design</h4> */}
+           
+              <div className="exp-block">
+                <Image
+                  src="/company-logos/nexuslab.jpg"
+                  alt="Goodwin desktop"
+                  width={39}
+                  height={39}
+                />
+                <h4>NexusLab</h4>
+              </div>
+
+              <div className="exp-block">
+               <div className='comp-logo'>MI</div>
+                <h4>Mikayel inck</h4>
+              </div>
+              
               <div className="graph">
                 UI/UX Designer
                 {/* UX Research, Wireframing, Design System, Atomic Design

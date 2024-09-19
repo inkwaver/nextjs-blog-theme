@@ -79,12 +79,11 @@
   position: absolute;
   left: 0;
   align-self: flex-start;
-  position: fixed;
   z-index: 4;
-  top: calc(50vh - 9rem);
+  top: -6rem;
   display: flex;
-align-items: center;
-gap: 2rem;
+  align-items: center;
+  gap: 2rem;
   /* .image-holder {
       span {
           border-radius: 360rem;
@@ -106,8 +105,6 @@ gap: 2rem;
     height: auto;
   }
 
- 
-
   .graph-section {
     height: 50vh;
     width: 100%;
@@ -126,30 +123,26 @@ gap: 2rem;
         &>div {
             height: 9rem;
         } */
-    .g1,.g2{
+    .g1,
+    .g2 {
       position: relative;
       z-index: 4;
       margin-bottom: 2rem;
     }
     .graph {
       font-size: 3rem;
-  font-weight: 900;
-  padding: var(--size-9x2);
+      font-weight: 900;
+      padding: var(--size-9x2);
     }
     .g1 {
       width: 40%;
       /* background-color: yellow; */
       align-self: flex-end;
-      h4 {
-        color: var(--color-s4);
-        opacity: 0;
-        transition: all ease-in-out 0.3s;
-      }
+
       .graph {
         background-color: var(--color-s7);
-  border: 0.1rem solid var(--color-s2);
+        border: 0.1rem solid var(--color-s2);
         color: var(--color-s3);
-
       }
     }
 
@@ -159,13 +152,11 @@ gap: 2rem;
         color: var(--color-p4);
         opacity: 0;
         transition: all ease-in-out 0.3s;
-
       }
       .graph {
         background-color: var(--color-p6);
-  border: 0.1rem solid var(--color-p2);
+        border: 0.1rem solid var(--color-p2);
         color: var(--color-p3);
-
       }
     }
   }
@@ -189,23 +180,74 @@ gap: 2rem;
   width: 100%;
   justify-content: space-between;
   /* padding: 9px; */
-  gap: .1rem;
->div{
-  position: relative;
-  width: 100%;
-  text-align: center;
-  z-index: 3;
-  color: var(--color-n5);
-}
-  >div:after {
+  gap: 0.1rem;
+  height: 100%;
+  position: absolute;
+  > div {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    color: var(--color-n5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  > div:after {
+    transition: all ease-in-out 0.5s;
     content: '';
     position: absolute;
-    height: 100%;
     background-color: var(--color-n6);
-    opacity: .3;
+    opacity: 0.3;
     width: 100%;
     left: 0;
-    bottom: 2rem;
-    height: 50vh;
+    /* bottom: 2rem; */
+    /* height: 100%; */
+    bottom: 0;
+    top: 0;
+    /* height: 50vh; */
+  }
+}
+
+header.sticked + main.main .first.section .graph-section .days div:after {
+  top: -39vh;
+  bottom: 0;
+  height: auto;
+}
+
+.exp-block {
+  /* display: inline-block; */
+  border: 0.1rem solid var(--color-p6);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 6vw;
+  border-radius: 9rem;
+  flex-direction: row-reverse;
+  padding-left: 0.4rem;
+  /* border: 0.1rem solid var(--color-s6) !important; */
+  background-color: var(--color-s6);
+  h4 {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--color-s1);
+  }
+  > span,
+  .comp-logo {
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 9rem;
+    overflow: hidden;
+    border: 0.2rem solid var(--white) !important;
+    padding: 0.5rem !important;
+  }
+  .comp-logo {
+    font-size: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
   }
 }
