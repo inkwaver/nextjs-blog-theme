@@ -183,8 +183,8 @@ export default function Index({ globalData }) {
                   className="avatar"
                   src="/narek-ch.jpg"
                   alt="Image description"
-                  width={204}
-                  height={204}
+                  width={137}
+                  height={137}
                   // fill
                   // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   loading="lazy"
@@ -245,7 +245,16 @@ export default function Index({ globalData }) {
 
 
             <div className="g2">
-              {/* <h4>DEVELOPMENT</h4> */}
+              <div className="exp-block beargeek">
+                <div className="comp-logo">BG</div>
+
+                <h4>Berargeek</h4>
+              </div>
+              <div className="exp-block beargeek">
+                <div className="comp-logo">BG</div>
+
+                <h4>Berargeek</h4>
+              </div>
               <div className="graph">
                 Web Developer
                 {/* Markup Specialist " */}

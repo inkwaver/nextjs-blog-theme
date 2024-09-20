@@ -3,7 +3,7 @@
   top: 0;
   z-index: 600;
   transition: all ease-in-out 0.5s;
-  display: inline-flex;
+  display:  flex;
   flex-direction: row;
   justify-content: flex-end;
   transition: all ease-in-out;
