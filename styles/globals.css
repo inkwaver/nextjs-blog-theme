@@ -171,7 +171,8 @@ footer.main {
     border: none;
     cursor: pointer;
     /* margin-top: -4.5px; */
-    margin-top: calc(-1 * var(--size-9) / 2);
+    /* margin-top: calc(-1 * var(--size-9) / 2); */
+    margin-top: -0.3rem;
     margin-left: -0.05rem;
     margin-right: -0.05rem;
     width: var(--size-24);

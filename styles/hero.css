@@ -141,7 +141,7 @@
       align-self: flex-end;
 
       .graph {
-        background-color: var(--color-s5);
+        background-color: var(--color-s3);
         border: 0.1rem solid var(--color-s4);
         color: var(--color-s7);
       }
@@ -155,7 +155,7 @@
         transition: all ease-in-out 0.3s;
       }
       .graph {
-        background-color: var(--color-p5);
+        background-color: var(--color-p3);
         border: 0.1rem solid var(--color-p4);
         color: var(--color-p6);
       }
@@ -209,7 +209,7 @@
     left: 0;
     /* bottom: 2rem; */
     /* height: 100%; */
-    bottom: 0;
+    bottom: 1.5rem;
     top: 0;
     /* height: 50vh; */
   }

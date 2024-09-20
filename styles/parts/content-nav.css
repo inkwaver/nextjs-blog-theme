@@ -23,9 +23,9 @@
   .nav-group a {
     cursor: pointer;
     display: inline-flex;
-    align-items: center;
+    /* align-items: center; */
     margin-left: var(--size-15);
-    line-height: 2rem;
+    line-height: 1.2rem;
     color: var(--color-n2);
     text-transform: uppercase;
   font-size: .8rem;
@@ -88,12 +88,12 @@ header.sticked + main.main {
       a:not(.active){
       transition: all ease-in-out 0.4s;
 
-        color: var(--color-n5);
+        color: var(--color-n3);
         &::before{
       transition: all ease-in-out 0.4s;
 
-          background-color: var(--color-n5);
-          border-color: var(--color-n1);
+          background-color: var(--color-n6);
+          border-color: var(--color-n5);
 
         }
       }
