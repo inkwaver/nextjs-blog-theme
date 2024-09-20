@@ -32,14 +32,7 @@ header.main {
     margin-right: auto;
     display: flex;
 
-    a {
-      /* display: inline-flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 1rem; */
-      /* width: 200px; */
-      /* margin-bottom: 24px; */
-    }
+
   }
 
   nav ul {
@@ -52,7 +45,7 @@ header.main {
   display: flex;
   padding: 0 var(--wrapper-margin);
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 header.main.sticked,
@@ -154,7 +147,6 @@ header.main {
 }
 
 .header-links {
-  align-self: flex-start;
   display: flex;
   align-items: center;
   gap: var(--size-24);

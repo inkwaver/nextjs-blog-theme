@@ -285,7 +285,7 @@ export default function Index({ globalData }) {
             id="journey"
             className="journey-section intersect-section wrapper-main "
           >
-            <h2 className="big-title color-n3 mb-39 sticky-header is-title-sticky ">
+            <h2 className="big-title color-n3 mb-39 sticky-header ">
               <span className="mr-15 no-body-bg">
                 <IconWithLabel Icon={DesExp} label="Design" />
               </span>
