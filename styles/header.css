@@ -46,6 +46,7 @@ header.main {
   padding: 0 var(--wrapper-margin);
   justify-content: center;
   flex-direction: row;
+  align-items: center;
 }
 
 header.main.sticked,
