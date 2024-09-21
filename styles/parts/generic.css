@@ -159,7 +159,10 @@ ul {
 }
 
 main.main {
-  padding:0  var(--wrapper-margin);
+  .journey-section, .wrapper-main{
+    padding:0  var(--wrapper-margin);
+
+  }
 }
 
 .wrapper-sec {

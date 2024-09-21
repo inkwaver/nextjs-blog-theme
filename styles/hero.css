@@ -73,22 +73,23 @@
 
 .hero-section {
   height: 12rem;
-  /* width: 21rem; */
+  width: 56rem;
   /* background-color: gray; */
   margin-bottom: -12rem;
   position: absolute;
-  left: 0;
+  left: calc(33vw - 28rem);
+  /* left:2rem; */
   align-self: flex-start;
   z-index: 4;
-  top: -6rem;
+  top: -5.8rem;
   display: flex;
   align-items: center;
   gap: 2rem;
-  /* .image-holder {
-      span {
-          border-radius: 360rem;
-      }
-  } */
+}
+.hero-holder{
+  /* position: relative; */
+    align-self: flex-start;
+    margin-bottom: auto;
 }
 
 .section {

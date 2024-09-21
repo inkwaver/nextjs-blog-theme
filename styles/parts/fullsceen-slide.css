@@ -86,13 +86,13 @@
     width: 100%;
     /* margin-bottom: var(--size-63x2); */
   }
-
+/* 
   .first-container {
     padding-bottom: 50vh;
     .big-title{
         margin-top: -18.9rem;
       }
-  }
+  } */
   .invisible {
     display: none;
   }
@@ -115,4 +115,8 @@
 
     }
   } */
+}
+
+.big-title {
+  margin-top: 12rem;
 }

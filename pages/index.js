@@ -177,7 +177,8 @@ export default function Index({ globalData }) {
 
         <div className="section first intersect-section">
           <div className="graph-section">
-            <div className="hero-section">
+          <div className='wrapper-main relative hero-holder'>
+          <div className="hero-section">
               <div className="image-holder">
                 <Image
                   className="avatar"
@@ -203,6 +204,8 @@ export default function Index({ globalData }) {
                 </p>
               </div>
             </div>
+          </div>
+          
 
 
             <div className="g1">
@@ -465,9 +468,9 @@ export default function Index({ globalData }) {
         </section>
 
         <section id="devSkillsSection" className="dev-section">
-          <h2 className="big-title design-heading  sticky-header  wrapper-main is-title-sticky intro-title-sticky">
+          {/* <h2 className="big-title design-heading  sticky-header  wrapper-main is-title-sticky intro-title-sticky">
             <IconWithLabel Icon={DevExp} label="Development" />
-          </h2>
+          </h2> */}
 
           <div
             id="devSkills"
