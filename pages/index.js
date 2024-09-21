@@ -18,7 +18,7 @@ import {
   Prototyping,
   DesExp,
   InfArch,
-  DevExp,
+  // DevExp,
   RenderQuality,
   Speed,
   Seo,
@@ -58,7 +58,7 @@ export default function Index({ globalData }) {
       let activeEntry = null;
 
       entries.forEach((entry) => {
-        const sectionId = entry.target.id;
+        // const sectionId = entry.target.id;
         // const buttonClass = idToButtonClass[sectionId];
 
         // console.log(
