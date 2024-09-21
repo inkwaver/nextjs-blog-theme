@@ -18,17 +18,33 @@
       opacity: 1;
       transition: all ease-in-out 0.4s;
     }
+
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    &.nav-design {
+      padding-left: .5rem;
+      margin-left: var(--size-15);
+      border-radius: .5rem 0 0 .5rem;
+      border-left: .1rem solid var(--color-n5);
+    }
+    &.nav-dev {
+      padding-right: .5rem;
+    }
   }
 
   .nav-group a {
     cursor: pointer;
     display: inline-flex;
     /* align-items: center; */
-    margin-left: var(--size-15);
+  margin-left: var(--size-15);
+
     line-height: 1.2rem;
     color: var(--color-n2);
     text-transform: uppercase;
-  font-size: .8rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: .05rem;
     &:before {

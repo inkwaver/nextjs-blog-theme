@@ -37,9 +37,12 @@ body {
 
   background-color: var(--body-color);
   text-rendering: optimizeLegibility;
+
 }
 
-
+.gradient {
+  background: linear-gradient(90deg, #5a6a82, #787894, #9885a1, #b594aa, #cfa5b1, #e5b8b6, #f5cebd, #ffe6c8);
+}
 
 .sticked .avatar {
   border: 0.1rem solid var(--color-n6) !important;

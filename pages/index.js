@@ -184,8 +184,8 @@ export default function Index({ globalData }) {
                   className="avatar"
                   src="/narek-ch.jpg"
                   alt="Image description"
-                  width={137}
-                  height={137}
+                  width={273}
+                  height={273}
                   // fill
                   // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   loading="lazy"

@@ -191,6 +191,7 @@ header.main {
 
 header.sticked {
   background-color: var(--white);
+  border-bottom: .1rem solid var(--color-n6);
   .logo {
     img {
       transition: all ease-in-out 0.2s;

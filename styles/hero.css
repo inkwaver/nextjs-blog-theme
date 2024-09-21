@@ -77,7 +77,8 @@
   /* background-color: gray; */
   margin-bottom: -12rem;
   position: absolute;
-  left: calc(33vw - 28rem);
+  /* left: calc(33vw - 28rem); */
+  left: calc(50% - 56rem);
   /* left:2rem; */
   align-self: flex-start;
   z-index: 4;
