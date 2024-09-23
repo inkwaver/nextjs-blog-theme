@@ -10,7 +10,7 @@ export default function Header() {
   const router = useRouter();
   const [avatarSize, setAvatarSize] = useState(180);
   const [isChecked, setIsChecked] = useState(false);
-  const [rootUrl, setRootUrl] = useState('');
+  // const [rootUrl, setRootUrl] = useState('');
 
   // Function to determine if a link is active
   const isActiveLink = (href) => {
@@ -23,9 +23,9 @@ export default function Header() {
 
   useEffect(() => {
     // Dynamically set the root URL
-    if (typeof window !== 'undefined') {
-      setRootUrl(window.location.origin);
-    }
+    // if (typeof window !== 'undefined') {
+    //   setRootUrl(window.location.origin);
+    // }
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
