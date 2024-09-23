@@ -75,8 +75,8 @@
   }
   .indipend-paragraph {
     /* margin-bottom: 50vh; */
-    max-width: 778px;
-    margin-top: 15px;
+    max-width: 43.22rem;
+    margin-top:  var(--size-15);
   }
   .icon-mid {
     margin-right: var(--size-15);
@@ -97,7 +97,7 @@
     display: none;
   }
   .content-dec{
-    max-width: 778px;
+    max-width: 43.22rem;
     font-size: var(--font-size-Subtitle);
     line-height: calc(1.5* var(--font-size-Subtitle));
     color: var(--color-n1);

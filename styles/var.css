@@ -1,6 +1,6 @@
 :root {
 
---wrapper-main: 1920px;
+--wrapper-main: 106.666rem;
 --wrapper-sec: 60rem;
 --font: Arial, Helvetica, sans-serif;
 
@@ -61,26 +61,26 @@
 --body-color: rgb(255, 255, 240);
 
 /* size and proportion */
---size-9: 9px;
---size-15: 15px;
---size-24: 24px;
---size-39: 39px;
---size-63: 63px;
---size-102: 102px;
+--size-9: .5rem;
+--size-15: 0.8333rem;
+--size-24: 1.333rem;
+--size-39: 2.16rem;
+--size-63: 3.5rem;
+--size-102: 5.6rem;
 
---size-9x2: 18px;
---size-15x2: 30px;
---size-24x2: 48px;
---size-39x2: 78px;
---size-63x2: 126px;
---size-102x2: 204px;
+--size-9x2: 1rem;
+--size-15x2: 1.6rem;
+--size-24x2: 2.66rem;
+--size-39x2: 4.33rem;
+--size-63x2: 7rem;
+--size-102x2: 11.3rem;
 
---size-9x3: 27px;
---size-15x3: 45px;
---size-24x3: 72px;
---size-39x3: 117px;
---size-63x3: 189px;
---size-102x3: 306px;
+--size-9x3: 1.5rem;
+--size-15x3: 2.5rem;
+--size-24x3: 4rem;
+--size-39x3: 6.5rem;
+--size-63x3: 10.5rem;
+--size-102x3: 17rem;
 
 
 /* wrapper */
@@ -97,7 +97,7 @@
 
 @media screen and (max-width: 500px) {
     :root{
-        --wrapper-margin: 15px;
+        --wrapper-margin: var(--size-15);
     }
 }
 
