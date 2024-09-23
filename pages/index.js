@@ -248,16 +248,72 @@ export default function Index({ globalData }) {
 
 
             <div className="g2">
-              <div className="exp-block beargeek">
-                <div className="comp-logo">BG</div>
 
-                <h4>Berargeek</h4>
+            <div className="exp-block beargeek">
+                <div className="comp-logo">WI</div>
+                <h4>Webinos</h4>
               </div>
-              <div className="exp-block beargeek">
-                <div className="comp-logo">BG</div>
 
-                <h4>Berargeek</h4>
+              <div className="exp-block beargeek">
+                <Image
+                  src="/company-logos/smartbet_io.jpg"
+                  alt="Goodwin desktop"
+                  width={39}
+                  height={39}
+                />
+                <h4>SmartBet</h4>
               </div>
+
+              <div className="exp-block beargeek">
+                <Image
+                  src="/company-logos/click2sure.jpg"
+                  alt="Goodwin desktop"
+                  width={39}
+                  height={39}
+                />
+                <h4>Click2Sure</h4>
+              </div>
+
+              <div className="exp-block beargeek">
+                <Image
+                  src="/company-logos/onearmenia_logo.jpg"
+                  alt="Goodwin desktop"
+                  width={39}
+                  height={39}
+                />
+                <h4>One Armenia</h4>
+              </div>
+
+              <div className="exp-block beargeek">
+                <Image
+                  src="/company-logos/spill.jpg"
+                  alt="Goodwin desktop"
+                  width={39}
+                  height={39}
+                />
+                <h4>SPILL, Barsamini Toort</h4>
+              </div>
+
+              <div className="exp-block beargeek">
+                <div className="comp-logo">MI</div>
+                <h4>Mikayel inc</h4>
+              </div>
+
+              <div className="exp-block beargeek">
+                <div className="comp-logo">AB</div>
+                <h4>Aragast Ben</h4>
+              </div>
+
+              <div className="exp-block beargeek">
+                <Image
+                  src="/company-logos/nexuslab.jpg"
+                  alt="Nexuslab"
+                  width={32}
+                  height={32}
+                />
+                <h4>NexusLab</h4>
+              </div>
+
               <div className="graph">
                 Web Developer
                 {/* Markup Specialist " */}

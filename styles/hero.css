@@ -317,7 +317,6 @@ header.sticked + main.main .first.section .graph-section .days div:after {
     display: block;
     position: absolute;
     height: .2rem;
-    background-color: var(--color-s2);
     /* width: 100%; */
     right: 0.7rem;
     left: 0;
@@ -350,15 +349,15 @@ header.sticked + main.main .first.section .graph-section .days div:after {
   }
   > span,
   .comp-logo {
-    width: 2rem;
+    width: 2rem !important;
     height: 2rem;
     border-radius: 9rem;
     overflow: hidden;
-    border: 0.2rem solid var(--color-s2) !important;
     padding: 0.5rem !important;
 
     /* padding: 0 !important; */
   }
+ 
   .comp-logo {
     font-size: 0.7rem;
     display: flex;
@@ -368,6 +367,23 @@ header.sticked + main.main .first.section .graph-section .days div:after {
     background-color: var(--color-s6);
     color: var(--color-p2);
     /* letter-spacing: 0.1rem; */
+  }
+}
+.g1 {
+  .exp-block > span, .comp-logo{
+    
+    border: 0.2rem solid var(--color-s2) !important;
+  }
+  .exp-block:after {
+    background-color: var(--color-s2);
+  }
+}
+.g2 {
+  .exp-block > span, .comp-logo{
+    border: 0.2rem solid var(--color-p2) !important;
+  }
+  .exp-block:after {
+    background-color: var(--color-p2);
   }
 }
 
