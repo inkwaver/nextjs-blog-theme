@@ -301,6 +301,7 @@ header.sticked + main.main .first.section .graph-section .days div:after {
   align-items: center;
   gap: 0.2rem;
   width: 0rem;
+  height: 0rem;
   border-radius: 9rem;
   flex-direction: row-reverse;
   padding-left: 0;
@@ -385,6 +386,10 @@ header.sticked + main.main .first.section .graph-section .days div:after {
   .exp-block:after {
     background-color: var(--color-p2);
   }
+  .graph{
+    margin-left: 4vw;
+    margin-right: 2vw;
+  }
 }
 
 header.sticked + main.main .section .graph-section {
@@ -392,6 +397,7 @@ header.sticked + main.main .section .graph-section {
     width: 6.3vw;
     padding-left: 0.4rem;
     opacity: 1;
+    height:2rem ;
     &.dubai-state {
       margin-left: 31.5vw;
     }
@@ -400,6 +406,37 @@ header.sticked + main.main .section .graph-section {
     }
     &.beargeek {
       margin-left: 0;
+    }
+    &.nl{
+      margin-left: 4vw;
+    }
+    &.ab{
+      margin-left: 12.5vw;
+       width: 7.4vw;
+    }
+    &.mi{
+      margin-left: 19.5vw;
+      width: 3.4vw;
+    }
+    &.bt{
+      margin-left: 22.5vw;
+    width: 9.4vw;
+    }
+    &.oa{
+      margin-left: 42.5vw;
+      width: 8.4vw;
+    }
+    &.cs{
+      margin-left: 52.5vw;
+    width: 8.4vw;
+    }
+    &.sb{
+      margin-left: 70vw;
+    width: 7.4vw;
+    }
+    &.wi{
+      margin-left: 82vw;
+    width: 5.4vw;
     }
   }
 }
