@@ -18,7 +18,7 @@
         } */
         .header-links {
             position: absolute;
-            right: var(--size-24);
+            right: 4rem;
         }
     }
 

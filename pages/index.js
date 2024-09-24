@@ -444,9 +444,9 @@ export default function Index({ globalData }) {
             className="project-part home-snipet mb-102 design-exp wrapper-main viewport-h intersect-section"
           >
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
-              <span className="mr-15">
+           
                 <IconWithLabel Icon={DesExp} label="Design" />
-              </span>
+           
               Projects
             </h2>
 
@@ -464,11 +464,8 @@ export default function Index({ globalData }) {
                   <img loading="lazy" src="/gif/CaseStudygif.gif" />
                 </div>
                 <div className="project-details">
-                  <h3>Case Study </h3>
-                  <p>
-                    <strong>Redesign Project:</strong> Real Estate Company
-                    Website
-                  </p>
+                  <h3>Case Study :Real Estate </h3>
+                
                   <ul>
                     <li>
                       <strong>Objective:</strong> Enhance desktop experience for

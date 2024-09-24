@@ -92,6 +92,8 @@ p {
   line-height: var(--font-size-big);
   font-weight: 900;
   color: var(--color-n5);
+  letter-spacing: -.2rem;
+  font-size: 3rem;
 }
 
 .title-normal {

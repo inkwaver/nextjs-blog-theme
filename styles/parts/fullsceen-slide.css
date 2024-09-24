@@ -1,6 +1,6 @@
 .sticky-header {
   position: sticky;
-  top: 5rem;
+  top: 4.5rem;
   z-index: 665;
   display: inline-block;
   padding-top: .5rem;
@@ -69,6 +69,7 @@
   .big-title {
     margin-bottom: var(--size-24);
     /* transition: all ease-in .3s; */
+    letter-spacing: -.2rem;
     .icon-mid {
         transform: translate(0, -.5rem);
     }

@@ -86,7 +86,7 @@
 
 
 /* wrapper */
---wrapper-margin: var(--size-39);
+--wrapper-margin: 4rem;
 /* header */
 --logo-name-small: var(--size-24);
 --logo-name-big: var(--size-15x3);
