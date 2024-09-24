@@ -13,9 +13,9 @@
 p {
   font-size: var(--font-size-paragraph);
   /* line-height: calc(2* var(--size-15)); */
-  line-height: var(--size-24);
+  line-height: 1.5rem;
   word-spacing: 0.04rem;
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.02rem;
 
   strong {
     font-weight: bold;
@@ -175,10 +175,12 @@ main.main {
 .col-container {
   display: flex;
   justify-content: space-between;
+  gap:2rem;
   .col-50 {
     width: 50%;
-    .col-50 {
+    .col-50, .col-70 {
       width: 100%;
+      
     }
   }
   .alig-right {

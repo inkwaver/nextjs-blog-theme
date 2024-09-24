@@ -39,14 +39,14 @@
     cursor: pointer;
     display: inline-flex;
     /* align-items: center; */
-  margin-left: var(--size-15);
+    margin-left: var(--size-15);
     align-items: center;
     /* line-height: 1.2rem; */
     color: var(--color-n2);
     text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: .05rem;
+    font-size: 1rem;
+    /* font-weight: 600; */
+    /* letter-spacing: -.05rem; */
     &:before {
       content: ' ';
       display: inline-block;
@@ -88,7 +88,7 @@
 header.sticked + main.main {
   .content-nav {
     position: sticky;
-    top: 6.4rem;
+    top: 5.6rem;
     z-index: 667  ;
     transition: all ease-in-out 0.5s;
     /* flex-direction: row-reverse;

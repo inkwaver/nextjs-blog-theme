@@ -3,9 +3,9 @@
   article.content {
     background-color: var(--white);
     width: 100%;
-
+    padding-top: 4.6rem;
     .content-holder {
-      padding: var(--size-39) var(--size-24);
+      padding: 4rem;
       h3 {
         margin-bottom: var(--size-15);
         color: var(--color-p1);
@@ -32,7 +32,7 @@
     top: 0;
     height: 100vh;
     overflow-y: auto;
-    padding-right: 1rem;
+    padding-right: 2rem;
     right: -2rem;
     background: var(--white);
   }
