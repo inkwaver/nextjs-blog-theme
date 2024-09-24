@@ -28,6 +28,13 @@
   }
   .sidebar {
     width: 30%;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding-right: 1rem;
+    right: -2rem;
+    background: var(--white);
   }
   .image-viewer {
   }

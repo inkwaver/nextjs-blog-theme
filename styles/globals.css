@@ -41,6 +41,10 @@ body {
 
 }
 
+.site-structure {
+  width: calc(70% + 2rem);
+}
+
 .gradient {
   background: linear-gradient(90deg, #5a6a82, #787894, #9885a1, #b594aa, #cfa5b1, #e5b8b6, #f5cebd, #ffe6c8);
 }
@@ -235,7 +239,7 @@ footer.main {
       display: flex;
       flex-direction: row;
       text-transform: uppercase;
-      font-size: 15px;
+      font-size: 0.83rem;
       line-height: 26px;
       gap: 9px;
       font-weight: 900;

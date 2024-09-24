@@ -65,12 +65,12 @@ const ImageViewerModal = ({
         >
           <div
             className="thumbnail-wrapper"
-            style={{
-              position: 'relative',
-              width: width ? `${width}px` : '100%',
-              paddingBottom: `${(imageDimensions.height / imageDimensions.width) * 100}%`, // maintain aspect ratio
-              overflow: 'hidden',
-            }}
+            // style={{
+            //   position: 'absolute',
+            //   width: width ? `${width}px` : '100%',
+            //   paddingBottom: `${(imageDimensions.height / imageDimensions.width) * 100}%`, // maintain aspect ratio
+            //   overflow: 'hidden',
+            // }}
           >
             <Image
               className="thumbnail"

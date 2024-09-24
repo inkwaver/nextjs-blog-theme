@@ -19,9 +19,9 @@
     /* max-width: 532px; */
     width: 100%;
     padding: var(--size-39);
-    border: .1rem solid var(--color-n5);
+    border: .1rem solid var(--color-s5);
     border-radius: var(--size-24);
-    background-color: var(--color-s7);
+    background-color: var(--color-n7);
     .icon {
       grid-area: icon;
     }
@@ -39,6 +39,7 @@
   }
 
   .dev-section .design-flow-card{
-    background-color: var(--color-p7);
+    background-color: var(--color-n7);
+    border-color: var(--color-p2);
 
   }

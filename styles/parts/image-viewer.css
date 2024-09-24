@@ -2,7 +2,7 @@
     position: relative; /* Ensure the parent element has a valid position */
     width: 100%;
     overflow: hidden;
-    background-color: #f0f0f0; /* Optional background color */
+    /* background-color: #f0f0f0;  */
   }
   
   .thumbnail-button {
