@@ -31,6 +31,7 @@
 --color-p4: #7895BA;
 --color-p5: #9DB2CD;
 --color-p6: #C1CFE0;
+--color-p7: #e0e8f3;
 
 --color-static-p1:  #093E82;
 --color-static-p2:  #2E5B95;
@@ -58,7 +59,7 @@
 --white:#ffffff;
 --black:#000000;
 /* --body-color: #fff8e1; */
---body-color: rgb(255, 255, 240);
+--body-color: rgb(253, 253, 253);
 
 /* size and proportion */
 --size-9: .5rem;

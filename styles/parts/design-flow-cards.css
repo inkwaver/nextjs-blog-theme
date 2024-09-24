@@ -14,14 +14,14 @@
     display: grid;
     grid-template: "icon title"
       "icon description";
-    grid-template-columns: 60px auto;
+    grid-template-columns: 4.33rem auto;
     column-gap: var(--size-24);
     /* max-width: 532px; */
     width: 100%;
     padding: var(--size-39);
     border: .1rem solid var(--color-n5);
     border-radius: var(--size-24);
-    background-color: var(--white);
+    background-color: var(--color-s7);
     .icon {
       grid-area: icon;
     }
@@ -34,6 +34,11 @@
   
     p {
       grid-area: description;
-      color: var(--color-n3);
+      color: var(--color-n1);
     }
+  }
+
+  .dev-section .design-flow-card{
+    background-color: var(--color-p7);
+
   }
