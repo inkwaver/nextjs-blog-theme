@@ -23,6 +23,8 @@ header.main {
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.3);
     border: 0.1rem solid var(--color-n6) !important;
+    width: 100%;
+    height: auto;
     /* position: absolute;
       width: 100%;
       height: 100%; */
@@ -87,8 +89,8 @@ header.main {
     justify-content: start;
   }
   .logo {
-    height: var(--size-15x3);
-    width: var(--size-15x3);
+    /* height: var(--size-15x3);
+    width: var(--size-15x3); */
     display: block;
     position: relative;
   }
@@ -205,6 +207,7 @@ header.main .logo a {
   justify-content: center;
   flex-direction: column;
   height: 100%;
+  width: 2rem;
 }
 
 .huge-title .logo-name {
@@ -229,7 +232,10 @@ header.hero-header {
   }
 }
 
-.image-holder span img {
-  transition: all ease-in-out 0.2s;
-  border-radius: 300rem;
+.image-holder {
+  width: 12rem;
+  span img {
+    transition: all ease-in-out 0.2s;
+    border-radius: 300rem;
+  }
 }
