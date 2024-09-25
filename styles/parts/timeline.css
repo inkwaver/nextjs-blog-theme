@@ -64,7 +64,7 @@
         position: absolute !important;
         border: 0.1rem solid var(--color-n3);
         border-radius: 100rem;
-        right: -3.7rem;
+        right: -3.3rem;
         top: -0.4rem;
         z-index: 1;
         padding: 0.3rem !important;
@@ -116,8 +116,10 @@
     }
     li {
       color: var(--color-n6);
-      font-size: var(--font-size-paragraph);
-      line-height: calc(1.5 * var(--font-size-paragraph));
+      /* font-size: var(--font-size-paragraph);
+      line-height: calc(1.5 * var(--font-size-paragraph)); */
+      font-size: 1.2rem;
+      line-height: 1.8rem;
       transition: all ease-in 0.5s;
 
       img {

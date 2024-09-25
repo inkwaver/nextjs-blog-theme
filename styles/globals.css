@@ -60,6 +60,12 @@ body {
 .design-section, .dev-section {
   /* padding-top: 13rem; */
 }
+
+#devExp {
+h2.big-title{
+  margin-bottom: 2rem;
+}
+}
 /* 
 .single {
   display: grid;
