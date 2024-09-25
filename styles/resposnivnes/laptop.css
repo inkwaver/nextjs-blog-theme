@@ -37,6 +37,12 @@
     }
 }
 
+@media screen and (min-width: 1200px) {
+    html{
+        font-size: 1.05vw;
+    }
+}
+
 @media screen and (max-width: 1240px) {
 
     .page-cover svg,
