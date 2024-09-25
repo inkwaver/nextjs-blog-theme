@@ -100,11 +100,13 @@
     text-indent: 0;
     overflow: hidden;
     transition: all ease-in-out 0.2s;
-    font-size: 3.6rem;
+    font-size: 3rem;
     font-weight: 900;
     line-height: 4rem;
+    color: var(--color-n3);
+
     span {
-      color: var(--color-n5);
+      color: var(--color-n6);
     }
   }
   p {

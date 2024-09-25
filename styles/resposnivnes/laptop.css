@@ -48,6 +48,12 @@
     }
 }
 
+@media screen and (min-width: 768px) {
+    html{
+        font-size: 1vw;
+    }
+}
+
 @media screen and (max-width: 1240px) {
 
     .page-cover svg,
@@ -80,7 +86,7 @@
 
 }
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1022px) {
     .project-block {
         display: inline-flex;
         grid-template-columns: 1fr;
