@@ -73,13 +73,16 @@ p {
   display: inline-grid;
   align-items: center;
   justify-items: center;
-  width: var(--size-63);
-  height: var(--size-63);
+  width: 2.5rem;
+  height: 2.5rem;
   /* margin-right: calc(-1*(var(--size-39))); */
   /* margin-right: calc(-2*(var(--size-39))); */
   /* transform: translateY( calc(-1 * (var(--font-size-big) + var(--size-39)))); */
   border: 0.1rem solid;
   border-radius: 10rem;
+  svg {
+    width: 1.2rem !important;
+  }
 }
 
 /* .dev-exp .icon-mid {

@@ -4,7 +4,7 @@
   z-index: 665;
   display: inline-block;
   padding-top: .5rem;
-  margin-left: -.5rem;
+  /* margin-left: -.5rem; */
 }
 .intro-title-sticky {
   display: flex;
@@ -71,9 +71,9 @@
     /* transition: all ease-in .3s; */
     margin-bottom: .2rem;
     letter-spacing: -.2rem;
-    .icon-mid {
+    /* .icon-mid {
         transform: translate(0, -.5rem);
-    }
+    } */
   }
   .indipend-paragraph {
     /* margin-bottom: 50vh; */
@@ -82,11 +82,17 @@
   }
   .icon-mid {
     margin-right: var(--size-15);
+    margin-top: .4rem;
   }
   h2.big-title {
     display: flex;
     width: 100%;
-    /* margin-bottom: var(--size-63x2); */
+    align-items: center;
+    > span{
+      display: inline-flex;
+      margin-right: .5rem;
+      align-items: center;
+    }
   }
 /* 
   .first-container {

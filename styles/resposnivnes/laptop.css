@@ -24,10 +24,10 @@
 
 }
 
-@media screen and (max-width: 80.94rem) {
+@media screen and (max-width: 14024px) {
     /* 1456px */
     .hero-section {
-        left: 2rem;
+        left: 4rem;
     }
 }
 
@@ -44,7 +44,7 @@
 }
 @media screen and (min-width: 1024px) {
     html{
-        font-size: 1.09vw;
+        font-size: 1vw;
     }
 }
 

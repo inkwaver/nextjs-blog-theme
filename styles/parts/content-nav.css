@@ -12,8 +12,8 @@
   .nav-group {
     transition: all ease-in-out 0.4s;
     /* transform: translate(-2rem, calc(80vh - 16rem)); */
-    transform: translate(0rem,44vh);
-
+    /* transform: translate(0rem,44vh); */
+    transform: translate(0rem, calc(50vh - 3.2rem));
     h3 {
       opacity: 1;
       transition: all ease-in-out 0.4s;

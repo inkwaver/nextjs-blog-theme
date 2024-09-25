@@ -345,9 +345,9 @@ export default function Index({ globalData }) {
             className="journey-section intersect-section wrapper-main "
           >
             <h2 className="big-title color-n3 mb-39 sticky-header ">
-              <span className="mr-15 no-body-bg">
+           
                 <IconWithLabel Icon={DesExp} label="Design" />
-              </span>
+            
               Journey
             </h2>
 
@@ -392,9 +392,9 @@ export default function Index({ globalData }) {
             className="design-flow mb-102 wrapper-main viewport-h intersect-section"
           >
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
-              <span className="mr-15">
+          
                 <IconWithLabel Icon={DesExp} label="Design" />
-              </span>
+           
               Flow
             </h2>
 
@@ -530,9 +530,9 @@ export default function Index({ globalData }) {
             className="design-flow  mb-102 wrapper-main viewport-h intersect-section first-container"
           >
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
-              <span className=" mr-15">
+            
                 <IconWithLabel Icon={DesExp} label="Development" />
-              </span>
+           
               Skills
             </h2>
             <p className="content-dec ">
@@ -600,9 +600,9 @@ export default function Index({ globalData }) {
             className="dev-exp wrapper-main viewport-h intersect-section"
           >
             <h2 className="big-title color-n3 mb-39 sticky-header body-bg is-title-sticky">
-              <span className="mr-15">
+             
                 <IconWithLabel Icon={DesExp} label="Development" />
-              </span>
+         
               Experience
             </h2>
 

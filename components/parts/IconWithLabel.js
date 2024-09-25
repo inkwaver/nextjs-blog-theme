@@ -2,6 +2,7 @@
 import React from 'react';
 
 const IconWithLabel = ({ Icon, label }) => (
+  
   <span className="color-n3 body-bg">
     <span className="icon-mid">
       <Icon />

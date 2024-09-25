@@ -209,7 +209,6 @@ footer.main {
 
 footer.main {
   background-color: var(--color-n2);
-  position: relative;
   /* padding: var(--size-63) 0 var(--size-63) 0; */
   *,
   path,
