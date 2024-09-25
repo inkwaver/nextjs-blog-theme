@@ -42,6 +42,11 @@
         font-size: 1.05vw;
     }
 }
+@media screen and (min-width: 1024px) {
+    html{
+        font-size: 1.09vw;
+    }
+}
 
 @media screen and (max-width: 1240px) {
 
