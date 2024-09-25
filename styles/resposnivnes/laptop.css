@@ -1,4 +1,10 @@
 
+@media screen and (max-width: 1847px) {
+    image-holder {
+        width: 9rem;
+    }
+}
+
 
 @media screen and (max-width: 80.94rem) {
     /* 1456px */

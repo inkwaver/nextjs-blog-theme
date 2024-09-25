@@ -403,6 +403,7 @@
       padding-right: 150px;
     }
     .project-thumbnail {
+      width: 50%;
       overflow: hidden;
       /* border-radius: 15px; */
     }
