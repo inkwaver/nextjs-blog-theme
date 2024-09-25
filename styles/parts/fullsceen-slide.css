@@ -69,6 +69,7 @@
   .big-title {
     margin-bottom: var(--size-24);
     /* transition: all ease-in .3s; */
+    margin-bottom: .2rem;
     letter-spacing: -.2rem;
     .icon-mid {
         transform: translate(0, -.5rem);
