@@ -16,7 +16,7 @@ const ImageViewerModal = ({
   buttonUrl,
   children,
   blur = false,
-  width,  // optional width prop
+  // width,  // optional width prop
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
