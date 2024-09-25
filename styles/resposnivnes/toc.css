@@ -2,7 +2,7 @@
 
 display: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 863px) {
   .overlay-toc {
     position: fixed;
     background-color: black;
