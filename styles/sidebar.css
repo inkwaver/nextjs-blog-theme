@@ -71,7 +71,7 @@
   }
 
   .parts {
-    margin-bottom: 24px;
+    margin-bottom: 3rem;
 
     /* background-color: var(--color-p1); */
     &>span {
@@ -215,8 +215,8 @@
       a.active+.content-links {
         background-color: var(--sidebar-active-cat-ul);
         /* border-left: 0.1rem solid var(--color-p1); */
-        margin-right: 24px;
-        border-radius: 0 0 9px 0;
+        margin-right:3rem;
+        border-radius: 0 0 .5rem 0;
 
         /* padding-bottom: 15px; */
         /* padding-top:  var(--size-15) ; */
@@ -254,7 +254,7 @@
 
   .title {
     font-size: var(--size-39);
-    padding-bottom: 24px;
+    padding-bottom: 3rem;
     padding-left: 45px;
     color: var(--color-n4);
     text-transform: uppercase;

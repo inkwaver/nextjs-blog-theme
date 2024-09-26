@@ -374,7 +374,7 @@
 .case-study-preview {
   margin-top: 63px;
   /* display: flex; */
-  gap: 24px;
+  gap: 3rem;
   position: relative;
   display: inline-block;
   h3 {
@@ -394,7 +394,7 @@
     z-index: 11;
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: 3rem;
     .project-thumbnail {
       img{
         width: 100%;

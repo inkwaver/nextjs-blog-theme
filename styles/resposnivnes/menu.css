@@ -14,7 +14,7 @@
         background-color: var(--color-n5);
         flex-direction: column-reverse;
         top: 4rem;
-        padding: 24px;
+        padding: 3rem;
         right: 0;
         width: 100%;
     }
@@ -29,14 +29,14 @@
   }
   .menu-icon {
     position: absolute;
-    right: 24px;
+    right: 3rem;
     top:21px;
     z-index: 12;
   }
   .main-menu-open , .main-menu-close{
-    width: 24px;
+    width: 3rem;
      path{
-        width: 24px;
+        width: 3rem;
         fill: var(--color-n2);
     }
   }
