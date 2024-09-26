@@ -1,8 +1,9 @@
 .design-flow-card svg,
 .design-flow-card svg path,
 .icon-24 svg path {
-  fill: var(--black);
+  fill: var(--color-n2);
   width: 100%;
+  max-width: 3rem;
 }
 .content-svg-holder {
   svg {

@@ -14,7 +14,7 @@
     display: grid;
     grid-template: "icon title"
       "icon description";
-    grid-template-columns: 4.33rem auto;
+    grid-template-columns: 3.33rem auto;
     column-gap: var(--size-24);
     /* max-width: 532px; */
     width: 100%;

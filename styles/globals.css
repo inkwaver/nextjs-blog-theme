@@ -42,7 +42,7 @@ body {
 }
 
 .site-structure {
-  width: calc(70% + 2rem);
+  width: calc(76% + 2rem);
 }
 
 .gradient {
@@ -215,6 +215,7 @@ footer.main {
 
 footer.main {
   background-color: var(--color-n2);
+  position: relative;
   /* padding: var(--size-63) 0 var(--size-63) 0; */
   *,
   path,
