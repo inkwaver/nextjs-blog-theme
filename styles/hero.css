@@ -78,7 +78,7 @@
   margin-bottom: -12rem;
   position: absolute;
   /* left: calc(33vw - 28rem); */
-  left: calc(50% - 42rem);
+  left: calc(50% - 55rem);
   /* left:2rem; */
   align-self: flex-start;
   z-index: 4;
@@ -195,6 +195,7 @@ header.sticked + main.main {
       /* background-color: yellow; */
       align-self: flex-end;
       margin-bottom: .5rem;
+      margin-right: 2vw;
       .graph {
         background-color: var(--color-s3);
         border: 0.1rem solid var(--color-s4);
@@ -220,6 +221,9 @@ header.sticked + main.main {
   .journey-section {
     height: 100vh;
     width: 100%;
+    .big-title .body-bg{
+      background-color: transparent;
+    }
     /* background-color: green; */
     display: flex;
     align-items: flex-start;

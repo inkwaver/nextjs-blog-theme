@@ -175,7 +175,7 @@ export default function Index({ globalData }) {
           </div>
         </nav>
 
-        <div className="section first intersect-section">
+        <div className="section first ">
           <div className="graph-section">
           <div className='wrapper-main relative hero-holder'>
           <div className="hero-section">
@@ -344,7 +344,7 @@ export default function Index({ globalData }) {
             id="journey"
             className="journey-section intersect-section wrapper-main "
           >
-            <h2 className="big-title color-n3 mb-39 sticky-header">
+            <h2 className="big-title color-n3 mb-39 sticky-header ">
            
                 <IconWithLabel Icon={DesExp} label="Design" />
             
