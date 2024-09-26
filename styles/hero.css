@@ -197,9 +197,9 @@ header.sticked + main.main {
       margin-bottom: .5rem;
       margin-right: 2vw;
       .graph {
-        background-color: var(--color-s3);
-        border: 0.1rem solid var(--color-s4);
-        color: var(--color-s7);
+        background-color: var(--color-s7);
+        border-left: 0.4rem solid var(--color-s4);
+        color: var(--color-s4);
       }
     }
 
@@ -211,9 +211,12 @@ header.sticked + main.main {
         transition: all ease-in-out 0.3s;
       }
       .graph {
-        background-color: var(--color-p3);
-        border: 0.1rem solid var(--color-p4);
-        color: var(--color-p6);
+        background-color: var(--color-p7);
+        border-left: 0.4rem solid var(--color-p4);
+        color: var(--color-p4);
+      }
+      .exp-block .comp-logo {
+        background-color: var(--color-p6);
       }
     }
   }
@@ -324,11 +327,12 @@ header.sticked + main.main .first.section .graph-section .days div:after {
     content: "";
     display: block;
     position: absolute;
-    height: .2rem;
+    height: .1rem;
     /* width: 100%; */
-    right: 0.7rem;
+    right: 0.8rem;
     left: 0;
     bottom: 0;
+    /* border-radius: 1rem; */
   }
   h4 {
       /* width: 100%; */

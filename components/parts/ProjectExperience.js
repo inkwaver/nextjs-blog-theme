@@ -292,7 +292,7 @@ const ProjectExperience = ({ onVisibleSectionChange }) => {
           <div className="psh-footer">
               <h5>Goodwin</h5>
               <Link target="_blank" href="https://goodwin.am/am/">
-              <span className="visiti-label">Visit Website Screenshot</span>
+              <span className="visiti-label">Visit Website</span>
 
               </Link>
             </div>
