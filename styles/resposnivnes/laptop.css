@@ -7,22 +7,15 @@
 
 
 @media screen and (max-width: 1456px) {
-    /* .hero-section {
-        left: 2rem;
-    } */
+  html{
+    font-size: 1vw;
+
+  }
 }
 
-/* @media screen and (min-width: 1456px) {
-    html{
-        font-size: 1vw;
-    }
-} */
 
-/* @media screen and (min-width: 1200px) {
-    html{
-        font-size: 1.05vw;
-    }
-} */
+
+
 @media screen and  (max-width: 425px){
     html{
         font-size: 1.09vw;

@@ -169,9 +169,8 @@ const ProjectExperience = ({ onVisibleSectionChange }) => {
 
       <div
         ref={(el) => (colLeftRefs.current[1] = el)}
-        className={`col-left feat-pin ${
-          highlightIndex >= 1 ? 'highlight' : ''
-        }`}
+        className={`col-left feat-pin ${highlightIndex >= 1 ? 'highlight' : ''
+          }`}
       >
         <h4>
           SmartBet
@@ -202,7 +201,7 @@ const ProjectExperience = ({ onVisibleSectionChange }) => {
           Developed a mobile-responsive version of the website, ensuring it met
           criteria for easy theming and dark/light modes.
         </li>
-        <li className="project-overview ">
+        <li className="project-overview project-screen-holder">
           <input
             readOnly
             checked={responsiveMode === 'desktop'}
@@ -258,17 +257,15 @@ const ProjectExperience = ({ onVisibleSectionChange }) => {
             </section>
           </div>
           <div
-            className={`desktop-view ${
-              responsiveMode === 'desktop' ? '' : 'hidden'
-            }`}
+            className={`desktop-view ${responsiveMode === 'desktop' ? '' : 'hidden'
+              }`}
           >
             <div className="desktop-bar toolbar-view">
               <span className="device-name">Desktop - 1200</span>
             </div>
             <Image
-              className={`desktop-view ${
-                colorMode === 'light' ? 'light' : 'dark'
-              }`}
+              className={`desktop-view ${colorMode === 'light' ? 'light' : 'dark'
+                }`}
               src={`/projects/goodwin-desk-${colorMode}.jpg`}
               alt="Goodwin desktop"
               width={635}
@@ -276,23 +273,29 @@ const ProjectExperience = ({ onVisibleSectionChange }) => {
             />
           </div>
           <div
-            className={`mobile-view ${
-              responsiveMode === 'mobile' ? '' : 'hidden'
-            }`}
+            className={`mobile-view ${responsiveMode === 'mobile' ? '' : 'hidden'
+              }`}
           >
             <div className="desktop-bar toolbar-view">
               <span className="device-name">Mobile - 320</span>
             </div>
             <Image
-              className={`mobile-view ${
-                colorMode === 'light' ? 'light' : 'dark'
-              }`}
+              className={`mobile-view ${colorMode === 'light' ? 'light' : 'dark'
+                }`}
               src={`/projects/goodwin-mobile-${colorMode}.jpg`}
               alt="Goodwin mobile"
               width={210}
               height={372}
             />
+             
           </div>
+          <div className="psh-footer">
+              <h5>Goodwin</h5>
+              <Link target="_blank" href="https://goodwin.am/am/">
+              <span className="visiti-label">Visit Website Screenshot</span>
+
+              </Link>
+            </div>
         </li>
       </ul>
 
@@ -475,12 +478,12 @@ const ProjectExperience = ({ onVisibleSectionChange }) => {
             target="_blank"
           >
             <Image
-            className="desktop-view dark"
-            src="/projects/butterfield.jpg"
-            alt="Butterfield"
-            width={635}
-            height={358}
-          />
+              className="desktop-view dark"
+              src="/projects/butterfield.jpg"
+              alt="Butterfield"
+              width={635}
+              height={358}
+            />
             <div className="psh-footer">
               <h5>Butterfield</h5>
               <span className="visiti-label">Visit Website Screenshot</span>
@@ -491,13 +494,13 @@ const ProjectExperience = ({ onVisibleSectionChange }) => {
             href="https://web.archive.org/web/20141223010029/http://www.esfcamps.com/"
             target="_blank"
           >
-              <Image
-            className="desktop-view dark"
-            src="/projects/esfcamps.jpg"
-            alt="Goodwin desktop"
-            width={635}
-            height={358}
-          />
+            <Image
+              className="desktop-view dark"
+              src="/projects/esfcamps.jpg"
+              alt="Goodwin desktop"
+              width={635}
+              height={358}
+            />
             <div className="psh-footer">
               <h5>Esfcamps</h5>
               <span className="visiti-label">Visit Website Screenshot</span>
@@ -509,9 +512,9 @@ const ProjectExperience = ({ onVisibleSectionChange }) => {
           buttonText="View Website Snapshot"
           buttonUrl="https://web.archive.org/web/20141220035155mp_/http://www.butterfield.com/"
         /> */}
-          
+
         </li>
-        
+
       </ul>
       <div
         ref={(el) => (colLeftRefs.current[5] = el)}
@@ -533,24 +536,24 @@ const ProjectExperience = ({ onVisibleSectionChange }) => {
           identical on multiple modern and old browsers (IE7, IE8).
         </li>
         <li className='has-psh'>
-        <Link
+          <Link
             className="project-screen-holder"
             href="https://web.archive.org/web/20141223010029/http://www.esfcamps.com/"
             target="_blank"
           >
-                  <Image
-            className="desktop-view dark"
-            src="/projects/cafe4tune.jpg"
-            alt="Goodwin desktop"
-            width={635}
-            height={358}
-          />
+            <Image
+              className="desktop-view dark"
+              src="/projects/cafe4tune.jpg"
+              alt="Goodwin desktop"
+              width={635}
+              height={358}
+            />
             <div className="psh-footer">
               <h5>Cafe4tune</h5>
               <span className="visiti-label">Visit Website Screenshot</span>
             </div>
           </Link>
-        
+
         </li>
       </ul>
       <div
@@ -583,18 +586,18 @@ const ProjectExperience = ({ onVisibleSectionChange }) => {
           themes.
         </li>
         <li className='has-psh'>
-        <Link
+          <Link
             className="project-screen-holder"
             href="https://web.archive.org/web/20130523110823/http://adaminasyan.com/"
             target="_blank"
           >
-               <Image
-            className="desktop-view dark"
-            src="/projects/ada.jpg"
-            alt="Ada Minasyan"
-            width={635}
-            height={358}
-          />
+            <Image
+              className="desktop-view dark"
+              src="/projects/ada.jpg"
+              alt="Ada Minasyan"
+              width={635}
+              height={358}
+            />
             <div className="psh-footer">
               <h5>Ada Minasyan</h5>
               <span className="visiti-label">Visit Website Screenshot</span>
@@ -602,16 +605,16 @@ const ProjectExperience = ({ onVisibleSectionChange }) => {
           </Link>
           <Link
             className="project-screen-holder"
-            href="https://web.archive.org/web/20141223010029/http://www.esfcamps.com/"
+            href="https://web.archive.org/web/20110203000334/http://www.leonelawaltrick.com/"
             target="_blank"
           >
-                <Image
-            className="desktop-view dark"
-            src="/projects/leonela.jpg"
-            alt="Leonle Waltrix"
-            width={635}
-            height={358}
-          />
+            <Image
+              className="desktop-view dark"
+              src="/projects/leonela.jpg"
+              alt="Leonle Waltrix"
+              width={635}
+              height={358}
+            />
             <div className="psh-footer">
               <h5>Leonle Waltrix</h5>
               <span className="visiti-label">Visit Website Screenshot</span>
@@ -619,23 +622,23 @@ const ProjectExperience = ({ onVisibleSectionChange }) => {
           </Link>
           <Link
             className="project-screen-holder"
-            href="https://web.archive.org/web/20141223010029/http://www.esfcamps.com/"
+            href="http://web.archive.org/web/20120502104034/http://blog.axonpotential.com/about/"
             target="_blank"
           >
-                 <Image
-            className="desktop-view dark"
-            src="/projects/axon.jpg"
-            alt="Leonle waltrix"
-            width={635}
-            height={358}
-          />
+            <Image
+              className="desktop-view dark"
+              src="/projects/axon.jpg"
+              alt="Axon Potential"
+              width={635}
+              height={358}
+            />
             <div className="psh-footer">
-              <h5>Esfcamps</h5>
+              <h5>Axon Potential</h5>
               <span className="visiti-label">Visit Website Screenshot</span>
             </div>
           </Link>
-          
-       
+
+
         </li>
       </ul>
     </div>

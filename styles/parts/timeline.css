@@ -170,6 +170,12 @@
   background: var(--color-n7);
   border-radius: .5rem;
   overflow: hidden;
+  &.project-screen-holder{
+    padding: 0 0 1rem 0 !important;
+  }
+  .psh-footer {
+    padding: 0 1rem;
+  }
 }
   img.dark,
   .mobile-view,
