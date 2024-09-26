@@ -19,7 +19,7 @@
       transition: all ease-in-out 0.4s;
     }
 
-    background-color: white;
+    background-color: var(--white);
     display: flex;
     align-items: center;
     padding-top: .5rem;

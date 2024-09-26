@@ -286,7 +286,9 @@ header.sticked + main.main {
     transition: all ease-in-out 0.5s;
     content: '';
     position: absolute;
-    background-color: var(--color-n6);
+    background-color: var(--white);
+    border-right: .1rem solid var(--color-n6);
+    border-top: .1rem solid var(--color-n6);
     /* opacity: 0.7; */
     width: 100%;
     left: 0;
@@ -296,13 +298,19 @@ header.sticked + main.main {
     top: 0;
     /* height: 50vh; */
   }
+  >div:last-child::after{
+    border-right: none;
+  }
+}
+.hero-header + main.main .image-holder span img{
+  border: .1rem solid var(--color-n5) !important;
 }
 
 header.sticked + main.main .first.section .graph-section .days div:after {
   top: -42vh;
   bottom: 1.5rem;
   height: auto;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .exp-block {

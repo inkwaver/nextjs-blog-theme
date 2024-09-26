@@ -60,8 +60,9 @@
 --white:#ffffff;
 --black:#000000;
 /* --body-color: #fff8e1; */
---body-color: rgb(253, 253, 253);
-
+--body-color: rgb(246, 243, 243);
+--shadow : .1rem .1rem .5rem -.5rem var(--black);
+--shadow-hover: .1rem .1rem .8rem -.2rem var(--color-n4);
 /* size and proportion */
 --size-9: .5rem;
 --size-15: 0.8333rem;
@@ -113,7 +114,7 @@
 --color-n2: #B3B3B3;
 --color-n1: #D9D9D9;
 /* --body-color: #110429; */
---body-color: #110429;
+--body-color: #000000;
 
 --color-p6: #093E82;
 --color-p5: #2E5B95;

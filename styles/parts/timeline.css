@@ -458,7 +458,7 @@
 }
 .project-screen-holder {
   padding: 1rem;
-  background-color: var(--color-n7);
+  background-color: var(--white);
   border-radius: .5rem;
   display: block;
   &:not(:last-child){
@@ -492,6 +492,13 @@
         content: " > ";
       }
     }
+  }
+  &{
+    box-shadow: var(--shadow);
+    transition: all ease-in-out .2s;
+  }
+  &:hover{
+    box-shadow: var(--shadow-hover);
   }
   &:hover .psh-footer span{
       letter-spacing: 0;
