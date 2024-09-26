@@ -34,7 +34,7 @@
     overflow-y: auto;
     padding-right: 2rem;
     right: -2rem;
-    background: var(--white);
+    /* background: var(--white); */
   }
   .image-viewer {
   }
