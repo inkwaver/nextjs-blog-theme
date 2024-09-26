@@ -276,6 +276,16 @@ header.sticked + main.main {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    &:before{
+      height: 2rem;
+    width: 100%;
+    background-color: var(--color-n6);
+    position: absolute;
+    bottom: -.4rem;
+    left: 0;
+    content: "";
+    z-index: -1;
+    }
   }
   > div:hover {
     &:after {
