@@ -278,6 +278,6 @@ main.main {
 
 a.cv-btn {
   color: var(--color-static-p2);
-  border-color: var(--color-p4);
-  background-color: var(--color-s4);
+  border-color: var(--color-p6);
+  background-color: var(--color-s6);
 }

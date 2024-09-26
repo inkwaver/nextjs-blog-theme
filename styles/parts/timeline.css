@@ -439,7 +439,7 @@
         letter-spacing: 0.02rem;
         strong{
           min-width: 11rem;
-          color: var(--color-p5);
+          color: var(--color-n5);
           line-height: 1.5rem;
         }
       }
