@@ -78,8 +78,8 @@
   margin-bottom: -12rem;
   position: absolute;
   /* left: calc(33vw - 28rem); */
-  left: calc(50% - 55rem);
-  /* left:2rem; */
+  /* left: calc(50% - 55rem); */
+  left:4rem;
   align-self: flex-start;
   z-index: 4;
   top: -5.5rem;
@@ -88,9 +88,9 @@
   gap: 2rem;
 }
 .hero-holder{
-  /* position: relative; */
-    align-self: flex-start;
-    margin-bottom: auto;
+  position: relative;
+    /* align-self: flex-start; */
+    margin-bottom: auto !important;
 }
 
 
