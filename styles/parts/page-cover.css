@@ -46,6 +46,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
+      width: 45%;
       img {
         position: static !important;
       }
@@ -58,13 +59,16 @@
         /* margin-bottom: 9px; */
         letter-spacing: -.25rem;
       }
-      .info > span{
-        color: var( --page-cover-subtitle);
-        font-size: var(--font-size-paragraph);
-        margin-bottom: var(--size-15);
-        display: block;
-        letter-spacing: .12rem;
-        margin-top: 1rem;
+      .info {
+        width: 100%;
+        > span{
+          color: var( --page-cover-subtitle);
+          font-size: var(--font-size-paragraph);
+          margin-bottom: var(--size-15);
+          display: block;
+          letter-spacing: .12rem;
+          margin-top: 1rem;
+        }
       }
       p, li {
         max-width: 552px;
