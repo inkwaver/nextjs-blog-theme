@@ -461,7 +461,12 @@ export default function Index({ globalData }) {
             <div className="case-study-preview">
               <div className="projec-play">
                 <div className="project-thumbnail">
-                  <img loading="lazy" src="/gif/CaseStudygif.gif" />
+                <Link
+                    href="/posts/case-study-real-estate-brief"
+                  >
+                                      <img loading="lazy" src="/gif/CaseStudygif.gif" />
+
+                  </Link>
                 </div>
                 <div className="project-details">
                   <h3>Case Study :Real Estate </h3>
@@ -493,16 +498,16 @@ export default function Index({ globalData }) {
                       search experience.
                     </li>
                   </ul>
-                  <a
+                  <Link
                     className="button "
                     href="/posts/case-study-real-estate-brief"
                   >
                     View Case Study
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
-            <div className="project-img max-wdth-1500">
+            <div className="project-img show-case max-wdth-1500">
               {images.smartbet.map((image, index) => (
                 <a key={index} href={image.link} rel="noopener noreferrer">
                   <span className="img-holder">

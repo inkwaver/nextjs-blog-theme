@@ -383,6 +383,7 @@
   gap: 3rem;
   position: relative;
   display: inline-block;
+  width: 100%;
   h3 {
     font-size: 1.5rem;
     color: var(--color-n4);
@@ -405,14 +406,21 @@
       img{
         width: 100%;
         border-radius: .5rem;
+        box-shadow: var(--shadow-hover);
+        border: 1rem solid var(--white);
+        transition: all ease-in-out .3s;
       }
-    }
+      &:hover img{
+        box-shadow: var(--shadow);
+
+      }
+    } 
     p {
       padding-right: 150px;
     }
     .project-thumbnail {
       width: 50%;
-      overflow: hidden;
+      /* overflow: hidden; */
       /* border-radius: 15px; */
     }
   
@@ -452,6 +460,8 @@
     }
   }
 }
+
+
 
 .has-psh {
   list-style-type: none;
