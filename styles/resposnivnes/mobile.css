@@ -42,7 +42,7 @@
       }
     }
     /* &.title-sticky, &.title-sticky * {
-      background-color: var(--color-n1);
+      background-color: var(--text);
       color: white;
     } */
    &.title-sticky span:not(.icon-mid){

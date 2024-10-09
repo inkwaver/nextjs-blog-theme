@@ -103,10 +103,10 @@
     font-size: 3rem;
     font-weight: 900;
     line-height: 4rem;
-    color: var(--color-n3);
+    color: var(--text60);
 
     span {
-      color: var(--color-n6);
+      color: var(--text15);
     }
   }
   p {
@@ -117,14 +117,14 @@
     display: inline-block;
     padding: 1rem;
     border-radius: .5rem;
-    border: .1rem solid var(--color-n6);
+    border: .1rem solid var(--text15);
   }
 }
 header.sticked + main.main {
   .image-holder span img {
     /* background-color: red; */
     transition: all ease-in-out 0.2s;
-    border: 0rem solid var(--color-n6) !important;
+    border: 0rem solid var(--text15) !important;
     width: 0;
     height: 0;
     min-height: 0 !important;
@@ -197,26 +197,26 @@ header.sticked + main.main {
       margin-bottom: .5rem;
       margin-right: 2vw;
       .graph {
-        background-color: var(--color-s7);
-        border-left: 0.4rem solid var(--color-s4);
-        color: var(--color-s4);
+        background-color: var(--secondary10);
+        border-left: 0.4rem solid var(--secondary45);
+        color: var(--secondary45);
       }
     }
 
     .g2 {
       width: 100%;
       h4 {
-        color: var(--color-p4);
+        color: var(--primary45);
         opacity: 0;
         transition: all ease-in-out 0.3s;
       }
       .graph {
-        background-color: var(--color-p7);
-        border-left: 0.4rem solid var(--color-p4);
-        color: var(--color-p4);
+        background-color: var(--primary10);
+        border-left: 0.4rem solid var(--primary45);
+        color: var(--primary45);
       }
       .exp-block .comp-logo {
-        background-color: var(--color-p6);
+        background-color: var(--primary15);
       }
     }
   }
@@ -272,14 +272,14 @@ header.sticked + main.main {
     width: 100%;
     text-align: center;
     /* z-index: 3; */
-    color: var(--color-n3);
+    color: var(--text60);
     display: flex;
     align-items: flex-end;
     justify-content: center;
     &:before{
       height: 2rem;
     width: 100%;
-    background-color: var(--color-n6);
+    background-color: var(--text15);
     position: absolute;
     bottom: -.4rem;
     left: 0;
@@ -296,9 +296,9 @@ header.sticked + main.main {
     transition: all ease-in-out 0.5s;
     content: '';
     position: absolute;
-    background-color: var(--white);
-    border-right: .1rem solid var(--color-n6);
-    border-top: .1rem solid var(--color-n6);
+    background-color: var(--bg);
+    border-right: .1rem solid var(--text15);
+    border-top: .1rem solid var(--text15);
     /* opacity: 0.7; */
     width: 100%;
     left: 0;
@@ -313,7 +313,7 @@ header.sticked + main.main {
   }
 }
 .hero-header + main.main .image-holder span img{
-  border: .1rem solid var(--color-n5) !important;
+  border: .1rem solid var(--text30) !important;
 }
 
 header.sticked + main.main .first.section .graph-section .days div:after {
@@ -324,7 +324,7 @@ header.sticked + main.main .first.section .graph-section .days div:after {
 }
 
 .exp-block {
-  /*border: 0.1rem solid var(--color-p6); */
+  /*border: 0.1rem solid var(--primary15); */
   display: flex;
   align-items: center;
   gap: 0.2rem;
@@ -333,8 +333,8 @@ header.sticked + main.main .first.section .graph-section .days div:after {
   border-radius: 9rem;
   flex-direction: row-reverse;
   padding-left: 0;
-  /* border: 0.1rem solid var(--color-s6) !important; */
-  /* background-color: var(--color-s6); */
+  /* border: 0.1rem solid var(--secondary15) !important; */
+  /* background-color: var(--secondary15); */
   margin-left: 0;
   transition: all ease-in-out 0.3s;
   /* overflow: hidden; */
@@ -357,7 +357,7 @@ header.sticked + main.main .first.section .graph-section .days div:after {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: var(--color-n1);
+      color: var(--text);
       font-size: 0.8rem;
       font-weight: 300;
       color: black;
@@ -394,26 +394,26 @@ header.sticked + main.main .first.section .graph-section .days div:after {
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    background-color: var(--color-s6);
-    color: var(--color-p2);
+    background-color: var(--secondary15);
+    color: var(--primary75);
     /* letter-spacing: 0.1rem; */
   }
 }
 .g1 {
   .exp-block > span, .comp-logo{
     
-    border: 0.2rem solid var(--color-s2) !important;
+    border: 0.2rem solid var(--secondary75) !important;
   }
   .exp-block:after {
-    background-color: var(--color-s2);
+    background-color: var(--secondary75);
   }
 }
 .g2 {
   .exp-block > span, .comp-logo{
-    border: 0.2rem solid var(--color-p2) !important;
+    border: 0.2rem solid var(--primary75) !important;
   }
   .exp-block:after {
-    background-color: var(--color-p2);
+    background-color: var(--primary75);
   }
   .graph{
     margin-left: 4vw;

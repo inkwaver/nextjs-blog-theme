@@ -1,4 +1,5 @@
 @import url(./var.css);
+@import url(./var-colors.css);
 @import url(./header.css);
 @import url(./hero.css);
 @import url(./sidebar.css);
@@ -27,7 +28,7 @@
   box-sizing: border-box;
   line-height: 1;
   text-decoration: none;
-  color: var(--color-n2);
+  color: var(--text75);
 }
 
 body {
@@ -50,7 +51,7 @@ body {
 }
 
 .sticked .avatar {
-  border: 0.1rem solid var(--color-n6) !important;
+  border: 0.1rem solid var(--text15) !important;
   transform: none !important;
 }
 
@@ -85,7 +86,7 @@ h2.big-title{
 
 .single-content{
   grid-area: content;
-  background-color: var(--white);
+  background-color: var(--bg);
 }
 
 aside.main {
@@ -112,7 +113,7 @@ footer.main {
       display: block;
       text-decoration: none;
       font-size: var(--font-size-Subtitle);
-      color: var(--color-n3);
+      color: var(--text60);
     }
 
     .img-holder {
@@ -123,7 +124,7 @@ footer.main {
       opacity: 1;
       position: relative;
       border-radius: 0.5rem;
-      border:1rem solid var(--white);
+      border:1rem solid var(--bg);
       box-shadow: var(--shadow);
       overflow: hidden;
       margin-top: var(--size-102);
@@ -181,8 +182,8 @@ footer.main {
 }
 
 .theme-switcher {
-  border: 0.1rem solid var(--color-n2);
-  background-color: var(--color-n6);
+  border: 0.1rem solid var(--text75);
+  background-color: var(--text15);
   border-radius: var(--size-102);
   height: var(--size-15);
   display: flex;
@@ -197,12 +198,12 @@ footer.main {
     margin-right: -0.05rem;
     width: var(--size-24);
     height: var(--size-24);
-    background-color: var(--color-n6);
+    background-color: var(--text15);
     border-radius: 5.55rem;
     opacity: 0;
     &.active {
       opacity: 1;
-      background-color: var(--color-n2);
+      background-color: var(--text75);
       svg path {
         stroke: var(--body-color);
       }
@@ -212,20 +213,20 @@ footer.main {
     width: var(--size-15);
     height: var(--size-15);
     path {
-      stroke: var(--color-n2);
+      stroke: var(--text75);
     }
   }
 }
 
 footer.main {
-  background-color: var(--color-n2);
+  background-color: var(--text75);
   position: relative;
   /* padding: var(--size-63) 0 var(--size-63) 0; */
   *,
   path,
   svg {
-    color: var(--color-n6);
-    fill: var(--color-n6);
+    color: var(--text15);
+    fill: var(--text15);
     list-style-type: none;
   }
 
@@ -241,7 +242,7 @@ footer.main {
       margin-bottom: var(--size-9);
     }
     h3 {
-      color: var(--color-n4);
+      color: var(--text45);
       font-weight: 900;
       font-size: var(--size-24);
       margin-bottom: var(--size-15);
@@ -254,7 +255,7 @@ footer.main {
       line-height: 26px;
       gap: 9px;
       font-weight: 900;
-      color: var(--color-n4);
+      color: var(--text45);
     }
   }
   .copyright {

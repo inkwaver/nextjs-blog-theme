@@ -11,7 +11,7 @@
   #hamburger:checked ~ .header-wrap {
     .header-links {
         display: flex;
-        background-color: var(--color-n5);
+        background-color: var(--text30);
         flex-direction: column-reverse;
         top: 4rem;
         padding: 3rem;
@@ -37,7 +37,7 @@
     width: 3rem;
      path{
         width: 3rem;
-        fill: var(--color-n2);
+        fill: var(--text75);
     }
   }
 }

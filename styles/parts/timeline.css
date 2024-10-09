@@ -13,7 +13,7 @@
     padding-top: var(--size-39);
   }
   .thumbnail-container {
-    border: 0.1rem solid var(--color-n6);
+    border: 0.1rem solid var(--text15);
     overflow: hidden;
     border-radius: var(--size-9);
     margin-bottom: var(--size-24);
@@ -22,15 +22,15 @@
   .col-left {
     padding-right: var(--size-39);
     text-align: right;
-    border-right: 0.1rem solid var(--color-n6);
+    border-right: 0.1rem solid var(--text15);
     position: relative;
     min-width: calc(5 * var(--size-102));
 
     &:after {
       content: '';
       display: block;
-      background-color: var(--color-n6);
-      border: 0.1rem solid var(--color-n4);
+      background-color: var(--text15);
+      border: 0.1rem solid var(--text45);
       border-radius: var(--size-24);
       width: var(--size-9);
       height: var(--size-9);
@@ -56,25 +56,25 @@
     h4 {
       font-size: var(--font-size-title);
       font-weight: bold;
-      color: var(--color-n4);
+      color: var(--text45);
       position: relative;
       img,
       .company-logo,
       & > span {
         position: absolute !important;
-        border: 0.1rem solid var(--color-n3);
+        border: 0.1rem solid var(--text60);
         border-radius: 100rem;
         right: -3.3rem;
         top: -0.4rem;
         z-index: 1;
         padding: 0.3rem !important;
-        background: var(--white);
+        background: var(--bg);
       }
       .company-logo,
       & > span {
         width: 2.16rem !important;
         height: 2.16rem !important;
-        border: 0.1rem solid var(--color-n3) !important;
+        border: 0.1rem solid var(--text60) !important;
         display: block;
         font-size: 0.8rem;
         display: flex;
@@ -85,13 +85,13 @@
 
     strong {
       font-size: var(--font-size-paragraph);
-      color: var(--color-n3);
+      color: var(--text60);
       font-weight: normal;
     }
 
     em {
       font-size: var(--font-size-caption);
-      color: var(--color-n2);
+      color: var(--text75);
       transition: all ease-in 0.5s;
       margin: var(--size-9) 0;
     }
@@ -115,7 +115,7 @@
       padding-bottom: var(--size-24);
     }
     li {
-      color: var(--color-n6);
+      color: var(--text15);
       /* font-size: var(--font-size-paragraph);
       line-height: calc(1.5 * var(--font-size-paragraph)); */
       font-size: 1.2rem;
@@ -136,15 +136,15 @@
 
   .col-left {
     &.highlight {
-      border-color: var(--color-n3);
+      border-color: var(--text60);
 
       &::after {
-        background-color: var(--color-n3);
+        background-color: var(--text60);
         transition: all ease-in 0.5s;
       }
 
       & + ul li {
-        color: var(--color-n2);
+        color: var(--text75);
         transition: all ease-in 0.5s;
 
         & img {
@@ -167,7 +167,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--color-n7);
+  background: var(--text10);
   border-radius: .5rem;
   overflow: hidden;
   &.project-screen-holder{
@@ -196,7 +196,7 @@
     }
 
     & ~ .view-mode .mob-btn {
-      background-color: var(--color-n6);
+      background-color: var(--text15);
     }
   }
 
@@ -210,7 +210,7 @@
     }
 
     & ~ .view-mode .desk-btn {
-      background-color: var(--color-n6);
+      background-color: var(--text15);
     }
   }
 
@@ -232,7 +232,7 @@
     }
 
     & ~ .view-mode .light {
-      background-color: var(--color-n6);
+      background-color: var(--text15);
     }
   }
 
@@ -254,7 +254,7 @@
     }
 
     & ~ .view-mode .dark {
-      background-color: var(--color-n6);
+      background-color: var(--text15);
     }
   }
 
@@ -274,7 +274,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: var(--color-n5);
+    background: var(--text30);
     /* border-radius: .5rem .5rem 0 0; */
     width: 100%;
 
@@ -282,12 +282,12 @@
       display: inline-block;
       font-size: var(--font-size-caption);
       /* text-transform: uppercase; */
-      color: var(--color-n4);
+      color: var(--text45);
     }
 
     .button {
       margin-left: var(--size-9);
-      border: 0.1rem solid var(--color-n5);
+      border: 0.1rem solid var(--text30);
     }
   }
 
@@ -301,7 +301,7 @@
   &:after {
     content: '';
     display: none;
-    background-color: var(--color-n2);
+    background-color: var(--text75);
     opacity: 0.5;
     width: 0.5rem;
     height: 10rem;
@@ -318,7 +318,7 @@
     right: -2rem;
   }
   .toolbar-view {   
-     background-color: var(--color-n6);
+     background-color: var(--text15);
     padding: .5rem;
     /* border-radius: 9px 9px 0 0; */
     font-weight: 600;
@@ -328,7 +328,7 @@
     top: 0;
     text-align: center;
     * {
-      color: var(--color-n4);
+      color: var(--text45);
       font-size: .7rem;
     }
   }
@@ -386,11 +386,11 @@
   width: 100%;
   h3 {
     font-size: 1.5rem;
-    color: var(--color-n4);
+    color: var(--text45);
     font-weight: 100;
     margin-bottom: 1rem;
     text-transform: uppercase;
-    border-bottom: .1rem solid var(--color-n6);
+    border-bottom: .1rem solid var(--text15);
     padding-bottom: 1rem;
   }
   > p{
@@ -407,7 +407,7 @@
         width: 100%;
         border-radius: .5rem;
         box-shadow: var(--shadow-hover);
-        border: 1rem solid var(--white);
+        border: 1rem solid var(--bg);
         transition: all ease-in-out .3s;
       }
       &:hover img{
@@ -432,7 +432,7 @@
     transition: opacity ease-in-out .3s;
     z-index: 15;
     /* background-color: rgba(255,255,255,.9); */
-    /* border: 0.1rem solid var(--color-p5); */
+    /* border: 0.1rem solid var(--primary30); */
     border-radius: 15px;
     /* padding: var(--size-24); */
     top: 0;
@@ -453,7 +453,7 @@
         letter-spacing: 0.02rem;
         strong{
           min-width: 11rem;
-          color: var(--color-n5);
+          color: var(--text30);
           line-height: 1.5rem;
         }
       }
@@ -468,7 +468,7 @@
 }
 .project-screen-holder {
   padding: 1rem;
-  background-color: var(--white);
+  background-color: var(--bg);
   border-radius: .5rem;
   display: block;
   &:not(:last-child){
@@ -485,7 +485,7 @@
     overflow: hidden;
     h5{
       font-size: 1rem;
-      color: var(--color-n3);
+      color: var(--text60);
     }
     span {
       font-size: .8rem;
@@ -496,7 +496,7 @@
       transition: all ease-in-out .3s;
       display: flex;
       gap: .3rem;
-      color: var(--color-p2);
+      color: var(--primary75);
       opacity: 0;
       &:after {
         content: " > ";

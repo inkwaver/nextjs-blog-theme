@@ -19,7 +19,7 @@
       transition: all ease-in-out 0.4s;
     }
 
-    background-color: var(--white);
+    background-color: var(--bg);
     display: flex;
     align-items: center;
     padding-top: .5rem;
@@ -28,7 +28,7 @@
       padding-left: .5rem;
       margin-left: var(--size-15);
       border-radius: .5rem 0 0 .5rem;
-      border-left: .1rem solid var(--color-n5);
+      border-left: .1rem solid var(--text30);
     }
     &.nav-dev {
       padding-right: .5rem;
@@ -42,7 +42,7 @@
     margin-left: var(--size-15);
     align-items: center;
     /* line-height: 1.2rem; */
-    color: var(--color-n2);
+    color: var(--text75);
     text-transform: uppercase;
     font-size: 1rem;
     /* font-weight: 600; */
@@ -62,24 +62,24 @@
     &.design {
       /* color: var(--color-static-p1); */
       &:before {
-        border-color: var(--color-s1);
-        background-color: var(--color-s6);
+        border-color: var(--secondary);
+        background-color: var(--secondary15);
       }
 
       &.active {
-        color: var(--color-s1);
+        color: var(--secondary);
       }
     }
 
     &.dev {
-      /* color: var(--color-p1); */
+      /* color: var(--primary); */
 
       &:before {
-        border-color: var(--color-p1);
-        background-color: var(--color-p5);
+        border-color: var(--primary);
+        background-color: var(--primary30);
       }
       &.active {
-        color: var(--color-p1);
+        color: var(--primary);
       }
     }
   }
@@ -93,7 +93,7 @@ header.sticked + main.main {
     transition: all ease-in-out 0.5s;
     /* flex-direction: row-reverse;
     justify-content: flex-start; */
-    /* background-color: var(--white); */
+    /* background-color: var(--bg); */
     > .nav-group {
 
 
@@ -104,12 +104,12 @@ header.sticked + main.main {
       a:not(.active){
       transition: all ease-in-out 0.4s;
 
-        color: var(--color-n3);
+        color: var(--text60);
         &::before{
       transition: all ease-in-out 0.4s;
 
-          background-color: var(--color-n6);
-          border-color: var(--color-n5);
+          background-color: var(--text15);
+          border-color: var(--text30);
 
         }
       }

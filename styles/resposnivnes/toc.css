@@ -18,7 +18,7 @@ display: none;
   }
   .single-content .sidebar-inner {
     position: fixed;
-    background: var(--white);
+    background: var(--bg);
     right: 0;
     height: 88vh;
     overflow-y: auto;
@@ -36,7 +36,7 @@ display: none;
   .toc-menu {
     display: inline-block;
     padding: var(--size-9);
-    border-bottom: .1rem solid var(--color-n4);
+    border-bottom: .1rem solid var(--text45);
     .open-toc {
         display: none;
     }

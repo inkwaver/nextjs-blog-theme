@@ -11,28 +11,25 @@
 --font-size-paragraph: 1rem;
 --font-size-caption: .83rem;
 
---color-n1: #1A1A1A;
---color-n2: #404040;
---color-n3: #666666;
---color-n4: #8C8C8C;
---color-n5: #B3B3B3;
---color-n6: #D9D9D9;
---color-n7: #f5f5f5;
 
---color-static-n1: #1A1A1A;
+
+
+/* --color-static-n1: #1A1A1A;
 --color-static-n2: #404040;
 --color-static-n3: #666666;
 --color-static-n4: #8C8C8C;
 --color-static-n5: #B3B3B3;
---color-static-n6: #D9D9D9;
+--color-static-n6: #D9D9D9; */
 
---color-p1: #093E82;
---color-p2: #2E5B95;
---color-p3: #5378A7;
---color-p4: #7895BA;
---color-p5: #9DB2CD;
---color-p6: #C1CFE0;
---color-p7: #e0e8f3;
+/*
+
+
+n1-90 n2-75 n3-60 n4-45 n5-30 n6-15 n7-5
+
+
+*/
+
+
 
 --color-static-p1:  #093E82;
 --color-static-p2:  #2E5B95;
@@ -41,13 +38,6 @@
 --color-static-p5:  #9DB2CD;
 --color-static-p6: #C1CFE0;
 
---color-s1: #FF9E00;
---color-s2: #FFAD26;
---color-s3: #FFBB4D;
---color-s4: #FFCA73;
---color-s5: #FFD899;
---color-s6: #FFE7BF;
---color-s7: #FFF0D9;
 
 --color-static-s1: #FF9E00;
 --color-static-s2: #FFAD26;
@@ -57,12 +47,12 @@
 --color-static-s6: #FFE7BF;
 --color-static-s7: #FFF0D9;
 
---white:#ffffff;
+--bg:#ffffff;
 --black:#000000;
 /* --body-color: #fff8e1; */
---body-color: rgb(246, 243, 243);
+--body-color: var(--bg);
 --shadow : .1rem .1rem .5rem -.5rem var(--black);
---shadow-hover: .1rem .1rem .8rem -.2rem var(--color-n4);
+--shadow-hover: .1rem .1rem .8rem -.2rem var(--text45);
 /* size and proportion */
 --size-9: .5rem;
 --size-15: 0.8333rem;
@@ -92,8 +82,8 @@
 --logo-name-small: var(--size-24);
 --logo-name-big: var(--size-15x3);
 --logo-name-big-font-weight: 900;
---logo-name-big-color: var(--color-n5);
---intro-color: var(--color-n1);
+--logo-name-big-color: var(--text30);
+--intro-color: var(--text);
 
 }
 
@@ -102,36 +92,5 @@
     :root{
         --wrapper-margin: var(--size-15);
     }
-}
-
-.dark:root{
---color-n7: #0b0b0b;
-
---color-n6: #1A1A1A;
---color-n5: #404040;
---color-n4: #666666;
---color-n3: #8C8C8C;
---color-n2: #B3B3B3;
---color-n1: #D9D9D9;
-/* --body-color: #110429; */
---body-color: #000000;
-
---color-p6: #093E82;
---color-p5: #2E5B95;
---color-p4: #5378A7;
---color-p3: #7895BA;
---color-p2: #9DB2CD;
---color-p1: #C1CFE0;
-
---color-s7: #FF9E00;
---color-s6: #FFAD26;
---color-s5: #FFBB4D;
---color-s4: #FFCA73;
---color-s3: #FFD899;
---color-s2: #FFE7BF;
---color-s1: #FFF0D9;
-
---white:#000000;
---black:#ffffff;
 }
 

@@ -1,14 +1,14 @@
 .single-content {
   display: flex;
   article.content {
-    background-color: var(--white);
+    background-color: var(--bg);
     width: 100%;
     padding-top: 4.6rem;
     .content-holder {
       padding: 4rem;
       h3 {
         margin-bottom: var(--size-15);
-        color: var(--color-p1);
+        color: var(--primary);
       }
       ul {
         list-style-type: disc;
@@ -34,7 +34,7 @@
     overflow-y: auto;
     padding-right: 2rem;
     right: -2rem;
-    /* background: var(--white); */
+    /* background: var(--bg); */
   }
   .image-viewer {
   }

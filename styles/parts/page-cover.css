@@ -1,19 +1,19 @@
 
 :root{
 
-    --page-cover-bg :var(--color-static-p1);
-    --page-cover-title: var(--color-s6);
-    --page-cover-subtitle: var(--color-s6);
-    --page-cover-content: var(--color-s7);
-    --page-cover-svg: var(--color-s3);
+    --page-cover-bg :var(--primary);
+    --page-cover-title: var(--secondary55);
+    --page-cover-subtitle: var(--secondary95);
+    --page-cover-content: var(--bg);
+    --page-cover-svg: var(--secondary60);
 }
 
 .dark:root{
-    --page-cover-bg :var(--color-p6);
-    --page-cover-title: var(--color-s4);
-    --page-cover-subtitle: var(--color-s4);
-    --page-cover-content: var(--color-s4);
-    --page-cover-svg: var(--color-s4);
+    --page-cover-bg :var(--primary15);
+    --page-cover-title: var(--secondary55);
+    --page-cover-subtitle: var(--secondary95);
+    --page-cover-content: var(--text);
+    --page-cover-svg: var(--secondary60);
 
 }
 
@@ -99,6 +99,6 @@
         fill: var(--page-cover-svg);
       }
     * {
-      color: var(--white);
+      color: var(--bg);
     }
   }

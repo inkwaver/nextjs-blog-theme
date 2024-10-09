@@ -1,30 +1,30 @@
 :root {
   /* sidebar-color schem v1 start */
 
-  /* --sidebar-bg: var(--color-p2);
-  --sidebar-border-left-color: var(--color-p2);
+  /* --sidebar-bg: var(--primary75);
+  --sidebar-border-left-color: var(--primary75);
 
   --sideabr-cat-bg:red;
-  --sidebar-active-cat-bg:var(--color-p2);
-  --sideabr-active-cat-ul-article-bg:var(--color-p3);
+  --sidebar-active-cat-bg:var(--primary75);
+  --sideabr-active-cat-ul-article-bg:var(--primary60);
 
-  --sidebar-chapter-color: var(--color-p5);
+  --sidebar-chapter-color: var(--primary30);
 
 
-  --sidebar-active-cat-ul-li-1st:var(--color-p5);
-  --sidebar-active-cat-ul-li-1st-active:var(--color-p6);
+  --sidebar-active-cat-ul-li-1st:var(--primary30);
+  --sidebar-active-cat-ul-li-1st-active:var(--primary15);
 
-  --sidebar-active-cat-ul:var(--color-p4);
-  --sidebar-active-cat-ul-li-2nt-higlight-color:var(--color-s5);
-  --sidebar-active-cat-ul-li-2nt-color:var(--white); */
+  --sidebar-active-cat-ul:var(--primary45);
+  --sidebar-active-cat-ul-li-2nt-higlight-color:var(--secondary30);
+  --sidebar-active-cat-ul-li-2nt-color:var(--bg); */
 
   /* sidebar-color schem v1 end */
-  --sidebar-active-cat-ul-li-1st: var(--color-n3);
-  --sidebar-active-cat-ul-li-1st-active: var(--color-p1);
-  --sidebar-chapter-color: var(--color-n3);
+  --sidebar-active-cat-ul-li-1st: var(--text60);
+  --sidebar-active-cat-ul-li-1st-active: var(--primary);
+  --sidebar-chapter-color: var(--text60);
 
-  --sidebar-active-cat-ul-li-2nt-higlight-color: var(--color-p1);
-  --sidebar-active-cat-ul-li-2nt-color: var(--color-n3);
+  --sidebar-active-cat-ul-li-2nt-higlight-color: var(--primary);
+  --sidebar-active-cat-ul-li-2nt-color: var(--text60);
 }
 
 .sidebar {
@@ -53,7 +53,7 @@
 
       &.active,
       &.active * {
-        color: var(--color-p1);
+        color: var(--primary);
       }
     }
 
@@ -73,19 +73,19 @@
   .parts {
     margin-bottom: 3rem;
 
-    /* background-color: var(--color-p1); */
+    /* background-color: var(--primary); */
     &>span {
       font-size: var(--size-24);
       display: block;
       padding-left: var(--size-15);
-      /* border-bottom: 0.1rem solid var(--color-p4); */
+      /* border-bottom: 0.1rem solid var(--primary45); */
       /* margin-bottom: var(--size-9); */
       background-color: var(--sideabr-cat-bg);
       font-weight: normal;
 
       &.active-cat {
         background-color: var(--sidebar-active-cat-bg);
-        color: var(--color-n5);
+        color: var(--text30);
       }
     }
   }
@@ -99,7 +99,7 @@
       background-color: var(--sideabr-active-cat-ul-article-bg);
 
       .chapter {
-        /* background-color: var(--color-n6); */
+        /* background-color: var(--text15); */
         font-size: 0.83rem;
         text-transform: uppercase;
         padding: .5rem;
@@ -117,7 +117,7 @@
             display: block;
             content: "";
             height: .1rem;
-            background-color: var(--color-n5);
+            background-color: var(--text30);
             width: 100%;
             top: 50%;
             margin-top: -.05rem;
@@ -150,7 +150,7 @@
 
       li:not(.chapter) {
         a {
-          /* border-bottom: .1rem solid var(--color-n6); */
+          /* border-bottom: .1rem solid var(--text15); */
           /* background-color: red; */
           display: block;
           /* padding: var(--size-15); */
@@ -165,7 +165,7 @@
             display: inline-block;
             width: 0;
             height: .5rem;
-            background-color: var(--color-p1);
+            background-color: var(--primary);
             border-radius: 5rem;
             transition: all ease-in-out .s;
           }
@@ -214,7 +214,7 @@
 
       a.active+.content-links {
         background-color: var(--sidebar-active-cat-ul);
-        /* border-left: 0.1rem solid var(--color-p1); */
+        /* border-left: 0.1rem solid var(--primary); */
         margin-right:3rem;
         border-radius: 0 0 .5rem 0;
 
@@ -256,7 +256,7 @@
     font-size: var(--size-39);
     padding-bottom: 3rem;
     padding-left: 45px;
-    color: var(--color-n4);
+    color: var(--text45);
     text-transform: uppercase;
     font-weight: 900;
   }

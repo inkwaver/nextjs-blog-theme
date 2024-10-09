@@ -16,7 +16,7 @@
 .design-intro-title {
   font-size: var(--size-24);
   padding-left: var(--size-24);
-  color: var(--color-n3);
+  color: var(--text60);
   line-height: 2rem;
   font-weight: 100;
   margin-left: 3rem;
@@ -109,7 +109,7 @@
     max-width: 43.22rem;
     font-size: var(--font-size-Subtitle);
     line-height: calc(1.5* var(--font-size-Subtitle));
-    color: var(--color-n1);
+    color: var(--text);
     /* margin-top: 3rem; */
   }
 

@@ -22,7 +22,7 @@ header.main {
   .avatar {
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.3);
-    border: 0.1rem solid var(--color-n6) !important;
+    border: 0.1rem solid var(--text15) !important;
     width: 100%;
     height: auto;
     /* position: absolute;
@@ -74,7 +74,7 @@ header.main {
 
     .logo-name {
       font-size: var(--logo-name-small);
-      color: var(--color-n2);
+      color: var(--text75);
     }
   }
 }
@@ -96,7 +96,7 @@ header.main {
   }
   .logo-name {
     font-size: var(--logo-name-small);
-    color: var(--color-n2);
+    color: var(--text75);
     display: block;
     font-weight: var(--logo-name-big-font-weight);
     margin-bottom: 0;
@@ -192,8 +192,8 @@ header.main {
 } */
 
 header.sticked {
-  background-color: var(--white);
-  border-bottom: .1rem solid var(--color-n6);
+  background-color: var(--bg);
+  border-bottom: .1rem solid var(--text15);
   .logo {
     img {
       transition: all ease-in-out 0.2s;
@@ -220,7 +220,7 @@ header.hero-header {
   .logo {
     img {
       transition: all ease-in-out 0.2s;
-      border: 0rem solid var(--color-n6) !important;
+      border: 0rem solid var(--text15) !important;
       width: 0;
       height: 0;
     }
