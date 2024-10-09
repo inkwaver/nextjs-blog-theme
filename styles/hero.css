@@ -104,9 +104,19 @@
     font-weight: 900;
     line-height: 4rem;
     color: var(--text60);
-
+   
+    strong{
+    font-weight: 900;
+      background: linear-gradient(120deg, var(--primary), var(--secondary40));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
     span {
-      color: var(--text15);
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--text);
+      color: transparent;
+      opacity: .4;
     }
   }
   p {
@@ -197,7 +207,8 @@ header.sticked + main.main {
       margin-bottom: .5rem;
       margin-right: 2vw;
       .graph {
-        background-color: var(--secondary10);
+        /* background-color: var(--secondary10); */
+        background: linear-gradient(120deg, var(--secondary10), var(--secondary40));
         border-left: 0.4rem solid var(--secondary45);
         color: var(--secondary45);
       }
@@ -211,7 +222,8 @@ header.sticked + main.main {
         transition: all ease-in-out 0.3s;
       }
       .graph {
-        background-color: var(--primary10);
+        /* background-color: var(--primary10); */
+        background: linear-gradient(120deg, var(--primary10), var(--primary40));
         border-left: 0.4rem solid var(--primary45);
         color: var(--primary45);
       }
@@ -276,10 +288,13 @@ header.sticked + main.main {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+
     &:before{
       height: 2rem;
     width: 100%;
-    background-color: var(--text15);
+    /* background: linear-gradient(120deg, var(--primary5), var(--accent15)); */
+
+    background-color: var(--accent20);
     position: absolute;
     bottom: -.4rem;
     left: 0;
@@ -296,8 +311,9 @@ header.sticked + main.main {
     transition: all ease-in-out 0.5s;
     content: '';
     position: absolute;
-    background-color: var(--bg);
-    border-right: .1rem solid var(--text15);
+    /* background-color: var(--bg); */
+    background: linear-gradient(120deg, var(--primary5), var(--secondary10));
+    border-right: .1rem solid var(--text5);
     border-top: .1rem solid var(--text15);
     /* opacity: 0.7; */
     width: 100%;
@@ -320,7 +336,7 @@ header.sticked + main.main .first.section .graph-section .days div:after {
   top: -42vh;
   bottom: 1.5rem;
   height: auto;
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .exp-block {

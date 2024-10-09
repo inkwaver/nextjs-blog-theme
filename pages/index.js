@@ -193,7 +193,10 @@ export default function Index({ globalData }) {
               </div>
               <div className="description">
                 <h2>
-                  Narek Ch<span>ilingaryan</span>
+                  <strong>
+                  Narek Ch
+                  </strong>
+                 <span>ilingaryan</span>
                 </h2>
                 <p className="paragraph">
                   {/* I <strong>design interfaces</strong> and translate them into

@@ -1,11 +1,11 @@
 
 :root{
 
-    --page-cover-bg :var(--primary);
-    --page-cover-title: var(--secondary55);
-    --page-cover-subtitle: var(--secondary95);
-    --page-cover-content: var(--bg);
-    --page-cover-svg: var(--secondary60);
+  --page-cover-bg :var(--primary15);
+  --page-cover-title: var(--secondary55);
+  --page-cover-subtitle: var(--secondary95);
+  --page-cover-content: var(--text);
+  --page-cover-svg: var(--secondary60);
 }
 
 .dark:root{

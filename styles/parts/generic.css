@@ -278,7 +278,7 @@ main.main {
 }
 
 a.cv-btn {
-  color: var(--color-static-p2);
+  color: var(--primary75);
   border-color: var(--bg);
   background-color: var(--secondary15);
   box-shadow: var(--shadow);
