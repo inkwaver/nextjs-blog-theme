@@ -110,6 +110,7 @@
     font-size: var(--font-size-Subtitle);
     line-height: calc(1.5* var(--font-size-Subtitle));
     color: var(--text);
+    opacity: .8;
     /* margin-top: 3rem; */
   }
 

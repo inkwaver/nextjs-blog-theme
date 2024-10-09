@@ -278,12 +278,13 @@ main.main {
 }
 
 a.cv-btn {
-  color: var(--primary75);
+  color: var(--bg);
   border-color: var(--bg);
-  background-color: var(--secondary15);
+  background-color: var(--accent70);
   box-shadow: var(--shadow);
   &:hover{
   box-shadow: var(--shadow-hover);
+  background-color: var(--accent);
 
   }
 }
