@@ -5,181 +5,148 @@ n1-90 n2-75 n3-60 n4-45 n5-30 n6-15 n7-5
 
 https://www.realtimecolors.com/?colors=f9e7e9-0b0404-b7c6d7-fdc0bf-0f72c2&fonts=Assistant-Assistant
 */
+
+
+
+
+
 :root {
-    --text: #180608;
-    --bg: #fbf4f4;
-    --primary: #283748;
-    --secondary: #400302;
-    --accent: #3d9ff0;
-    --textcontrast: #64d97b;
-    --bgcontrast: #64d97b;
-    --primarycontrast: #64d97b;
-    --secondarycontrast: #64d97b;
-    --accentcontrast: #64d97b;
-    --text5: hsl(353, 60%, 6%, 5%);
-    --text10: hsl(353, 60%, 6%, 10%);
-    --text15: hsl(353, 60%, 6%, 15%);
-    --text20: hsl(353, 60%, 6%, 20%);
-    --text25: hsl(353, 60%, 6%, 25%);
-    --text30: hsl(353, 60%, 6%, 30%);
-    --text35: hsl(353, 60%, 6%, 35%);
-    --text40: hsl(353, 60%, 6%, 40%);
-    --text45: hsl(353, 60%, 6%, 45%);
-    --text50: hsl(353, 60%, 6%, 50%);
-    --text55: hsl(353, 60%, 6%, 55%);
-    --text60: hsl(353, 60%, 6%, 60%);
-    --text65: hsl(353, 60%, 6%, 65%);
-    --text70: hsl(353, 60%, 6%, 70%);
-    --text75: hsl(353, 60%, 6%, 75%);
-    --text80: hsl(353, 60%, 6%, 80%);
-    --text85: hsl(353, 60%, 6%, 85%);
-    --text90: hsl(353, 60%, 6%, 90%);
-    --text95: hsl(353, 60%, 6%, 95%);
-    --primary5: hsl(212, 29%, 22%, 5%);
-    --primary10: hsl(212, 29%, 22%, 10%);
-    --primary15: hsl(212, 29%, 22%, 15%);
-    --primary20: hsl(212, 29%, 22%, 20%);
-    --primary25: hsl(212, 29%, 22%, 25%);
-    --primary30: hsl(212, 29%, 22%, 30%);
-    --primary35: hsl(212, 29%, 22%, 35%);
-    --primary40: hsl(212, 29%, 22%, 40%);
-    --primary45: hsl(212, 29%, 22%, 45%);
-    --primary50: hsl(212, 29%, 22%, 50%);
-    --primary55: hsl(212, 29%, 22%, 55%);
-    --primary60: hsl(212, 29%, 22%, 60%);
-    --primary65: hsl(212, 29%, 22%, 65%);
-    --primary70: hsl(212, 29%, 22%, 70%);
-    --primary75: hsl(212, 29%, 22%, 75%);
-    --primary80: hsl(212, 29%, 22%, 80%);
-    --primary85: hsl(212, 29%, 22%, 85%);
-    --primary90: hsl(212, 29%, 22%, 90%);
-    --primary95: hsl(212, 29%, 22%, 95%);
-    --secondary5: hsl(1, 94%, 13%, 5%);
-    --secondary10: hsl(1, 94%, 13%, 10%);
-    --secondary15: hsl(1, 94%, 13%, 15%);
-    --secondary20: hsl(1, 94%, 13%, 20%);
-    --secondary25: hsl(1, 94%, 13%, 25%);
-    --secondary30: hsl(1, 94%, 13%, 30%);
-    --secondary35: hsl(1, 94%, 13%, 35%);
-    --secondary40: hsl(1, 94%, 13%, 40%);
-    --secondary45: hsl(1, 94%, 13%, 45%);
-    --secondary50: hsl(1, 94%, 13%, 50%);
-    --secondary55: hsl(1, 94%, 13%, 55%);
-    --secondary60: hsl(1, 94%, 13%, 60%);
-    --secondary65: hsl(1, 94%, 13%, 65%);
-    --secondary70: hsl(1, 94%, 13%, 70%);
-    --secondary75: hsl(1, 94%, 13%, 75%);
-    --secondary80: hsl(1, 94%, 13%, 80%);
-    --secondary85: hsl(1, 94%, 13%, 85%);
-    --secondary90: hsl(1, 94%, 13%, 90%);
-    --secondary95: hsl(1, 94%, 13%, 95%);
-    --accent5: hsl(207, 86%, 59%, 5%);
-    --accent10: hsl(207, 86%, 59%, 10%);
-    --accent15: hsl(207, 86%, 59%, 15%);
-    --accent20: hsl(207, 86%, 59%, 20%);
-    --accent25: hsl(207, 86%, 59%, 25%);
-    --accent30: hsl(207, 86%, 59%, 30%);
-    --accent35: hsl(207, 86%, 59%, 35%);
-    --accent40: hsl(207, 86%, 59%, 40%);
-    --accent45: hsl(207, 86%, 59%, 45%);
-    --accent50: hsl(207, 86%, 59%, 50%);
-    --accent55: hsl(207, 86%, 59%, 55%);
-    --accent60: hsl(207, 86%, 59%, 60%);
-    --accent65: hsl(207, 86%, 59%, 65%);
-    --accent70: hsl(207, 86%, 59%, 70%);
-    --accent75: hsl(207, 86%, 59%, 75%);
-    --accent80: hsl(207, 86%, 59%, 80%);
-    --accent85: hsl(207, 86%, 59%, 85%);
-    --accent90: hsl(207, 86%, 59%, 90%);
-    --accent95: hsl(207, 86%, 59%, 95%);
+
+
+
+    --alpha-5: 5%;
+    --alpha-10: 10%;
+    --alpha-15: 15%;
+    --alpha-20: 20%;
+    --alpha-25: 25%;
+    --alpha-30: 30%;
+    --alpha-35: 35%;
+    --alpha-40: 40%;
+    --alpha-45: 45%;
+    --alpha-50: 50%;
+    --alpha-55: 55%;
+    --alpha-60: 60%;
+    --alpha-65: 65%;
+    --alpha-70: 70%;
+    --alpha-75: 75%;
+    --alpha-80: 80%;
+    --alpha-85: 85%;
+    --alpha-90: 90%;
+    --alpha-95: 95%;
+    --alpha-100: 100%;
+
+
+
+
+
+    /* --pr5: hsl(212, 29%, 22%, 5%);
+    --sec5: hsl(1, 94%, 13%, 5%);
+    --acc5: hsl(207, 86%, 59%, 5%); */
+
+
+
+    --text5: hsla(var(--text-hsl), var(--alpha-5));
+    --text10: hsla(var(--text-hsl), var(--alpha-10));
+    --text15: hsla(var(--text-hsl), var(--alpha-15));
+    --text20: hsla(var(--text-hsl), var(--alpha-20));
+    --text25: hsla(var(--text-hsl), var(--alpha-25));
+    --text30: hsla(var(--text-hsl), var(--alpha-30));
+    --text35: hsla(var(--text-hsl), var(--alpha-35));
+    --text40: hsla(var(--text-hsl), var(--alpha-40));
+    --text45: hsla(var(--text-hsl), var(--alpha-45));
+    --text50: hsla(var(--text-hsl), var(--alpha-50));
+    --text55: hsla(var(--text-hsl), var(--alpha-55));
+    --text60: hsla(var(--text-hsl), var(--alpha-60));
+    --text65: hsla(var(--text-hsl), var(--alpha-65));
+    --text70: hsla(var(--text-hsl), var(--alpha-70));
+    --text75: hsla(var(--text-hsl), var(--alpha-75));
+    --text80: hsla(var(--text-hsl), var(--alpha-80));
+    --text85: hsla(var(--text-hsl), var(--alpha-85));
+    --text90: hsla(var(--text-hsl), var(--alpha-90));
+    --text95: hsla(var(--text-hsl), var(--alpha-95));
+    --text: hsla(var(--text-hsl), var(--alpha-100));
+
+
+
+    --primary5: hsla(var(--primary-hsl), var(--alpha-5));
+    --primary10: hsla(var(--primary-hsl), var(--alpha-10));
+    --primary15: hsla(var(--primary-hsl), var(--alpha-15));
+    --primary20: hsla(var(--primary-hsl), var(--alpha-20));
+    --primary25: hsla(var(--primary-hsl), var(--alpha-25));
+    --primary30: hsla(var(--primary-hsl), var(--alpha-30));
+    --primary35: hsla(var(--primary-hsl), var(--alpha-35));
+    --primary40: hsla(var(--primary-hsl), var(--alpha-40));
+    --primary45: hsla(var(--primary-hsl), var(--alpha-45));
+    --primary50: hsla(var(--primary-hsl), var(--alpha-50));
+    --primary55: hsla(var(--primary-hsl), var(--alpha-55));
+    --primary60: hsla(var(--primary-hsl), var(--alpha-60));
+    --primary65: hsla(var(--primary-hsl), var(--alpha-65));
+    --primary70: hsla(var(--primary-hsl), var(--alpha-70));
+    --primary75: hsla(var(--primary-hsl), var(--alpha-75));
+    --primary80: hsla(var(--primary-hsl), var(--alpha-80));
+    --primary85: hsla(var(--primary-hsl), var(--alpha-85));
+    --primary90: hsla(var(--primary-hsl), var(--alpha-90));
+    --primary95: hsla(var(--primary-hsl), var(--alpha-95));
+    --primary: hsla(var(--primary-hsl), var(--alpha-100));
+
+
+    --secondary5: hsla(var(--secondary-hsl), var(--alpha-5));
+    --secondary10: hsla(var(--secondary-hsl), var(--alpha-10));
+    --secondary15: hsla(var(--secondary-hsl), var(--alpha-15));
+    --secondary20: hsla(var(--secondary-hsl), var(--alpha-20));
+    --secondary25: hsla(var(--secondary-hsl), var(--alpha-25));
+    --secondary30: hsla(var(--secondary-hsl), var(--alpha-30));
+    --secondary35: hsla(var(--secondary-hsl), var(--alpha-35));
+    --secondary40: hsla(var(--secondary-hsl), var(--alpha-40));
+    --secondary45: hsla(var(--secondary-hsl), var(--alpha-45));
+    --secondary50: hsla(var(--secondary-hsl), var(--alpha-50));
+    --secondary55: hsla(var(--secondary-hsl), var(--alpha-55));
+    --secondary60: hsla(var(--secondary-hsl), var(--alpha-60));
+    --secondary65: hsla(var(--secondary-hsl), var(--alpha-65));
+    --secondary70: hsla(var(--secondary-hsl), var(--alpha-70));
+    --secondary75: hsla(var(--secondary-hsl), var(--alpha-75));
+    --secondary80: hsla(var(--secondary-hsl), var(--alpha-80));
+    --secondary85: hsla(var(--secondary-hsl), var(--alpha-85));
+    --secondary90: hsla(var(--secondary-hsl), var(--alpha-90));
+    --secondary95: hsla(var(--secondary-hsl), var(--alpha-95));
+    --secondary: hsla(var(--secondary-hsl), var(--alpha-100));
+
+
+    --accent5: hsla(var(--accent-hsl), var(--alpha-5));
+    --accent10: hsla(var(--accent-hsl), var(--alpha-10));
+    --accent15: hsla(var(--accent-hsl), var(--alpha-15));
+    --accent20: hsla(var(--accent-hsl), var(--alpha-20));
+    --accent25: hsla(var(--accent-hsl), var(--alpha-25));
+    --accent30: hsla(var(--accent-hsl), var(--alpha-30));
+    --accent35: hsla(var(--accent-hsl), var(--alpha-35));
+    --accent40: hsla(var(--accent-hsl), var(--alpha-40));
+    --accent45: hsla(var(--accent-hsl), var(--alpha-45));
+    --accent50: hsla(var(--accent-hsl), var(--alpha-50));
+    --accent55: hsla(var(--accent-hsl), var(--alpha-55));
+    --accent60: hsla(var(--accent-hsl), var(--alpha-60));
+    --accent65: hsla(var(--accent-hsl), var(--alpha-65));
+    --accent70: hsla(var(--accent-hsl), var(--alpha-70));
+    --accent75: hsla(var(--accent-hsl), var(--alpha-75));
+    --accent80: hsla(var(--accent-hsl), var(--alpha-80));
+    --accent85: hsla(var(--accent-hsl), var(--alpha-85));
+    --accent90: hsla(var(--accent-hsl), var(--alpha-90));
+    --accent95: hsla(var(--accent-hsl), var(--alpha-95));
+    --accent: hsla(var(--accent-hsl), var(--alpha-100));
+
+    --text-hsl: 227, 70%, 4%;
+    --primary-hsl: 229, 64%, 25%;
+    --secondary-hsl: 1, 94%, 13%;
+    --accent-hsl: 37, 69%, 49%;
+    --bg: hsl(225, 80%, 98%);
 }
+/* https://www.realtimecolors.com/?colors=030611-f6f8fe-172669-400302-d39127&fonts=Assistant-Assistant */
+
+.dark:root {
 
 
-.dark:root{
-    --text: #f9e7e9;
-    --bg: #0b0404;
-    --primary: #b7c6d7;
-    --secondary: #fdc0bf;
-    --accent: #0f72c2;
-    --textcontrast: #64d97b;
-    --bgcontrast: #64d97b;
-    --primarycontrast: #64d97b;
-    --secondarycontrast: #64d97b;
-    --accentcontrast: #ff8f8f;
-    --text5: hsl(353, 60%, 94%, 5%);
-    --text10: hsl(353, 60%, 94%, 10%);
-    --text15: hsl(353, 60%, 94%, 15%);
-    --text20: hsl(353, 60%, 94%, 20%);
-    --text25: hsl(353, 60%, 94%, 25%);
-    --text30: hsl(353, 60%, 94%, 30%);
-    --text35: hsl(353, 60%, 94%, 35%);
-    --text40: hsl(353, 60%, 94%, 40%);
-    --text45: hsl(353, 60%, 94%, 45%);
-    --text50: hsl(353, 60%, 94%, 50%);
-    --text55: hsl(353, 60%, 94%, 55%);
-    --text60: hsl(353, 60%, 94%, 60%);
-    --text65: hsl(353, 60%, 94%, 65%);
-    --text70: hsl(353, 60%, 94%, 70%);
-    --text75: hsl(353, 60%, 94%, 75%);
-    --text80: hsl(353, 60%, 94%, 80%);
-    --text85: hsl(353, 60%, 94%, 85%);
-    --text90: hsl(353, 60%, 94%, 90%);
-    --text95: hsl(353, 60%, 94%, 95%);
-    --primary5: hsl(212, 29%, 78%, 5%);
-    --primary10: hsl(212, 29%, 78%, 10%);
-    --primary15: hsl(212, 29%, 78%, 15%);
-    --primary20: hsl(212, 29%, 78%, 20%);
-    --primary25: hsl(212, 29%, 78%, 25%);
-    --primary30: hsl(212, 29%, 78%, 30%);
-    --primary35: hsl(212, 29%, 78%, 35%);
-    --primary40: hsl(212, 29%, 78%, 40%);
-    --primary45: hsl(212, 29%, 78%, 45%);
-    --primary50: hsl(212, 29%, 78%, 50%);
-    --primary55: hsl(212, 29%, 78%, 55%);
-    --primary60: hsl(212, 29%, 78%, 60%);
-    --primary65: hsl(212, 29%, 78%, 65%);
-    --primary70: hsl(212, 29%, 78%, 70%);
-    --primary75: hsl(212, 29%, 78%, 75%);
-    --primary80: hsl(212, 29%, 78%, 80%);
-    --primary85: hsl(212, 29%, 78%, 85%);
-    --primary90: hsl(212, 29%, 78%, 90%);
-    --primary95: hsl(212, 29%, 78%, 95%);
-    --secondary5: hsl(1, 94%, 87%, 5%);
-    --secondary10: hsl(1, 94%, 87%, 10%);
-    --secondary15: hsl(1, 94%, 87%, 15%);
-    --secondary20: hsl(1, 94%, 87%, 20%);
-    --secondary25: hsl(1, 94%, 87%, 25%);
-    --secondary30: hsl(1, 94%, 87%, 30%);
-    --secondary35: hsl(1, 94%, 87%, 35%);
-    --secondary40: hsl(1, 94%, 87%, 40%);
-    --secondary45: hsl(1, 94%, 87%, 45%);
-    --secondary50: hsl(1, 94%, 87%, 50%);
-    --secondary55: hsl(1, 94%, 87%, 55%);
-    --secondary60: hsl(1, 94%, 87%, 60%);
-    --secondary65: hsl(1, 94%, 87%, 65%);
-    --secondary70: hsl(1, 94%, 87%, 70%);
-    --secondary75: hsl(1, 94%, 87%, 75%);
-    --secondary80: hsl(1, 94%, 87%, 80%);
-    --secondary85: hsl(1, 94%, 87%, 85%);
-    --secondary90: hsl(1, 94%, 87%, 90%);
-    --secondary95: hsl(1, 94%, 87%, 95%);
-    --accent5: hsl(207, 86%, 41%, 5%);
-    --accent10: hsl(207, 86%, 41%, 10%);
-    --accent15: hsl(207, 86%, 41%, 15%);
-    --accent20: hsl(207, 86%, 41%, 20%);
-    --accent25: hsl(207, 86%, 41%, 25%);
-    --accent30: hsl(207, 86%, 41%, 30%);
-    --accent35: hsl(207, 86%, 41%, 35%);
-    --accent40: hsl(207, 86%, 41%, 40%);
-    --accent45: hsl(207, 86%, 41%, 45%);
-    --accent50: hsl(207, 86%, 41%, 50%);
-    --accent55: hsl(207, 86%, 41%, 55%);
-    --accent60: hsl(207, 86%, 41%, 60%);
-    --accent65: hsl(207, 86%, 41%, 65%);
-    --accent70: hsl(207, 86%, 41%, 70%);
-    --accent75: hsl(207, 86%, 41%, 75%);
-    --accent80: hsl(207, 86%, 41%, 80%);
-    --accent85: hsl(207, 86%, 41%, 85%);
-    --accent90: hsl(207, 86%, 41%, 90%);
-    --accent95: hsl(207, 86%, 41%, 95%);
+    --bg: hsl(225, 80%, 2%);
+    --text-hsl: 227, 70%, 96%;
+    --primary-hsl: 229, 64%, 75%;
+    --secondary-hsl: 1, 94%, 87%;
+    --accent-hsl: 37, 69%, 51%;
 }
