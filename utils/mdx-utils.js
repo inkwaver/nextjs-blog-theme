@@ -5,24 +5,57 @@ import { serialize } from 'next-mdx-remote/serialize';
 import rehypePrism from '@mapbox/rehype-prism';
 import remarkGfm from 'remark-gfm';
 
-// POSTS_PATH is useful when you want to get the path to a specific file
+// Base path for posts directory
 export const POSTS_PATH = path.join(process.cwd(), 'posts');
 
-// postFilePaths is the list of all mdx files inside the POSTS_PATH directory
-export const postFilePaths = () => {
-  const files = fs.readdirSync(POSTS_PATH);
-  return files.filter((file) => /\.mdx?$/.test(file));
+// Function to get all MDX files from a category folder
+export const getFileNamesFromCategory = (category) => {
+  const categoryPath = path.join(POSTS_PATH, category);
+  return fs
+    .readdirSync(categoryPath) // Read all files in the directory
+    .filter((file) => file.endsWith('.mdx')) // Only keep MDX files
+    .map((file) => ({
+      category,
+      slug: file.replace(/\.mdx$/, ''), // Remove .mdx extension to create the slug
+    }));
 };
 
+// Automatically collect all post file paths from categories
+export const postFilePaths = [
+  ...getFileNamesFromCategory('case-study'),
+  ...getFileNamesFromCategory('show-case'),
+  // Uncomment or add other categories as needed:
+  // ...getFileNamesFromCategory('articles'),
+  // ...getFileNamesFromCategory('design-system'),
+];
+
+// Function to get a post by slug and category
+export const getPostBySlug = async (slug, category) => {
+  const postFilePath = path.join(POSTS_PATH, category, `${slug}.mdx`);
+  const source = fs.readFileSync(postFilePath, 'utf-8');
+  const { content, data } = matter(source);
+
+  const mdxSource = await serialize(content, {
+    mdxOptions: {
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: [rehypePrism],
+    },
+    scope: data,
+  });
+
+  return { mdxSource, data };
+};
+
+// Function to sort posts by their "order" field
 export const sortPostsByOrder = (posts) => {
   return posts.sort((a, b) => a.data.order - b.data.order);
 };
 
+// Function to get posts filtered by a tag
 export const getPosts = (tag) => {
-  const filePaths = postFilePaths();
-
-  let posts = filePaths.map((filePath) => {
-    const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
+  let posts = postFilePaths.map(({ category, slug }) => {
+    const postFilePath = path.join(POSTS_PATH, category, `${slug}.mdx`);
+    const source = fs.readFileSync(postFilePath, 'utf-8');
     const { content, data } = matter(source);
 
     return {
@@ -32,7 +65,7 @@ export const getPosts = (tag) => {
         thumbnail: data.thumbnail || null,
         label: data.label || null,
       },
-      filePath,
+      filePath: `${category}/${slug}.mdx`,
     };
   });
 
@@ -45,55 +78,32 @@ export const getPosts = (tag) => {
   return posts;
 };
 
-export const getPostBySlug = async (slug, basePath = 'posts') => {
-  const postFilePath = path.join(process.cwd(), basePath, `${slug}.mdx`);
-  const source = fs.readFileSync(postFilePath);
-
-  const { content, data } = matter(source);
-
-  const mdxSource = await serialize(content, {
-    mdxOptions: {
-      remarkPlugins: [remarkGfm],
-      rehypePlugins: [rehypePrism],
-    },
-    scope: data,
-  });
-
-  return { mdxSource, data, postFilePath };
-};
-
+// Function to get the next post based on the current slug
 export const getNextPostBySlug = (slug, tag) => {
   const posts = getPosts(tag);
-  const currentFileName = `${slug}.mdx`;
-  const currentPost = posts.find((post) => post.filePath === currentFileName);
-  const currentPostIndex = posts.indexOf(currentPost);
+  const currentPostIndex = posts.findIndex((post) => post.filePath.endsWith(`${slug}.mdx`));
 
-  const post = posts[currentPostIndex + 1];
-  if (!post) return null;
-
-  const nextPostSlug = post.filePath.replace(/\.mdx?$/, '');
+  const nextPost = posts[currentPostIndex + 1];
+  if (!nextPost) return null;
 
   return {
-    title: post.data.title,
-    slug: nextPostSlug,
-    thumbnail: post.data.thumbnail, // Include the thumbnail
+    title: nextPost.data.title,
+    slug: nextPost.filePath.replace(/\.mdx$/, '').split('/').pop(),
+    thumbnail: nextPost.data.thumbnail,
   };
 };
 
+// Function to get the previous post based on the current slug
 export const getPreviousPostBySlug = (slug, tag) => {
   const posts = getPosts(tag);
-  const currentFileName = `${slug}.mdx`;
-  const currentPost = posts.find((post) => post.filePath === currentFileName);
-  const currentPostIndex = posts.indexOf(currentPost);
+  const currentPostIndex = posts.findIndex((post) => post.filePath.endsWith(`${slug}.mdx`));
 
-  const post = posts[currentPostIndex - 1];
-  if (!post) return null;
-
-  const previousPostSlug = post.filePath.replace(/\.mdx?$/, '');
+  const previousPost = posts[currentPostIndex - 1];
+  if (!previousPost) return null;
 
   return {
-    title: post.data.title,
-    slug: previousPostSlug,
-    thumbnail: post.data.thumbnail, // Include the thumbnail
+    title: previousPost.data.title,
+    slug: previousPost.filePath.replace(/\.mdx$/, '').split('/').pop(),
+    thumbnail: previousPost.data.thumbnail,
   };
 };

@@ -100,11 +100,18 @@ export default function Header() {
         </div>
         <div className="header-links">
           <Link
-            href="/posts/case-study-real-estate-brief"
+            href="/posts/case-study/case-study-real-estate-brief"
             rel="noopener noreferrer"
             className="button  ghost"
           >
             Case Study
+          </Link>
+          <Link
+            href="/posts/show-case/show-case-festberg"
+            rel="noopener noreferrer"
+            className="button  ghost"
+          >
+            Show Case
           </Link>
           {/* <Link
             href={`${rootUrl}/#devExp`}

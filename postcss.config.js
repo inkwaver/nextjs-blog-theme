@@ -1,10 +1,7 @@
-// If you want to use other PostCSS plugins, see the following:
-// https://tailwindcss.com/docs/using-with-preprocessors
 module.exports = {
   plugins: {
-    'postcss-import': {},
-    'tailwindcss/nesting': 'postcss-nesting',
-    tailwindcss: {},
-    autoprefixer: {},
+    'postcss-import': {}, // Enables @import in CSS
+    'postcss-nesting': {}, // Native CSS nesting support
+    autoprefixer: {}, // Adds vendor prefixes for compatibility
   },
 };
